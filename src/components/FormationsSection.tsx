@@ -38,7 +38,7 @@ export const FormationsSection = () => {
       features: ["Trading professionnel", "Programmation avancée", "Automatisation complète", "Coaching personnalisé"],
       price: "599.99 $",
       gradient: "from-purple-500 to-purple-600",
-      message: "Je+veux+m'+inscrire+a+la+formation+complette+Trading&Programation+Je+me+nomme:+",
+      message: "Je+veux+m'+inscrire+a+la+formation+complette+Trading&+Programation+Je+me+nomme:+",
       icon: Users
     }
   ];
