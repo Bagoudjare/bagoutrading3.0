@@ -7,7 +7,7 @@ import { BookOpen, Users, Clock, Code } from "lucide-react";
   const socialLinks = [
     { name: "WhatsApp", icon: "📱", url: "https://wa.me/+22898740835", color: "from-green-400 to-green-600" },
   ];
-const openUrl = (url: string) => {
+  const openUrl = (url: string) => {
     window.open(`${url}`, '_blank');
   };
 
@@ -19,6 +19,7 @@ export const FormationsSection = () => {
       features: ["Programmation MQL5", "Création d'indicateurs", "Développement d'EAs", "Optimisation de code"],
       price: "249.99 $",
       gradient: "from-blue-500 to-blue-600",
+      message: "Je+veux+m'inscrire+a+la+formation+MQL5+Je+me+nomme:+",
       icon: Code
     },
     {
@@ -27,6 +28,7 @@ export const FormationsSection = () => {
       features: ["Analyse technique avancée", "Gestion des risques", "Psychologie du trader", "Stratégies gagnantes", "Accès a mes indicateurs personnalisé a vie"],
       price: "499.99 $",
       gradient: "from-green-500 to-emerald-600",
+      message: "Je+veux+m'+inscrire+a+la+formation+complette+en+Trading+Je+me+nomme:+",
       popular: true,
       icon: BookOpen
     },
@@ -36,10 +38,13 @@ export const FormationsSection = () => {
       features: ["Trading professionnel", "Programmation avancée", "Automatisation complète", "Coaching personnalisé"],
       price: "599.99 $",
       gradient: "from-purple-500 to-purple-600",
+      message: "Je+veux+m'+inscrire+a+la+formation+complette+Trading++Programation+Je+me+nomme:+",
       icon: Users
     }
   ];
-
+    const opentext = (message: string) => {
+    window.open(`https://wa.me/+22898740835?text=${message}`, '_blank');
+  };
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
@@ -92,7 +97,7 @@ export const FormationsSection = () => {
                   <div className="text-3xl font-bold text-white mb-4">{formation.price}</div>
                   {socialLinks.map((social) => (
                   <button 
-                    onClick={() => openUrl(social.url)} className={`w-full bg-gradient-to-r ${formation.gradient} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}>
+                    onClick={() => opentext(formation.message)} className={`w-full bg-gradient-to-r ${formation.gradient} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}>
                     S'inscrire
                   </button>
                 ))}
