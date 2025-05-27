@@ -10,7 +10,7 @@ export const TradingAlgoSection = () => {
       name: "Viking Strategy Signal Indicator",
       description: "Indicateur avancé qui identifie les tendances émergentes avec une précision élevée. Utilise des algorithmes sophistiqués pour analyser les patterns de marché et générer des signaux fiables.",
       features: ["Signaux précis", "Alertes en temps réel", "Multi-timeframes", "Interface intuitive"],
-      image: scalp,
+      image: robo,
       gradient: "from-blue-500 to-cyan-500",
       algoId: "124360"
     },
@@ -18,7 +18,7 @@ export const TradingAlgoSection = () => {
       name: "Scalping Crypto Forex Indices EA",
       description: "Expert Advisor automatisé spécialement conçu pour le scalping sur les crypto-monnaies, le Forex et les indices. Optimisé pour détecter les micro-mouvements et maximiser les profits à court terme.",
       features: ["Trading automatisé", "Multi-marchés", "Gestion du risque", "Scalping optimisé"],
-      image: robo,
+      image: scalp,
       gradient: "from-purple-500 to-pink-500",
       algoId: "133191"
     }

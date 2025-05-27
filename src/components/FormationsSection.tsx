@@ -4,6 +4,12 @@ import { BookOpen, Users, Clock, Code } from "lucide-react";
   const scrollToContact = () => {
     document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
+  const socialLinks = [
+    { name: "WhatsApp", icon: "📱", url: "https://wa.me/+22898740835", color: "from-green-400 to-green-600" },
+  ];
+const openUrl = (url: string) => {
+    window.open(`${url}`, '_blank');
+  };
 
 export const FormationsSection = () => {
   const formations = [
@@ -84,9 +90,12 @@ export const FormationsSection = () => {
 
                 <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-4">{formation.price}</div>
-                  <button onClick={scrollToContact} className={`w-full bg-gradient-to-r ${formation.gradient} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}>
+                  {socialLinks.map((social) => (
+                  <button 
+                    onClick={() => openUrl(social.url)} className={`w-full bg-gradient-to-r ${formation.gradient} text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}>
                     S'inscrire
                   </button>
+                ))}
                 </div>
               </div>
             );
