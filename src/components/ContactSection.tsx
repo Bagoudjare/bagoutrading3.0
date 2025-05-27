@@ -14,8 +14,8 @@ export const ContactSection = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Message envoyé !",
-      description: "Je vous répondrai dans les plus brefs délais.",
+      title: "Message non envoyé !",
+      description: "Contactez moi par télégram ou par whatsapp de preference en utilisant les boutons de la parti suivez moi.",
     });
     setFormData({ name: "", email: "", message: "" });
   };
