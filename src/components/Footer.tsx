@@ -46,7 +46,7 @@ export const Footer = () => {
           </p>
           <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0">
             <span className="text-xl font-bold">Fait par </span>
-            <span className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent">FineCode</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent">Léonardo</span>
             <PhoneCallIcon className="h-6 w-6 text-blue-400" />
             <span><a className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent" href="https://wa.me/+22896938284">+228 96938284</a></span>
           </div>
