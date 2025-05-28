@@ -48,7 +48,8 @@ const openUrl = (url: string) => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 items-center gap-12">
+          <div className="space-y-8">
           {/* Contact Form */}
           <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
             <div className="flex items-center space-x-2 mb-6">
@@ -114,9 +115,10 @@ const openUrl = (url: string) => {
               </button>
             </form>
           </div>
+          </div>
 
           {/* Contact Info & Socials */}
-          <div className="space-y-8">
+          <div className="relative">
             {/* Contact Info */}
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
               <h3 className="text-2xl font-bold text-white mb-6">Informations de contact</h3>
