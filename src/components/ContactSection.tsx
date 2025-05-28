@@ -36,7 +36,7 @@ const openUrl = (url: string) => {
     window.open(`${url}`, '_blank');
   };
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="py-20 px-4 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
