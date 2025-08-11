@@ -1,16 +1,16 @@
 
 import { TrendingUp, BarChart3 } from "lucide-react";
-import scalp from "@/assets/imgs/scalping.jpg";
+import sys from "@/assets/imgs/BT3.0.jpg";
 import robo from "@/assets/imgs/viking.png";
 
 
 export const TradingAlgoSection = () => {
   const indicators = [
     {
-      name: "Viking Strategy Signal Indicator",
-      description: "Indicateur avancé qui identifie les tendances émergentes avec une précision élevée. Utilise des algorithmes sophistiqués pour analyser les patterns de marché et générer des signaux fiables.",
-      features: ["Signaux précis", "Alertes en temps réel", "Multi-timeframes", "Interface intuitive"],
-      image: robo,
+      name: "Système BT3.0",
+      description: "BT3.0 est un solution qui vous facilite le trading, il est composé de 6 indicateurs personnalisés.",
+      features: ["✅Viking Strategy indicator", "✅C_BAGOU", "✅C_BAGOU_LEVELS", "✅QM_DETECTOR", "✅ORDER_BLOCK_DETECTOR", "✅DAILY_OPEN_LINE"],
+      image: sys,
       gradient: "from-blue-500 to-cyan-500",
       algoId: "124360"
     },
@@ -18,7 +18,7 @@ export const TradingAlgoSection = () => {
       name: "Scalping Crypto Forex Indices EA",
       description: "Expert Advisor automatisé spécialement conçu pour le scalping sur les crypto-monnaies, le Forex et les indices. Optimisé pour détecter les micro-mouvements et maximiser les profits à court terme.",
       features: ["Trading automatisé", "Multi-marchés", "Gestion du risque", "Scalping optimisé"],
-      image: scalp,
+      image: robo,
       gradient: "from-purple-500 to-pink-500",
       algoId: "133191"
     }
