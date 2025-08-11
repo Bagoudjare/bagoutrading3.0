@@ -8,20 +8,12 @@ export const TradingAlgoSection = () => {
   const indicators = [
     {
       name: "Système BT3.0",
-      description: "BT3.0 est un solution qui vous facilite le trading, il est composé de 6 indicateurs personnalisés.",
-      features: ["✅Viking Strategy indicator", "✅C_BAGOU", "✅C_BAGOU_LEVELS", "✅QM_DETECTOR", "✅ORDER_BLOCK_DETECTOR", "✅DAILY_OPEN_LINE"],
+      description: "BT3.0 est un solution qui vous facilite le trading, il est composé de 6 indicateurs personnalisés. et un assistant intelligent",
+      features: ["✅ Viking Strategy indicator", "✅ C_BAGOU", "✅ C_BAGOU_LEVELS", "✅ QM_DETECTOR", "✅ ORDER_BLOCK_DETECTOR", "✅ DAILY_OPEN_LINE"],
       image: sys,
       gradient: "from-blue-500 to-cyan-500",
       algoId: "124360"
     },
-    {
-      name: "Scalping Crypto Forex Indices EA",
-      description: "Expert Advisor automatisé spécialement conçu pour le scalping sur les crypto-monnaies, le Forex et les indices. Optimisé pour détecter les micro-mouvements et maximiser les profits à court terme.",
-      features: ["Trading automatisé", "Multi-marchés", "Gestion du risque", "Scalping optimisé"],
-      image: robo,
-      gradient: "from-purple-500 to-pink-500",
-      algoId: "133191"
-    }
   ];
 
   const openAlgo = (algoId: string) => {
