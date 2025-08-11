@@ -56,7 +56,7 @@ export const TradingAlgoSection = () => {
                     <img
                       src={indicator.image}
                       alt={indicator.name}
-                      className="w-full h-90 object-cover rounded-xl"
+                      className="w-full h-50 object-cover rounded-xl"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
                   </div>
