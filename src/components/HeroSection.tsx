@@ -52,7 +52,8 @@ export const HeroSection = () => {
             >
               Découvrir mes services
             </button>
-            
+
+            <Link to="/partenaire">
             <button
               onClick={}
               className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
@@ -60,7 +61,8 @@ export const HeroSection = () => {
               Devenire partenaire de BT3.0
             </button>
           </div>
-          
+          </Link>
+
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
