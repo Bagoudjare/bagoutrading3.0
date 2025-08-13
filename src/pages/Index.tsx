@@ -46,31 +46,31 @@ const Index = () => {
           <HeroSection />
         </section>
 
-        <section id="apropos" data-animate className={`transition-all duration-800 delay-100 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="apropos" data-animate className={`transition-all duration-800 delay-130 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AboutSection />
         </section>
 
-        <section id="formations" data-animate className={`transition-all duration-800 delay-130 ${isVisible.formations ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="formations" data-animate className={`transition-all duration-800 delay-160 ${isVisible.formations ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <FormationsSection />
         </section>
 
-        <section id="automatisation" data-animate className={`transition-all duration-800 delay-160 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="automatisation" data-animate className={`transition-all duration-800 delay-190 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AutomationSection />
         </section>
 
-        <section id="algo" data-animate className={`transition-all duration-800 delay-190 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="algo" data-animate className={`transition-all duration-800 delay-220 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <TradingAlgoSection />
         </section>
 
-        <section id="partner" data-animate className={`transition-all duration-800 delay-220 ${isVisible.partner ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="partner" data-animate className={`transition-all duration-800 delay-250 ${isVisible.partner ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <PartnerCTA />
         </section>
 
-        <section id="videos" data-animate className={`transition-all duration-800 delay-250 ${isVisible.videos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="videos" data-animate className={`transition-all duration-800 delay-280 ${isVisible.videos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Videos />
         </section>
 
-        <section id="contact" data-animate className={`transition-all duration-800 delay-280 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="contact" data-animate className={`transition-all duration-800 delay-310 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <ContactSection />
         </section>
       </main>
