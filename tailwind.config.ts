@@ -115,19 +115,6 @@ export default {
 						transform: 'none',
 						animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
 					}
-				},
-				'light-sweep': {
-					'0%': {
-						transform: 'translateX(-100%) skewX(-15deg)',
-						opacity: '0'
-					},
-					'50%': {
-						opacity: '0.6'
-					},
-					'100%': {
-						transform: 'translateX(100%) skewX(-15deg)',
-						opacity: '0'
-					}
 				}
 			},
 			animation: {
@@ -135,8 +122,7 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
 				'scale-in': 'scale-in 0.5s ease-out',
-				'bounce': 'bounce 1s infinite',
-				'light-sweep': 'light-sweep 8s ease-in-out infinite'
+				'bounce': 'bounce 1s infinite'
 			}
 		}
 	},
