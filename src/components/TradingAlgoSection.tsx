@@ -9,7 +9,7 @@ export const TradingAlgoSection = () => {
     {
       name: "Système BT3.0",
       description: "BT3.0 est un solution qui vous facilite le trading, il est composé de 6 indicateurs personnalisés. et un assistant intelligent",
-      features: ["✅ Viking Strategy indicator", "✅ C_BAGOU", "✅ C_BAGOU_LEVELS", "✅ QM_DETECTOR", "✅ ORDER_BLOCK_DETECTOR", "✅ DAILY_OPEN_LINE"],
+      features: ["✅ Viking Strategy indicator", "✅ C_BAGOU", "✅ C_BAGOU_LEVELS", "✅ QM_DETECTOR", "✅ OB_DETECTOR", "✅ DAILY_OPEN_LINE"],
       image: sys,
       gradient: "from-blue-500 to-cyan-500",
       algoId: "124360"
