@@ -62,7 +62,7 @@ const Index = () => {
           <TradingAlgoSection />
         </section>
 
-        <section id="automatisation" data-animate className={`transition-all duration-1000 delay-400 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="partner" data-animate className={`transition-all duration-1000 delay-400 ${isVisible.partner ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <PartnerCTA />
         </section>
 
