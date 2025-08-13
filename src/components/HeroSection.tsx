@@ -6,8 +6,8 @@ export const HeroSection = () => {
     document.querySelector('#formations')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToAbout = () => {
-    document.querySelector('#apropos')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToPartner = () => {
+    document.querySelector('#partner')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -52,16 +52,15 @@ export const HeroSection = () => {
             >
               Découvrir mes services
             </button>
-
-            <Link to="/partenaire">
-            <button 
-            className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
+            
+            <button
+              onClick={scrollToPartner}
+              className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              Devenire partenaire de BT3.0
+              Devenir partenaire de BT3.0
             </button>
-            </Link>
-
           </div>
+          
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
