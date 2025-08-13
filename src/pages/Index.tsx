@@ -62,13 +62,13 @@ const Index = () => {
           <TradingAlgoSection />
         </section>
 
-        <section id="partner" data-animate className={`transition-all duration-800 delay-250 ${isVisible.partner ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{
+        <section id="partner" data-animate className={`transition-all duration-800 delay-250 ${isVisible.partner ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={
             background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent)',
             width: '40%',
             height: '100%',
             animation: 'light-sweep 8s ease-in-out infinite',
             transform: 'skewX(-15deg)',
-          }}>
+          }>
           <PartnerCTA />
         </section>
 
