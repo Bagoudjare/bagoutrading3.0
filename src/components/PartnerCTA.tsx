@@ -11,7 +11,7 @@ export const PartnerCTA = () => {
             Deviens Partenaire de Notre Système
           </h2>
           <p className="text-slate-300 mt-3">
-            Rejoins notre programme partenaire et gagne avec nous grâce à l'algorithme SEI.
+            Rejoins notre programme partenaire et gagne avec nous grâce au Système BT3.0.
           </p>
         </header>
 
