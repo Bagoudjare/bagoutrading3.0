@@ -28,6 +28,7 @@ export const ContactSection = () => {
   };
 
   const socialLinks = [
+    { name: "Facebook", icon: "🇫", url: "https://www.facebook.com/profile.php?id=61578864823885", color: "from-white-400 to-white-600" },
     { name: "Telegram", icon: "💬", url: "https://t.me/+wKNlPbDMuldmMmQ0", color: "from-blue-400 to-blue-600" },
     { name: "WhatsApp", icon: "📱", url: "https://wa.me/+22898740835", color: "from-green-400 to-green-600" },
     { name: "YouTube", icon: "📺", url: "https://www.youtube.com/@bagoudjaretrading", color: "from-red-400 to-red-600" }
