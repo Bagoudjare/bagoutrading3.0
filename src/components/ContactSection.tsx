@@ -58,10 +58,10 @@ export const ContactSection = () => {
   };
 
   const socialLinks = [
-    { name: "Facebook", icon: "📘", url: "#", color: "from-blue-600 to-blue-800" },
-    { name: "Telegram", icon: "💬", url: "#", color: "from-blue-400 to-blue-600" },
-    { name: "WhatsApp", icon: "📱", url: "#", color: "from-green-400 to-green-600" },
-    { name: "YouTube", icon: "📺", url: "#", color: "from-red-400 to-red-600" }
+    { name: "Facebook", icon: "📘", url: "https://www.facebook.com/profile.php?id=61578864823885", color: "from-blue-600 to-blue-800" },
+    { name: "Telegram", icon: "💬", url: "https://t.me/+wKNlPbDMuldmMmQ0", color: "from-blue-400 to-blue-600" },
+    { name: "WhatsApp", icon: "📱", url: "https://wa.me/+22898740835", color: "from-green-400 to-green-600" },
+    { name: "YouTube", icon: "📺", url: "https://www.youtube.com/@bagoudjaretrading", color: "from-red-400 to-red-600" }
   ];
 
   return (
@@ -161,7 +161,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Email</h4>
-                    <p className="text-gray-300">contact@tradingpro.com</p>
+                    <p className="text-gray-300">aiglestrengthtrading@gmail.com</p>
                   </div>
                 </div>
 
@@ -171,7 +171,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Téléphone</h4>
-                    <p className="text-gray-300">+33 6 12 34 56 78</p>
+                    <p className="text-gray-300">+228 98 74 08 35</p>
                   </div>
                 </div>
 
@@ -181,7 +181,7 @@ export const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-white font-semibold">Localisation</h4>
-                    <p className="text-gray-300">Paris, France</p>
+                    <p className="text-gray-300">Pya, Togo</p>
                   </div>
                 </div>
               </div>
@@ -191,7 +191,7 @@ export const ContactSection = () => {
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
               <h3 className="text-2xl font-bold text-white mb-6">Suivez-moi</h3>
               
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-3 gap-4">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
