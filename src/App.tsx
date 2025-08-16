@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Partenaire from "./pages/Partenaire";
-import PartenaireAvantages from "./pages/PartenaireAvantages";
 import PartenaireInscription from "./pages/PartenaireInscription";
 import { RefTracker } from "./components/RefTracker";
 
@@ -22,9 +21,8 @@ const App = () => (
           <RefTracker />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/partenaire" element={<Partenaire />} />
-            <Route path="/partenaire" element={<Partenaire />} />
-            <Route path="/partenaire-inscription" element={<PartenaireInscription />} />
+            {/* <Route path="/partenaire" element={<Partenaire />} />
+            <Route path="/partenaire-inscription" element={<PartenaireInscription />} /> */}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
