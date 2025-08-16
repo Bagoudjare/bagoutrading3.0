@@ -286,7 +286,7 @@ export default function PartenaireInscription() {
               Des questions ? Notre équipe partenaire est là pour vous aider
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/partenaire-avantages">
+              <Link to="/partenaire">
                 <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
                   ← Retour aux avantages
                 </Button>

@@ -10,7 +10,7 @@ export default function PartenaireAvantages() {
   const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire`, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"> 
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
 
       {/* Navigation */}
       <nav className="absolute top-6 left-6 z-50">
@@ -42,30 +42,58 @@ export default function PartenaireAvantages() {
                 Rejoindre maintenant
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
-              Voir la démo
-            </Button>
           </div>
         </header>
 
-        {/* Avantages principaux */}
+        {/* Pourquoi nous cherchons des partenaires */}
         <section className="mb-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 border-green-600/50 text-center">
-              <CardContent className="pt-8 pb-8">
-                <div className="text-5xl mb-4">💸</div>
-                <div className="text-4xl font-bold text-white mb-2">50%</div>
-                <p className="text-green-300 text-lg font-semibold mb-2">Réduction exclusive</p>
-                <p className="text-slate-300">Seulement 349,99 $ au lieu de 699,99 $</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Pourquoi nous recherchons des partenaires ?</h2>
+            <p className="text-slate-300 text-lg max-w-4xl mx-auto leading-relaxed">
+              Forte de plusieurs années d'expérience dans le développement de systèmes de trading automatisés et de stratégies d'investissement performantes, notre équipe a décidé d'élargir son impact en s'associant avec des partenaires partageant notre vision.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="bg-slate-900/60 border-blue-600/40 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🤝</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">Partage d'expertise</h3>
+                  <p className="text-slate-300 text-sm">
+                    Notre expérience de plus de 5 ans en trading algorithmique nous a permis de développer des stratégies uniques que nous souhaitons partager.
+                  </p>
+                </div>
               </CardContent>
             </Card>
-            
-            <Card className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 border-blue-600/50 text-center">
-              <CardContent className="pt-8 pb-8">
-                <div className="text-5xl mb-4">🎯</div>
-                <div className="text-4xl font-bold text-white mb-2">29%</div>
-                <p className="text-blue-300 text-lg font-semibold mb-2">Commission par vente</p>
-                <p className="text-slate-300">100 $ par client que vous apportez</p>
+
+            <Card className="bg-slate-900/60 border-purple-600/40 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🌍</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">Expansion mondiale</h3>
+                  <p className="text-slate-300 text-sm">
+                    Nous voulons démocratiser l'accès au trading automatisé et toucher une audience internationale grâce à des partenaires locaux.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-slate-900/60 border-green-600/40 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">💡</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">Innovation continue</h3>
+                  <p className="text-slate-300 text-sm">
+                    Nous améliorons constamment nos algorithmes et leurs nos performances. 
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -139,50 +167,88 @@ export default function PartenaireAvantages() {
 
         {/* Pourquoi devenir partenaire */}
         <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Pourquoi devenir partenaire ?</h2>
-            <p className="text-slate-300 text-lg">Des arguments clairs pour rejoindre notre communauté</p>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">Pourquoi devenir partenaire ?</h2>
+            <p className="text-slate-300 text-lg max-w-2xl mx-auto">
+              Découvrez tous les avantages qui font de notre programme partenaire une opportunité unique
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 border-green-600/50 text-center">
-              <CardHeader>
-                <div className="text-5xl mb-4">💰</div>
-                <CardTitle className="text-white text-xl">Tarif Exclusif</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-300 mb-4">
-                  Profitez de 50% de réduction sur BT3.0. Un investissement qui se rentabilise rapidement.
-                </p>
-                <Badge className="bg-green-600">349,99 $ seulement</Badge>
-              </CardContent>
-            </Card>
+          <div className="space-y-12">
+            {/* Row 1 - Tarif & Commission */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-xl blur-xl group-hover:blur-lg transition-all duration-300"></div>
+                <Card className="relative bg-slate-900/80 border-green-600/40 backdrop-blur-sm hover:border-green-500/60 transition-all duration-300">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="p-3 bg-green-600/20 rounded-xl">
+                        <div className="text-4xl">💰</div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-white mb-3">Tarif Exclusif</h3>
+                        <p className="text-slate-300 mb-4 leading-relaxed">
+                          Profitez de 50% de réduction sur BT3.0. Un investissement qui se rentabilise rapidement grâce à notre système performant.
+                        </p>
+                        <div className="flex items-center gap-4">
+                          <Badge className="bg-green-600 text-white px-4 py-2 text-lg">349,99 $ seulement</Badge>
+                          <span className="text-slate-400 line-through text-sm">699,99 $</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-            <Card className="bg-gradient-to-br from-blue-900/40 to-purple-900/40 border-blue-600/50 text-center">
-              <CardHeader>
-                <div className="text-5xl mb-4">📈</div>
-                <CardTitle className="text-white text-xl">Commission Attractive</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-300 mb-4">
-                  Gagnez 100$ par vente avec 29% de commission. Revenus récurrents assurés.
-                </p>
-                <Badge className="bg-blue-600">100$/vente</Badge>
-              </CardContent>
-            </Card>
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl blur-xl group-hover:blur-lg transition-all duration-300"></div>
+                <Card className="relative bg-slate-900/80 border-blue-600/40 backdrop-blur-sm hover:border-blue-500/60 transition-all duration-300">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="p-3 bg-blue-600/20 rounded-xl">
+                        <div className="text-4xl">📈</div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-white mb-3">Commission Attractive</h3>
+                        <p className="text-slate-300 mb-4 leading-relaxed">
+                          Gagnez 100$ par vente avec 29% de commission. Créez une source de revenus récurrents et évolutive.
+                        </p>
+                        <div className="flex items-center gap-4">
+                          <Badge className="bg-blue-600 text-white px-4 py-2 text-lg">100$/vente</Badge>
+                          <span className="text-blue-300 text-sm font-medium">29% de commission</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-purple-600/50 text-center">
-              <CardHeader>
-                <div className="text-5xl mb-4">👥</div>
-                <CardTitle className="text-white text-xl">Communauté VIP</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-slate-300 mb-4">
-                  Rejoignez une communauté exclusive de partenaires avec support dédié.
-                </p>
-                <Badge className="bg-purple-600">Support 24/7</Badge>
-              </CardContent>
-            </Card>
+            {/* Row 2 - Communauté & Support */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-xl blur-xl group-hover:blur-lg transition-all duration-300"></div>
+                <Card className="relative bg-slate-900/80 border-purple-600/40 backdrop-blur-sm hover:border-purple-500/60 transition-all duration-300">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="p-3 bg-purple-600/20 rounded-xl">
+                        <div className="text-4xl">👥</div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-white mb-3">Communauté VIP</h3>
+                        <p className="text-slate-300 mb-4 leading-relaxed">
+                          Rejoignez une communauté exclusive de partenaires performants avec accès à des ressources privilégiées.
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          <Badge className="bg-purple-600 text-white">Support dédié</Badge>
+                          <Badge variant="outline" className="border-purple-600/50 text-purple-300">Événements privés</Badge>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -193,59 +259,74 @@ export default function PartenaireAvantages() {
             <p className="text-slate-300 text-lg">Tous les profils avec une audience intéressée par la finance</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {[
               {
                 icon: "🎥",
                 title: "Créateurs de contenu",
-                description: "YouTubers, TikTokers, Influenceurs",
-                audience: "10K+ abonnés"
+                description: "YouTubers, TikTokers, Influenceurs partageant du contenu finance",
+                minAudience: "++ abonnés",
+                engagement: "Taux d'engagement élevé"
               },
               {
                 icon: "📊",
-                title: "Experts finance",
-                description: "Traders, Analystes, Conseillers",
-                audience: "Communauté engagée"
+                title: "Tradeurs",
+                description: "Traders expérimentés, analystes financiers, conseillers",
+                minAudience: "Communauté active",
+                engagement: "Expertise reconnue"
               },
               {
                 icon: "💻",
                 title: "Entrepreneurs web",
-                description: "Bloggers, Marketeurs, Affiliés",
-                audience: "Traffic qualifié"
+                description: "Bloggers finance, marketeurs digitaux, affiliés",
+                minAudience: "Traffic qualifié",
+                engagement: "Conversion optimisée"
               },
               {
                 icon: "🎓",
-                title: "Formateurs",
-                description: "Coachs, Mentors, Éducateurs",
-                audience: "Élèves actifs"
-              },
-              {
-                icon: "📱",
-                title: "Community managers",
-                description: "Gestionnaires réseaux sociaux",
-                audience: "Engagement élevé"
-              },
-              {
-                icon: "🤝",
-                title: "Réseauteurs",
-                description: "Vendeurs, Commerciaux",
-                audience: "Réseau personnel"
+                title: "Formateurs & Coachs",
+                description: "Mentors trading, éducateurs financiers, coachs",
+                minAudience: "Élèves engagés",
+                engagement: "Relation de confiance"
               }
+              // {
+              //   icon: "📱",
+              //   title: "Community managers",
+              //   description: "Gestionnaires de communautés finance et crypto",
+              //   minAudience: "Groupes actifs",
+              //   engagement: "Modération qualité"
+              // },
+              // {
+              //   icon: "🤝",
+              //   title: "Professionnels réseau",
+              //   description: "Commerciaux finance, vendeurs B2B, networkers",
+              //   minAudience: "Réseau qualifié",
+              //   engagement: "Relations établies"
+              // }
             ].map((profile, index) => (
               <Card key={index} className="bg-slate-900/50 border-slate-700/50 hover:bg-slate-800/50 transition-all duration-300 group">
-                <CardHeader className="text-center">
-                  <div className="text-4xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                    {profile.icon}
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      {profile.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white text-lg font-semibold mb-2">{profile.title}</h3>
+                      <p className="text-slate-300 text-sm mb-4 leading-relaxed">
+                        {profile.description}
+                      </p>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                          <span className="text-blue-300 text-sm font-medium">{profile.minAudience}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                          <span className="text-green-300 text-sm font-medium">{profile.engagement}</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <CardTitle className="text-white text-lg">{profile.title}</CardTitle>
-                  <Badge variant="outline" className="text-blue-300 border-blue-300/50">
-                    {profile.audience}
-                  </Badge>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-slate-300 text-center">
-                    {profile.description}
-                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -297,42 +378,81 @@ export default function PartenaireAvantages() {
         </section>
 
         {/* CTA Final */}
-        <section className="text-center">
-          <Card className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 border-slate-700/50 max-w-4xl mx-auto">
-            <CardHeader>
-              <CardTitle className="text-white text-3xl mb-4">
-                Prêt à transformer votre influence en revenus ?
-              </CardTitle>
-              <CardDescription className="text-slate-300 text-lg">
-                Rejoignez les centaines de partenaires qui génèrent déjà des revenus avec SEI
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <section className="text-center relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 via-purple-600/10 to-blue-600/10 rounded-3xl blur-3xl"></div>
+          
+          <Card className="relative bg-gradient-to-br from-slate-900/90 to-slate-800/90 border-blue-600/40 backdrop-blur-xl max-w-5xl mx-auto overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-purple-600/5"></div>
+            
+            <CardContent className="relative p-12">
+              <div className="text-center mb-10">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                  Prêt à transformer votre 
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> influence</span>
+                  <br />en revenus ?
+                </h2>
+                <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                  Rejoignez une communauté exclusive de partenaires qui génèrent déjà des revenus significatifs avec BT3.0
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">💰</span>
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-2">100€/vente</div>
+                  <p className="text-slate-400 text-sm">Commission garantie</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">⚡</span>
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-2">24h</div>
+                  <p className="text-slate-400 text-sm">Activation rapide</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-600/20 to-pink-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🎯</span>
+                  </div>
+                  <div className="text-2xl font-bold text-white mb-2">500+</div>
+                  <p className="text-slate-400 text-sm">Partenaires actifs</p>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center mb-10">
                 <Link to="/partenaire-inscription">
-                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4">
+                  <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-10 py-4 shadow-xl hover:shadow-2xl hover:shadow-blue-600/25 transition-all duration-300">
                     Rejoindre maintenant
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
-                  Télécharger la brochure
+                <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800/50 hover:border-slate-500 transition-all duration-300">
+                  Me contacter sur whatsapp
                 </Button>
               </div>
               
-              <Separator className="my-6 bg-slate-700" />
+              <Separator className="my-8 bg-gradient-to-r from-transparent via-slate-600 to-transparent" />
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-slate-400">
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-400">✓</span>
-                  Inscription gratuite
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                <div className="flex items-center justify-center gap-3 p-4 bg-slate-800/30 rounded-xl">
+                  <div className="w-8 h-8 bg-green-600/20 rounded-full flex items-center justify-center">
+                    <span className="text-green-400 text-lg">✓</span>
+                  </div>
+                  <span className="text-slate-300 font-medium">Inscription gratuite</span>
                 </div>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-400">✓</span>
-                  Pas d'engagement
+                <div className="flex items-center justify-center gap-3 p-4 bg-slate-800/30 rounded-xl">
+                  <div className="w-8 h-8 bg-blue-600/20 rounded-full flex items-center justify-center">
+                    <span className="text-blue-400 text-lg">✓</span>
+                  </div>
+                  <span className="text-slate-300 font-medium">Aucun engagement</span>
                 </div>
-                <div className="flex items-center justify-center gap-2">
-                  <span className="text-green-400">✓</span>
-                  Support 24/7
+                <div className="flex items-center justify-center gap-3 p-4 bg-slate-800/30 rounded-xl">
+                  <div className="w-8 h-8 bg-purple-600/20 rounded-full flex items-center justify-center">
+                    <span className="text-purple-400 text-lg">✓</span>
+                  </div>
+                  <span className="text-slate-300 font-medium">Acces aux avantages</span>
                 </div>
               </div>
             </CardContent>
