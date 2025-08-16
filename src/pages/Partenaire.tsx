@@ -10,16 +10,7 @@ export default function PartenaireAvantages() {
   const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire-avantages`, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-      <Helmet>
-        <title>Programme Partenaire — Commissions exclusives et avantages premium</title>
-        <meta name="description" content="Rejoignez notre programme partenaire SEI et bénéficiez de commissions attractives, support dédié, et accès privilégié à notre système de trading automatisé." />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="Programme Partenaire SEI — Commissions exclusives" />
-        <meta property="og:description" content="Découvrez comment générer des revenus avec notre programme partenaire SEI." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={canonicalUrl} />
-      </Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"> 
 
       {/* Navigation */}
       <nav className="absolute top-6 left-6 z-50">
