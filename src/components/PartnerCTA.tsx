@@ -21,7 +21,7 @@ export const PartnerCTA = () => {
               Je deviens partenaire
             </Button>
           </Link>
-          <Link to="#apropos" className="inline-flex">
+          <Link to="/partenaire" className="inline-flex">
             <Button variant="outline">En savoir plus</Button>
           </Link>
         </div>

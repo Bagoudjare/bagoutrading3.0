@@ -195,7 +195,7 @@ export const ContactSection = () => {
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
-                    href={social.url}
+                    href={() => openUrl(social.url)}
                     className={`bg-gradient-to-r ${social.color} p-4 rounded-lg text-white font-semibold hover:transform hover:scale-105 transition-all duration-300 text-center group`}
                   >
                     <div className="text-2xl mb-2 group-hover:animate-bounce">{social.icon}</div>
