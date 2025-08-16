@@ -2,7 +2,6 @@ import { useEffect, useMemo, useState } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { useToast } from "@/hooks/use-toast";
 
@@ -108,37 +107,6 @@ export default function PartenaireInscription() {
     }
   };
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Dois-je avoir acheté l'algorithme pour devenir partenaire ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Non, ce n'est pas obligatoire, mais tu bénéficies d'une réduction spéciale en tant que partenaire."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Combien puis-je gagner ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Il n'y a pas de limite. Tu gagnes un pourcentage à chaque vente générée par ton lien."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Y a-t-il un contrat ou un engagement ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aucun engagement. Tu peux rejoindre, tester, et arrêter quand tu veux."
-        }
-      }
-    ]
-  };
-
   useEffect(() => {
     // Pré-remplir si déjà inscrit
     const savedId = localStorage.getItem("affiliate:partnerId");
@@ -157,7 +125,7 @@ export default function PartenaireInscription() {
             Rejoindre le Programme Partenaire
           </h1>
           <p className="text-xl text-slate-300 mb-8">
-            Obtenez votre lien d'affiliation et commencez à gagner immédiatement
+            Obtenez votre lien d'affiliation et commencez à partager la solution au autres.
           </p>
         </header>
 

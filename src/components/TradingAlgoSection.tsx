@@ -1,7 +1,6 @@
 
 import { TrendingUp, BarChart3 } from "lucide-react";
 import sys from "@/assets/imgs/BT3.0.jpg";
-import robo from "@/assets/imgs/viking.png";
 
 
 export const TradingAlgoSection = () => {

@@ -7,7 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 
 export default function PartenaireAvantages() {
-  const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire-avantages`, []);
+  const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire`, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800"> 
