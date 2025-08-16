@@ -337,12 +337,12 @@ export default function PartenaireAvantages() {
         {/* FAQ */}
         <section className="mb-20">
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Questions fréquentes</h2>
-          <Accordion type="single" collapsible className="bg-slate-900/40 border border-slate-600/40 rounded-xl">
+          <Accordion type="single" collapsible className="max-w-4xl mx-auto space-y-4 bg-slate-900/50 border-slate-700/50 rounded-xl">
             <AccordionItem value="q1" className="border-slate-700/50">
               <AccordionTrigger className="text-white hover:text-blue-300 px-6">
                 Est-ce que je dois avoir déjà acheté l'algorithme pour devenir partenaire ?
               </AccordionTrigger>
-              <AccordionContent className="text-green-400 text-xl px-6 pb-6">
+              <AccordionContent className="text-slate-300 px-6 pb-6">
                 Non, ce n'est pas obligatoire, mais tu bénéficies d'une réduction spéciale en tant que partenaire. 
                 Cela peut t'aider à mieux comprendre le produit pour le recommander efficacement.
               </AccordionContent>
@@ -352,9 +352,8 @@ export default function PartenaireAvantages() {
               <AccordionTrigger className="text-white hover:text-blue-300 px-6">
                 Combien puis-je gagner ?
               </AccordionTrigger>
-              <AccordionContent className="text-green-400 text-xl px-6 pb-6">
-                Il n'y a pas de limite. Tu gagnes un pourcentage à chaque vente générée par ton lien. 
-                Plus tu recommandes, plus tu gagnes. Certains partenaires génèrent plusieurs milliers d'euros par mois.
+              <AccordionContent className="text-slate-300 px-6 pb-6">
+                Vous recevez 29% de commission soit 100$ par vente générée via votre lien d'affiliation. Les paiements sont effectués mensuellement.
               </AccordionContent>
             </AccordionItem>
             
@@ -362,7 +361,7 @@ export default function PartenaireAvantages() {
               <AccordionTrigger className="text-white hover:text-blue-300 px-6">
                 Y a-t-il un contrat ou un engagement ?
               </AccordionTrigger>
-              <AccordionContent className="text-green-400 text-xl px-6 pb-6">
+              <AccordionContent className="text-slate-300 px-6 pb-6">
                 Aucun engagement. Tu peux rejoindre, tester, et arrêter quand tu veux. 
                 Le programme est totalement gratuit et sans contrainte.
               </AccordionContent>
@@ -370,57 +369,13 @@ export default function PartenaireAvantages() {
 
             <AccordionItem value="q4" className="border-slate-700/50">
               <AccordionTrigger className="text-white hover:text-blue-300 px-6">
-                Comment suis-je payé ?
+                Quand puis-je commencer à promouvoir ?
               </AccordionTrigger>
-              <AccordionContent className="text-green-400 text-xl px-6 pb-6">
-                Les paiements sont effectués mensuellement ou hebdomadairement selon ton volume. 
-                Paiement dès que tu atteins le seuil minimum. Plusieurs méthodes disponibles.
+              <AccordionContent className="text-slate-300 px-6 pb-6">
+                Immédiatement après inscription ! Vous recevez votre lien d'affiliation et vos outils marketing instantanément.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </section>
-
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Questions Fréquentes</h2>
-            <p className="text-slate-300 text-lg">Tout ce que vous devez savoir</p>
-          </div>
-
-          <div className="max-w-4xl mx-auto space-y-4">
-            {[
-              {
-                question: "Dois-je acheter BT3.0 pour devenir partenaire ?",
-                answer: "Non, ce n'est pas obligatoire. Cependant, vous bénéficiez de 50% de réduction en tant que partenaire, ce qui peut vous aider à mieux comprendre le produit."
-              },
-              {
-                question: "Comment sont calculées les commissions ?",
-                answer: "Vous recevez 29% de commission soit 100$ par vente générée via votre lien d'affiliation. Les paiements sont effectués mensuellement."
-              },
-              {
-                question: "Y a-t-il des engagements ou contrats ?",
-                answer: "Aucun engagement requis. Le programme est gratuit et vous pouvez vous désinscrire à tout moment."
-              },
-              {
-                question: "Quand puis-je commencer à promouvoir ?",
-                answer: "Immédiatement après inscription ! Vous recevez votre lien d'affiliation et vos outils marketing instantanément."
-              }
-            ].map((faq, index) => (
-              <Card key={index} className="bg-slate-900/50 border-slate-700/50">
-                <CardHeader>
-                  <CardTitle className="text-white text-lg flex items-start gap-3">
-                    <span className="text-blue-400 text-xl">Q:</span>
-                    {faq.question}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-slate-300 flex items-start gap-3">
-                    <span className="text-green-400 text-xl">R:</span>
-                    {faq.answer}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
         </section>
 
         {/* CTA Final */}
