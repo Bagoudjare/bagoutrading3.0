@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Footer } from "@/components/Footer";
@@ -20,26 +19,12 @@ export default function PartenaireInscription() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const affiliateLink = useMemo(() => {
-    if (!partnerId) return "";
-    return `${window.location.origin}/?ref=${partnerId}`;
-  }, [partnerId]);
-
   const whatsappLink = useMemo(() => {
     if (!partnerId || !name) return "";
     const message = encodeURIComponent(`Je viens de la part de ${name}`);
-    const phoneNumber = "33123456789"; // Remplace par ton vrai numéro
+    const phoneNumber = "+22898740835"; // Remplace par ton vrai numéro
     return `https://wa.me/${phoneNumber}?text=${message}`;
   }, [partnerId, name]);
-
-  const clicks = useMemo(() => {
-    if (!partnerId) return 0;
-    const key = `affiliate:clicks:${partnerId}`;
-    const raw = localStorage.getItem(key);
-    return raw ? parseInt(raw, 10) || 0 : 0;
-  }, [partnerId]);
-
-  const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire-inscription`, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -91,12 +76,12 @@ export default function PartenaireInscription() {
   };
 
   const copyLink = async () => {
-    if (!affiliateLink) return;
+    if (!whatsappLink) return;
     try {
-      await navigator.clipboard.writeText(affiliateLink);
+      await navigator.clipboard.writeText(whatsappLink);
       toast({
         title: "Lien copié !",
-        description: "Ton lien affilié a été copié dans le presse-papiers.",
+        description: "Ton lien a été copié dans le presse-papiers.",
       });
     } catch {
       toast({
@@ -189,7 +174,7 @@ export default function PartenaireInscription() {
                   disabled={isSubmitting}
                 />
                 <p className="text-slate-400 text-sm mt-3 bg-slate-800/30 rounded-lg p-3">
-                  💡 Cette information nous aide à vous fournir les meilleurs outils marketing adaptés à votre audience
+                  💡 Ces informations nous aide à vous fir un suivie des recommandations
                 </p>
               </div>
               
@@ -233,7 +218,7 @@ export default function PartenaireInscription() {
                       Votre lien d'affiliation
                     </h4>
                     <div className="bg-slate-900/60 rounded-lg p-4 mb-4">
-                      <p className="text-slate-300 break-all font-mono text-sm">{affiliateLink}</p>
+                      <p className="text-slate-300 break-all font-mono text-sm">{whatsappLink}</p>
                     </div>
                     <Button 
                       onClick={copyLink}
@@ -243,7 +228,7 @@ export default function PartenaireInscription() {
                     </Button>
                   </div>
                   
-                  <div className="bg-slate-800/60 rounded-xl p-6">
+                  {/* <div className="bg-slate-800/60 rounded-xl p-6">
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <span className="text-purple-400">💬</span>
                       Lien WhatsApp personnalisé
@@ -261,18 +246,7 @@ export default function PartenaireInscription() {
                     >
                       📱 Copier le lien WhatsApp
                     </Button>
-                  </div>
-
-                  <div className="grid md:grid-cols-2 gap-6 pt-4">
-                    <div className="bg-slate-800/60 rounded-xl p-4 text-center">
-                      <div className="text-2xl font-bold text-white">{clicks}</div>
-                      <p className="text-slate-300 text-sm">Clics enregistrés</p>
-                    </div>
-                    <div className="bg-slate-800/60 rounded-xl p-4 text-center">
-                      <div className="text-green-400 font-bold text-lg">● ACTIF</div>
-                      <p className="text-slate-300 text-sm">Statut du compte</p>
-                    </div>
-                  </div>
+                  </div> */}
                 </div>
               </aside>
             )}
@@ -287,7 +261,7 @@ export default function PartenaireInscription() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/partenaire">
-                <Button variant="outline" className="border-slate-600 text-white hover:bg-slate-800">
+                <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
                   ← Retour aux avantages
                 </Button>
               </Link>

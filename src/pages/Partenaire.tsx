@@ -429,7 +429,7 @@ export default function PartenaireAvantages() {
                     Rejoindre maintenant
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="border-slate-600 text-white hover:bg-slate-800/50 hover:border-slate-500 transition-all duration-300">
+                <Button size="lg" variant="outline" className="border-slate-600 text-slate-800/50 hover:bg-slate-800/50 hover:border-slate-500 transition-all duration-300">
                   Me contacter sur whatsapp
                 </Button>
               </div>
