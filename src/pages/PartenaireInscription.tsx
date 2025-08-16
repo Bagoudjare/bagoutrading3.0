@@ -149,7 +149,7 @@ export default function PartenaireInscription() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
       <Helmet>
-        <title>Inscription Programme Partenaire SEI — Formulaire partenaire</title>
+        <title>Inscription Programme Partenaire — Formulaire partenaire</title>
         <meta name="description" content="Inscris-toi gratuitement au programme partenaire SEI et obtiens ton lien affilié instantanément. Commence à gagner dès aujourd'hui." />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
