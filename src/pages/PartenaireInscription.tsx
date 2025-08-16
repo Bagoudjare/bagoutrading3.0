@@ -13,6 +13,7 @@ function slugify(input: string) {
 
 export default function PartenaireInscription() {
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [channel, setChannel] = useState("");
   const [partnerId, setPartnerId] = useState<string | null>(null);
@@ -56,6 +57,7 @@ export default function PartenaireInscription() {
         localStorage.setItem("affiliate:partnerId", id);
         localStorage.setItem("affiliate:partnerName", name);
         localStorage.setItem("affiliate:partnerEmail", email);
+        localStorage.setItem("affiliate:partnerPhone", phone);
 
         toast({
           title: "Inscription réussie !",
@@ -154,6 +156,22 @@ export default function PartenaireInscription() {
                     placeholder="votre@email.com" 
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)} 
+                    required 
+                    disabled={isSubmitting}
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-white mb-3 text-lg font-semibold flex items-center gap-2" htmlFor="email">
+                    <span className="text-purple-400"></span>
+                    Numero de télephone *
+                  </label>
+                  <input 
+                    id="phone"
+                    className="w-full px-6 py-4 bg-slate-800/60 border border-slate-600/60 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 text-lg transition-all duration-300 focus:bg-slate-800/80" 
+                    placeholder="+228 00 00 00 00" 
+                    value={hone} 
+                    onChange={(e) => setPhone(e.target.value)} 
                     required 
                     disabled={isSubmitting}
                   />
