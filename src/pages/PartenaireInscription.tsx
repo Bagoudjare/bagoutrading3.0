@@ -171,7 +171,7 @@ export default function PartenaireInscription() {
                     id="phone"
                     className="w-full px-6 py-4 bg-slate-800/60 border border-slate-600/60 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 text-lg transition-all duration-300 focus:bg-slate-800/80" 
                     placeholder="+228 00 00 00 00" 
-                    value={hone} 
+                    value={phone} 
                     onChange={(e) => setPhone(e.target.value)} 
                     required 
                     disabled={isSubmitting}
@@ -193,7 +193,7 @@ export default function PartenaireInscription() {
                   disabled={isSubmitting}
                 />
                 <p className="text-slate-400 text-sm mt-3 bg-slate-800/30 rounded-lg p-3">
-                  💡 Ces informations nous aide à vous fir un suivie des recommandations
+                  💡 Ces informations nous aide à fair un suivie des recommandations
                 </p>
               </div>
               
