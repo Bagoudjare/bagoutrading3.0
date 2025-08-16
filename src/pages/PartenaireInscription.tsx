@@ -41,6 +41,7 @@ export default function PartenaireInscription() {
         body: JSON.stringify({
           name,
           email,
+          phone,
           channel,
           timestamp: new Date().toISOString(),
         }),
