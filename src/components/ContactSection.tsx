@@ -64,6 +64,10 @@ export const ContactSection = () => {
     { name: "YouTube", icon: "📺", url: "https://www.youtube.com/@bagoudjaretrading", color: "from-red-400 to-red-600" }
   ];
 
+  const openUrl = (url: string) => {
+    window.open(`${url}`, '_blank');
+  };
+
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-6xl mx-auto">

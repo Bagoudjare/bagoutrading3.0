@@ -8,6 +8,7 @@ import NotFound from "./pages/NotFound";
 import Partenaire from "./pages/Partenaire";
 import PartenaireInscription from "./pages/PartenaireInscription";
 import { RefTracker } from "./components/RefTracker";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <RefTracker />
           <Routes>
             <Route path="/" element={<Index />} />

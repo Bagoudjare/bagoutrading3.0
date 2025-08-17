@@ -31,7 +31,7 @@ export default function PartenaireAvantages() {
           </Badge>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Devenez Partenaire de 
-            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">BT3.0</span>
+            <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> BT3.0</span>
           </h1>
           <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto leading-relaxed">
             Rejoignez l'aventure et profitez d'avantages exclusifs
