@@ -7,7 +7,7 @@ export const Videos = () => {
       title: "Guide Officiel du Système BT3.0 : La Solution Recommandée pour un Trading Rentable",
       description: "Guide d'utilisation du Système BT3.0 meilleure solution recommander pour être rentable en trading ",
       videoId: "hXLgJimCO-o", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/an_webp/hXLgJimCO-o/mqdefault_6s.webp",
+      thumbnail: "https://i.ytimg.com/vi/HgFSb8pFor8/hqdefault.jpg",
       duration: "1:43:26",
       category: "Presentation"
     },
@@ -23,7 +23,7 @@ export const Videos = () => {
       title: "+100% Par trade gagnant et + 400% par mois (meilleur stratégie de Trading Rentable) BT3.0",
       description: "Dans cette vidéo je te présente ma stratégie de Trading Rentable qui est semi-automatique et qui te permettra de gagner de l'argent en trading sur le Forex et les indices synthétiques.",
       videoId: "3UEKHASb8l0", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/an_webp/3UEKHASb8l0/mqdefault_6s.webp",
+      thumbnail: "https://i.ytimg.com/vi/3UEKHASb8l0/hqdefault.jpg",
       duration: "17:38",
       category: "Formation"
     },
