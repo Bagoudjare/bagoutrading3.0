@@ -4,27 +4,27 @@ import { Youtube, Play, Eye } from "lucide-react";
 export const Videos = () => {
   const videos = [
     {
-      title: "Meilleurs robot Forex 100% Automatique",
-      description: "Découvrez le Meilleurs robot Forex 100% Automatique, Le robot qui peut agrandir un compte de 100$ a 50 000$.",
-      videoId: "qzqHlfB4dBo", // YouTube video ID
-      thumbnail: "https://img.youtube.com/vi/qzqHlfB4dBo/hqdefault.jpg ",
-      duration: "36:43",
+      title: "Guide Officiel du Système BT3.0 : La Solution Recommandée pour un Trading Rentable",
+      description: "Guide d'utilisation du Système BT3.0 meilleure solution recommander pour être rentable en trading ",
+      videoId: "hXLgJimCO-o", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/an_webp/hXLgJimCO-o/mqdefault_6s.webp?du=3000&sqp=CPaljsUG&rs=AOn4CLDeXulv_5fnEBY8TXwQQiTRdhLV2w",
+      duration: "1:43:26",
       category: "Presentation"
     },
     {
-      title: "Robot de trading fiable scalping multi time frame M1 et M15",
-      description: "je te présente mon Robot de trading fiable SNIPER 3.0 EA en mode scalping en utilisant l'analyse multi time frame M1 ET M15.",
-      videoId: "HErlF5DnpoU", // YouTube video ID
-      thumbnail: "https://img.youtube.com/vi/HErlF5DnpoU/hqdefault.jpg",
-      duration: "06:52",
+      title: "BT3.0 : Trading 100% Automatique avec la Stratégie CRT & CIT",
+      description: "Stratégie de CRT et CIT automatisé, BT3.0 trade 100% automatique selon CRT et CIT analyse 98% Win ",
+      videoId: "HgFSb8pFor8", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/HgFSb8pFor8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzc3hn_nIHhiJcjklJsxiG5erdsw",
+      duration: "20:43",
       category: "Presentation"
     },
     {
-      title: "Formation en Trading , Trading Semi-automatique",
+      title: "+100% Par trade gagnant et + 400% par mois (meilleur stratégie de Trading Rentable) BT3.0",
       description: "Dans cette vidéo je te présente ma stratégie de Trading Rentable qui est semi-automatique et qui te permettra de gagner de l'argent en trading sur le Forex et les indices synthétiques.",
-      videoId: "bNtLTIBYQqI", // YouTube video ID
-      thumbnail: "https://img.youtube.com/vi/bNtLTIBYQqI/hqdefault.jpg",
-      duration: "21:36",
+      videoId: "3UEKHASb8l0", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/an_webp/3UEKHASb8l0/mqdefault_6s.webp?du=3000&sqp=CL-fjsUG&rs=AOn4CLCOJP8yv6GlqMWY91lBVBkPZ31-ow",
+      duration: "17:38",
       category: "Formation"
     },
     {
