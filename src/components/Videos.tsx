@@ -12,11 +12,11 @@ export const Videos = () => {
       category: "Presentation"
     },
     {
-      title: "BT3.0 : Trading 100% Automatique avec la Stratégie CRT & CIT",
-      description: "Stratégie de CRT et CIT automatisé, BT3.0 trade 100% automatique selon CRT et CIT analyse 98% Win ",
-      videoId: "HgFSb8pFor8", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/HgFSb8pFor8/hqdefault.jpg",
-      duration: "20:43",
+      title: "Setup Rentable : Transformez 25 $ en 450 $ avec une Stratégie Facile",
+      description: "Tu peux gagner 450$ sur ce setup avec un investissement de 25$ et moins, une stratégie simple",
+      videoId: "fiBGZtyK200", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/fiBGZtyK200/hqdefault.jpg",
+      duration: "31:10",
       category: "Presentation"
     },
     {
@@ -28,11 +28,11 @@ export const Videos = () => {
       category: "Formation"
     },
     {
-      title: "Formation complète en trading pour débutant",
-      description: "Formation complète en trading pour débutant avec Stratégie de trading Rentable || Gagne en trading| E1",
+      title: "BT3.0 : Trading 100% Automatique avec la Stratégie CRT & CIT",
+      description: "Stratégie de CRT et CIT automatisé, BT3.0 trade 100% automatique selon CRT et CIT analyse 98% Win",
       videoId: "7pac8dXoHJI", // YouTube video ID
-      thumbnail: "https://img.youtube.com/vi/7pac8dXoHJI/hqdefault.jpg",
-      duration: "1:07:57",
+      thumbnail: "https://i.ytimg.com/vi/HgFSb8pFor8/hqdefault.jpg",
+      duration: "20:43",
       category: "Formation"
     }
   ];
