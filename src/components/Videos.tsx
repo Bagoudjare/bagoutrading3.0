@@ -7,7 +7,7 @@ export const Videos = () => {
       title: "Guide Officiel du Système BT3.0 : La Solution Recommandée pour un Trading Rentable",
       description: "Guide d'utilisation du Système BT3.0 meilleure solution recommander pour être rentable en trading ",
       videoId: "hXLgJimCO-o", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/HgFSb8pFor8/hqdefault.jpg",
+      thumbnail: "https://i.ytimg.com/vi/hXLgJimCO-o/hqdefault.jpg",
       duration: "1:43:26",
       category: "Presentation"
     },
