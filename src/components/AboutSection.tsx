@@ -1,6 +1,6 @@
 
 import { TrendingUp, Target, Lightbulb } from "lucide-react";
-import profile from "@/assets/imgs/profiles.jpeg";
+import profile from "@/assets/imgs/profile.png";
 import files from "@/assets/files/Reussir_En_Trading-v1.pdf";
 
 export const AboutSection = () => {
@@ -13,7 +13,7 @@ export const AboutSection = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
         </div>
-
+              
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-10 rounded-xl backdrop-blur-sm border border-slate-600/30">
