@@ -28,12 +28,12 @@ export const Videos = () => {
       category: "Presentation"
     },
     {
-      title: "BT3.0 : Trading 100% Automatique avec la Stratégie CRT & CIT",
-      description: "Stratégie de CRT et CIT automatisé, BT3.0 trade 100% automatique selon CRT et CIT analyse 98% Win",
-      videoId: "HgFSb8pFor8", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/HgFSb8pFor8/hqdefault.jpg",
-      duration: "20:43",
-      category: "Formation"
+      title: "Strategie de trading des spikes crash et boom en M1",
+      description: "Dans cette vidéo, je te dévoile une stratégie puissante et simple à appliquer pour trader efficacement les Spikes sur les indices Crash et Boom en time frame M1 (1 minute).",
+      videoId: "6IqF4N3t2E0", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/6IqF4N3t2E0/hqdefault.jpg",
+      duration: "22:33",
+      category: "Presentation"
     }
   ];
 
