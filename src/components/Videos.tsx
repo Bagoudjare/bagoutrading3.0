@@ -1,7 +1,10 @@
 
-import { Youtube, Play, Eye } from "lucide-react";
+import { Youtube, Play, Eye, X } from "lucide-react";
+import { useState } from "react";
 
 export const Videos = () => {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
   const videos = [
     {
       title: "Guide Officiel du Système BT3.0 : La Solution Recommandée pour un Trading Rentable",
@@ -48,7 +51,11 @@ export const Videos = () => {
   };
 
   const openVideo = (videoId: string) => {
-    window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+    setSelectedVideo(videoId);
+  };
+
+  const closeVideo = () => {
+    setSelectedVideo(null);    
   };
 
   return (
@@ -125,6 +132,30 @@ export const Videos = () => {
           </button>
         </div>
       </div>
+
+            {/* Video Modal */}
+      {selectedVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+          <div className="relative w-full max-w-4xl mx-auto bg-slate-900 rounded-xl overflow-hidden">
+            <button
+              onClick={closeVideo}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            <div className="aspect-video">
+              <iframe
+                src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
+                title="YouTube Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
