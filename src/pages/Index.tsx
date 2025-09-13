@@ -63,34 +63,6 @@ const Index = () => {
         </section>
 
         <section id="partner" data-animate className={`transition-all duration-1000 delay-300 ${isVisible.partner ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-                  {/* Effet de balayage lumineux principal - plus visible */}
-        <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'linear-gradient(120deg, transparent 0%, transparent 35%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 55%, transparent 65%, transparent 100%)',
-            width: '300%',
-            height: '120%',
-            left: '-150%',
-            top: '-10%',
-            animation: 'light-sweep-smooth 6s ease-in-out infinite alternate',
-            transform: 'skewX(-15deg)',
-          }}
-        />
-        
-        {/* Deuxième couche pour effet plus diffus */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-70"
-          style={{
-            background: 'linear-gradient(100deg, transparent 0%, transparent 30%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.2) 60%, transparent 70%, transparent 100%)',
-            width: '250%',
-            height: '110%',
-            left: '-125%',
-            top: '-5%',
-            animation: 'light-sweep-smooth 8s ease-in-out infinite alternate-reverse',
-            transform: 'skewX(10deg)',
-            animationDelay: '1s',
-          }}
-        />
           <PartnerCTA />
         </section>
 
