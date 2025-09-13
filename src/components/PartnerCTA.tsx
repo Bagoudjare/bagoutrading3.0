@@ -13,25 +13,11 @@ export const PartnerCTA = () => {
             height: '120%',
             left: '-150%',
             top: '-10%',
-            animation: 'light-sweep-smooth 2s ease-in-out infinite alternate',
+            animation: 'light-sweep-smooth 3s ease-in-out infinite alternate',
             transform: 'skewX(-15deg)',
           }}
         />
-        
-        {/* Deuxième couche pour effet plus diffus */}
-        <div 
-          className="absolute inset-0 pointer-events-none opacity-70"
-          style={{
-            background: 'linear-gradient(100deg, transparent 0%, transparent 30%, rgba(255,255,255,0.2) 40%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0.2) 60%, transparent 70%, transparent 100%)',
-            width: '250%',
-            height: '110%',
-            left: '-125%',
-            top: '-5%',
-            animation: 'light-sweep-smooth 6s ease-in-out infinite alternate-reverse',
-            transform: 'skewX(10deg)',
-            animationDelay: '1s',
-          }}
-        />
+
       <article className="max-w-6xl mx-auto bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-slate-600/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-xl">
         <header className="mb-6">
           <p className="text-sm text-blue-300 uppercase tracking-widest">Programme partenaire</p>
