@@ -116,14 +116,14 @@
     transform: translateX(-100%) skewX(-15deg);
     opacity: 0;
   }
-  5% {
+  2% {
     opacity: 1;
   }
-  50% {
+  10% {
     transform: translateX(100%) skewX(-15deg);
     opacity: 1;
   }
-  55% {
+  12% {
     opacity: 0;
   }
   100% {
