@@ -9,7 +9,7 @@ export const PartnerCTA = () => {
           className="absolute inset-0 pointer-events-none"
           style={{
             background: 'linear-gradient(120deg, transparent 0%, transparent 35%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 55%, transparent 65%, transparent 100%)',
-            width: '300%',
+            width: '250%',
             height: '100%',
             left: '-150%',
             top: '0%',
