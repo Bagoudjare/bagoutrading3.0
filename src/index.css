@@ -116,14 +116,18 @@
     transform: translateX(-100%) skewX(-15deg);
     opacity: 0;
   }
-  22.2% {
+  2% {
     opacity: 1;
   }
-  24% {
+  30.8% {
     transform: translateX(100%) skewX(-15deg);
     opacity: 1;
   }
-  44.4% {
+  32% {
+    opacity: 1;
+  }
+  61.6% {
+    transform: translateX(-100%) skewX(-15deg);
     opacity: 0;
   }
   100% {
