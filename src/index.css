@@ -109,3 +109,25 @@
     transform: translateX(100%) skewX(-15deg);
   }
 }
+
+/* Animation pour l'effet de lumière défilante */
+@keyframes light-sweep-delayed {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100%) skewX(-15deg);
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+}
