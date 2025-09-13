@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 export const PartnerCTA = () => {
   return (
     <div className="px-4 py-16">
+      <article className="max-w-6xl mx-auto bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-slate-600/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-xl">
               {/* Effet de balayage lumineux principal - plus visible */}
         <div 
           className="absolute inset-0 pointer-events-none"
@@ -17,8 +18,6 @@ export const PartnerCTA = () => {
             transform: 'skewX(-15deg)',
           }}
         />
-
-      <article className="max-w-6xl mx-auto bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-slate-600/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-xl">
         <header className="mb-6">
           <p className="text-sm text-blue-300 uppercase tracking-widest">Programme partenaire</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
