@@ -10,7 +10,7 @@ export const PartnerCTA = () => {
           style={{
             background: 'linear-gradient(120deg, transparent 0%, transparent 35%, rgba(255,255,255,0.4) 45%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.4) 55%, transparent 65%, transparent 100%)',
             width: '300%',
-            height: '120%',
+            height: '100%',
             left: '-150%',
             top: '0%',
             animation: 'light-sweep-smooth 3s ease-in-out infinite alternate',
