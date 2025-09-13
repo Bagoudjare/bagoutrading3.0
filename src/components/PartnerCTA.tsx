@@ -14,7 +14,7 @@ export const PartnerCTA = () => {
             height: '120%',
             left: '-150%',
             top: '-10%',
-            animation: 'light-sweep-delayed 2.6s ease-in-out infinite alternate',
+            animation: 'light-sweep-delayed 2.6s ease-in-out infinite',
             transform: 'skewX(-15deg)',
           }}
         />
