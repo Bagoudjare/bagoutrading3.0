@@ -99,3 +99,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Animation pour l'effet de lumière défilante */
+@keyframes light-sweep-smooth {
+  0% {
+    transform: translateX(-100%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(100%) skewX(-15deg);
+  }
+}
