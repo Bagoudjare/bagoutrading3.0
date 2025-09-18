@@ -1,9 +1,22 @@
 
 import { Youtube, Play, Eye, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 export const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const modalRef = useRef<HTMLDivElement>(null);
+  
+  // Auto-scroll to center the modal when video opens
+  useEffect(() => {
+    if (selectedVideo && modalRef.current) {
+      setTimeout(() => {
+        modalRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      }, 100); // Small delay to ensure modal is rendered
+    }
+  }, [selectedVideo]);
 
   const videos = [
     {
@@ -135,7 +148,10 @@ export const Videos = () => {
 
             {/* Video Modal */}
       {selectedVideo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+        <div 
+          ref={modalRef}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+        >
           <div className="relative w-full max-w-4xl mx-auto bg-slate-900 rounded-xl overflow-hidden">
             <button
               onClick={closeVideo}
