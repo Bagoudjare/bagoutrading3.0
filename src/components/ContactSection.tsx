@@ -87,7 +87,7 @@ export const ContactSection = () => {
     { name: "Facebook", icon: FacebookIcon, url: "https://www.facebook.com/profile.php?id=61578864823885", color: "from-blue-600 to-blue-800" },
     { name: "Telegram", icon: TelegramIcon, url: "https://t.me/+wKNlPbDMuldmMmQ0", color: "from-blue-400 to-blue-600" },
     { name: "WhatsApp", icon: WhatsAppIcon, url: "https://wa.me/+22898740835", color: "from-green-400 to-green-600" },
-    { name: "YouTube", icon: YouTubeIcon, url: "https://www.youtube.com/@bagoudjaretrading", color: "from-red-400 to-red-600" }
+    { name: "YouTube", icon: YouTubeIcon, url: "https://www.youtube.com/@bt3.0", color: "from-red-400 to-red-600" }
   ];
 
   const openUrl = (url: string) => {
