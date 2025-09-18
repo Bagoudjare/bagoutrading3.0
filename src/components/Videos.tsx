@@ -124,7 +124,7 @@ export const Videos = () => {
 
         <div className="text-center mt-12">
           <button 
-            onClick={() => window.open('https://www.youtube.com/@bt3.0', '_blank')}
+            onClick={() => window.open('https://www.youtube.com/@bt3.0trading', '_blank')}
             className="border border-red-600 text-red-400 px-8 py-3 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-all duration-300 flex items-center space-x-2 mx-auto"
           >
             <Youtube className="h-5 w-5" />
