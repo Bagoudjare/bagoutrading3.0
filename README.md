@@ -1,4 +1,4 @@
-# Welcome to your Lovable projec
+# Welcome to my project
 
 ## How can I edit this code?
 
