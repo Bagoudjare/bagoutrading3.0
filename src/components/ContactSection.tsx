@@ -94,7 +94,7 @@ export const ContactSection = () => {
     { name: "Telegram", icon: TelegramIcon, url: "https://t.me/+wKNlPbDMuldmMmQ0", color: "from-blue-400 to-blue-600" },
     { name: "WhatsApp", icon: WhatsAppIcon, url: "https://wa.me/+22898740835", color: "from-green-400 to-green-600" },
     { name: "YouTube", icon: YouTubeIcon, url: "https://www.youtube.com/@bt3.0trading", color: "from-red-400 to-red-600" },
-    { name: "TikTok", icon: TikTokIcon, url: "#", color: "from-black-400 to-black-600" }
+    { name: "TikTok", icon: TikTokIcon, url: "https://www.tiktok.com/@bt3.0.trading.sol?_t=ZM-8zrI5TvigVH&_r=1", color: "from-black-400 to-black-600" }
   ];
 
   const openUrl = (url: string) => {
