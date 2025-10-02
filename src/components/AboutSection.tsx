@@ -45,20 +45,6 @@ export const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white">Expert Trader & Formateur</h3>
               </div>
-              
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Années d'expérience</span>
-                  <span className="text-blue-400 font-bold">5+</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Stratégies développées</span>
-                  <span className="text-purple-400 font-bold">++</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Clients formés</span>
-                  <span className="text-green-400 font-bold">++</span>
-                </div>
               </div>
             </div>
           </div>
