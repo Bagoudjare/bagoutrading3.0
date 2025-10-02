@@ -45,7 +45,6 @@ export const AboutSection = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white">Expert Trader & Formateur</h3>
               </div>
-              </div>
             </div>
           </div>
         </div>
