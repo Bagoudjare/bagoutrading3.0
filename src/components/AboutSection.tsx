@@ -52,7 +52,7 @@ export const AboutSection = () => {
         {/* Free guide section */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-500/30 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
-            Voici un guide gratuit qui va te permettre de commencer ton aventure trading ?
+            Voici un guide gratuit pour vous aider à ommencer votre aventure en trading ?
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Découvrez les bases solides du trading avec ce guide offert. Un condensé de mes meilleures stratégies pour bien commencer.
