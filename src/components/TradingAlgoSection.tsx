@@ -46,7 +46,7 @@ export const TradingAlgoSection = () => {
     { name: "Litecoin", logo: "https://cryptologos.cc/logos/litecoin-ltc-logo.png" },
     { name: "USDT TRC20", logo: "https://cryptologos.cc/logos/tether-usdt-logo.png" },
     { name: "TRON", logo: "https://cryptologos.cc/logos/tron-trx-logo.png" },
-    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/2022/04/slide-moov-money-togo2.jpg" },
+    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg" },
     { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-3060196/yas.tg/wp-content/uploads/2024/10/jem_logo.svg" }
   ];
 
