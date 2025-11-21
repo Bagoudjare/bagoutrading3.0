@@ -36,8 +36,7 @@ export const Navigation = () => {
   const navItems = [
     { label: "Accueil", href: "#accueil", id: "accueil" },
     { label: "À propos", href: "#apropos", id: "apropos" },
-    { label: "Formations", href: "#formations", id: "formations" },
-    { label: "Automatisation", href: "#automatisation", id: "automatisation" },
+    { label: "Services", href: "#automatisation", id: "automatisation" },
     { label: "Algo Trading", href: "#algo", id: "algo" },
     { label: "Vidéos", href: "#videos", id: "videos" },
     { label: "Contact", href: "#contact", id: "contact" }
