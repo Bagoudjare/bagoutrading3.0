@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { AboutSection } from "@/components/AboutSection";
-import { FormationsSection } from "@/components/FormationsSection";
 import { AutomationSection } from "@/components/AutomationSection";
 import { TradingAlgoSection } from "@/components/TradingAlgoSection";
 import { PartnerCTA } from "@/components/PartnerCTA";

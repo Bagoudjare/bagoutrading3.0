@@ -1,5 +1,6 @@
 
 import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap } from "lucide-react";
+import sniper from "@/assets/imgs/sniper.jpg";
 
 export const TradingAlgoSection = () => {
   const features = [
@@ -67,7 +68,7 @@ export const TradingAlgoSection = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <div className="relative">
               <img
-                src="https://unsplash.com/photos/businessmans-hand-pointing-to-a-glowing-arrow-graph-pointing-to-investment-growth-finance-and-profit-with-business-success-metaverse-3d-rendering-illustration-XqvAjEJGOO4"
+                src={sniper}
                 alt="Sniper Setup UE"
                 className="w-full h-96 object-cover rounded-xl"
               />
