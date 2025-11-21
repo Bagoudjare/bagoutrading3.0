@@ -146,7 +146,7 @@ export const TradingAlgoSection = () => {
           }
         }
         .animate-scroll {
-          animation: scroll 20s linear infinite;
+          animation: scroll 12s linear infinite;
         }
         .animate-scroll:hover {
           animation-play-state: paused;
