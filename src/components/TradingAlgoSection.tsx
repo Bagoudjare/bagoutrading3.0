@@ -44,7 +44,7 @@ export const TradingAlgoSection = () => {
     { name: "Litecoin", logo: "https://cryptologos.cc/logos/litecoin-ltc-logo.png" },
     { name: "USDT TRC20", logo: "https://cryptologos.cc/logos/tether-usdt-logo.png" },
     { name: "TRON", logo: "https://cryptologos.cc/logos/tron-trx-logo.png" },
-    { name: "Mobile Money", logo: "" }
+    { name: "Mobile Money", logo: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&h=200&fit=crop" }
   ];
 
 
