@@ -53,7 +53,7 @@ export const TradingAlgoSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sniper Setup UE
+            Sniper Setup Entry
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             L'outil ultime pour trader comme un professionnel
