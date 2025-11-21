@@ -101,14 +101,14 @@ export const TradingAlgoSection = () => {
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex justify-center space-x-4 mb-20">
+        {/* <div className="flex justify-center space-x-4 mb-20">
           <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg">
             Télécharger maintenant
           </button>
           <button className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300">
             Documentation
           </button>
-        </div>
+        </div> */}
 
         {/* Payment Methods Section */}
         <div className="border-t border-slate-700 pt-16">
