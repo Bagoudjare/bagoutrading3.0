@@ -67,7 +67,7 @@ export const TradingAlgoSection = () => {
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src="https://unsplash.com/photos/businessmans-hand-pointing-to-a-glowing-arrow-graph-pointing-to-investment-growth-finance-and-profit-with-business-success-metaverse-3d-rendering-illustration-XqvAjEJGOO4"
                 alt="Sniper Setup UE"
                 className="w-full h-96 object-cover rounded-xl"
               />
