@@ -1,3 +1,4 @@
+
 import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap } from "lucide-react";
 
 export const TradingAlgoSection = () => {
@@ -44,9 +45,8 @@ export const TradingAlgoSection = () => {
     { name: "Litecoin", logo: "https://cryptologos.cc/logos/litecoin-ltc-logo.png" },
     { name: "USDT TRC20", logo: "https://cryptologos.cc/logos/tether-usdt-logo.png" },
     { name: "TRON", logo: "https://cryptologos.cc/logos/tron-trx-logo.png" },
-    { name: "Mobile Money", logo: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=200&h=200&fit=crop" }
+    { name: "Mobile Money", logo: "" }
   ];
-
 
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
@@ -59,66 +59,6 @@ export const TradingAlgoSection = () => {
             L'outil ultime pour trader comme un professionnel
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
-        </div>
-
-        <div className="space-y-16">
-          {indicators.map((indicator, index) => (
-            <div
-              key={indicator.name}
-              className={`grid md:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'md:flex-row-reverse' : ''
-              }`}
-            >
-              <div className={index % 2 === 1 ? 'md:order-2' : ''}>
-                <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                  <div className="relative">
-                    <img
-                      src={indicator.image}
-                      alt={indicator.name}
-                      className="w-full h-50 object-cover rounded-xl"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl"></div>
-                  </div>
-                </div>
-              </div>
-
-              <div className={index % 2 === 1 ? 'md:order-1' : ''}>
-                <div className="space-y-6">
-                  <div>
-                    <div className={`inline-flex items-center space-x-2 bg-gradient-to-r ${indicator.gradient} px-4 py-2 rounded-full mb-4`}>
-                      <TrendingUp className="h-5 w-5 text-white" />
-                      <span className="text-white font-semibold">Outil Premium</span>
-                    </div>
-                    <h3 className="text-3xl font-bold text-white mb-4">{indicator.name}</h3>
-                    <p className="text-gray-300 text-lg leading-relaxed">
-                      {indicator.description}
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-4">
-                    {indicator.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-3">
-                        <div className={`w-3 h-3 bg-gradient-to-r ${indicator.gradient} rounded-full`}></div>
-                        <span className="text-gray-300">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="flex space-x-4">
-                    <button onClick={() => openAlgo(indicator.algoId)} className={`bg-gradient-to-r ${indicator.gradient} text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg`}>
-                      Acheter
-                    </button>
-                    <button 
-                    onClick={() => openAlgo(indicator.algoId)} 
-                    className="border border-gray-600 text-gray-300 px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-all duration-300">
-                      Documentation
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
 
         {/* Hero Image */}
@@ -210,7 +150,6 @@ export const TradingAlgoSection = () => {
           animation-play-state: paused;
         }
       `}</style>
-      
     </div>
   );
 };
