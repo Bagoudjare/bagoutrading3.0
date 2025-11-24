@@ -71,7 +71,7 @@ export const TradingAlgoSection = () => {
                 🔥 OFFRE LIMITÉE - 100 PREMIERS ACHETEURS
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Obtenez une Licence à Vie à Prix Exceptionnel !
+                Obtenez une Licence à Vie de l'outil à Prix Exceptionnel !
               </h3>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/30">
@@ -136,10 +136,10 @@ export const TradingAlgoSection = () => {
             </div>
           </div>
         </div>
-
+          <h3 className="text-2xl font-bold text-white text-center mb-8">Fontionnalités principales :</h3>
+        
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Fontionnalités principales :</h3>
           {features.map((feature, idx) => {
             const IconComponent = feature.icon;
             return (
