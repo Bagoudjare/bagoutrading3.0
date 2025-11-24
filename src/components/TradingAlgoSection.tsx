@@ -71,7 +71,7 @@ export const TradingAlgoSection = () => {
                 🔥 OFFRE LIMITÉE - 100 PREMIERS ACHETEURS
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Obtenez une Licence à Vie de l'outil à prix exceptionnel !
+                Obtenez une Licence à Vie de l'outil à un prix exceptionnel !
               </h3>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-4">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/30">
