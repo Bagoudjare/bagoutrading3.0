@@ -55,7 +55,7 @@ export const TradingAlgoSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sniper Setup Entry
+            Sniper Setup EA
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             L'outil ultime pour trader comme un professionnel
@@ -115,7 +115,7 @@ export const TradingAlgoSection = () => {
 
             {/* Prix à droite */}
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/30">
-              <h3 className="text-3xl font-bold text-white mb-4">Sniper Setup Entry</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">Sniper Setup EA</h3>
               <div className="mb-6">
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-5xl font-bold text-white">$699.99</span>
