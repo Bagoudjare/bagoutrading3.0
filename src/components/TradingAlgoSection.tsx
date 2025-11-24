@@ -126,19 +126,7 @@ export const TradingAlgoSection = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center text-gray-300">
                   <Shield className="h-5 w-5 text-green-400 mr-3" />
-                  <span>Analyse automatique SMC</span>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Target className="h-5 w-5 text-green-400 mr-3" />
-                  <span>Détection des zones clés</span>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Zap className="h-5 w-5 text-green-400 mr-3" />
-                  <span>Gestion automatique</span>
-                </div>
-                <div className="flex items-center text-gray-300">
-                  <Calculator className="h-5 w-5 text-green-400 mr-3" />
-                  <span>Outils de backtesting</span>
+                  <span>Profitez dès maintenants de l'outils avec toutes ses fonctionnalités</span>
                 </div>
               </div>
 
@@ -151,6 +139,7 @@ export const TradingAlgoSection = () => {
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">Fontionnalités principales :</h3>
           {features.map((feature, idx) => {
             const IconComponent = feature.icon;
             return (
