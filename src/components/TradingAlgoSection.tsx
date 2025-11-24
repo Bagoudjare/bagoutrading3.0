@@ -63,21 +63,87 @@ export const TradingAlgoSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
         </div>
 
-        {/* Hero Image */}
-        <div className="mb-16">
-          <div className="relative group max-w-4xl mx-auto">
-            <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-            <div className="relative">
-              <img
-                src={sniper}
-                alt="Sniper Setup UE"
-                className="w-full h-96 object-cover rounded-xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl flex items-end justify-center pb-8">
-                <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full">
-                  <TrendingUp className="h-6 w-6 text-white" />
-                  <span className="text-white font-bold text-lg">Outil Premium</span>
+        {/* Promo Banner */}
+        <div className="mb-12 max-w-5xl mx-auto">
+          <div className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 rounded-2xl p-8 text-center">
+            <div className="relative z-10">
+              <div className="inline-block bg-white text-red-600 px-4 py-2 rounded-full font-bold text-sm mb-4">
+                🔥 OFFRE LIMITÉE - 100 PREMIERS ACHETEURS
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Obtenez une Licence à Vie à Prix Exceptionnel !
+              </h3>
+              <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-4">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/30">
+                  <div className="text-5xl font-bold text-white mb-2">$100</div>
+                  <div className="text-white text-lg">Paiement en 1 tranche</div>
                 </div>
+                <div className="text-white text-2xl font-bold">OU</div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/30">
+                  <div className="text-5xl font-bold text-white mb-2">$120</div>
+                  <div className="text-white text-lg">2 tranches sur 2 mois</div>
+                </div>
+              </div>
+              <p className="text-white text-lg">
+                Après les 100 premiers acheteurs, le prix reviendra à <span className="font-bold text-2xl">$699.99</span>
+              </p>
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
+          </div>
+        </div>
+
+        {/* Hero Image + Price */}
+        <div className="mb-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+            {/* Image à gauche */}
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  alt="Sniper Setup UE"
+                  className="w-full h-80 object-cover rounded-xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl flex items-end justify-center pb-6">
+                  <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full">
+                    <TrendingUp className="h-6 w-6 text-white" />
+                    <span className="text-white font-bold text-lg">Outil Premium</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Prix à droite */}
+            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/30">
+              <h3 className="text-3xl font-bold text-white mb-4">Sniper Setup Entry</h3>
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <span className="text-5xl font-bold text-white">$699.99</span>
+                </div>
+                <p className="text-gray-300 text-sm">Prix standard après l'offre de lancement</p>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-gray-300">
+                  <Shield className="h-5 w-5 text-green-400 mr-3" />
+                  <span>Analyse automatique SMC</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <Target className="h-5 w-5 text-green-400 mr-3" />
+                  <span>Détection des zones clés</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <Zap className="h-5 w-5 text-green-400 mr-3" />
+                  <span>Gestion automatique</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <Calculator className="h-5 w-5 text-green-400 mr-3" />
+                  <span>Outils de backtesting</span>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <p className="text-yellow-400 font-semibold mb-4">⚡ Profitez de l'offre limitée ci-dessus !</p>
               </div>
             </div>
           </div>
