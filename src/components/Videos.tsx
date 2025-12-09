@@ -21,7 +21,7 @@ export const Videos = () => {
   const videos = [
     {
       title: "Conseils et Stratégie pour réussir en trading Forex et indices synthétiques, les erreurs a éviter ",
-      description: "Guide d'utilisation du Système BT3.0 meilleure solution recommander pour être rentable en trading ",
+      description: "Découvrez les meilleurs conseils et stratégies pour réussir durablement en trading Forex et sur les indices synthétiques. Dans ce guide",
       videoId: "AUq_ai4Y2Nw", // YouTube video ID
       thumbnail: "https://i.ytimg.com/vi/AUq_ai4Y2Nw/hqdefault.jpg",
       duration: "6:24",
