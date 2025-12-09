@@ -20,35 +20,19 @@ export const Videos = () => {
 
   const videos = [
     {
-      title: "Guide Officiel du Système BT3.0 : La Solution Recommandée pour un Trading Rentable",
+      title: "Conseils et Stratégie pour réussir en trading Forex et indices synthétiques, les erreurs a éviter ",
       description: "Guide d'utilisation du Système BT3.0 meilleure solution recommander pour être rentable en trading ",
-      videoId: "hXLgJimCO-o", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/hXLgJimCO-o/hqdefault.jpg",
-      duration: "1:43:26",
+      videoId: "AUq_ai4Y2Nw", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/AUq_ai4Y2Nw/hqdefault.jpg",
+      duration: "6:24",
       category: "Presentation"
     },
     {
-      title: "Setup Rentable : Transformez 25 $ en 450 $ avec une Stratégie Facile",
-      description: "Tu peux gagner 450$ sur ce setup avec un investissement de 25$ et moins, une stratégie simple",
-      videoId: "fiBGZtyK200", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/fiBGZtyK200/hqdefault.jpg",
-      duration: "31:10",
-      category: "Presentation"
-    },
-    {
-      title: "+100% Par trade gagnant et + 400% par mois (meilleur stratégie de Trading Rentable) BT3.0",
-      description: "Dans cette vidéo je te présente ma stratégie de Trading Rentable qui est semi-automatique et qui te permettra de gagner de l'argent en trading sur le Forex et les indices synthétiques.",
-      videoId: "3UEKHASb8l0", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/3UEKHASb8l0/hqdefault.jpg",
-      duration: "17:38",
-      category: "Presentation"
-    },
-    {
-      title: "Strategie de trading des spikes crash et boom en M1",
-      description: "Dans cette vidéo, je te dévoile une stratégie puissante et simple à appliquer pour trader efficacement les Spikes sur les indices Crash et Boom en time frame M1 (1 minute).",
-      videoId: "6IqF4N3t2E0", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/6IqF4N3t2E0/hqdefault.jpg",
-      duration: "22:33",
+      title: "Faire des entrées a faibles risques en Scalping M1, en Day trading M15, et en Swing H4",
+      description: "Cette approche vise à identifier des zones d’entrée à faible risque sur plusieurs horizons de temps — M1, M15, H4",
+      videoId: "AcTqm8vRjWw", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/AcTqm8vRjWw/hqdefault.jpg",
+      duration: "5:33",
       category: "Presentation"
     }
   ];
