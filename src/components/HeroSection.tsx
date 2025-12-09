@@ -3,7 +3,7 @@ import { TrendingUp } from "lucide-react";
 
 export const HeroSection = () => {
   const scrollToServices = () => {
-    document.querySelector('#formations')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#automatisation')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   const scrollToPartner = () => {
