@@ -68,7 +68,7 @@ export const TradingAlgoSection = () => {
           <div className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 rounded-2xl p-8 text-center">
             <div className="relative z-10">
               <div className="inline-block bg-white text-red-600 px-4 py-2 rounded-full font-bold text-sm mb-4">
-                🔥 OFFRE LIMITÉE - 100 PREMIERS ACHETEURS
+                🔥 OFFRE LIMITÉE - 20 PREMIERS ACHETEURS
               </div>
               <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Obtenez une Licence à Vie de l'outil à un prix exceptionnel
@@ -85,7 +85,7 @@ export const TradingAlgoSection = () => {
                 </div>
               </div>
               <p className="text-white text-lg">
-                Après les 100 premiers acheteurs, le prix reviendra à <span className="font-bold text-2xl">$699.99</span> ou plus
+                Après les 20 premiers acheteurs, le prix reviendra à <span className="font-bold text-2xl">$699.99</span> ou plus. 10 ont déjà fait leur choix, alors qu’attendez-vous ?
               </p>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
