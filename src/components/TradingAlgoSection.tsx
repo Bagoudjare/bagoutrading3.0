@@ -85,8 +85,9 @@ export const TradingAlgoSection = () => {
                 </div>
               </div>
               <p className="text-white text-lg">
-                Après les 20 premiers acheteurs, le prix reviendra à <span className="font-bold text-2xl">$699.99</span> ou plus. 10 ont déjà fait leur choix, alors qu’attendez-vous ?
+                Après les 20 premiers acheteurs, le prix reviendra à <span className="font-bold text-2xl">$699.99</span> ou plus.
               </p>
+              <p>10 ont déjà fait leur choix, alors qu’attendez-vous ?</p>
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
           </div>
