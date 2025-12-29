@@ -211,7 +211,7 @@ export const TradingAlgoSection = () => {
               
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a 
-                  href="src/assets/files/SNS_EA_DEMO.ex5" 
+                  href="/demo/SNS_EA_DEMO.ex5" 
                   download="SNS_EA_DEMO.ex5"
                   className="group flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
                 >
