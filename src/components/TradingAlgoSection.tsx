@@ -194,8 +194,8 @@ export const TradingAlgoSection = () => {
                     <Target className="h-5 w-5 text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-white font-medium">Zones clés</p>
-                    <p className="text-gray-400 text-sm">BT3.0 CCT</p>
+                    <p className="text-white font-medium">BT3.0 CCT</p>
+                    <p className="text-gray-400 text-sm">Version limitée</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
