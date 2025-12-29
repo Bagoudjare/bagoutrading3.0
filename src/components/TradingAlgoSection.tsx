@@ -1,5 +1,5 @@
-
-import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap } from "lucide-react";
+import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock } from "lucide-react";
+// import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap } from "lucide-react";
 import sniper from "@/assets/imgs/sniper.jpg";
 
 export const TradingAlgoSection = () => {
@@ -156,6 +156,83 @@ export const TradingAlgoSection = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Demo Download Section */}
+        <div className="mb-16 max-w-4xl mx-auto">
+          <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl p-8 border border-slate-600/40 backdrop-blur-sm">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
+            
+            <div className="relative z-10">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl">
+                  <Play className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">
+                  Essayez la Version Démo Gratuite
+                </h3>
+              </div>
+              
+              <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
+                Testez Sniper Setup UE avant d'acheter. La version démo inclut toutes les fonctionnalités 
+                de base pour vous familiariser avec l'outil sur MT4/MT5.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-4 mb-8">
+                <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
+                  <div className="p-2 bg-green-500/20 rounded-lg">
+                    <LineChart className="h-5 w-5 text-green-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Analyse SMC</p>
+                    <p className="text-gray-400 text-sm">Version limitée</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
+                  <div className="p-2 bg-blue-500/20 rounded-lg">
+                    <Target className="h-5 w-5 text-blue-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Zones clés</p>
+                    <p className="text-gray-400 text-sm">3 paires max</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
+                  <div className="p-2 bg-purple-500/20 rounded-lg">
+                    <Lock className="h-5 w-5 text-purple-400" />
+                  </div>
+                  <div>
+                    <p className="text-white font-medium">Backtesting</p>
+                    <p className="text-gray-400 text-sm">Non disponible</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a 
+                  href="/demo/SniperSetupUE_Demo.ex4" 
+                  download="SniperSetupUE_Demo.ex4"
+                  className="group flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
+                >
+                  <Download className="h-5 w-5 group-hover:animate-bounce" />
+                  Télécharger la Démo (.ex4)
+                </a>
+                <a 
+                  href="/demo/SniperSetupUE_Demo.mq4" 
+                  download="SniperSetupUE_Demo.mq4"
+                  className="group flex items-center gap-3 border-2 border-green-500/50 text-green-400 px-8 py-4 rounded-xl font-semibold hover:bg-green-500/10 transition-all duration-300"
+                >
+                  <Download className="h-5 w-5" />
+                  Code source (.mq4)
+                </a>
+              </div>
+              
+              <p className="text-gray-500 text-sm text-center mt-4">
+                Compatible MT4 & MT5 • Installation en 2 minutes • Aucune inscription requise
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* CTA Buttons */}
