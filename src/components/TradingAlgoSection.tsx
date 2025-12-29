@@ -140,19 +140,18 @@ export const TradingAlgoSection = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-8">Fontionnalités principales :</h3>
         
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-16">
           {features.map((feature, idx) => {
             const IconComponent = feature.icon;
             return (
               <div
                 key={idx}
-                className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-xl backdrop-blur-sm border border-slate-600/30 hover:border-slate-500/50 transition-all duration-300 group"
+                className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-4 rounded-xl backdrop-blur-sm border border-slate-600/30 hover:border-slate-500/50 transition-all duration-300 group text-center"
               >
-                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${feature.gradient} mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="h-6 w-6 text-white" />
+                <div className={`inline-flex p-2 rounded-lg bg-gradient-to-r ${feature.gradient} mb-2 group-hover:scale-110 transition-transform duration-300`}>
+                  <IconComponent className="h-5 w-5 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <h3 className="text-sm font-semibold text-white leading-tight">{feature.title}</h3>
               </div>
             );
           })}
