@@ -185,7 +185,7 @@ export const TradingAlgoSection = () => {
                     <LineChart className="h-5 w-5 text-green-400" />
                   </div>
                   <div>
-                    <p className="text-white font-medium">Analyse SMC</p>
+                    <p className="text-white font-medium">BT3.0 SMART TREND</p>
                     <p className="text-gray-400 text-sm">Version limitée</p>
                   </div>
                 </div>
@@ -195,7 +195,7 @@ export const TradingAlgoSection = () => {
                   </div>
                   <div>
                     <p className="text-white font-medium">Zones clés</p>
-                    <p className="text-gray-400 text-sm">3 paires max</p>
+                    <p className="text-gray-400 text-sm">BT3.0 CCT</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
@@ -203,8 +203,8 @@ export const TradingAlgoSection = () => {
                     <Lock className="h-5 w-5 text-purple-400" />
                   </div>
                   <div>
-                    <p className="text-white font-medium">Backtesting</p>
-                    <p className="text-gray-400 text-sm">Non disponible</p>
+                    <p className="text-white font-medium">BT3.0 MSS</p>
+                    <p className="text-gray-400 text-sm">Version limitée</p>
                   </div>
                 </div>
               </div>
