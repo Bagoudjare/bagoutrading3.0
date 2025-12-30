@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export const PartnerCTA = () => {
   return (
     <div className="px-4 py-16 overflow-hidden">
-      <article className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 rounded-2xl p-8 text-center">
+      <article className="relative max-w-6xl mx-auto bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 border border-slate-600/30 rounded-2xl p-8 md:p-12 shadow-xl overflow-hidden">
       {/* <article className="relative max-w-6xl mx-auto bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-slate-600/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-xl overflow-hidden"> */}
         {/* Effet de balayage lumineux principal - plus visible */}
         <div 
