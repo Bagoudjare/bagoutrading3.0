@@ -64,7 +64,7 @@ export const TradingAlgoSection = () => {
         </div>
 
         {/* Promo Banner */}
-        <div className="mb-12 max-w-5xl mx-auto">
+        {/* <div className="mb-12 max-w-5xl mx-auto">
           <div className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 rounded-2xl p-8 text-center">
             <div className="relative z-10">
               <div className="inline-block bg-white text-red-600 px-4 py-2 rounded-full font-bold text-sm mb-4">
@@ -91,7 +91,7 @@ export const TradingAlgoSection = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-pulse"></div>
           </div>
-        </div>
+        </div> */}
 
         {/* Hero Image + Price */}
         <div className="mb-16">
