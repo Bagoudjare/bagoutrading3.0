@@ -174,7 +174,7 @@ export const TradingAlgoSection = () => {
               </div>
               
               <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
-                Testez Sniper Setup UE avant d'acheter. La version démo inclut toutes les fonctionnalités 
+                Testez SNIPER_SETUP EA avant d'acheter. La version démo inclut toutes les fonctionnalités 
                 de base pour vous familiariser avec l'outil sur MT5.
               </p>
               
