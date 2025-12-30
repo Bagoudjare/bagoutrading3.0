@@ -115,17 +115,14 @@ export default function PartenaireAvantages() {
               <CardHeader>
                 <CardTitle className="text-white text-2xl flex items-center gap-3">
                   <span className="text-3xl">📊</span>
-                  6 Indicateurs Exclusifs
+                  3 Indicateurs Exclusifs
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 {[
-                  { name: "Smart Trend", icon: "📈" },
-                  { name: "Volume Analyzer", icon: "📊" },
-                  { name: "Support/Resistance Pro", icon: "🎯" },
-                  { name: "Momentum Scanner", icon: "⚡" },
-                  { name: "Risk Manager", icon: "🛡️" },
-                  { name: "Entry/Exit Signals", icon: "🔔" }
+                  { name: "BT3.0 SMART TREND", icon: "📈" },
+                  { name: "BT3.0 CCT", icon: "📊" },
+                  { name: "BT3.0 MSS", icon: "🎯" }
                 ].map((indicator, index) => (
                   <div key={index} className="flex items-center gap-3 p-3 bg-slate-800/30 rounded-lg">
                     <span className="text-2xl">{indicator.icon}</span>
