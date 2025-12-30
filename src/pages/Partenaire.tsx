@@ -121,8 +121,11 @@ export default function PartenaireAvantages() {
               <CardContent className="space-y-4">
                 {[
                   { name: "BT3.0 SMART TREND", icon: "📈" },
-                  { name: "BT3.0 CCT", icon: "📊" },
+                  { name: "BT3.0 CCT", icon: "⚡" },
                   { name: "BT3.0 MSS", icon: "🎯" }
+                  // { name: "Momentum Scanner", icon: "⚡" },
+                  // { name: "Risk Manager", icon: "🛡️" },
+                  // { name: "Entry/Exit Signals", icon: "🔔" }
                 ].map((indicator, index) => (
                   <div key={index} className="flex items-center gap-3 p-3 bg-slate-800/30 rounded-lg">
                     <span className="text-2xl">{indicator.icon}</span>
