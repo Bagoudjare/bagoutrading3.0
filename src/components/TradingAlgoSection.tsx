@@ -175,7 +175,7 @@ export const TradingAlgoSection = () => {
               
               <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
                 Testez Sniper Setup UE avant d'acheter. La version démo inclut toutes les fonctionnalités 
-                de base pour vous familiariser avec l'outil sur MT4/MT5.
+                de base pour vous familiariser avec l'outil sur MT5.
               </p>
               
               <div className="grid md:grid-cols-3 gap-4 mb-8">
@@ -215,21 +215,12 @@ export const TradingAlgoSection = () => {
                   className="group flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
                 >
                   <Download className="h-5 w-5 group-hover:animate-bounce" />
-                  Télécharger la Démo (.ex4)
+                  Télécharger la Démo (.ex5)
                 </a>
-
-                {/* <a 
-                  href="/demo/SniperSetupUE_Demo.mq4" 
-                  download="SniperSetupUE_Demo.mq4"
-                  className="group flex items-center gap-3 border-2 border-green-500/50 text-green-400 px-8 py-4 rounded-xl font-semibold hover:bg-green-500/10 transition-all duration-300"
-                >
-                  <Download className="h-5 w-5" />
-                  Code source (.mq4)
-                </a> */}
               </div>
               
               <p className="text-gray-500 text-sm text-center mt-4">
-                Compatible MT4 & MT5 • Installation en 2 minutes • Aucune inscription requise
+                Compatible uniquement MT5 • Installation en 2 minutes • Aucune inscription requise
               </p>
             </div>
           </div>
