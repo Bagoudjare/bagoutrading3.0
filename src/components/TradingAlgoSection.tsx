@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users } from "lucide-react";
 import sniper from "@/assets/imgs/sniper.jpg";
-import { supabases } from "@/utils/supabase";
+import { supabase } from "@/utils/supabase";
 import { useToast } from "@/hooks/use-toast";
 
 export const TradingAlgoSection = () => {
@@ -12,7 +12,7 @@ export const TradingAlgoSection = () => {
   // Fetch download count on mount
   useEffect(() => {
     const fetchDownloadCount = async () => {
-      const { count, error } = await supabases
+      const { count, error } = await supabase
         .from('demo_downloads')
         .select('*', { count: 'exact', head: true });
       
