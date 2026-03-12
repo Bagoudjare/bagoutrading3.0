@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users } from "lucide-react";
 import sniper from "@/assets/imgs/sniper.jpg";
-import { supabase } from "@/utils/supabase";
+import supabase from "@/utils/supabase";
 import { useToast } from "@/hooks/use-toast";
 
 export const TradingAlgoSection = () => {
