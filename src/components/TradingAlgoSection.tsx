@@ -1,8 +1,57 @@
-import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock } from "lucide-react";
+import { useState, useEffect } from "react";
+import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users } from "lucide-react";
 // import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap } from "lucide-react";
 import sniper from "@/assets/imgs/sniper.jpg";
+import { supabases } from "@/utils/supabase";
+import { useToast } from "@/hooks/use-toast";
 
 export const TradingAlgoSection = () => {
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [downloadCount, setDownloadCount] = useState<number>(0);
+  const { toast } = useToast();
+
+  // Fetch download count on mount
+  useEffect(() => {
+    const fetchDownloadCount = async () => {
+      const { count, error } = await supabases
+        .from('demo_downloads')
+        .select('*', { count: 'exact', head: true });
+      
+      if (!error && count !== null) {
+        setDownloadCount(count);
+      }
+    };
+    
+    fetchDownloadCount();
+  }, []);
+
+  const handleDownload = async () => {
+    if (isDownloading) return;
+    
+    setIsDownloading(true);
+    
+    // Record the download
+    await supabases.from('demo_downloads').insert({
+      user_agent: navigator.userAgent
+    });
+    
+    // Update local count
+    setDownloadCount(prev => prev + 1);
+    
+    // Show notification
+    toast({
+      title: "Téléchargement démarré !",
+      description: "Le fichier SNS_EA_DEMO.ex5 est en cours de téléchargement.",
+    });
+    // Trigger actual download
+    const link = document.createElement('a');
+    link.href = '/demo/SNS_EA_DEMO.ex5';
+    link.download = 'SNS_EA_DEMO.ex5';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const features = [
     {
       icon: LineChart,
@@ -208,15 +257,34 @@ export const TradingAlgoSection = () => {
                 </div>
               </div>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a 
-                  href="/demo/SNS_EA_DEMO.ex5" 
-                  download="SNS_EA_DEMO.ex5"
-                  className="group flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-green-500/25"
-                >
-                  <Download className="h-5 w-5 group-hover:animate-bounce" />
-                  Télécharger la Démo (.ex5)
-                </a>
+              <div className="flex flex-col items-center gap-4">
+                <button 
+                  onClick={handleDownload}
+                  disabled={isDownloading}
+                  className={`group flex items-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg ${
+                    isDownloading 
+                      ? 'bg-gray-600 text-gray-300 cursor-not-allowed' 
+                      : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:opacity-90 transform hover:scale-105 shadow-green-500/25'
+                  }`}
+                  >
+
+                                    {isDownloading ? (
+                    <>
+                      <CheckCircle className="h-5 w-5" />
+                      Téléchargement lancé
+                    </>
+                  ) : (
+                    <>
+                      <Download className="h-5 w-5 group-hover:animate-bounce" />
+                      Télécharger la Démo (.ex5)
+                    </>
+                  )}
+                </button>
+                
+                <div className="flex items-center gap-2 text-gray-400 text-sm">
+                  <Users className="h-4 w-4" />
+                  <span><strong className="text-green-400">{downloadCount}</strong> téléchargements</span>
+                </div>
               </div>
               
               <p className="text-gray-500 text-sm text-center mt-4">
