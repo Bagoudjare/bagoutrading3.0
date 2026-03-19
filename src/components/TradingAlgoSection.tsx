@@ -103,11 +103,11 @@ export const TradingAlgoSection = () => {
   ];
 
   const paymentMethods = [
-    { name: "Litecoin", logo: "https://cryptologos.cc/logos/litecoin-ltc-logo.png" },
-    { name: "USDT TRC20", logo: "https://cryptologos.cc/logos/tether-usdt-logo.png" },
-    { name: "TRON", logo: "https://cryptologos.cc/logos/tron-trx-logo.png" },
+    { name: "Litecoin", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/2.png" },
+    { name: "USDT TRC20", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" },
+    { name: "TRON", logo: "https://research.binance.com/static/images/projects/tron/tronlogo.png" },
     { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg" },
-    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-3060196/yas.tg/wp-content/uploads/2024/10/jem_logo.svg" }
+    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg" }
   ];
 
   return (
