@@ -24,25 +24,24 @@ export const TradingAlgoSection = () => {
     fetchDownloadCount();
   }, []);
 
-const handleDownload = async () => {
+ const handleDownload = async () => {
   if (isDownloading) return;
-  
+
   setIsDownloading(true);
-  
+
   try {
-    // Incrémenter le compteur directement via Supabase
-    const { error } = await supabase.rpc('increment_demo_downloads');
-    if (error) {
-      console.error('Erreur Supabase:', error);
-    } else {
-      setDownloadCount(prev => prev + 1);
-      console.log('Download compté avec succès');
-    }
+    const { data, error } = await supabase
+      .from('demo_downloads')
+      .update({ count: downloadCount + 1 })
+      .eq('id', 1);
+
+    if (error) console.error('Erreur Supabase:', error);
+    else setDownloadCount(prev => prev + 1);
+
   } catch (error) {
     console.error('Erreur réseau Supabase:', error);
   }
 
-  // Toujours lancer le téléchargement
   toast({
     title: "Téléchargement démarré !",
     description: "Le fichier SNS_EA_DEMO.ex5 est en cours de téléchargement.",
