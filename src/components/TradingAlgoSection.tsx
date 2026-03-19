@@ -24,44 +24,39 @@ export const TradingAlgoSection = () => {
     fetchDownloadCount();
   }, []);
 
-  const handleDownload = async () => {
-    if (isDownloading) return;
-    
-    setIsDownloading(true);
-    
-    try {
-      // Appeler l'API de tracking (serverless function sur Vercel)
-      const response = await fetch('/api/track-download', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-      });
-
-      if (!response.ok) {
-        console.error('Erreur lors du tracking du téléchargement');
-      } else {
-        // Mise à jour locale du compteur
-        setDownloadCount(prev => prev + 1);
-      }
-    } catch (error) {
-      console.error('Erreur réseau', error);
+const handleDownload = async () => {
+  if (isDownloading) return;
+  
+  setIsDownloading(true);
+  
+  try {
+    // Incrémenter le compteur directement via Supabase
+    const { error } = await supabase.rpc('increment_demo_downloads');
+    if (error) {
+      console.error('Erreur Supabase:', error);
+    } else {
+      setDownloadCount(prev => prev + 1);
+      console.log('Download compté avec succès');
     }
+  } catch (error) {
+    console.error('Erreur réseau Supabase:', error);
+  }
 
-    // Toujours lancer le téléchargement même si le tracking échoue
-    toast({
-      title: "Téléchargement démarré !",
-      description: "Le fichier SNS_EA_DEMO.ex5 est en cours de téléchargement.",
-    });
+  // Toujours lancer le téléchargement
+  toast({
+    title: "Téléchargement démarré !",
+    description: "Le fichier SNS_EA_DEMO.ex5 est en cours de téléchargement.",
+  });
 
-    const link = document.createElement('a');
-    link.href = '/demo/SNS_EA_DEMO.ex5';
-    link.download = 'SNS_EA_DEMO.ex5';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const link = document.createElement('a');
+  link.href = '/demo/SNS_EA_DEMO.ex5';
+  link.download = 'SNS_EA_DEMO.ex5';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 
-    // Réactiver le bouton après un court délai
-    setTimeout(() => setIsDownloading(false), 2000);
-  };
+  setTimeout(() => setIsDownloading(false), 2000);
+};
 
   const features = [
     {
