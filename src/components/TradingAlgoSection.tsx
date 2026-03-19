@@ -63,24 +63,6 @@ export const TradingAlgoSection = () => {
     setTimeout(() => setIsDownloading(false), 2000);
   };
 
-
-    // Toujours lancer le téléchargement même si le tracking échoue
-    toast({
-      title: "Téléchargement démarré !",
-      description: "Le fichier SNS_EA_DEMO.ex5 est en cours de téléchargement.",
-    });
-
-    const link = document.createElement('a');
-    link.href = '/demo/SNS_EA_DEMO.ex5';
-    link.download = 'SNS_EA_DEMO.ex5';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    // Réactiver le bouton après un court délai
-    setTimeout(() => setIsDownloading(false), 2000);
-  };
-
   const features = [
     {
       icon: LineChart,
