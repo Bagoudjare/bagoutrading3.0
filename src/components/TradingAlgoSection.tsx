@@ -210,32 +210,50 @@ export const TradingAlgoSection = () => {
               
               <div className="grid md:grid-cols-3 gap-4 mb-8">
                 <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
-                  <div className="p-2 bg-green-500/20 rounded-lg">
-                    <LineChart className="h-5 w-5 text-green-400" />
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-green-500/20 rounded-lg">
+                      <LineChart className="h-5 w-5 text-green-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">BT3.0 SMART TREND</p>
+                      <p className="text-gray-400 text-sm">Version limitée</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-white font-medium">BT3.0 SMART TREND</p>
-                    <p className="text-gray-400 text-sm">Version limitée</p>
-                  </div>
+                      <button onClick={handleDownload} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
+                        <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-green-400'}`} />
+                      </button>
                 </div>
+
                 <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
-                  <div className="p-2 bg-blue-500/20 rounded-lg">
-                    <Target className="h-5 w-5 text-blue-400" />
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-blue-500/20 rounded-lg">
+                      <Target className="h-5 w-5 text-blue-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">BT3.0 CCT</p>
+                      <p className="text-gray-400 text-sm">Version limitée</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-white font-medium">BT3.0 CCT</p>
-                    <p className="text-gray-400 text-sm">Version limitée</p>
-                  </div>
+                      <button onClick={handleDownload} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-500/20 hover:bg-blue-500/40 cursor-pointer'}`}>
+                        <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-blue-400'}`} />
+                      </button>
                 </div>
+
                 <div className="flex items-center gap-3 bg-slate-700/50 rounded-lg p-4">
-                  <div className="p-2 bg-purple-500/20 rounded-lg">
-                    <Lock className="h-5 w-5 text-purple-400" />
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-purple-500/20 rounded-lg">
+                      <Lock className="h-5 w-5 text-purple-400" />
+                    </div>
+                    <div>
+                      <p className="text-white font-medium">BT3.0 MSS</p>
+                      <p className="text-gray-400 text-sm">Version limitée</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-white font-medium">BT3.0 MSS</p>
-                    <p className="text-gray-400 text-sm">Version limitée</p>
-                  </div>
+                      <button onClick={handleDownload} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
+                        <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-purple-400'}`} />
+                      </button>
                 </div>
+
               </div>
               
               <div className="flex flex-col items-center gap-4">
