@@ -219,7 +219,7 @@ export const TradingAlgoSection = () => {
                       <p className="text-gray-400 text-sm">Version Demo</p>
                     </div>
                   </div>
-                      <button onClick={() => handleDownload('BT3.0_TREND_STRATEGY.ex5', '/demo/BT3.0_TREND_STRATEGY.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
+                      <button onClick={() => handleDownload('BT3.0_SMART_TREND.ex5', '/demo/BT3.0_SMART_TREND.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
                         <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-green-400'}`} />
                       </button>
                 </div>
