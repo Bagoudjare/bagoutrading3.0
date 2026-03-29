@@ -216,7 +216,7 @@ export const TradingAlgoSection = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium">BT3.0 SMART TREND</p>
-                      <p className="text-gray-400 text-sm">Version limitée</p>
+                      <p className="text-gray-400 text-sm">Version Demo</p>
                     </div>
                   </div>
                       <button onClick={() => handleDownload('BT3.0_TREND_STRATEGY.ex5', '/demo/BT3.0_TREND_STRATEGY.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
@@ -231,7 +231,7 @@ export const TradingAlgoSection = () => {
                     </div>
                     <div>
                       <p className="text-white font-medium">BT3.0 CCT</p>
-                      <p className="text-gray-400 text-sm">Version limitée</p>
+                      <p className="text-gray-400 text-sm">Version Demo</p>
                     </div>
                   </div>
                       <button onClick={() => handleDownload('BT3.0_CCT.ex5', '/demo/BT3.0_CCT.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-500/20 hover:bg-blue-500/40 cursor-pointer'}`}>
@@ -245,8 +245,8 @@ export const TradingAlgoSection = () => {
                       <Lock className="h-5 w-5 text-purple-400" />
                     </div>
                     <div>
-                      <p className="text-white font-medium">BT3.0 MSS</p>
-                      <p className="text-gray-400 text-sm">Version limitée</p>
+                      <p className="text-white font-medium">BT3.0 OBS</p>
+                      <p className="text-gray-400 text-sm">Version Demo</p>
                     </div>
                   </div>
                       <button onClick={() => handleDownload('BT3.0_OBS.ex5', '/demo/BT3.0_OBS.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
@@ -274,7 +274,7 @@ export const TradingAlgoSection = () => {
                   ) : (
                     <>
                       <Download className="h-5 w-5 group-hover:animate-bounce" />
-                      Télécharger la Démo (.ex5)
+                      Télécharger la Démo de SNS_SETUP_EA (.ex5)
                     </>
                   )}
                 </button>
