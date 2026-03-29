@@ -249,7 +249,7 @@ export const TradingAlgoSection = () => {
                       <p className="text-gray-400 text-sm">Version limitée</p>
                     </div>
                   </div>
-                      <button onClick={() => handleDownload('DAY_TRADER.ex5', '/demo/DAY_TRADER.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
+                      <button onClick={() => handleDownload('BT3.0_OBS.ex5', '/demo/BT3.0_OBS.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
                         <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-purple-400'}`} />
                       </button>
                 </div>
