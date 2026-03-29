@@ -24,7 +24,7 @@ export const TradingAlgoSection = () => {
     fetchDownloadCount();
   }, []);
 
-  const handleDownload = async () => {
+  const handleDownload = async (fileName: string, filePath: string) => {
     if (isDownloading) return;
     
     setIsDownloading(true);
@@ -49,18 +49,18 @@ export const TradingAlgoSection = () => {
     // Toujours lancer le téléchargement même si le tracking échoue
     toast({
       title: "Téléchargement démarré !",
-      description: "Le fichier SNS_EA_DEMO.ex5 est en cours de téléchargement.",
+      description: `Le fichier ${fileName} est en cours de téléchargement.`,
     });
 
     const link = document.createElement('a');
-    link.href = '/demo/SNS_EA_DEMO.ex5';
-    link.download = 'SNS_EA_DEMO.ex5';
+    link.href = filePath;
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
 
-    // Réactiver le bouton après un court délai
-    setTimeout(() => setIsDownloading(false), 2000);
+    // Re-enable after 3 seconds
+    setTimeout(() => setIsDownloading(false), 3000);
   };
 
   const features = [
@@ -219,7 +219,7 @@ export const TradingAlgoSection = () => {
                       <p className="text-gray-400 text-sm">Version limitée</p>
                     </div>
                   </div>
-                      <button onClick={handleDownload} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
+                      <button onClick={() => handleDownload('BT3.0_TREND_STRATEGY.ex5', '/demo/BT3.0_TREND_STRATEGY.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
                         <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-green-400'}`} />
                       </button>
                 </div>
@@ -234,7 +234,7 @@ export const TradingAlgoSection = () => {
                       <p className="text-gray-400 text-sm">Version limitée</p>
                     </div>
                   </div>
-                      <button onClick={handleDownload} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-500/20 hover:bg-blue-500/40 cursor-pointer'}`}>
+                      <button onClick={() => handleDownload('BT3.0_CCT.ex5', '/demo/BT3.0_CCT.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-500/20 hover:bg-blue-500/40 cursor-pointer'}`}>
                         <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-blue-400'}`} />
                       </button>
                 </div>
@@ -249,7 +249,7 @@ export const TradingAlgoSection = () => {
                       <p className="text-gray-400 text-sm">Version limitée</p>
                     </div>
                   </div>
-                      <button onClick={handleDownload} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
+                      <button onClick={() => handleDownload('DAY_TRADER.ex5', '/demo/DAY_TRADER.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
                         <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-purple-400'}`} />
                       </button>
                 </div>
@@ -258,7 +258,7 @@ export const TradingAlgoSection = () => {
               
               <div className="flex flex-col items-center gap-4">
                 <button 
-                  onClick={handleDownload}
+                  onClick={() => handleDownload('SNS_EA_DEMO.ex5', '/demo/SNS_EA_DEMO.ex5')}
                   disabled={isDownloading}
                   className={`group flex items-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg ${
                     isDownloading 
