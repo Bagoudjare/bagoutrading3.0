@@ -115,10 +115,15 @@ export const TradingAlgoSection = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Sniper Setup EA
+            Système BT3.0
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            L'outil ultime pour trader comme un professionnel
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
+            Un système complet composé de la stratégie <strong className="text-blue-400">BT3.0 TREND STRATEGY</strong> (3 indicateurs) 
+            et de l'outil d'exécution <strong className="text-purple-400">SNIPER SETUP EA</strong>.
+          </p>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            Sniper Setup EA est l'outil ultime d'exécution automatique — il analyse la structure du marché, 
+            détecte les zones clés et gère vos trades en toute autonomie.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
         </div>
@@ -147,19 +152,24 @@ export const TradingAlgoSection = () => {
             {/* Prix à droite */}
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/30">
               <h3 className="text-3xl font-bold text-white mb-4">Sniper Setup EA</h3>
-              <div className="mb-6">
-                <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-5xl font-bold text-white">$699.99</span>
+              <div className="mb-6 space-y-3">
+                <div className="flex items-baseline gap-3">
+                  <span className="text-4xl font-bold text-white">$699.99</span>
+                  <span className="text-gray-400 text-sm">/ licence annuelle</span>
+                </div>
+                <div className="flex items-baseline gap-3">
+                  <span className="text-3xl font-bold text-white">$99.99</span>
+                  <span className="text-gray-400 text-sm">/ licence mensuelle</span>
                 </div>
                 <p className="text-gray-300 text-sm">Prix standard après l'offre de lancement</p>
               </div>
               
-              <div className="space-y-3 mb-6">
+              {/* <div className="space-y-3 mb-6">
                 <div className="flex items-center text-gray-300">
                   <Shield className="h-5 w-5 text-green-400 mr-3" />
                   <span>Profitez dès maintenants de l'outils avec toutes ses fonctionnalités</span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="text-center">
                 <p className="text-yellow-400 font-semibold mb-4">⚡ Profitez de l'offre limitée ci-dessus !</p>
@@ -204,8 +214,9 @@ export const TradingAlgoSection = () => {
               </div>
               
               <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
-                Testez SNIPER_SETUP EA avant d'acheter. La version démo inclut toutes les fonctionnalités 
-                de base pour vous familiariser avec l'outil sur MT5.
+                    Testez le système BT3.0 avant d'acheter. Les 3 indicateurs ci-dessous forment la stratégie 
+                    <strong className="text-blue-400"> BT3.0 TREND STRATEGY</strong>. Combinés avec 
+                    <strong className="text-purple-400"> Sniper Setup EA</strong>, ils composent le système complet BT3.0.
               </p>
               
               <div className="grid md:grid-cols-3 gap-4 mb-8">
