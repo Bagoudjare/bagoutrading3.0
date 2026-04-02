@@ -164,12 +164,12 @@ export const TradingAlgoSection = () => {
                 <p className="text-gray-300 text-sm">Prix standard après l'offre de lancement</p>
               </div>
               
-              {/* <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-6">
                 <div className="flex items-center text-gray-300">
                   <Shield className="h-5 w-5 text-green-400 mr-3" />
                   <span>Profitez dès maintenants de l'outils avec toutes ses fonctionnalités</span>
                 </div>
-              </div> */}
+              </div>
 
               <div className="text-center">
                 <p className="text-yellow-400 font-semibold mb-4">⚡ Profitez de l'offre limitée ci-dessus !</p>
