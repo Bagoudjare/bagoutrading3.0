@@ -163,13 +163,19 @@ export const TradingAlgoSection = () => {
                 </div>
                 <p className="text-gray-300 text-sm">Prix standard après l'offre de lancement</p>
               </div>
+
+              <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg p-3 border border-green-500/30 mb-4">
+                <p className="text-green-400 text-sm font-semibold text-center">
+                  🎉 Profitez d'une réduction de 50% grâce au programme de partenariat
+                </p>
+              </div>
               
-              <div className="space-y-3 mb-6">
+              {/* <div className="space-y-3 mb-6">
                 <div className="flex items-center text-gray-300">
                   <Shield className="h-5 w-5 text-green-400 mr-3" />
                   <span>Profitez dès maintenants de l'outils avec toutes ses fonctionnalités</span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="text-center">
                 <p className="text-yellow-400 font-semibold mb-4">⚡ Profitez de l'offre limitée ci-dessus !</p>
