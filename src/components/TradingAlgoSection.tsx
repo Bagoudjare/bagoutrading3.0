@@ -177,9 +177,9 @@ export const TradingAlgoSection = () => {
                 </div>
               </div> */}
 
-              <div className="text-center">
+              {/* <div className="text-center">
                 <p className="text-yellow-400 font-semibold mb-4">⚡ Profitez de l'offre limitée ci-dessus !</p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

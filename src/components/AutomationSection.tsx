@@ -33,6 +33,12 @@ export const AutomationSection = () => {
                 Je développe des Expert Advisors (EAs) personnalisés basés sur vos stratégies de trading. 
                 Chaque robot est optimisé pour votre style de trading et vos objectifs de performance.
               </p>
+              <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg p-4 border border-blue-500/20 mb-4">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-2xl font-bold text-white">À partir de $99.99</span>
+                </div>
+                <p className="text-gray-400 text-sm">Pour les stratégies non complexes. Le prix varie en fonction de la complexité de votre stratégie.</p>
+              </div>
               <div className="flex items-center space-x-2 text-blue-400">
                 <Zap className="h-5 w-5" />
                 <span className="font-semibold">Livrable + Formation</span>
