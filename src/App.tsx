@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Partenaire from "./pages/Partenaire";
 import PartenaireInscription from "./pages/PartenaireInscription";
+import InitiationTrading from "./pages/InitiationTrading";
 import { RefTracker } from "./components/RefTracker";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -24,6 +25,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/partenaire" element={<Partenaire />} />
             <Route path="/partenaire-inscription" element={<PartenaireInscription />} /> 
+            <Route path="/initiation-trading" element={<InitiationTrading />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

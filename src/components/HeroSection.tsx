@@ -59,6 +59,12 @@ export const HeroSection = () => {
             >
               Devenir partenaire de BT3.0
             </button>
+
+            <a href="/initiation-trading">
+              <button className="border-2 border-green-400 text-green-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-400 hover:text-white transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Initiation au trading
+              </button>
+            </a>
           </div>
           
           <div className="flex items-center justify-center space-x-8 text-gray-400 text-sm">
