@@ -210,7 +210,7 @@ const InitiationTrading = () => {
                 <p className="text-gray-300 mb-4">
                   Vous avez terminé l'initiation. Prêt à passer au niveau supérieur avec nos formations avancées ?
                 </p>
-                <button
+                {/* <button
                   onClick={() => {
                     navigate("/");
                     setTimeout(() => {
@@ -220,7 +220,7 @@ const InitiationTrading = () => {
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all"
                 >
                   Découvrir nos formations
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
