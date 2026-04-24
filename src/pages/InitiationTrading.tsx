@@ -208,7 +208,7 @@ const InitiationTrading = () => {
               <div className="bg-gradient-to-br from-yellow-500/10 to-orange-600/10 rounded-xl p-6 border border-yellow-400/30">
                 <h3 className="text-xl font-bold text-white mb-2">Félicitations !</h3>
                 <p className="text-gray-300 mb-4">
-                  Vous avez terminé l'initiation. Prêt à passer au niveau supérieur avec nos formations avancées ?
+                  Vous avez terminé l'initiation. Vous etes maintenant prêt à passer au niveau supérieur
                 </p>
                 {/* <button
                   onClick={() => {
