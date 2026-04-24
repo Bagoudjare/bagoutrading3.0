@@ -3,6 +3,7 @@ import { ArrowLeft, Play, X, GraduationCap, CheckCircle2, Lock } from "lucide-re
 import { useNavigate } from "react-router-dom";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { HeroSection } from "@/components/HeroSection";
 
 interface Lesson {
   number: number;
@@ -210,17 +211,17 @@ const InitiationTrading = () => {
                 <p className="text-gray-300 mb-4">
                   Vous avez terminé l'initiation. Vous etes maintenant prêt à passer au niveau supérieur
                 </p>
-                {/* <button
+                <button
                   onClick={() => {
                     navigate("/");
                     setTimeout(() => {
-                      document.querySelector("#formations")?.scrollIntoView({ behavior: "smooth" });
+                      document.querySelector("#accueil")?.scrollIntoView({ behavior: "smooth" });
                     }, 100);
                   }}
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all"
                 >
-                  Découvrir nos formations
-                </button> */}
+                  Revenir sur la page principale
+                </button>
               </div>
             </div>
           </div>
