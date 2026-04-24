@@ -104,7 +104,7 @@ const InitiationTrading = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-      <Navigation />
+      {/* <Navigation /> */}
 
       <main className="pt-24 pb-16 px-4">
         <div className="max-w-5xl mx-auto">
