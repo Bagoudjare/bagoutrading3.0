@@ -37,15 +37,35 @@ export const AutomationSection = () => {
                 <div className="flex items-baseline gap-2 mb-1">
                   <span className="text-2xl font-bold text-white">À partir de $99.99</span>
                 </div>
-                <p className="text-gray-400 text-sm">Pour les stratégies non complexes. Le prix varie en fonction de la complexité de votre stratégie.</p>
+                <p className="text-gray-400 text-sm">Frais de base pour les services de programmation : 99,99 $ pour les stratégies jugées non complexes. Le prix varie en fonction de la complexité de votre stratégie.</p>
               </div>
+              <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-600/40 mb-4">
+                <p className="text-white font-semibold mb-3 text-sm">
+                  Avant de soumettre votre stratégie, veuillez prendre connaissance de mes conditions de travail :
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed">
+                    <span className="text-green-400 mt-0.5">✅</span>
+                    <span>Un acompte correspondant à <span className="text-white font-semibold">50 % des frais de programmation</span> est requis pour le démarrage du projet.</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed">
+                    <span className="text-green-400 mt-0.5">✅</span>
+                    <span>Une fois le développement terminé, une <span className="text-white font-semibold">version démo</span> vous sera fournie afin de vérifier que la logique correspond à vos attentes.</span>
+                  </li>
+                  <li className="flex items-start gap-2 text-gray-300 text-sm leading-relaxed">
+                    <span className="text-green-400 mt-0.5">✅</span>
+                    <span>Après validation, le <span className="text-white font-semibold">paiement du solde restant</span> permettra la livraison complète de votre outil.</span>
+                  </li>
+                </ul>
+              </div>
+
               <div className="flex items-center space-x-2 text-blue-400">
                 <Zap className="h-5 w-5" />
                 <span className="font-semibold">Livrable + Formation</span>
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-4 rounded-lg border border-blue-500/30">
                 <Target className="h-8 w-8 text-blue-400 mb-2" />
                 <h4 className="text-white font-semibold mb-1">Précision</h4>
@@ -56,7 +76,7 @@ export const AutomationSection = () => {
                 <h4 className="text-white font-semibold mb-1">Support</h4>
                 <p className="text-gray-300 text-sm">Accompagnement personnalisé</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative">
@@ -86,8 +106,22 @@ export const AutomationSection = () => {
                   <span className="text-gray-300">Livraison et formation</span>
                 </div>
               </div>
+              
             </div>
           </div>
+                        {/* Précision & Support en bas du processus */}
+              <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-600/30">
+                <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-4 rounded-lg border border-blue-500/30">
+                  <Target className="h-8 w-8 text-blue-400 mb-2" />
+                  <h4 className="text-white font-semibold mb-1">Précision</h4>
+                  <p className="text-gray-300 text-sm">Exécution parfaite de vos stratégies</p>
+                </div>
+                <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-4 rounded-lg border border-purple-500/30">
+                  <Users className="h-8 w-8 text-purple-400 mb-2" />
+                  <h4 className="text-white font-semibold mb-1">Support</h4>
+                  <p className="text-gray-300 text-sm">Accompagnement personnalisé</p>
+                </div>
+              </div>
         </div>
 
         {/* Call to action */}
