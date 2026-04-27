@@ -108,8 +108,7 @@ export const AutomationSection = () => {
               </div>
               
             </div>
-          </div>
-                        {/* Précision & Support en bas du processus */}
+            {/* Précision & Support en bas du processus */}
               <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-600/30">
                 <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-4 rounded-lg border border-blue-500/30">
                   <Target className="h-8 w-8 text-blue-400 mb-2" />
@@ -122,6 +121,7 @@ export const AutomationSection = () => {
                   <p className="text-gray-300 text-sm">Accompagnement personnalisé</p>
                 </div>
               </div>
+          </div>
         </div>
 
         {/* Call to action */}
