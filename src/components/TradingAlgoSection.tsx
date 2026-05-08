@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users } from "lucide-react";
+import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users, Star, MessageSquarePlus, Copy, Check, X } from "lucide-react";
 import sniper from "@/assets/imgs/sniper.jpg";
 import supabase from "@/utils/supabase";
 import { useToast } from "@/hooks/use-toast";
@@ -7,6 +7,8 @@ import { useToast } from "@/hooks/use-toast";
 export const TradingAlgoSection = () => {
   const [isDownloading, setIsDownloading] = useState(false);
   const [downloadCount, setDownloadCount] = useState<number>(0);
+  const [selectedPayment, setSelectedPayment] = useState<number | null>(null);
+  const [copied, setCopied] = useState(false);
   const { toast } = useToast();
 
   // Fetch download count on mount

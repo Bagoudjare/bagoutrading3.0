@@ -19,7 +19,7 @@ export const AboutSection = () => {
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-10 rounded-xl backdrop-blur-sm border border-slate-600/30">
               <h3 className="text-2xl font-bold text-white mb-6">Mon parcours</h3>
               <p className="text-gray-300 leading-relaxed">
-                Avec 5 ans d'expérience dans les marchés financiers, j'ai développé une expertise unique dans le trading algorithmique et l'automatisation de stratégies. Ma passion pour l'innovation m'a conduit à créer des solutions sur mesure pour optimiser les performances de trading.
+                Avec 6 ans d'expérience dans les marchés financiers, j'ai développé une expertise unique dans le trading algorithmique et l'automatisation de stratégies. Ma passion pour l'innovation m'a conduit à créer des solutions sur mesure pour optimiser les performances de trading.
               </p>
             </div>
 
