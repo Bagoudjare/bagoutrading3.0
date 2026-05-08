@@ -311,6 +311,34 @@ export const TradingAlgoSection = () => {
           </div>
         </div>
 
+        {/* Trustpilot Buttons */}
+        <div className="mb-12 max-w-3xl mx-auto">
+          <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl p-6 border border-slate-600/40 text-center">
+            <h3 className="text-xl font-bold text-white mb-2">Que pensent nos utilisateurs ?</h3>
+            <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés ou partagez votre expérience sur Trustpilot</p>
+            <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <a
+                href="https://fr.trustpilot.com/review/bagoudjaretrading3-0.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                <Star className="h-5 w-5" />
+                Voir les avis
+              </a>
+              <a
+                href="https://fr.trustpilot.com/evaluate/bagoudjaretrading3-0.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                <MessageSquarePlus className="h-5 w-5" />
+                Donner son avis
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Payment Methods Section */}
         <div className="border-t border-slate-700 pt-16">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Moyens de paiement acceptés</h3>
