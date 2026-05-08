@@ -354,7 +354,7 @@ export const TradingAlgoSection = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-3">Moyens de paiement acceptés</h3>
           <p className="text-gray-400 text-center text-sm mb-8">Cliquez sur un moyen de paiement pour afficher l'adresse de réception</p>
           <div className="relative overflow-x-auto overflow-y-visible payment-scroll">
-            <div className="flex justify-start md:justify-center min-w-min pt-30 pb-6 px-4">
+            <div className="flex justify-start md:justify-center min-w-min pt-35 pb-6 px-4">
               {paymentMethods.map((method, idx) => {
                 const isOpen = selectedPayment === idx;
                 return (
