@@ -116,7 +116,10 @@ export const TradingAlgoSection = () => {
     await navigator.clipboard.writeText(address);
     setCopied(true);
     toast({ title: "Adresse copiée !", description: address });
-    setTimeout(() => setCopied(false), 2000);
+    setTimeout(() => {
+      setCopied(false);
+      setSelectedPayment(null);
+    }, 800);
   };
 
   return (
@@ -350,64 +353,52 @@ export const TradingAlgoSection = () => {
         <div className="border-t border-slate-700 pt-16">
           <h3 className="text-2xl font-bold text-white text-center mb-3">Moyens de paiement acceptés</h3>
           <p className="text-gray-400 text-center text-sm mb-8">Cliquez sur un moyen de paiement pour afficher l'adresse de réception</p>
-          <div className="relative overflow-hidden">
-            <div className="flex animate-scroll">
-              {[...paymentMethods, ...paymentMethods].map((method, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setSelectedPayment(idx % paymentMethods.length)}
-                  className="flex-shrink-0 mx-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:border-blue-500/70 hover:bg-white/20 transition-all duration-300 cursor-pointer"
-                  style={{ width: '180px' }}
-                >
-                  <img
-                    src={method.logo}
-                    alt={method.name}
-                    className="w-16 h-16 mx-auto mb-3 object-contain"
-                  />
-                  <p className="text-gray-300 text-center text-sm font-semibold">{method.name}</p>
-                </button>
-              ))}
+          <div className="relative overflow-x-auto overflow-y-visible payment-scroll">
+            <div className="flex justify-start md:justify-center min-w-min pt-40 pb-6 px-4">
+              {paymentMethods.map((method, idx) => {
+                const isOpen = selectedPayment === idx;
+                return (
+                  <div key={idx} className="relative flex-shrink-0 mx-4" style={{ width: '160px' }}>
+                    {isOpen && (
+                      <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 w-64 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-600 rounded-xl p-3 shadow-2xl">
+                        <button
+                          onClick={() => setSelectedPayment(null)}
+                          className="absolute top-1.5 right-1.5 p-1 rounded-md hover:bg-slate-700 transition"
+                          aria-label="Fermer"
+                        >
+                          <X className="h-3.5 w-3.5 text-gray-300" />
+                        </button>
+                        <p className="text-xs text-gray-400 mb-1 pr-6">Adresse {method.name}</p>
+                        <div className="bg-slate-900/70 border border-slate-600/40 rounded-md p-2 mb-2 break-all text-gray-200 text-xs font-mono">
+                          {method.address}
+                        </div>
+                        <button
+                          onClick={() => handleCopyAddress(method.address)}
+                          className="w-full inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1.5 rounded-md text-xs font-semibold hover:opacity-90 transition"
+                        >
+                          {copied ? <><Check className="h-3.5 w-3.5" /> Copié</> : <><Copy className="h-3.5 w-3.5" /> Copier</>}
+                        </button>
+                      </div>
+                    )}
+
+                    <button
+                      onClick={() => setSelectedPayment(isOpen ? null : idx)}
+                      className="w-full bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:border-blue-500/70 hover:bg-white/20 transition-all duration-300 cursor-pointer"
+                    >
+                      <img
+                        src={method.logo}
+                        alt={method.name}
+                        className="w-16 h-16 mx-auto mb-3 object-contain"
+                      />
+                      <p className="text-gray-300 text-center text-sm font-semibold">{method.name}</p>
+                    </button>
+                    
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
-
-        {/* Payment address modal */}
-        {selectedPayment !== null && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
-            onClick={() => setSelectedPayment(null)}
-          >
-            <div
-              className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-600 rounded-2xl p-6 max-w-md w-full"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <button
-                onClick={() => setSelectedPayment(null)}
-                className="absolute top-3 right-3 p-2 rounded-lg hover:bg-slate-700 transition"
-                aria-label="Fermer"
-              >
-                <X className="h-5 w-5 text-gray-300" />
-              </button>
-              <div className="flex items-center gap-4 mb-4">
-                <img src={paymentMethods[selectedPayment].logo} alt="" className="w-14 h-14 object-contain" />
-                <div>
-                  <h4 className="text-xl font-bold text-white">{paymentMethods[selectedPayment].name}</h4>
-                  <p className="text-gray-400 text-xs">Adresse de réception</p>
-                </div>
-              </div>
-              <div className="bg-slate-900/70 border border-slate-600/40 rounded-lg p-3 mb-4 break-all text-gray-200 text-sm font-mono">
-                {paymentMethods[selectedPayment].address}
-              </div>
-              <button
-                onClick={() => handleCopyAddress(paymentMethods[selectedPayment].address)}
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-xl font-semibold hover:opacity-90 transition"
-              >
-                {copied ? <><Check className="h-5 w-5" /> Copié !</> : <><Copy className="h-5 w-5" /> Copier l'adresse</>}
-              </button>
-            </div>
-          </div>
-        )}
-
       </div>
 
       <style>{`
@@ -425,6 +416,9 @@ export const TradingAlgoSection = () => {
         .animate-scroll:hover {
           animation-play-state: paused;
         }
+        .payment-scroll::-webkit-scrollbar { height: 8px; }
+        .payment-scroll::-webkit-scrollbar-track { background: rgba(15,23,42,0.4); border-radius: 4px; }
+        .payment-scroll::-webkit-scrollbar-thumb { background: linear-gradient(90deg, #3b82f6, #8b5cf6); border-radius: 4px; }
       `}</style>
     </div>
   );
