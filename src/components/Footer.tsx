@@ -42,7 +42,7 @@ export const Footer = () => {
 
         <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Bagoudjare Trading 3.0. Tous droits réservés.
+            © 2026 Bagoudjare Trading 3.0. Tous droits réservés.
           </p>
           <div className="flex items-center space-x-1 text-gray-400 text-sm mt-4 md:mt-0">
             <span className="text-xl font-bold">Fait par </span>

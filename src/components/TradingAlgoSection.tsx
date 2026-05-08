@@ -120,7 +120,7 @@ export const TradingAlgoSection = () => {
             Système BT3.0
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-            Un système complet composé de la stratégie <strong className="text-blue-400">BT3.0 TREND STRATEGY</strong> (3 indicateurs) 
+            Un système complet composé de la stratégie <strong className="text-blue-400">BT3.0 STRATEGY ULTIME</strong> (3 indicateurs) 
             et de l'outil d'exécution <strong className="text-purple-400">SNIPER SETUP EA</strong>.
           </p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
@@ -160,15 +160,15 @@ export const TradingAlgoSection = () => {
                   <span className="text-gray-400 text-sm">/ licence annuelle</span>
                 </div>
                 <div className="flex items-baseline gap-3">
-                  <span className="text-3xl font-bold text-white">$99.99</span>
-                  <span className="text-gray-400 text-sm">/ licence mensuelle</span>
+                  <span className="text-3xl font-bold text-white">$399.99</span>
+                  <span className="text-gray-400 text-sm">/ licence semestrielle</span>
                 </div>
                 <p className="text-gray-300 text-sm">Prix standard après l'offre de lancement</p>
               </div>
 
               <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-lg p-3 border border-green-500/30 mb-4">
                 <p className="text-green-400 text-sm font-semibold text-center">
-                  🎉 Profitez d'une réduction de 50% grâce au programme de partenariat
+                  🎉 Profitez d'une réduction de 50% grâce au programme de partenariat sur la licence annuelle uniquement
                 </p>
               </div>
               
