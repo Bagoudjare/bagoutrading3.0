@@ -105,12 +105,19 @@ export const TradingAlgoSection = () => {
   ];
 
   const paymentMethods = [
-    { name: "Litecoin", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/2.png" },
-    { name: "USDT TRC20", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png" },
-    { name: "TRON", logo: "https://research.binance.com/static/images/projects/tron/tronlogo.png" },
-    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg" },
-    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg" }
+    { name: "Litecoin", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/2.png", address: "..." },
+    { name: "USDT TRC20", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png", address: "..." },
+    { name: "TRON", logo: "https://research.binance.com/static/images/projects/tron/tronlogo.png" , address: "..." },
+    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg", address: "..." },
+    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg", address: "..." }
   ];
+
+  const handleCopyAddress = async (address: string) => {
+    await navigator.clipboard.writeText(address);
+    setCopied(true);
+    toast({ title: "Adresse copiée !", description: address });
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
@@ -341,13 +348,15 @@ export const TradingAlgoSection = () => {
 
         {/* Payment Methods Section */}
         <div className="border-t border-slate-700 pt-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Moyens de paiement acceptés</h3>
+          <h3 className="text-2xl font-bold text-white text-center mb-3">Moyens de paiement acceptés</h3>
+          <p className="text-gray-400 text-center text-sm mb-8">Cliquez sur un moyen de paiement pour afficher l'adresse de réception</p>
           <div className="relative overflow-hidden">
             <div className="flex animate-scroll">
               {[...paymentMethods, ...paymentMethods].map((method, idx) => (
-                <div
+                <button
                   key={idx}
-                  className="flex-shrink-0 mx-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:border-slate-500/50 transition-all duration-300"
+                  onClick={() => setSelectedPayment(idx % paymentMethods.length)}
+                  className="flex-shrink-0 mx-8 bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:border-blue-500/70 hover:bg-white/20 transition-all duration-300 cursor-pointer"
                   style={{ width: '180px' }}
                 >
                   <img
@@ -356,11 +365,49 @@ export const TradingAlgoSection = () => {
                     className="w-16 h-16 mx-auto mb-3 object-contain"
                   />
                   <p className="text-gray-300 text-center text-sm font-semibold">{method.name}</p>
-                </div>
+                </button>
               ))}
             </div>
           </div>
         </div>
+
+        {/* Payment address modal */}
+        {selectedPayment !== null && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4"
+            onClick={() => setSelectedPayment(null)}
+          >
+            <div
+              className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-600 rounded-2xl p-6 max-w-md w-full"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedPayment(null)}
+                className="absolute top-3 right-3 p-2 rounded-lg hover:bg-slate-700 transition"
+                aria-label="Fermer"
+              >
+                <X className="h-5 w-5 text-gray-300" />
+              </button>
+              <div className="flex items-center gap-4 mb-4">
+                <img src={paymentMethods[selectedPayment].logo} alt="" className="w-14 h-14 object-contain" />
+                <div>
+                  <h4 className="text-xl font-bold text-white">{paymentMethods[selectedPayment].name}</h4>
+                  <p className="text-gray-400 text-xs">Adresse de réception</p>
+                </div>
+              </div>
+              <div className="bg-slate-900/70 border border-slate-600/40 rounded-lg p-3 mb-4 break-all text-gray-200 text-sm font-mono">
+                {paymentMethods[selectedPayment].address}
+              </div>
+              <button
+                onClick={() => handleCopyAddress(paymentMethods[selectedPayment].address)}
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-3 rounded-xl font-semibold hover:opacity-90 transition"
+              >
+                {copied ? <><Check className="h-5 w-5" /> Copié !</> : <><Copy className="h-5 w-5" /> Copier l'adresse</>}
+              </button>
+            </div>
+          </div>
+        )}
+
       </div>
 
       <style>{`
