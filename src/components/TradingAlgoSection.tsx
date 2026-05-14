@@ -287,7 +287,7 @@ export const TradingAlgoSection = () => {
               
               <div className="flex flex-col items-center gap-4">
                 <button 
-                  onClick={() => handleDownload('SNS_EA_DEMO_LTD1.ex5', '/demo/SNS_EA_DEMO_LTD1.ex5')}
+                  onClick={() => handleDownload('SNS_SETUP_EA-FULL-DEMO.ex5', '/demo/SNS_SETUP_EA-FULL-DEMO.ex5')}
                   disabled={isDownloading}
                   className={`group flex items-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg ${
                     isDownloading 
