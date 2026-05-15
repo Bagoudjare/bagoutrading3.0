@@ -108,8 +108,8 @@ export const TradingAlgoSection = () => {
     { name: "Litecoin", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/2.png", address: "..." },
     { name: "USDT TRC20", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png", address: "..." },
     { name: "TRON", logo: "https://research.binance.com/static/images/projects/tron/tronlogo.png" , address: "..." },
-    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg", address: "..." },
-    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg", address: "..." }
+    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg", address: "(+228) 98740835" },
+    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg", address: "(+228) 91818382" }
   ];
 
   const handleCopyAddress = async (address: string) => {
@@ -354,7 +354,7 @@ export const TradingAlgoSection = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-3">Moyens de paiement acceptés</h3>
           <p className="text-gray-400 text-center text-sm mb-8">Cliquez sur un moyen de paiement pour afficher l'adresse de réception</p>
           <div className="relative overflow-x-auto overflow-y-visible payment-scroll">
-            <div className="flex justify-start md:justify-center min-w-min pt-35 pb-6 px-4">
+            <div className="flex justify-start md:justify-center min-w-min pt-40 pb-6 px-4">
               {paymentMethods.map((method, idx) => {
                 const isOpen = selectedPayment === idx;
                 return (
