@@ -237,7 +237,7 @@ export const TradingAlgoSection = () => {
                     <strong className="text-purple-400"> Sniper Setup EA</strong>, ils composent le système complet BT3.0.
               </p>
               
-              <div className="grid md:grid-cols-3 gap-4 mb-8">
+              {/* <div className="grid md:grid-cols-3 gap-4 mb-8">
                 <div className="flex items-center justify-between bg-slate-700/50 rounded-lg p-3">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-green-500/20 rounded-lg">
@@ -283,7 +283,7 @@ export const TradingAlgoSection = () => {
                       </button>
                 </div>
 
-              </div>
+              </div> */}
               
               <div className="flex flex-col items-center gap-4">
                 <button 
