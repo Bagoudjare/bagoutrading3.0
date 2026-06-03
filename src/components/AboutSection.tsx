@@ -1,7 +1,7 @@
 
 import { TrendingUp, Target, Lightbulb } from "lucide-react";
 import profile from "@/assets/imgs/profile.png";
-import files from "@/assets/files/Reussir_En_Trading-v1.pdf";
+import files from "@/assets/files/Reussir_En_Trading-V2.pdf";
 
 export const AboutSection = () => {
   return (
