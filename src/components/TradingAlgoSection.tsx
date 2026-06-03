@@ -287,7 +287,7 @@ export const TradingAlgoSection = () => {
               
               <div className="flex flex-col items-center gap-4">
                 <button 
-                  onClick={() => handleDownload('SNS_SETUP_EA-FULL-DEMO.ex5', '/demo/SNS_SETUP_EA-FULL-DEMO.ex5')}
+                  onClick={() => handleDownload('SNS_QM_EA_DEMO.ex5', '/demo/SNS_QM_EA_DEMO.ex5')}
                   disabled={isDownloading}
                   className={`group flex items-center gap-3 px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg ${
                     isDownloading 
@@ -303,7 +303,7 @@ export const TradingAlgoSection = () => {
                   ) : (
                     <>
                       <Download className="h-5 w-5 group-hover:animate-bounce" />
-                      Télécharger la Démo de SNS_SETUP_EA (.ex5)
+                      Télécharger la Démo de SNS_QM_EA (.ex5)
                     </>
                   )}
                 </button>
