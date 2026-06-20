@@ -52,10 +52,10 @@ export const AboutSection = () => {
         {/* Free guide section */}
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-blue-500/30 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
-            Voici un guide gratuit pour vous aider à commencer votre aventure en trading ?
+            Voici un guide pour vous aider à commencer votre aventure en trading ?
           </h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Découvrez les bases solides du trading avec ce guide offert. Un condensé de mes meilleures stratégies pour bien commencer.
+            Découvrez les bases solides du trading avec ce guide. Un condensé de mes meilleures stratégies pour bien commencer.
           </p>
           <button 
             onClick={() => window.open("https://vhconuvm.mychariow.shop/prd_2a4vvu/checkout", '_blank')} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
