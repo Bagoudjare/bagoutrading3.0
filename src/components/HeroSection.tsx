@@ -41,7 +41,7 @@ export const HeroSection = () => {
         </h1>
         
         <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto animate-fade-in animation-delay-500">
-          Transformez votre approche du Forex et des crypto-monnaies avec des stratégies automatisées et une formation d'exception
+          Transformez votre approche du Forex, des crypto-monnaies et des indices synthetiques avec des stratégies automatisées et une formation d'exception
         </p>
         
         <div className="space-y-4 animate-fade-in animation-delay-1000">
@@ -75,6 +75,10 @@ export const HeroSection = () => {
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
               <span>Crypto</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse"></div>
+              <span>indices synthetiques</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>

@@ -73,12 +73,6 @@ export const TradingAlgoSection = () => {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Target,
-      title: "Auto-détection des zones de décision",
-      description: "Identification précise des zones clés de trading",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
       icon: Zap,
       title: "Gestion automatique des trades",
       description: "Automatisation complète de vos positions",
@@ -90,12 +84,12 @@ export const TradingAlgoSection = () => {
       description: "Calcul précis de votre exposition au risque",
       gradient: "from-orange-500 to-red-500"
     },
-    {
-      icon: Shield,
-      title: "Mesure du risque et du reward",
-      description: "Analyse complète du ratio risk/reward",
-      gradient: "from-indigo-500 to-purple-500"
-    },
+    // {
+    //   icon: Shield,
+    //   title: "Mesure du risque et du reward",
+    //   description: "Analyse complète du ratio risk/reward",
+    //   gradient: "from-indigo-500 to-purple-500"
+    // },
     {
       icon: History,
       title: "Outils de backtesting",
@@ -130,11 +124,11 @@ export const TradingAlgoSection = () => {
             Système BT3.0
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-            Un système complet composé de la stratégie <strong className="text-blue-400">BT3.0 STRATEGY ULTIME</strong> (3 indicateurs) 
-            et de l'outil d'exécution <strong className="text-purple-400">SNIPER SETUP EA</strong>.
+            Un système complet composé de la stratégie <strong className="text-blue-400">BT3.0 STRATEGY ULTIME</strong> (2 indicateurs) 
+            et de l'outil d'exécution <strong className="text-purple-400">Système BT3.0</strong>.
           </p>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-            Sniper Setup EA est l'outil ultime d'exécution automatique — il analyse la structure du marché, 
+            Système BT3.0 est l'outil ultime d'exécution automatique — il analyse la structure du marché, 
             détecte les zones clés et gère vos trades en toute autonomie.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
@@ -232,9 +226,9 @@ export const TradingAlgoSection = () => {
               </div>
               
               <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
-                    Testez le système BT3.0 avant d'acheter. Les 3 indicateurs ci-dessous forment la stratégie 
+                    Testez le système BT3.0 avant d'acheter. {/* Les 2 indicateurs ci-dessous forment la stratégie 
                     <strong className="text-blue-400"> BT3.0 TREND STRATEGY</strong>. Combinés avec 
-                    <strong className="text-purple-400"> Sniper Setup EA</strong>, ils composent le système complet BT3.0.
+                    <strong className="text-purple-400"> Sniper Setup EA</strong>, ils composent le système complet BT3.0. */}
               </p>
               
               {/* <div className="grid md:grid-cols-3 gap-4 mb-8">
