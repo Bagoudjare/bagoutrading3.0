@@ -58,8 +58,8 @@ export const AboutSection = () => {
             Découvrez les bases solides du trading avec ce guide offert. Un condensé de mes meilleures stratégies pour bien commencer.
           </p>
           <button 
-            onClick={() => window.open(files, '_blank')} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
-            📚 Télécharger le guide gratuit
+            onClick={() => window.open("https://vhconuvm.mychariow.shop/prd_2a4vvu/checkout", '_blank')} className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+            📚 Télécharger le guide
           </button>
         </div>
       </div>
