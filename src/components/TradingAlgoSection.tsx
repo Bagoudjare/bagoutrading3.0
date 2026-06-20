@@ -157,7 +157,7 @@ export const TradingAlgoSection = () => {
 
             {/* Prix à droite */}
             <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/30">
-              <h3 className="text-3xl font-bold text-white mb-4">Sniper Setup EA</h3>
+              <h3 className="text-3xl font-bold text-white mb-4">Système BT3.0</h3>
               <div className="mb-6 space-y-3">
                 <div className="flex items-baseline gap-3">
                   <span className="text-4xl font-bold text-white">$699.99</span>
