@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
 import { AboutSection } from "@/components/AboutSection";
 import { AutomationSection } from "@/components/AutomationSection";
 import { TradingAlgoSection } from "@/components/TradingAlgoSection";
@@ -44,6 +45,10 @@ const Index = () => {
       <main className="relative">
         <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <HeroSection />
+        </section>
+
+        <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <BmaeLicensesSection />
         </section>
 
         <section id="apropos" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
