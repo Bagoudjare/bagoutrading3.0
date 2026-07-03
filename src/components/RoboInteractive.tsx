@@ -23,7 +23,7 @@ const iconMap: { [key: string]: any } = {
   Send
 };
 
-export default function RobotInteractive() {
+export function RoboInteractive() {
   const [selectedId, setSelectedId] = useState<string | null>("robo-ai");
 
   const selectedFeature = robotFeatures.find((f) => f.id === selectedId);
