@@ -77,7 +77,7 @@ export const HeroSection = () => {
             <div className="absolute -inset-8 rounded-full border border-blue-400/20 animate-pulse"></div>
             <div className="absolute -inset-16 rounded-full border border-purple-400/10"></div>
             <img
-              src={bmaeAsset.url}
+              src={bmaeAsset}
               alt="BMAE - Best Market Analyser Edge"
               className="relative w-64 md:w-80 rounded-3xl shadow-2xl shadow-blue-500/40"
             />
