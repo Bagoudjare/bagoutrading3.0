@@ -119,7 +119,7 @@ export const TradingAlgoSection = () => {
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        {/* <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Système BT3.0
           </h2>
@@ -132,13 +132,13 @@ export const TradingAlgoSection = () => {
             détecte les zones clés et gère vos trades en toute autonomie.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
-        </div>
+        </div> */}
 
         {/* Hero Image + Price */}
-        <div className="mb-16">
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+        {/* <div className="mb-16">
+          <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto"> */}
             {/* Image à gauche */}
-            <div className="relative group">
+            {/* <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative">
                 <img
@@ -153,10 +153,10 @@ export const TradingAlgoSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Prix à droite */}
-            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/30">
+            {/* <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-2xl backdrop-blur-sm border border-slate-600/30">
               <h3 className="text-3xl font-bold text-white mb-4">Système BT3.0</h3>
               <div className="mb-6 space-y-3">
                 <div className="flex items-baseline gap-3">
@@ -186,13 +186,13 @@ export const TradingAlgoSection = () => {
               {/* <div className="text-center">
                 <p className="text-yellow-400 font-semibold mb-4">⚡ Profitez de l'offre limitée ci-dessus !</p>
               </div> */}
-            </div>
+            {/* </div>
           </div>
         </div>
-          <h3 className="text-2xl font-bold text-white text-center mb-8">Fontionnalités principales :</h3>
+          <h3 className="text-2xl font-bold text-white text-center mb-8">Fontionnalités principales :</h3> */}
         
         {/* Features Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-16">
+        {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-16">
           {features.map((feature, idx) => {
             const IconComponent = feature.icon;
             return (
@@ -207,7 +207,7 @@ export const TradingAlgoSection = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         {/* Demo Download Section */}
         <div className="mb-16 max-w-4xl mx-auto">
