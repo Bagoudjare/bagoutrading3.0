@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
-import { RoboInteractive } from "@/components/RoboInteractive"
+import { RoboInteractive } from "@/components/RoboInteractive";
 import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
 import { AboutSection } from "@/components/AboutSection";
 import { AutomationSection } from "@/components/AutomationSection";
@@ -52,8 +52,12 @@ const Index = () => {
           <BmaeLicensesSection />
         </section>
 
-        <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.robointeractive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="robointeractive" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.robointeractive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <RoboInteractive />
+        </section>
+
+        <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <TradingAlgoSection />
         </section>
 
         <section id="apropos" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -66,10 +70,6 @@ const Index = () => {
 
         <section id="automatisation" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AutomationSection />
-        </section>
-
-        <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <TradingAlgoSection />
         </section>
 
         <section id="brokers" data-animate className={`transition-all duration-1000 delay-550 ${isVisible.brokers ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
