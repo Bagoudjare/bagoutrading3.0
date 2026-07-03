@@ -226,7 +226,7 @@ export const TradingAlgoSection = () => {
               </div>
               
               <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
-                    Testez le système BT3.0 avant d'acheter. {/* Les 2 indicateurs ci-dessous forment la stratégie 
+                    Testez l'outil BMAE avant d'acheter. {/* Les 2 indicateurs ci-dessous forment la stratégie 
                     <strong className="text-blue-400"> BT3.0 TREND STRATEGY</strong>. Combinés avec 
                     <strong className="text-purple-400"> Sniper Setup EA</strong>, ils composent le système complet BT3.0. */}
               </p>
@@ -297,7 +297,7 @@ export const TradingAlgoSection = () => {
                   ) : (
                     <>
                       <Download className="h-5 w-5 group-hover:animate-bounce" />
-                      Télécharger la Démo de SNS_QM_EA (.ex5)
+                      Télécharger la Démo de BMAE (.ex5)
                     </>
                   )}
                 </button>

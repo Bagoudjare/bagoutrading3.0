@@ -7,7 +7,7 @@ export const HeroSection = () => {
   const [videoOpen, setVideoOpen] = useState(false);
 
   const scrollToLicence = () => {
-    document.querySelector('#licence')?.scrollIntoView({ behavior: 'smooth' });
+    document.querySelector('#bmaesection')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
