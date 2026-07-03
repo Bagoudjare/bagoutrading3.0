@@ -54,7 +54,7 @@ export function RoboInteractive() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4 tracking-tight transition-colors duration-300"
           >
-            Le Cerveau Algorithmique
+            Pourquoi choisir notre système ?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -98,7 +98,7 @@ export function RoboInteractive() {
                 <div className="absolute inset-0.5 rounded-full bg-gradient-to-b from-blue-500/10 via-cyan-500/5 to-purple-500/10 opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
                 <Cpu className="w-10 h-10 md:w-14 md:h-14 text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform duration-300 z-10" />
                 <span className="text-[10px] md:text-xs font-mono font-bold text-slate-800 dark:text-white tracking-widest mt-1.5 z-10 animate-pulse">
-                  APEX CORE
+                  BMAE
                 </span>
                 {/* Simulated connection rays */}
                 {selectedId && (

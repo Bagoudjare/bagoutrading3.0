@@ -48,12 +48,12 @@ const Index = () => {
           <HeroSection />
         </section>
 
-        <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <BmaeLicensesSection />
-        </section>
-
         <section id="robointeractive" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.robointeractive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <RoboInteractive />
+        </section>
+
+        <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <BmaeLicensesSection />
         </section>
 
         <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
