@@ -58,16 +58,16 @@ const Index = () => {
           <BmaeLicensesSection />
         </section>
 
+        <section id="warning" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.warning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <WarningNoticeSection />
+        </section>
+
         <section id="testimonials" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.testimonials ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Testimonials />
         </section>
 
         <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <TradingAlgoSection />
-        </section>
-
-        <section id="warning" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.warning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <WarningNoticeSection />
         </section>
 
         <section id="apropos" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
