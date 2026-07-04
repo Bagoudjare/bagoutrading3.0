@@ -165,38 +165,47 @@ export const licensingPlans: LicenseOption[] = [
 export const testimonials: TestimonialItem[] = [
   {
     id: "test-1",
-    name: "Marc-Antoine D.",
-    role: "Prop Trader Indépendant",
+    name: "Mawuna KITCHO",
+    role: "Trader Indépendant",
     company: "Alpha Capital",
     avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80",
-    comment: "Ce système a radicalement transformé ma gestion du risque. Je le laisse tourner sur les indices en journée pendant que je me concentre sur mes analyses de fond. L'exécution est incroyablement rapide.",
+    comment: "Mon expérience avec ce coach m'a permis de vite maîtriser les analyses des graphiques, comment faire le money management, comment faire pour être un trader rentable sur le long terme grâce à ses algorithmes semi automatiques.... En bref il maîtrise son travail....",
     rating: 5
   },
   {
     id: "test-2",
-    name: "Élodie R.",
-    role: "Analyste Crypto Quant",
+    name: "Vinifient",
+    role: "Trader Indépendant",
     company: "Lux Crypto Fund",
     avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
-    comment: "La transparence de l'algorithme est ce qui m'a séduite. Chaque transaction est expliquée de façon limpide via Telegram. Les résultats de performance historique correspondent parfaitement au réel.",
+    comment: "La stratégie BT3.0 est très efficace, j’utilise depuis 3 mois et je suis satisfait des signaux. Je viens de me procurer le nouveau robot basé sur cette stratégie totalement automatisée . C’est super ",
     rating: 5
   },
   {
     id: "test-3",
-    name: "Alexandre G.",
-    role: "Investisseur Privé",
+    name: "Samdine Kondo",
+    role: "Trader Indépendant",
     company: "Gestion Privée",
     avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150&q=80",
-    comment: "En tant qu'entrepreneur, je n'ai plus le temps de scruter les courbes d'écrans toute la journée. La licence Pro me permet de capitaliser sur la volatilité des marchés d'une manière passive et très pro.",
+    comment: "Très bon outil. Je recommande 👏💪.",
     rating: 5
   },
   {
     id: "test-4",
-    name: "Sophie M.",
-    role: "Trader Forex",
+    name: "Dieudonné SANWOGOU",
+    role: "Trader Indépendant",
     company: "SMC International",
     avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80",
-    comment: "L'option de couplage multi-actifs m'a permis d'équilibrer mes drawdowns sur les devises majeures avec les dynamiques de l'or. Un outil technique tout simplement irréprochable.",
+    comment: "Excellent ,service rapide .La stratégie bt3.0 basée sur de la connaissance pure et des années d’expérience de mon coach m’a permis d’apprendre énormément avec des signaux précis. Je recommande vivement.",
+    rating: 5
+  },
+  {
+    id: "test-5",
+    name: "Zie Issouf Soro",
+    role: "Trader Indépendant",
+    company: "SMC International",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80",
+    comment: "Très bon outil,des signaux précis, bonne stratégie. Je vous le recommande.",
     rating: 5
   }
 ];

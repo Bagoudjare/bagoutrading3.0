@@ -27,14 +27,14 @@ export const HeroSection = () => {
             Solution BMAE — Trading Automatisé
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Automatisez votre trading avec un système{" "}
+              Ne perdez plus des mois à apprendre seul {" "}
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              conçu par un trader professionnel
+              le trading
             </span>
             .
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-            Profitez d'une solution de trading automatisée qui analyse le marché, exécute vos stratégies et vous aide à trader avec plus de discipline et d'efficacité.
+            Best Market Analyser Edge automatise les analyses les plus complexes du Smart Money Concept pour vous aider à identifier les meilleures opportunités tout en gardant le contrôle de vos décisions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">

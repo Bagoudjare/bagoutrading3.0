@@ -37,7 +37,7 @@ export function RoboInteractive() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.04),transparent_60%)]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-5">
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export function RoboInteractive() {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4 tracking-tight transition-colors duration-300"
           >
-            Pourquoi choisir notre système ?
+            Pourquoi choisir BMAE ?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -63,7 +63,7 @@ export function RoboInteractive() {
             transition={{ delay: 0.2 }}
             className="text-slate-600 dark:text-neutral-400 mt-4 text-sm md:text-base"
           >
-            Explorez les engrenages internes du robot de trading de BagougjareTrading 3.0. Cliquez sur n'importe quel module périphérique pour inspecter ses fonctionnalités.
+            BMAE réduit considérablement la courbe d'apprentissage en automatisant les analyses les plus complexes. Cliquez sur n'importe quel module périphérique pour inspecter ses fonctionnalités.
           </motion.p>
         </div>
 

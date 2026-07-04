@@ -4,6 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { RoboInteractive } from "@/components/RoboInteractive";
 import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
+import { Testimonials } from "@/components/Testimonials";
 import { AboutSection } from "@/components/AboutSection";
 import { AutomationSection } from "@/components/AutomationSection";
 import { TradingAlgoSection } from "@/components/TradingAlgoSection";
@@ -54,6 +55,10 @@ const Index = () => {
 
         <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <BmaeLicensesSection />
+        </section>
+
+        <section id="testimonials" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.testimonials ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <Testimonials />
         </section>
 
         <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
