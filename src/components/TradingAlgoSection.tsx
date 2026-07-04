@@ -98,14 +98,6 @@ export const TradingAlgoSection = () => {
     }
   ];
 
-  const paymentMethods = [
-    { name: "Litecoin", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/2.png", address: "..." },
-    { name: "USDT TRC20", logo: "https://s2.coinmarketcap.com/static/img/coins/64x64/825.png", address: "..." },
-    { name: "TRON", logo: "https://research.binance.com/static/images/projects/tron/tronlogo.png" , address: "..." },
-    { name: "Moov money", logo: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg", address: "(+228) 98740835" },
-    { name: "Mixx by Yas", logo: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg", address: "(+228) 91818382" }
-  ];
-
   const handleCopyAddress = async (address: string) => {
     await navigator.clipboard.writeText(address);
     setCopied(true);
@@ -226,58 +218,8 @@ export const TradingAlgoSection = () => {
               </div>
               
               <p className="text-gray-300 text-center max-w-2xl mx-auto mb-6">
-                    Testez l'outil BMAE avant d'acheter. {/* Les 2 indicateurs ci-dessous forment la stratégie 
-                    <strong className="text-blue-400"> BT3.0 TREND STRATEGY</strong>. Combinés avec 
-                    <strong className="text-purple-400"> Sniper Setup EA</strong>, ils composent le système complet BT3.0. */}
+                    Testez l'outil BMAE avant d'acheter. Toutes les fonctionnalités ne seront pas disponibles dans le testeur de stratégie 
               </p>
-              
-              {/* <div className="grid md:grid-cols-3 gap-4 mb-8">
-                <div className="flex items-center justify-between bg-slate-700/50 rounded-lg p-3">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-green-500/20 rounded-lg">
-                      <LineChart className="h-5 w-5 text-green-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">BT3.0 SMART TREND</p>
-                      <p className="text-gray-400 text-sm">Version Demo</p>
-                    </div>
-                  </div>
-                      <button onClick={() => handleDownload('BT3.0_SMART_TREND.ex5', '/demo/BT3.0_SMART_TREND.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-green-500/20 hover:bg-green-500/40 cursor-pointer'}`}>
-                        <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-green-400'}`} />
-                      </button>
-                </div>
-
-                <div className="flex items-center justify-between bg-slate-700/50 rounded-lg p-3">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-blue-500/20 rounded-lg">
-                      <Target className="h-5 w-5 text-blue-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">BT3.0 CCT</p>
-                      <p className="text-gray-400 text-sm">Version Demo</p>
-                    </div>
-                  </div>
-                      <button onClick={() => handleDownload('BT3.0_CCT.ex5', '/demo/BT3.0_CCT.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-blue-500/20 hover:bg-blue-500/40 cursor-pointer'}`}>
-                        <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-blue-400'}`} />
-                      </button>
-                </div>
-
-                <div className="flex items-center justify-between bg-slate-700/50 rounded-lg p-3">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 bg-purple-500/20 rounded-lg">
-                      <Lock className="h-5 w-5 text-purple-400" />
-                    </div>
-                    <div>
-                      <p className="text-white font-medium">BT3.0 OBS</p>
-                      <p className="text-gray-400 text-sm">Version Demo</p>
-                    </div>
-                  </div>
-                      <button onClick={() => handleDownload('BT3.0_OBS.ex5', '/demo/BT3.0_OBS.ex5')} disabled={isDownloading} className={`p-2 rounded-lg transition-all duration-300 ${isDownloading ? 'bg-gray-600 cursor-not-allowed' : 'bg-purple-500/20 hover:bg-purple-500/40 cursor-pointer'}`}>
-                        <Download className={`h-4 w-4 ${isDownloading ? 'text-gray-500' : 'text-purple-400'}`} />
-                      </button>
-                </div>
-
-              </div> */}
               
               <div className="flex flex-col items-center gap-4">
                 <button 
@@ -319,9 +261,9 @@ export const TradingAlgoSection = () => {
         <div className="mb-12 max-w-3xl mx-auto">
           <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl p-6 border border-slate-600/40 text-center">
             <h3 className="text-xl font-bold text-white mb-2">Que pensent nos utilisateurs ?</h3>
-            <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés ou partagez votre expérience sur Trustpilot</p>
+            <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés et partagez votre expérience sur Trustpillot</p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
-              <a
+              {/* <a
                 href="https://fr.trustpilot.com/review/bagoudjaretrading3-0.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -329,7 +271,7 @@ export const TradingAlgoSection = () => {
               >
                 <Star className="h-5 w-5" />
                 Voir les avis
-              </a>
+              </a> */}
               <a
                 href="https://fr.trustpilot.com/evaluate/bagoudjaretrading3-0.vercel.app"
                 target="_blank"
@@ -339,57 +281,6 @@ export const TradingAlgoSection = () => {
                 <MessageSquarePlus className="h-5 w-5" />
                 Donner son avis
               </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Payment Methods Section */}
-        <div className="border-t border-slate-700 pt-16">
-          <h3 className="text-2xl font-bold text-white text-center mb-3">Moyens de paiement acceptés</h3>
-          <p className="text-gray-400 text-center text-sm mb-8">Cliquez sur un moyen de paiement pour afficher l'adresse de réception</p>
-          <div className="relative overflow-x-auto overflow-y-visible payment-scroll">
-            <div className="flex justify-start md:justify-center min-w-min pt-40 pb-6 px-4">
-              {paymentMethods.map((method, idx) => {
-                const isOpen = selectedPayment === idx;
-                return (
-                  <div key={idx} className="relative flex-shrink-0 mx-4" style={{ width: '160px' }}>
-                    {isOpen && (
-                      <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 w-64 bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-600 rounded-xl p-3 shadow-2xl">
-                        <button
-                          onClick={() => setSelectedPayment(null)}
-                          className="absolute top-1.5 right-1.5 p-1 rounded-md hover:bg-slate-700 transition"
-                          aria-label="Fermer"
-                        >
-                          <X className="h-3.5 w-3.5 text-gray-300" />
-                        </button>
-                        <p className="text-xs text-gray-400 mb-1 pr-6">Adresse {method.name}</p>
-                        <div className="bg-slate-900/70 border border-slate-600/40 rounded-md p-2 mb-2 break-all text-gray-200 text-xs font-mono">
-                          {method.address}
-                        </div>
-                        <button
-                          onClick={() => handleCopyAddress(method.address)}
-                          className="w-full inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1.5 rounded-md text-xs font-semibold hover:opacity-90 transition"
-                        >
-                          {copied ? <><Check className="h-3.5 w-3.5" /> Copié</> : <><Copy className="h-3.5 w-3.5" /> Copier</>}
-                        </button>
-                      </div>
-                    )}
-
-                    <button
-                      onClick={() => setSelectedPayment(isOpen ? null : idx)}
-                      className="w-full bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-slate-600/30 hover:border-blue-500/70 hover:bg-white/20 transition-all duration-300 cursor-pointer"
-                    >
-                      <img
-                        src={method.logo}
-                        alt={method.name}
-                        className="w-16 h-16 mx-auto mb-3 object-contain"
-                      />
-                      <p className="text-gray-300 text-center text-sm font-semibold">{method.name}</p>
-                    </button>
-                    
-                  </div>
-                );
-              })}
             </div>
           </div>
         </div>

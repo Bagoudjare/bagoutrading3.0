@@ -8,6 +8,7 @@ import Testimonials from "@/components/Testimonials";
 import { AboutSection } from "@/components/AboutSection";
 import { AutomationSection } from "@/components/AutomationSection";
 import { TradingAlgoSection } from "@/components/TradingAlgoSection";
+import { WarningNoticeSection } from "@/components/WarningNoticeSection";
 import { BrokersSection } from "@/components/BrokersSection";
 import { PartnerCTA } from "@/components/PartnerCTA";
 import { Videos } from "@/components/Videos";
@@ -75,6 +76,10 @@ const Index = () => {
 
         <section id="automatisation" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AutomationSection />
+        </section>
+
+        <section id="warning" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.warning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <WarningNoticeSection />
         </section>
 
         <section id="brokers" data-animate className={`transition-all duration-1000 delay-550 ${isVisible.brokers ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

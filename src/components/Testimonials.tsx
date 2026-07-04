@@ -1,5 +1,5 @@
 import { testimonials } from "../data";
-import { Star } from "lucide-react";
+import { Quote, Star } from "lucide-react";
 
 export default function Testimonials() {
   // Duplicate list to create an infinite, seamless circular loop
@@ -52,12 +52,15 @@ export default function Testimonials() {
 
               {/* Profile Block */}
               <div className="flex items-center gap-4 mt-6 pt-4 border-t border-slate-100 dark:border-neutral-900">
-                <img
+                <div className="absolute -top-3 -left-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-2.5 shadow-lg shadow-blue-500/30">
+                  <Quote className="w-4 h-4 text-white" />
+                </div>
+                {/* <img
                   src={item.avatar}
                   alt={item.name}
                   referrerPolicy="no-referrer"
                   className="w-10 h-10 rounded-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 border border-slate-200 dark:border-neutral-850"
-                />
+                /> */}
                 <div className="text-left">
                   <h4 className="text-slate-800 dark:text-white font-bold font-display text-xs md:text-sm">
                     {item.name}
