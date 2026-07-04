@@ -30,7 +30,7 @@ export default function Testimonials() {
         <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white dark:from-black via-white/80 dark:via-black/80 to-transparent z-15 pointer-events-none" />
 
         {/* Moving track */}
-        <div className="animate-marquee flex gap-8 pr-8">
+        <div className="flex w-max animate-marquee gap-8 pr-8 hover:[animation-play-state:paused]">
           {duplicatedTestimonials.map((item, idx) => (
             <div
               key={`${item.id}-${idx}`}
@@ -63,7 +63,7 @@ export default function Testimonials() {
                     {item.name}
                   </h4>
                   <p className="text-slate-500 dark:text-neutral-400 text-[10px] font-mono mt-0.5">
-                    {item.role}, <span className="text-slate-400 dark:text-neutral-500">{item.company}</span>
+                    {item.role}, {/* <span className="text-slate-400 dark:text-neutral-500">{item.company}</span> */}
                   </p>
                 </div>
               </div>
