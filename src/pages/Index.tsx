@@ -4,7 +4,7 @@ import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
 import { RoboInteractive } from "@/components/RoboInteractive";
 import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
-import { Testimonials } from "@/components/Testimonials";
+import Testimonials from "@/components/Testimonials";
 import { AboutSection } from "@/components/AboutSection";
 import { AutomationSection } from "@/components/AutomationSection";
 import { TradingAlgoSection } from "@/components/TradingAlgoSection";
