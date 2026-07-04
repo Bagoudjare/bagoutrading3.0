@@ -69,45 +69,45 @@ export const timelineSteps = [
 export const robotFeatures: FeatureItem[] = [
   {
     id: "robo-anal",
-    title: "Analyse Quantitative",
-    description: "Interprétation simultanée de plusieurs unités de temps (de 1m à 1d) pour dégager des confluences parfaites de probabilité.",
+    title: "Analyse des Zones",
+    description: "Détection automatique des Order Blocks (OB) et Fair Value Gaps (FVG).",
     iconName: "BarChart3",
-    detailedExplanation: "Notre module d'analyse combine l'étude de l'order flow, du volume profile et d'indicateurs personnalisés d'impulsion pour filtrer les faux signaux avec un taux de précision exceptionnel."
+    detailedExplanation: "Le moteur d'analyse identifie automatiquement les Order Blocks représentant les zones d'intervention potentielles des acteurs institutionnels, ainsi que les Fair Value Gaps (FVG), révélant les déséquilibres créés par une forte impulsion du marché. Ces zones sont mises à jour dynamiquement afin de fournir des niveaux de réaction potentiels en temps réel."
   },
   {
     id: "robo-risk",
     title: "Risk Management",
-    description: "Régulation stricte des risques. Jamais plus de 1% du capital global n'est risqué sur une seule transaction.",
+    description: "Calcul automatique des paramètres de gestion du capital pour chaque opportunité.",
     iconName: "ShieldCheck",
-    detailedExplanation: "Le module de risk management intègre une coupure automatique globale quotidienne (daily max drawdown) et une répartition de risque asymétrique qui sécurise vos gains à chaque étape."
+    detailedExplanation: "L'outil évalue automatiquement le Risk/Reward de chaque configuration et calcule les paramètres essentiels de gestion du risque, notamment la taille de position, le Stop Loss (SL) et le Take Profit (TP). Cette approche permet d'appliquer des règles de gestion du capital de manière cohérente sur chaque opération."
   },
   {
     id: "robo-asset",
-    title: "Multi Asset Portfolio",
-    description: "Hedging et diversification instantanée entre Crypto, Forex et Indices pour amortir la volatilité globale.",
+    title: "Détection des Opportunités",
+    description: "Identification des configurations de trading à forte probabilité grâce à des filtres intelligents.",
     iconName: "Layers",
-    detailedExplanation: "Le robot ajuste dynamiquement son exposition selon la corrélation des marchés en temps réel, évitant ainsi le surexposition sectorielle lors des phases de haute volatilité macro-économique."
+    detailedExplanation: "Le système recherche automatiquement les setups Sniper répondant à une combinaison de critères techniques avancés. Les signaux Buy Signal (BS) et Sell Signal (SS) sont générés uniquement lorsque les conditions principales sont réunies, tandis que les signaux Filter Buy (FB) et Filter Sell (FS) apportent une validation supplémentaire pour réduire les faux signaux. Un guide d'interprétation accompagne ces signaux afin de faciliter leur utilisation."
   },
   {
     id: "robo-247",
-    title: "Trading Actif 24/7",
-    description: "Surveillance algorithmique des marchés mondiaux sans interruption de fatigue ni biais émotionnel.",
+    title: "Visualisation Intelligente",
+    description: "Une représentation graphique claire des informations essentielles pour une lecture rapide du marché.",
     iconName: "Activity",
-    detailedExplanation: "Grâce à notre infrastructure de serveurs cloud redondants à Francfort et New York, le robot maintient une disponibilité absolue, exécutant des opportunités nocturnes pendant que vous vous reposez."
+    detailedExplanation: "Les informations détectées par l'algorithme sont affichées à l'aide d'objets graphiques organisés et actualisés automatiquement. Les zones clés, les structures et les signaux sont représentés directement sur le graphique afin d'améliorer la lisibilité et de faciliter l'analyse sans surcharger l'écran."
   },
   {
     id: "robo-ai",
-    title: "Intelligence Synthétique",
-    description: "Ajustement automatique des stratégies selon le régime de marché (tendance forte, range horizontal, expansion).",
+    title: "Structure du Marché",
+    description: "Compréhension avancée de la dynamique des prix grâce à l'analyse de structure et au Multi-Timeframe (MTF).",
     iconName: "BrainCircuit",
-    detailedExplanation: "La technologie d'IA adaptative de nos modèles analyse continuellement la structure générale pour basculer automatiquement entre des algorithmes de suivi de tendance ou d'arbitrage de range."
+    detailedExplanation: "L'algorithme analyse en permanence la structure du marché afin d'identifier les cassures, les changements de caractère, la direction dominante et les phases de consolidation. L'analyse Multi-Timeframe (MTF) combine plusieurs unités de temps pour confirmer les tendances et améliorer la précision des décisions de trading."
   },
   {
     id: "robo-notif",
-    title: "Alertes Instantanées",
-    description: "Rapports d'activité riches et graphiques en temps réel envoyés directement sur votre canal privé.",
+    title: "Alertes et Surveillance",
+    description: "Restez informé instantanément dès qu'une opportunité répond aux critères définis.",
     iconName: "Send",
-    detailedExplanation: "Chaque action entreprise par le robot est expliquée de façon transparente : prix d'entrée, objectifs de sortie, niveau de stop-loss et raison technique de la prise de position."
+    detailedExplanation: "Le système surveille le marché en continu et envoie des notifications Push sur smartphone dès qu'une configuration correspondant aux paramètres de l'algorithme est détectée. Les alertes permettent de suivre plusieurs actifs sans rester constamment devant les graphiques."
   }
 ];
 
