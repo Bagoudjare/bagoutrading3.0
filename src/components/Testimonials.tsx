@@ -66,7 +66,7 @@ export default function Testimonials() {
                     {item.name}
                   </h4>
                   <p className="text-slate-500 dark:text-neutral-400 text-[10px] font-mono mt-0.5">
-                    {item.role}, {/* <span className="text-slate-400 dark:text-neutral-500">{item.company}</span> */}
+                    {item.role}, <span className="text-slate-400 dark:text-neutral-500">{item.company}</span>
                   </p>
                 </div>
               </div>

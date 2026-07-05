@@ -167,7 +167,7 @@ export const testimonials: TestimonialItem[] = [
     id: "test-1",
     name: "Mawuna KITCHO",
     role: "Trader Indépendant",
-    company: "",
+    company: "Togo",
     avatar: "",
     comment: "Mon expérience avec ce coach m'a permis de vite maîtriser les analyses des graphiques, comment faire le money management, comment faire pour être un trader rentable sur le long terme grâce à ses algorithmes semi automatiques.... En bref il maîtrise son travail....",
     rating: 5
@@ -176,7 +176,7 @@ export const testimonials: TestimonialItem[] = [
     id: "test-2",
     name: "Vinifient",
     role: "Trader Indépendant",
-    company: "",
+    company: "Cote d'Ivoire",
     avatar: "",
     comment: "La stratégie BT3.0 est très efficace, j’utilise depuis 3 mois et je suis satisfait des signaux. Je viens de me procurer le nouveau robot basé sur cette stratégie totalement automatisée . C’est super ",
     rating: 5
@@ -185,7 +185,7 @@ export const testimonials: TestimonialItem[] = [
     id: "test-3",
     name: "Samdine Kondo",
     role: "Trader Indépendant",
-    company: "",
+    company: "Togo",
     avatar: "",
     comment: "Très bon outil. Je recommande 👏💪.",
     rating: 5
@@ -194,7 +194,7 @@ export const testimonials: TestimonialItem[] = [
     id: "test-4",
     name: "Dieudonné SANWOGOU",
     role: "Trader Indépendant",
-    company: "",
+    company: "Togo",
     avatar: "",
     comment: "Excellent ,service rapide .La stratégie bt3.0 basée sur de la connaissance pure et des années d’expérience de mon coach m’a permis d’apprendre énormément avec des signaux précis. Je recommande vivement.",
     rating: 5
@@ -203,7 +203,7 @@ export const testimonials: TestimonialItem[] = [
     id: "test-5",
     name: "Zie Issouf Soro",
     role: "Trader Indépendant",
-    company: "",
+    company: "Cote d'Ivoire",
     avatar: "",
     comment: "Très bon outil,des signaux précis, bonne stratégie. Je vous le recommande.",
     rating: 5

@@ -34,7 +34,7 @@ export const HeroSection = () => {
             .
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-            Best Market Analyser Edge automatise les analyses les plus complexes du Smart Money Concept pour vous aider à identifier les meilleures opportunités tout en gardant le contrôle de vos décisions.
+            Pourquoi passer des années à développer une lecture efficace du marché ? BMAE condense plus de 6 ans d'expérience dans un seul outil. Attachez-le à votre graphique et profitez immédiatement de la même vision du marché que celle que j'utilise chaque jour.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
