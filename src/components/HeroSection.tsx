@@ -34,7 +34,7 @@ export const HeroSection = () => {
             .
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">
-            Pourquoi passer des années à développer une lecture efficace du marché ? BMAE condense plus de 6 ans d'expérience dans un seul outil. Attachez-le à votre graphique et profitez immédiatement de la même vision du marché que celle que j'utilise chaque jour.
+            BMAE a été conçu pour vous faire gagner des années d'apprentissage en vous offrant une lecture du marché claire et efficace. BMAE est le résultat de plus de 6 ans d'expérience, de recherche et d'optimisation condensé en un seul outil. Attachez-le à votre graphique et profitez immédiatement de la même vision du marché que celle de plusieurs professionnelle qui utilisent l'outil au quotidien.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
