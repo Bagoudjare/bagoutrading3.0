@@ -112,6 +112,24 @@ export const TradingAlgoSection = () => {
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
+
+            <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 flex gap-4">
+              <div className="shrink-0 mt-0.5">
+                <AlertTriangle className="h-5 w-5 text-amber-400" />
+              </div>
+              <p className="text-sm text-amber-100/90 leading-relaxed">
+                <span className="font-semibold text-amber-300">Important :</span> les signaux générés par Best Market Analyser Edge constituent une aide à l'analyse et à la prise de décision. Ils doivent être confirmés par la méthodologie enseignée dans la formation, et ne garantissent pas un résultat sur chaque opération.
+              </p>
+            </div>
+            <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 flex gap-4">
+              <div className="shrink-0 mt-0.5">
+                <AlertTriangle className="h-5 w-5 text-amber-400" />
+              </div>
+              <p className="text-sm text-amber-100/90 leading-relaxed">
+                <span className="font-semibold text-amber-300">Testeur de stratégie :</span> Best Market Analyser Edge repose en grande partie sur une interface interactive (boutons d'analyse, filtres et boutons d'exécution manuelle des ordres) qui nécessite une interaction en temps réel. Ces boutons ne sont pas opérationnels dans le Testeur de Stratégie de MetaTrader, qui ne permet pas de clics interactifs pendant la simulation. Pour évaluer pleinement l'outil et l'ensemble de ses fonctionnalités, il est recommandé de l'utiliser sur un compte démo ou réel, en conditions de marché réelles.
+              </p>
+            </div>
+            
         {/* <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Système BT3.0
@@ -208,23 +226,6 @@ export const TradingAlgoSection = () => {
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
             
-            <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 flex gap-4">
-              <div className="shrink-0 mt-0.5">
-                <AlertTriangle className="h-5 w-5 text-amber-400" />
-              </div>
-              <p className="text-sm text-amber-100/90 leading-relaxed">
-                <span className="font-semibold text-amber-300">Important :</span> les signaux générés par Best Market Analyser Edge constituent une aide à l'analyse et à la prise de décision. Ils doivent être confirmés par la méthodologie enseignée dans la formation, et ne garantissent pas un résultat sur chaque opération.
-              </p>
-            </div>
-            <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 flex gap-4">
-              <div className="shrink-0 mt-0.5">
-                <AlertTriangle className="h-5 w-5 text-amber-400" />
-              </div>
-              <p className="text-sm text-amber-100/90 leading-relaxed">
-                <span className="font-semibold text-amber-300">Testeur de stratégie :</span> Best Market Analyser Edge repose en grande partie sur une interface interactive (boutons d'analyse, filtres et boutons d'exécution manuelle des ordres) qui nécessite une interaction en temps réel. Ces boutons ne sont pas opérationnels dans le Testeur de Stratégie de MetaTrader, qui ne permet pas de clics interactifs pendant la simulation. Pour évaluer pleinement l'outil et l'ensemble de ses fonctionnalités, il est recommandé de l'utiliser sur un compte démo ou réel, en conditions de marché réelles.
-              </p>
-            
-            </div>
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-3 mb-4">
                 <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl">
