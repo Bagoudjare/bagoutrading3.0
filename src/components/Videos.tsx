@@ -21,7 +21,7 @@ export const Videos = () => {
   const videos = [
     {
       title: "🔥 J'ai Gagné 679€ en 5 Trades Grâce à Mon Outil Semi-Automatique !",
-      description: "Investissez dans une méthodologie complete de trading semi-automatique et accédez à la même logique d'analyyse utiliséenquotidiennement par Bagoudjare Trading",
+      description: "Investissez dans une méthodologie complete de trading semi-automatique et accédez à la même logique d'analyse utilisée quotidiennement par Bagoudjare Trading",
       videoId: "SUVaRYY34h8", // YouTube video ID
       thumbnail: "https://i.ytimg.com/vi/SUVaRYY34h8/hqdefault.jpg",
       duration: "20:51",
