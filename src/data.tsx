@@ -70,9 +70,9 @@ export const robotFeatures: FeatureItem[] = [
   {
     id: "robo-anal",
     title: "Analyse des Zones",
-    description: "Détection automatique des Order Blocks (OB) et Fair Value Gaps (FVG).",
+    description: "Détection automatique des Zones de Renversement.",
     iconName: "BarChart3",
-    detailedExplanation: "Le moteur d'analyse identifie automatiquement les Order Blocks représentant les zones d'intervention potentielles des acteurs institutionnels, ainsi que les Fair Value Gaps (FVG), révélant les déséquilibres créés par une forte impulsion du marché. Ces zones sont mises à jour dynamiquement afin de fournir des niveaux de réaction potentiels en temps réel."
+    detailedExplanation: "Le moteur d'analyse identifie automatiquement les Zones de Renversement  du marché a forte probabilité de réussite en Multi timeframe et les Setup de sniper de Renversement et de continuité a forte probabilité de réussite en Multi timeframe. Ces zones sont mises à jour dynamiquement afin de fournir des niveaux de réaction potentiels en temps réel."
   },
   {
     id: "robo-risk",

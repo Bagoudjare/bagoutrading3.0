@@ -20,19 +20,19 @@ export const Videos = () => {
 
   const videos = [
     {
-      title: "Conseils et Stratégie pour réussir en trading Forex et indices synthétiques, les erreurs a éviter ",
+      title: "🔥 J'ai Gagné 679€ en 5 Trades Grâce à Mon Outil Semi-Automatique !",
       description: "Découvrez les meilleurs conseils et stratégies pour réussir durablement en trading Forex et sur les indices synthétiques. Dans ce guide",
-      videoId: "AUq_ai4Y2Nw", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/AUq_ai4Y2Nw/hqdefault.jpg",
-      duration: "6:24",
+      videoId: "SUVaRYY34h8", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/SUVaRYY34h8/hqdefault.jpg",
+      duration: "20:51",
       category: "Presentation"
     },
     {
-      title: "Faire des entrées a faibles risques en Scalping M1, en Day trading M15, et en Swing H4",
+      title: "Best Market Analyser Edge (BMAE)",
       description: "Cette approche vise à identifier des zones d’entrée à faible risque sur plusieurs horizons de temps — M1, M15, H4",
-      videoId: "AcTqm8vRjWw", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/AcTqm8vRjWw/hqdefault.jpg",
-      duration: "5:33",
+      videoId: "6TglLCU7rdc", // YouTube video ID
+      thumbnail: "https://i.ytimg.com/vi/6TglLCU7rdc/hqdefault.jpg",
+      duration: "20:40",
       category: "Presentation"
     }
   ];
