@@ -62,9 +62,9 @@ const Index = () => {
           <Testimonials />
         </section>
 
-        <section id="warning" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.warning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* <section id="warning" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.warning ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <WarningNoticeSection />
-        </section>
+        </section> */}
 
         <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <TradingAlgoSection />

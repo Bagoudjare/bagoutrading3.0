@@ -113,7 +113,7 @@ export const TradingAlgoSection = () => {
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
 
-        <div className="space-y-4">
+        <div className="space-y-4 pb-10">
           <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 flex gap-4">
             <div className="shrink-0 mt-0.5">
               <AlertTriangle className="h-5 w-5 text-amber-400" />
