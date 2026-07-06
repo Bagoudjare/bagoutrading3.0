@@ -21,7 +21,7 @@ export const Videos = () => {
   const videos = [
     {
       title: "🔥 J'ai Gagné 679€ en 5 Trades Grâce à Mon Outil Semi-Automatique !",
-      description: "Découvrez les meilleurs conseils et stratégies pour réussir durablement en trading Forex et sur les indices synthétiques. Dans ce guide",
+      description: "Investissez dans une méthodologie complete de trading semi-automatique et accédez à la même logique d'analyyse utiliséenquotidiennement par Bagoudjare Trading",
       videoId: "SUVaRYY34h8", // YouTube video ID
       thumbnail: "https://i.ytimg.com/vi/SUVaRYY34h8/hqdefault.jpg",
       duration: "20:51",
@@ -29,7 +29,7 @@ export const Videos = () => {
     },
     {
       title: "Best Market Analyser Edge (BMAE)",
-      description: "Cette approche vise à identifier des zones d’entrée à faible risque sur plusieurs horizons de temps — M1, M15, H4",
+      description: "Presentation de l'outil de BMAE et test sur la marché ",
       videoId: "6TglLCU7rdc", // YouTube video ID
       thumbnail: "https://i.ytimg.com/vi/6TglLCU7rdc/hqdefault.jpg",
       duration: "20:40",
