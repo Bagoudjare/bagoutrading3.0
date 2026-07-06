@@ -105,6 +105,10 @@ export const BmaeLicensesSection = () => {
               Le prix augmente de <span className="text-amber-300 font-semibold">+50 $ après chaque vente</span>, jusqu'à atteindre le tarif final :
               <span className="text-white font-semibold"> 699,99 $</span> (6 mois) et <span className="text-white font-semibold">1 999,99 $</span> (à vie). Sécurisez votre tarif de lancement dès maintenant.
             </p>
+            <p className="text-gray-300 text-sm">
+              Une licence acheter l'indicateur<span className="text-amber-300 font-semibold"> Viking</span>, offert
+              <span className="text-white font-semibold"> gratuitement</span>
+            </p>
           </div>
         </div>
       </div>
