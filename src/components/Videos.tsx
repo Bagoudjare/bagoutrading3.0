@@ -1,124 +1,90 @@
-
-import { Youtube, Play, Eye, X } from "lucide-react";
+import { Youtube, Play, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-export const Videos = () => {
+export const BlogSection = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
-  
-  // Auto-scroll to center the modal when video opens
+
   useEffect(() => {
     if (selectedVideo && modalRef.current) {
       setTimeout(() => {
-        modalRef.current?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'center' 
-        });
-      }, 100); // Small delay to ensure modal is rendered
+        modalRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 100);
     }
   }, [selectedVideo]);
 
   const videos = [
     {
-      title: "🔥 J'ai Gagné 679€ en 5 Trades Grâce à Mon Outil Semi-Automatique !",
-      description: "Investissez dans une méthodologie complete de trading semi-automatique et accédez à la même logique d'analyse utilisée quotidiennement par Bagoudjare Trading",
-      videoId: "SUVaRYY34h8", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/SUVaRYY34h8/hqdefault.jpg",
-      duration: "20:51",
-      category: "Presentation"
+      label: "Témoignage 01",
+      author: "Bagoudjare Trading",
+      videoId: "SUVaRYY34h8",
+      thumbnail: `https://img.youtube.com/vi/SUVaRYY34h8/hqdefault.jpg`,
     },
     {
-      title: "Best Market Analyser Edge (BMAE)",
-      description: "Presentation de l'outil de BMAE et test sur la marché ",
-      videoId: "6TglLCU7rdc", // YouTube video ID
-      thumbnail: "https://i.ytimg.com/vi/6TglLCU7rdc/hqdefault.jpg",
-      duration: "20:40",
-      category: "Presentation"
-    }
+      label: "Témoignage 02",
+      author: "Bagoudjare Trading",
+      videoId: "6TglLCU7rdc",
+      thumbnail: `https://img.youtube.com/vi/6TglLCU7rdc/hqdefault.jpg`,
+    },
+    {
+      label: "Témoignage 03",
+      author: "Bagoudjare Trading",
+      videoId: "HpUGxXRs0ko",
+      thumbnail: `https://img.youtube.com/vi/HpUGxXRs0ko/hqdefault.jpg`,
+    },
   ];
 
-  const getCategoryColor = (category: string) => {
-    const colors = {
-      "Formation": "from-green-500 to-emerald-600",
-      "Crypto": "from-yellow-500 to-orange-600",
-      "Presentation": "from-blue-500 to-purple-600",
-      "Stratégie": "from-purple-500 to-pink-600"
-    };
-    return colors[category as keyof typeof colors] || "from-gray-500 to-gray-600";
-  };
-
-  const openVideo = (videoId: string) => {
-    setSelectedVideo(videoId);
-  };
-
-  const closeVideo = () => {
-    setSelectedVideo(null);    
-  };
-
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-slate-800 to-slate-900">
+    <div className="py-20 px-4 bg-gradient-to-b from-white to-rose-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-14">
+          <span className="inline-block bg-rose-100 text-rose-600 text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
             Vidéos YouTube
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </span>
+          <p className="text-slate-600 max-w-2xl mx-auto text-lg">
             Retrouvez mes analyses, tutoriels et conseils trading sur ma chaîne YouTube
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {videos.map((video, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {videos.map((video) => (
             <div
-              key={video.title}
-              className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 rounded-xl overflow-hidden backdrop-blur-sm border border-slate-600/30 hover:transform hover:scale-105 transition-all duration-300 group cursor-pointer"
-              onClick={() => openVideo(video.videoId)}
+              key={video.label}
+              onClick={() => setSelectedVideo(video.videoId)}
+              className="group relative rounded-2xl overflow-hidden bg-white shadow-[0_10px_40px_-15px_rgba(0,0,0,0.15)] hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.25)] transition-all duration-300 cursor-pointer border border-slate-100"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
                 <img
                   src={video.thumbnail}
-                  alt={video.title}
-                  className="w-full h-50 object-cover group-hover:scale-110 transition-transform duration-300"
+                  alt={video.label}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                
-                {/* Play Button Overlay */}
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-red-600 rounded-full p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+                <div className="absolute top-4 left-4">
+                  <span className="bg-white/95 backdrop-blur text-slate-900 text-sm font-semibold px-3 py-1.5 rounded-lg shadow">
+                    {video.label}
+                  </span>
+                  <div className="text-white text-xs mt-1 pl-1 drop-shadow">{video.author}</div>
+                </div>
+
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-red-600 rounded-full p-5 shadow-lg group-hover:scale-110 transition-transform">
                     <Play className="h-8 w-8 text-white fill-white" />
                   </div>
                 </div>
 
-                {/* Duration Badge */}
-                <div className="absolute bottom-2 right-2 bg-black/80 text-white text-xs px-2 py-1 rounded">
-                  {video.duration}
+                <div className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded flex items-center gap-1">
+                  <svg className="h-3 w-3" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.4-1.9.5-3.8.5-5.8s-.1-3.9-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/>
+                  </svg>
+                  Regarder sur YouTube
                 </div>
-
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <span className={`bg-gradient-to-r ${getCategoryColor(video.category)} px-3 py-1 rounded-full text-white text-sm font-semibold`}>
-                    {video.category}
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
-                  {video.title}
-                </h3>
-                <p className="text-gray-300 mb-6 line-clamp-3">
-                  {video.description}
-                </p>
-
-                <button className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white py-2 rounded-lg font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 flex items-center justify-center space-x-2">
-                  <Youtube className="h-4 w-4" />
-                  <span>Regarder sur YouTube</span>
-                </button>
               </div>
             </div>
           ))}
         </div>
-
+        
         <div className="text-center mt-12">
           <button 
             onClick={() => window.open('https://www.youtube.com/@bt3.0trading', '_blank')}
@@ -128,18 +94,19 @@ export const Videos = () => {
             <span>Voir toutes les vidéos</span>
           </button>
         </div>
+
       </div>
 
-            {/* Video Modal */}
       {selectedVideo && (
-        <div 
+        <div
           ref={modalRef}
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          onClick={() => setSelectedVideo(null)}
         >
-          <div className="relative w-full max-w-4xl mx-auto bg-slate-900 rounded-xl overflow-hidden">
+          <div className="relative w-full max-w-4xl mx-auto bg-slate-900 rounded-xl overflow-hidden" onClick={(e) => e.stopPropagation()}>
             <button
-              onClick={closeVideo}
-              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all duration-300"
+              onClick={() => setSelectedVideo(null)}
+              className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full p-2"
             >
               <X className="h-6 w-6" />
             </button>
