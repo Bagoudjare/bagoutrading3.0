@@ -123,15 +123,15 @@ export default {
 						transform: 'none',
 						animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
 					}
+				},
+				'marquee-left': {
+					'0%': { transform: 'translateX(0)' },
+					'100%': { transform: 'translateX(-50%)' }
+				},
+				'marquee-right': {
+					'0%': { transform: 'translateX(-50%)' },
+					'100%': { transform: 'translateX(0)' }
 				}
-				// 'marquee-left': {
-				// 	'0%': { transform: 'translateX(0)' },
-				// 	'100%': { transform: 'translateX(-50%)' }
-				// },
-				// 'marquee-right': {
-				// 	'0%': { transform: 'translateX(-50%)' },
-				// 	'100%': { transform: 'translateX(0)' }
-				// }
 			},
 			animation: {
 				'marquee': "marquee 40s linear infinite",
