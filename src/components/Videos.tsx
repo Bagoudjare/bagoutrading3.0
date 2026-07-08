@@ -29,8 +29,8 @@ export const Videos = () => {
     {
       label: "Presentation",
       author: "Bagoudjare Trading",
-      videoId: "HpUGxXRs0ko",
-      thumbnail: `https://img.youtube.com/vi/HpUGxXRs0ko/hqdefault.jpg`,
+      videoId: "6AK6WmPqm8U",
+      thumbnail: `https://img.youtube.com/vi/6AK6WmPqm8U/hqdefault.jpg`,
     },
   ];
 
