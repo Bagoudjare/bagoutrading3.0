@@ -1,7 +1,7 @@
 import { Youtube, Play, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 
-export const BlogSection = () => {
+export const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
