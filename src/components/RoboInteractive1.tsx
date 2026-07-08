@@ -52,7 +52,7 @@ export const BmaeSpotlightSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.04),transparent_60%)]" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-5">
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <span className="px-3 py-1 text-xs font-mono font-medium tracking-widest text-blue-300 uppercase bg-blue-500/10 border border-blue-400/30 rounded-full">
               Système Central Autonome
@@ -65,7 +65,7 @@ export const BmaeSpotlightSection = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold text-white mt-4 tracking-tight"
           >
-            Pourquoi choisir <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">BMAE ?</span>
+            Pourquoi choisir BMAE ?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
