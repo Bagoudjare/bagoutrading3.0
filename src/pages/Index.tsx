@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
 import { HeroSection } from "@/components/HeroSection";
+import { VideoPresentationSection } from "@/components/VideoPresentationSection";
 import { RoboInteractive } from "@/components/RoboInteractive";
 import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
 import Testimonials from "@/components/Testimonials";
 import { AboutSection } from "@/components/AboutSection";
 import { AutomationSection } from "@/components/AutomationSection";
 import { TradingAlgoSection } from "@/components/TradingAlgoSection";
-import { WarningNoticeSection } from "@/components/WarningNoticeSection";
 import { BrokersSection } from "@/components/BrokersSection";
 import { PartnerCTA } from "@/components/PartnerCTA";
 import { Videos } from "@/components/Videos";
@@ -48,6 +48,10 @@ const Index = () => {
       <main className="relative">
         <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <HeroSection />
+        </section>
+
+        <section id="presentation" data-animate className={`transition-all duration-800 ${isVisible.presentation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <VideoPresentationSection />
         </section>
 
         <section id="robointeractive" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.robointeractive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
