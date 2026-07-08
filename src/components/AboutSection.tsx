@@ -43,7 +43,7 @@ export const AboutSection = () => {
                 <div className="w-30 h-30 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <img src={profile} alt="ma photo" className="w-full h-95 object-cover " />
                 </div>
-                <h3 className="text-xl font-bold text-white">Expert Trader & Formateur</h3>
+                <h3 className="text-xl font-bold text-white">Expert Trader Formateur & Programmeur MQL5</h3>
               </div>
             </div>
           </div>
