@@ -83,8 +83,8 @@ export const VideoPresentationSection = () => {
           <div className="text-slate-700 font-medium">
             Noté <span className="font-bold text-slate-900">4.8 sur 5</span> par nos utilisateurs
           </div>
-        </div>
-      </div> */}
+        </div> */}
+      </div>
 
       {/* Modal */}
       {isOpen && (
