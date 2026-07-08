@@ -61,12 +61,12 @@ export const Videos = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                <div className="absolute top-4 left-4">
+                {/* <div className="absolute top-4 left-4">
                   <span className="bg-white/95 backdrop-blur text-slate-900 text-sm font-semibold px-3 py-1.5 rounded-lg shadow">
                     {video.label}
                   </span>
                   <div className="text-white text-xs mt-1 pl-1 drop-shadow">{video.author}</div>
-                </div>
+                </div> */}
 
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="bg-red-600 rounded-full p-5 shadow-lg group-hover:scale-110 transition-transform">
