@@ -70,10 +70,10 @@ export function RoboInteractive() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center min-h-[500px]">
           
           {/* Left Column: Orbital Interactive Canvas */}
-          <div className="lg:col-span-7 flex justify-center items-center relative h-[400px] md:h-[480px]">
+          <div className="lg:col-span-7 flex justify-center items-center relative h-[420px] md:h-[520px]">
             {/* Pulsing Concentric Circular Orbit Rings */}
-            <div className="absolute w-[300px] h-[300px] md:w-[380px] md:h-[380px] rounded-full border border-dashed border-slate-300 dark:border-neutral-800/60 animate-[spin_120s_linear_infinite] pointer-events-none" />
-            <div className="absolute w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-full border border-slate-200 dark:border-neutral-800/40 pointer-events-none" />
+            <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full border border-dashed border-blue-400/20 animate-[spin_120s_linear_infinite] pointer-events-none" />
+            <div className="absolute w-[200px] h-[200px] md:w-[260px] md:h-[260px] rounded-full border border-blue-400/10 pointer-events-none" />
             
             {/* Center Robot Engine Core Visual */}
             <div className="relative z-20 flex flex-col items-center justify-center">
@@ -81,9 +81,9 @@ export function RoboInteractive() {
                 animate={{
                   scale: [1, 1.03, 1],
                   boxShadow: [
-                    "0 0 20px rgba(59,130,246,0.15)",
-                    "0 0 35px rgba(59,130,246,0.3)",
-                    "0 0 20px rgba(59,130,246,0.15)"
+                    "0 0 20px rgba(59,130,246,0.25)",
+                    "0 0 35px rgba(59,130,246,0.5)",
+                    "0 0 20px rgba(59,130,246,0.25)"
                   ]
                 }}
                 transition={{
@@ -110,8 +110,8 @@ export function RoboInteractive() {
             {robotFeatures.map((feat, index) => {
               const total = robotFeatures.length;
               const angle = (index * 2 * Math.PI) / total; // Math calculation to map evenly in a circle
-              const radius = 135; // default pixel radius on mobile
-              const mdRadius = 175; // default pixel radius on desktop
+              const radius = 140; // default pixel radius on mobile
+              const mdRadius = 190; // default pixel radius on desktop
               
               const IconComponent = iconMap[feat.iconName] || Cpu;
               const isSelected = selectedId === feat.id;
@@ -125,7 +125,7 @@ export function RoboInteractive() {
                     transform: `translate(calc(var(--radius) * ${Math.cos(angle)}), calc(var(--radius) * ${Math.sin(angle)}))`,
                     "--radius": `${radius}px`
                   } as any}
-                  className="md:[--radius:175px] transition-all duration-300 z-30"
+                  className="md:[--radius:190px] transition-all duration-300 z-30"
                 >
                   <motion.button
                     onClick={() => setSelectedId(feat.id)}
@@ -150,7 +150,7 @@ export function RoboInteractive() {
                         y1="50%"
                         x2={`calc(50% - ${Math.cos(angle) * (mdRadius - 40)}px)`}
                         y2={`calc(50% - ${Math.sin(angle) * (mdRadius - 40)}px)`}
-                        stroke="rgba(59, 130, 246, 0.4)"
+                        stroke="rgba(96, 165, 250, 0.5)"
                         strokeWidth="1.5"
                         strokeDasharray="4"
                       />
