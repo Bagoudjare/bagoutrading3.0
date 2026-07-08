@@ -6,13 +6,13 @@ type ProofItem =
 
 // TODO: remplacer par vos vraies captures / vidéos (ou uploadez-les et je branche les URLs).
 const items: ProofItem[] = [
-  { type: "image", device: "pc", label: "Analyse PC – Setup Sniper", src: "/assets/imgs/proof2.58.16.jpeg" },
-  { type: "image", device: "pc", label: "PC – Signaux BS/SS", src: "/assets/imgs/proof2.59.23.jpeg" },
-  { type: "image", device: "pc", label: "PC – Signaux BS/SS", src: "/assets/imgs/proof2.59.53.jpeg" },
-  { type: "image", device: "android", label: "Android – Notifications", src: "/assets/imgs/proof-video.mp4" },
-  { type: "image", device: "android", label: "Android – Historique trades", src: "/assets/imgs/proof3.32.52.jpeg" },
-  { type: "video", label: "Android – Exécution live", src: "/assets/imgs/proof3.32.59.jpeg" },
-  { type: "video", label: "PC – Backtest résultats", src: "/assets/imgs/proof3.38.30.jpeg" },
+  { type: "image", device: "pc", label: "", src: "/assets/imgs/proof2.58.16.jpeg" },
+  { type: "image", device: "pc", label: "", src: "/assets/imgs/proof2.59.23.jpeg" },
+  { type: "image", device: "pc", label: "", src: "/assets/imgs/proof2.59.53.jpeg" },
+  { type: "video", device: "android", label: "", src: "/assets/imgs/proof-video.mp4" },
+  { type: "image", device: "android", label: "", src: "/assets/imgs/proof3.32.52.jpeg" },
+  { type: "image", device: "android", label: "", src: "/assets/imgs/proof3.32.59.jpeg" },
+  { type: "image", device: "android", label: "", src: "/assets/imgs/proof3.38.30.jpeg" },
 ];
 
 const DeviceBadge = ({ device }: { device: "pc" | "android" | "video" }) => {
