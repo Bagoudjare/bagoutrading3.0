@@ -15,19 +15,19 @@ export const Videos = () => {
 
   const videos = [
     {
-      label: "Témoignage 01",
+      label: "Presentation",
       author: "Bagoudjare Trading",
       videoId: "SUVaRYY34h8",
       thumbnail: `https://img.youtube.com/vi/SUVaRYY34h8/hqdefault.jpg`,
     },
     {
-      label: "Témoignage 02",
+      label: "Presentation",
       author: "Bagoudjare Trading",
       videoId: "6TglLCU7rdc",
       thumbnail: `https://img.youtube.com/vi/6TglLCU7rdc/hqdefault.jpg`,
     },
     {
-      label: "Témoignage 03",
+      label: "Presentation",
       author: "Bagoudjare Trading",
       videoId: "HpUGxXRs0ko",
       thumbnail: `https://img.youtube.com/vi/HpUGxXRs0ko/hqdefault.jpg`,
