@@ -74,7 +74,7 @@ export const VideoPresentationSection = () => {
         </div>
 
         {/* Trustpilot rating */}
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        {/* <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} className="h-6 w-6 fill-green-500 text-green-500" />
@@ -84,7 +84,7 @@ export const VideoPresentationSection = () => {
             Noté <span className="font-bold text-slate-900">4.8 sur 5</span> par nos utilisateurs
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Modal */}
       {isOpen && (
