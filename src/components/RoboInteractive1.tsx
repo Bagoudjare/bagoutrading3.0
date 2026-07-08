@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Boxes,
   GitBranch,
@@ -46,13 +46,12 @@ export const BmaeSpotlightSection = () => {
   return (
     <section id="robot" className="py-20 md:py-24 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950">
       {/* Ambient glow */}
-      <div className="absolute inset-0 bg-slate-50 dark:bg-[#060606] transition-colors duration-300" />
-      <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-white dark:from-black to-transparent pointer-events-none" />
-      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white dark:from-black to-transparent pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.04),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.12),transparent_60%)] pointer-events-none" />
+      <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-slate-900 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-5">
+        <div className="text-center max-w-3xl mx-auto mb-10">
           <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <span className="px-3 py-1 text-xs font-mono font-medium tracking-widest text-blue-300 uppercase bg-blue-500/10 border border-blue-400/30 rounded-full">
               Système Central Autonome
@@ -65,7 +64,7 @@ export const BmaeSpotlightSection = () => {
             transition={{ delay: 0.1 }}
             className="text-3xl md:text-5xl font-bold text-white mt-4 tracking-tight"
           >
-            Pourquoi choisir BMAE ?
+            Pourquoi choisir <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">BMAE ?</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
