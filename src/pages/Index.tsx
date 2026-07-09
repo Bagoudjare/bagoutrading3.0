@@ -87,9 +87,9 @@ const Index = () => {
           <FormationsSection />
         </section> */}
 
-        <section id="automatisation" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* <section id="automatisation" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AutomationSection />
-        </section>
+        </section> */}
 
         <section id="brokers" data-animate className={`transition-all duration-1000 delay-550 ${isVisible.brokers ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <BrokersSection />
