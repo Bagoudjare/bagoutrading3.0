@@ -104,19 +104,19 @@ export const BmaeLicensesSection = () => {
           </div>
         </div>
         {/* Évolutif */}
-        <div className="mt-10 bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center flex-shrink-0">
-            <TrendingUp className="w-6 h-6 text-amber-300" />
+        <div className="mt-10 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
+          <div className="w-12 h-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
+            <TrendingUp className="w-6 h-6 text-amber-600" />
           </div>
           <div className="flex-1 text-center md:text-left">
-            <h4 className="text-white font-bold text-lg mb-1">Tarifs évolutifs — Récompensez votre rapidité</h4>
-            <p className="text-gray-300 text-sm">
-              Le prix augmente de <span className="text-amber-300 font-semibold">+50 $ après chaque vente</span>, jusqu'à atteindre le tarif final :
-              <span className="text-white font-semibold"> 699,99 $</span> (6 mois) et <span className="text-white font-semibold">1 999,99 $</span> (à vie). Sécurisez votre tarif de lancement dès maintenant.
+            <h4 className="text-slate-900 font-bold text-lg mb-1">Tarifs évolutifs — Récompensez votre rapidité</h4>
+            <p className="text-slate-600 text-sm">
+              Le prix augmente de <span className="text-amber-700 font-semibold">+50 $ après chaque vente</span>, jusqu'à atteindre le tarif final :
+              <span className="text-slate-900 font-semibold"> 699,99 $</span> (6 mois) et <span className="text-slate-900 font-semibold">1 999,99 $</span> (à vie). Sécurisez votre tarif de lancement dès maintenant.
             </p>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-700 text-sm">
               Une licence acheter l'indicateur<span className="text-amber-300 font-semibold"> Viking</span>, offert
-              <span className="text-white font-semibold"> gratuitement</span>
+              <span className="text-slate-900 font-semibold"> gratuitement</span>
             </p>
           </div>
         </div>
