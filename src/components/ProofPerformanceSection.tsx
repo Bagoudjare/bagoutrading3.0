@@ -12,12 +12,12 @@ type ProofItem =
   | { type: "video"; src: string; label: string; device: "pc" | "android" };
 
 const items: ProofItem[] = [
-  { type: "image", device: "pc", label: "Backtest MT5 – Résultats", src: pcProof1.url },
-  { type: "image", device: "pc", label: "Statistiques détaillées MT5", src: pcProof2.url },
-  { type: "image", device: "pc", label: "Statistiques détaillées MT5", src: pcProof3.url },
-  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof1.url },
-  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof2.url },
-  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof3.url },
+  { type: "image", device: "pc", label: "Backtest MT5 – Résultats", src: pcProof1 },
+  { type: "image", device: "pc", label: "Statistiques détaillées MT5", src: pcProof2 },
+  { type: "image", device: "pc", label: "Statistiques détaillées MT5", src: pcProof3 },
+  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof1 },
+  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof2 },
+  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof3 },
   { type: "video", device: "android", label: "Android – Exécution live", src: androidVideo.url },
 ];
 
@@ -121,10 +121,6 @@ export const ProofPerformanceSection = () => {
         </div>
       </div>
 
-      <p className="text-center text-xs text-gray-500 mt-8 px-4">
-        Les résultats affichés sont donnés à titre illustratif et ne constituent pas une garantie
-        de gains futurs.
-      </p>
     </section>
   );
 };
