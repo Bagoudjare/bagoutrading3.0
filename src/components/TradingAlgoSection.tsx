@@ -110,7 +110,7 @@ export const TradingAlgoSection = () => {
   };
 
   return (
-    <div className="py-10 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="pt-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
 
         {/* <div className="text-center mb-16">
@@ -265,7 +265,7 @@ export const TradingAlgoSection = () => {
             <h3 className="text-xl font-bold text-white mb-2">Que pensent nos utilisateurs ?</h3>
             <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés et partagez votre expérience sur Trustpillot</p>
             <div className="flex flex-col sm:flex-row justify-center gap-3">
-              {/* <a
+              <a
                 href="https://fr.trustpilot.com/review/bagoudjaretrading3-0.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -273,7 +273,7 @@ export const TradingAlgoSection = () => {
               >
                 <Star className="h-5 w-5" />
                 Voir les avis
-              </a> */}
+              </a>
               <a
                 href="https://fr.trustpilot.com/evaluate/bagoudjaretrading3-0.vercel.app"
                 target="_blank"
