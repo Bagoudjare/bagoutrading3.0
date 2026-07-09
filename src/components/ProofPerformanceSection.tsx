@@ -1,18 +1,24 @@
 import { Monitor, Smartphone, Video, AlertTriangle } from "lucide-react";
+import pcProof1 from "@/assets/imgs/proof2.58.16.jpeg.asset.json";
+import pcProof2 from "@/assets/imgs/proof2.59.23.jpeg.asset.json";
+import pcProof3 from "@/assets/imgs/proof2.59.53.jpeg.asset.json";
+import androidProof1 from "@/assets/imgs/proof3.32.52.jpeg.asset.json";
+import androidProof2 from "@/assets/imgs/proof3.35.59.jpeg.asset.json";
+import androidProof3 from "@/assets/imgs/proof3.38.30.jpeg.asset.json";
+import androidVideo from "@/assets/imgs/proof-video.mp4.asset.json";
 
 type ProofItem =
   | { type: "image"; src: string; label: string; device: "pc" | "android" }
-  | { type: "video"; src: string; label: string; poster?: string };
+  | { type: "video"; src: string; label: string; device: "pc" | "android" };
 
-// TODO: remplacer par vos vraies captures / vidéos (ou uploadez-les et je branche les URLs).
 const items: ProofItem[] = [
-  { type: "image", device: "pc", label: "", src: "/assets/imgs/proof2.58.16.jpeg" },
-  { type: "image", device: "pc", label: "", src: "/assets/imgs/proof2.59.23.jpeg" },
-  { type: "image", device: "pc", label: "", src: "/assets/imgs/proof2.59.53.jpeg" },
-  { type: "video", device: "android", label: "", src: "/assets/imgs/proof-video.mp4" },
-  { type: "image", device: "android", label: "", src: "/assets/imgs/proof3.32.52.jpeg" },
-  { type: "image", device: "android", label: "", src: "/assets/imgs/proof3.32.59.jpeg" },
-  { type: "image", device: "android", label: "", src: "/assets/imgs/proof3.38.30.jpeg" },
+  { type: "image", device: "pc", label: "Backtest MT5 – Résultats", src: pcProof1.url },
+  { type: "image", device: "pc", label: "Statistiques détaillées MT5", src: pcProof2.url },
+  { type: "image", device: "pc", label: "Statistiques détaillées MT5", src: pcProof3.url },
+  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof1.url },
+  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof2.url },
+  { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof3.url },
+  { type: "video", device: "android", label: "Android – Exécution live", src: androidVideo.url },
 ];
 
 const DeviceBadge = ({ device }: { device: "pc" | "android" | "video" }) => {
@@ -30,30 +36,42 @@ const DeviceBadge = ({ device }: { device: "pc" | "android" | "video" }) => {
   );
 };
 
-const ProofCard = ({ item }: { item: ProofItem }) => (
-  <div className="relative shrink-0 mx-3 w-[280px] sm:w-[320px] h-[420px] rounded-2xl overflow-hidden border border-slate-700/50 bg-gradient-to-br from-slate-800/80 to-slate-900/90 shadow-xl">
-    <DeviceBadge device={item.type === "video" ? "video" : item.device} />
-    {item.type === "image" ? (
-      <img
-        src={item.src}
-        alt={item.label}
-        className="w-full h-full object-cover"
-        loading="lazy"
-      />
-    ) : (
-      <video
-        src={item.src}
-        controls
-        playsInline
-        preload="metadata"
-        className="w-full h-full object-cover bg-slate-950"
-      />
-    )}
-    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent p-4">
-      <p className="text-sm font-medium text-white">{item.label}</p>
+const ProofCard = ({ item }: { item: ProofItem }) => {
+  const isPc = item.device === "pc";
+  // PC: format paysage large (16:10). Android: format portrait (9:16).
+  const sizeClass = isPc
+    ? "w-[520px] sm:w-[640px] h-[360px]"
+    : "w-[240px] sm:w-[280px] h-[500px]";
+
+  return (
+    <div
+      className={`relative shrink-0 mx-3 ${sizeClass} rounded-2xl overflow-hidden border border-slate-700/50 bg-gradient-to-br from-slate-800/80 to-slate-900/90 shadow-xl`}
+    >
+      <DeviceBadge device={item.type === "video" ? "video" : item.device} />
+      {item.type === "image" ? (
+        <img
+          src={item.src}
+          alt={item.label}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+      ) : (
+        <video
+          src={item.src}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="w-full h-full object-cover bg-slate-950"
+        />
+      )}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent p-4">
+        <p className="text-sm font-medium text-white">{item.label}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const ProofPerformanceSection = () => {
   const loop = [...items, ...items];
@@ -74,13 +92,15 @@ export const ProofPerformanceSection = () => {
           <p className="text-sm text-amber-100/90 leading-relaxed">
             Beaucoup achètent des formations ou des outils de trading uniquement parce qu'ils ont
             vu des captures de profits publiées par un formateur — et une fois la formation
-            acquise, aucune rentabilité. Pourquoi ? Parce que <span className="font-semibold text-amber-300">les profits
-            réalisés sur une période donnée ne garantissent pas les résultats futurs</span>. Les
-            performances passées d'un élève ne garantissent pas votre propre réussite. C'est
-            pourquoi nous avons rendu notre méthodologie <span className="font-semibold text-amber-300">semi-automatique</span> :
-            vous pouvez lancer notre outil dans le testeur de stratégie de MetaTrader et
-            constater par vous-même l'efficacité de la méthodologie et la puissance de l'outil
-            avant tout achat.
+            acquise, aucune rentabilité. Pourquoi ? Parce que{" "}
+            <span className="font-semibold text-amber-300">
+              les profits réalisés sur une période donnée ne garantissent pas les résultats futurs
+            </span>
+            . Les performances passées d'un élève ne garantissent pas votre propre réussite. C'est
+            pourquoi nous avons rendu notre méthodologie{" "}
+            <span className="font-semibold text-amber-300">semi-automatique</span> : vous pouvez
+            lancer notre outil dans le testeur de stratégie de MetaTrader et constater par
+            vous-même l'efficacité de la méthodologie et la puissance de l'outil avant tout achat.
           </p>
         </div>
       </div>
@@ -94,7 +114,7 @@ export const ProofPerformanceSection = () => {
             "linear-gradient(to right, transparent, black 6%, black 94%, transparent)",
         }}
       >
-        <div className="flex w-max animate-marquee-right hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-marquee-right hover:[animation-play-state:paused] items-center">
           {loop.map((item, i) => (
             <ProofCard key={i} item={item} />
           ))}
