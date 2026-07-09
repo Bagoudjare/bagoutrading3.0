@@ -18,7 +18,7 @@ const items: ProofItem[] = [
   { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof1 },
   { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof2 },
   { type: "image", device: "android", label: "Android – Trades en cours", src: androidProof3 },
-  { type: "video", device: "android", label: "Android – Exécution live", src: androidVideo.url },
+  { type: "video", device: "android", label: "Android – Exécution live", src: androidVideo },
 ];
 
 const DeviceBadge = ({ device }: { device: "pc" | "android" | "video" }) => {
