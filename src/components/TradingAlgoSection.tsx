@@ -204,7 +204,7 @@ export const TradingAlgoSection = () => {
         </div> */}
 
         {/* Demo Download Section */}
-        <div className="mb-16 max-w-4xl mx-auto">
+        <div className="mb-20 max-w-4xl mx-auto">
           <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl p-8 border border-slate-600/40 backdrop-blur-sm">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
