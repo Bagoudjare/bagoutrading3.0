@@ -110,7 +110,7 @@ export const TradingAlgoSection = () => {
   };
 
   return (
-    <div className="pt-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto">
 
         {/* <div className="text-center mb-16">
