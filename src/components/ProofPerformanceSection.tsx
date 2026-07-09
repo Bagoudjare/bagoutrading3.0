@@ -1,11 +1,11 @@
 import { Monitor, Smartphone, Video, AlertTriangle } from "lucide-react";
-import pcProof1 from "@/assets/imgs/proof2.58.16.jpeg.asset.json";
-import pcProof2 from "@/assets/imgs/proof2.59.23.jpeg.asset.json";
-import pcProof3 from "@/assets/imgs/proof2.59.53.jpeg.asset.json";
-import androidProof1 from "@/assets/imgs/proof3.32.52.jpeg.asset.json";
-import androidProof2 from "@/assets/imgs/proof3.35.59.jpeg.asset.json";
-import androidProof3 from "@/assets/imgs/proof3.38.30.jpeg.asset.json";
-import androidVideo from "@/assets/imgs/proof-video.mp4.asset.json";
+import pcProof1 from "@/assets/imgs/proof2.58.16.jpeg";
+import pcProof2 from "@/assets/imgs/proof2.59.23.jpeg";
+import pcProof3 from "@/assets/imgs/proof2.59.53.jpeg";
+import androidProof1 from "@/assets/imgs/proof3.32.52.jpeg";
+import androidProof2 from "@/assets/imgs/proof3.35.59.jpeg;
+import androidProof3 from "@/assets/imgs/proof3.38.30.jpeg";
+import androidVideo from "@/assets/imgs/proof-video.mp4";
 
 type ProofItem =
   | { type: "image"; src: string; label: string; device: "pc" | "android" }
