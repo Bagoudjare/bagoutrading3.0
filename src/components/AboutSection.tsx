@@ -39,7 +39,7 @@ export const AboutSection = () => {
           <div className="relative">
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-sm">
               <div className="text-center mb-6">
-                <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
+                <div className="w-30 h-30 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg">
                   <img src={profile} alt="ma photo" className="w-full h-95 object-cover " />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900">Expert Trader Formateur & Programmeur MQL5</h3>
