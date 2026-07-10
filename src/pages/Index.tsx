@@ -48,13 +48,13 @@ const Index = () => {
       <Navigation />
       
       <main className="relative">
-        <section id="hero" data-animate className={`transition-all duration-800 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* <section id="hero" data-animate className={`transition-all duration-800 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Hero />
-        </section>
-        
-        {/* <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <HeroSection />
         </section> */}
+        
+        <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <HeroSection />
+        </section>
 
         <section id="presentation" data-animate className={`transition-all duration-800 ${isVisible.presentation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <VideoPresentationSection />
