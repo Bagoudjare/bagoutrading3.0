@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
 import { HeroSection } from "@/components/HeroSection";
 import { VideoPresentationSection } from "@/components/VideoPresentationSection";
 import { RoboInteractive } from "@/components/RoboInteractive";
@@ -47,6 +48,10 @@ const Index = () => {
       <Navigation />
       
       <main className="relative">
+        <section id="hero" data-animate className={`transition-all duration-800 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <Hero />
+        </section>
+        
         <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <HeroSection />
         </section>
