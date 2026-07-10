@@ -4,7 +4,7 @@ import bmaeAsset from "@/assets/bmae.png";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { motion, AnimatePresence } from "motion/react";
 
-export const HeroSection = () => {
+export const Hero = () => {
   // États du Fichier 1
   const [videoOpen, setVideoOpen] = useState(false);
 
