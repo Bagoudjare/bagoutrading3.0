@@ -414,9 +414,9 @@ export const Hero = () => {
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
       </div>
 
-      {/* Contenu principal - TAILLES MODÉRÉES */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center max-w-5xl mx-auto">
+      {/* ✅ max-w-6xl = parfait entre 5xl (trop serré) et 7xl (trop large) */}
+      <div className="relative z-10 w-full px-5 sm:px-6 lg:px-10 py-16 md:py-20 lg:py-24">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
           
           {/* Colonne gauche - Texte */}
           <div className="text-center md:text-left animate-fade-in">
@@ -424,7 +424,6 @@ export const Hero = () => {
               Solution BMAE — Trading Automatisé
             </span>
             
-            {/* Titre : taille modérée, jamais trop grand ni trop petit */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
               Ne perdez plus des mois à apprendre seul{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -433,12 +432,10 @@ export const Hero = () => {
               .
             </h1>
             
-            {/* Description : lisible sans être envahissante */}
             <p className="text-base lg:text-lg text-gray-300 mb-7 leading-relaxed">
               BMAE a été conçu pour vous faire gagner des années d'apprentissage en vous offrant une lecture du marché claire et efficace. BMAE est le résultat de plus de 6 ans d'expérience, de recherche et d'optimisation condensé en un seul outil. Attachez-le à votre graphique et profitez immédiatement de la même vision du marché que celle de plusieurs professionnels qui utilisent l'outil au quotidien.
             </p>
 
-            {/* Boutons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button
                 onClick={scrollToLicence}
@@ -457,7 +454,6 @@ export const Hero = () => {
               </button>
             </div>
 
-            {/* Indicateurs */}
             <div className="mt-6 flex items-center justify-center md:justify-start gap-5 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
@@ -479,12 +475,12 @@ export const Hero = () => {
             
             <div className="absolute inset-0 bg-blue-500/10 rounded-full filter blur-[100px] pointer-events-none" />
 
-            {/* Écran principal iMac - TAILLE MODÉRÉE */}
+            {/* Écran principal iMac */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[460px]"
+              className="relative w-full max-w-[400px] sm:max-w-[440px] lg:max-w-[480px]"
             >
               <div className="relative bg-[#1a1c24] p-[6px] sm:p-[7px] rounded-[16px] sm:rounded-[18px] shadow-[0_25px_65px_rgba(0,0,0,0.95)] border border-neutral-800">
                 <div className="bg-[#040508] p-1.5 sm:p-2 rounded-[10px] sm:rounded-[12px]">
@@ -502,12 +498,12 @@ export const Hero = () => {
               <div className="w-24 sm:w-28 h-1.5 sm:h-2 bg-gradient-to-r from-[#1c1d24] via-[#2d2e38] to-[#1c1d24] mx-auto rounded-b-md shadow-lg" />
             </motion.div>
 
-            {/* Deuxième écran MacBook - TAILLE MODÉRÉE */}
+            {/* Deuxième écran MacBook */}
             <motion.div
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="absolute -bottom-5 sm:-bottom-7 -right-3 sm:-right-4 lg:-right-3 z-30 w-[200px] sm:w-[250px] lg:w-[280px]"
+              className="absolute -bottom-5 sm:-bottom-7 -right-3 sm:-right-5 lg:-right-4 z-30 w-[210px] sm:w-[260px] lg:w-[300px]"
             >
               <div className="relative bg-[#1a1c24] p-[4px] rounded-t-lg border-t border-x border-neutral-800 shadow-[0_20px_50px_rgba(0,0,0,0.95)]">
                 <div className="relative bg-black aspect-[16/10] overflow-hidden rounded border border-neutral-950">
