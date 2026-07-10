@@ -110,33 +110,33 @@ export const Hero = () => {
   // Composant Terminal MT5
   const MT5Terminal = ({ isCompact = false }: { isCompact?: boolean }) => {
     return (
-      <div className={`w-full h-full bg-[#07080c] select-none flex flex-col relative text-white font-sans ${isCompact ? "text-[8px]" : ""}`}>
+      <div className={`w-full h-full bg-[#07080c] select-none flex flex-col relative text-white font-sans ${isCompact ? "text-[10px]" : ""}`}>
         
         {/* Header MT5 */}
         {!isCompact && (
-          <div className="bg-[#12141d] border-b border-neutral-900 px-2 sm:px-3 py-1 sm:py-1.5 flex items-center justify-between text-neutral-400 select-none">
-            <div className="flex items-center gap-1 sm:gap-1.5">
-              <div className="w-3 h-3 sm:w-4 sm:h-4 rounded bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-[6px] sm:text-[8px] font-black text-white">5</div>
-              <span className="text-[7px] sm:text-[9.5px] font-semibold text-neutral-300 font-mono truncate max-w-[120px] sm:max-w-none">
+          <div className="bg-[#12141d] border-b border-neutral-900 px-3 py-1.5 flex items-center justify-between text-neutral-400 select-none">
+            <div className="flex items-center gap-1.5">
+              <div className="w-4 h-4 rounded bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-[8px] font-black text-white">5</div>
+              <span className="text-[9.5px] font-semibold text-neutral-300 font-mono truncate max-w-[180px] sm:max-w-none">
                 61343461 : DeriV (SVG) LLC - Volatility 100 Index, M5
               </span>
             </div>
-            <div className="flex items-center gap-0.5 sm:gap-1">
-              <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-neutral-700" />
-              <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-neutral-700" />
-              <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-neutral-700" />
+            <div className="flex items-center gap-1">
+              <div className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+              <div className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
+              <div className="w-1.5 h-1.5 rounded-full bg-neutral-700" />
             </div>
           </div>
         )}
 
-        {/* Barre de menu avec bouton Paramètres */}
+        {/* Barre de menu */}
         {!isCompact && (
-          <div className="bg-[#161a25] border-b border-[#0f1118] px-2 sm:px-3 py-0.5 sm:py-1 flex items-center justify-between text-[7px] sm:text-[9px] text-neutral-300 font-sans select-none">
-            <div className="flex gap-2 sm:gap-3">
+          <div className="bg-[#161a25] border-b border-[#0f1118] px-3 py-1 flex items-center justify-between text-[9px] text-neutral-300 font-sans select-none">
+            <div className="flex gap-3">
               <span className="hover:text-white cursor-pointer transition-colors">Fichier</span>
               <span className="hover:text-white cursor-pointer transition-colors">Voir</span>
-              <span className="hover:text-white cursor-pointer transition-colors hidden sm:inline">Insérer</span>
-              <span className="hover:text-white cursor-pointer transition-colors hidden sm:inline">Graphiques</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Insérer</span>
+              <span className="hover:text-white cursor-pointer transition-colors">Graphiques</span>
               <span className="hover:text-white cursor-pointer font-extrabold text-blue-400">BMAE</span>
             </div>
             <button 
@@ -145,25 +145,25 @@ export const Hero = () => {
                 e.stopPropagation();
                 setShowSettingsModal(true);
               }}
-              className="flex items-center gap-0.5 sm:gap-1 px-1 sm:px-1.5 py-0.5 rounded bg-blue-900/30 border border-blue-800/40 hover:bg-blue-800/30 text-blue-400 font-mono text-[6px] sm:text-[7.5px] uppercase tracking-wider cursor-pointer"
+              className="flex items-center gap-1 px-1.5 py-0.5 rounded bg-blue-900/30 border border-blue-800/40 hover:bg-blue-800/30 text-blue-400 font-mono text-[7.5px] uppercase tracking-wider cursor-pointer"
             >
-              <Sliders className="w-2 h-2 sm:w-2.5 sm:h-2.5" />
-              <span className="hidden sm:inline">PROPRIÉTÉS</span>
+              <Sliders className="w-2.5 h-2.5" />
+              PROPRIÉTÉS
             </button>
           </div>
         )}
 
         {/* Info paire active */}
-        <div className="bg-[#0e111a] px-2 sm:px-3 py-1 sm:py-1.5 flex items-center justify-between border-b border-neutral-900 text-[7px] sm:text-[9px] font-mono text-neutral-400 select-none">
-          <div className="flex gap-x-2 sm:gap-x-3 gap-y-1 items-center">
+        <div className="bg-[#0e111a] px-3 py-1.5 flex items-center justify-between border-b border-neutral-900 text-[9px] font-mono text-neutral-400 select-none">
+          <div className="flex gap-x-3 gap-y-1 items-center">
             <span className="text-white font-extrabold flex items-center gap-1">
-              <span className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-blue-500 animate-ping" />
-              <span className="truncate max-w-[100px] sm:max-w-none">{activePair}</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping" />
+              {activePair}
             </span>
             {!isCompact && (
               <>
-                <span className="hidden lg:inline text-neutral-500">|</span>
-                <span className="hidden lg:inline">MS_MD =&gt; <span className="text-emerald-400 font-bold">Flat</span></span>
+                <span className="hidden sm:inline text-neutral-500">|</span>
+                <span>MS_MD =&gt; <span className="text-emerald-400 font-bold">Flat</span></span>
               </>
             )}
           </div>
@@ -174,53 +174,49 @@ export const Hero = () => {
 
         {/* Zone graphique */}
         <div className="flex-1 relative bg-[#07080c] overflow-hidden select-none">
-          {/* Grille de fond */}
-          <div className="absolute inset-0 pointer-events-none grid grid-cols-6 sm:grid-cols-8 grid-rows-4 sm:grid-rows-6 opacity-[0.05]">
+          <div className="absolute inset-0 pointer-events-none grid grid-cols-8 grid-rows-6 opacity-[0.05]">
             {Array.from({ length: 48 }).map((_, i) => (
               <div key={i} className="border-r border-b border-neutral-500 border-dashed" />
             ))}
           </div>
 
           {/* HUD overlay */}
-          <div className={`absolute inset-x-1.5 sm:inset-x-2.5 z-10 grid grid-cols-3 font-mono font-bold text-neutral-400 pointer-events-none select-none ${isCompact ? "top-0.5 text-[6px]" : "top-1 sm:top-2 lg:top-3 text-[6px] sm:text-[7px] lg:text-[8px]"}`}>
-            {/* Colonne gauche */}
+          <div className={`absolute inset-x-2.5 z-10 grid grid-cols-3 font-mono font-bold text-neutral-400 pointer-events-none select-none ${isCompact ? "top-1 text-[7px]" : "top-3 text-[8px] sm:text-[8.5px]"}`}>
             <div className="space-y-0.5 text-left">
               {activeSignals.S_SNS && (
                 <>
-                  <div className="flex gap-1 sm:gap-2 text-neutral-500 text-[5px] sm:text-[6.5px]">
+                  <div className="flex gap-2 text-neutral-500 text-[6.5px]">
                     <span>H4_SNS</span>
-                    <span className="hidden sm:inline">H4_CIT</span>
+                    <span>H4_CIT</span>
                   </div>
-                  <div className="text-[#00ff00] font-black text-[6px] sm:text-[7px] lg:text-[9px] tracking-wide filter drop-shadow-[0_0_2px_rgba(0,255,0,0.4)] truncate">
+                  <div className="text-[#00ff00] font-black text-[8px] sm:text-[9px] tracking-wide filter drop-shadow-[0_0_2px_rgba(0,255,0,0.4)]">
                     BAGOUDJARE WA:+228 98 74 08 35
                   </div>
                 </>
               )}
             </div>
 
-            {/* Colonne centre */}
             <div className="text-center space-y-0.5">
-              <div className="flex justify-center gap-1 sm:gap-2 text-[5px] sm:text-[6.5px]">
+              <div className="flex justify-center gap-2 text-[6.5px]">
                 <span>MN1 AV</span>
                 <span>W1 AV</span>
                 <span className="text-[#ff00ff] font-extrabold">Jeudi</span>
               </div>
               {!isCompact && (
-                <div className="text-[5px] sm:text-[6.5px] flex justify-center gap-1">
+                <div className="text-[6.5px] flex justify-center gap-1">
                   <span className="text-neutral-600">M5_MD=&gt;</span>
                   <span className="text-white font-bold">Flat</span>
                 </div>
               )}
             </div>
 
-            {/* Colonne droite */}
             <div className="text-right space-y-0.5">
-              <div className="text-[#00ff00] font-black tracking-wider text-[6px] sm:text-[8px] lg:text-[9.5px]">
+              <div className="text-[#00ff00] font-black tracking-wider text-[8px] sm:text-[9.5px]">
                 {currentTime || "2026.07.09 00:33:32"}
               </div>
               <div className="flex justify-end gap-0.5 pt-0.5">
-                <span className="px-0.5 py-0.2 bg-[#00ff00]/10 border border-[#00ff00]/35 text-[#00ff00] text-[5px] sm:text-[6.5px] font-black rounded-sm">H4</span>
-                <span className="px-0.5 py-0.2 bg-[#00ff00]/10 border border-[#00ff00]/35 text-[#00ff00] text-[5px] sm:text-[6.5px] font-black rounded-sm">W1</span>
+                <span className="px-0.5 py-0.2 bg-[#00ff00]/10 border border-[#00ff00]/35 text-[#00ff00] text-[6.5px] font-black rounded-sm">H4</span>
+                <span className="px-0.5 py-0.2 bg-[#00ff00]/10 border border-[#00ff00]/35 text-[#00ff00] text-[6.5px] font-black rounded-sm">W1</span>
               </div>
             </div>
           </div>
@@ -228,7 +224,7 @@ export const Hero = () => {
           {/* Prix en direct */}
           {activeSignals.S_PR && (
             <div 
-              className={`absolute right-8 sm:right-12 px-0.5 sm:px-1 py-0.2 text-[6px] sm:text-[7px] lg:text-[8px] font-mono rounded font-bold transition-all duration-300 z-20 shadow-md ${
+              className={`absolute right-12 px-1 py-0.2 text-[8px] font-mono rounded font-bold transition-all duration-300 z-20 shadow-md ${
                 lastTickDirection === "up" 
                   ? "bg-emerald-600 text-white translate-y-[-1px]" 
                   : "bg-red-600 text-white translate-y-[1px]"
@@ -240,19 +236,19 @@ export const Hero = () => {
           )}
 
           {/* Graphique SVG */}
-          <svg className="w-full h-full absolute inset-0 z-0 pr-8 sm:pr-12 pb-8 sm:pb-10 pt-8 sm:pt-12" viewBox="0 0 520 340" preserveAspectRatio="none">
+          <svg className="w-full h-full absolute inset-0 z-0 pr-12 pb-10 pt-12" viewBox="0 0 520 340" preserveAspectRatio="none">
             {activeSignals.S_PNL && (
               <g className="transition-opacity duration-300">
                 <line x1="5" y1="70" x2="515" y2="70" stroke="#10b981" strokeWidth="0.8" strokeDasharray="3 3" />
-                <text x="15" y="64" fill="#10b981" fontSize="6" sm-fontsize="7.5" fontFamily="monospace" fontWeight="bold">
+                <text x="15" y="64" fill="#10b981" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
                   Take Profit +{(profit * lotSize).toFixed(2)} USD
                 </text>
                 <line x1="5" y1="130" x2="515" y2="130" stroke="#3b82f6" strokeWidth="0.8" strokeDasharray="3 1" />
-                <text x="15" y="124" fill="#3b82f6" fontSize="6" fontFamily="monospace" fontWeight="bold">
+                <text x="15" y="124" fill="#3b82f6" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
                   @BUY_LIMIT RR = 6.30
                 </text>
                 <line x1="5" y1="260" x2="515" y2="260" stroke="#ef4444" strokeWidth="0.8" strokeDasharray="3 3" />
-                <text x="15" y="254" fill="#ef4444" fontSize="6" fontFamily="monospace" fontWeight="bold">
+                <text x="15" y="254" fill="#ef4444" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
                   Stop Loss -{(2.32 * lotSize).toFixed(2)} USD
                 </text>
               </g>
@@ -263,6 +259,25 @@ export const Hero = () => {
                 <rect x="155" y="130" width="145" height="110" fill="none" stroke="#52525b" strokeWidth="0.8" strokeDasharray="3 3" />
                 <rect x="305" y="80" width="135" height="150" fill="none" stroke="#52525b" strokeWidth="0.8" strokeDasharray="3 3" />
                 <rect x="445" y="195" width="55" height="50" fill="none" stroke="#52525b" strokeWidth="0.8" strokeDasharray="3 3" />
+                <line x1="500" y1="195" x2="500" y2="245" stroke="#ef4444" strokeWidth="1.2" />
+              </g>
+            )}
+
+            {activeSignals.S_MSS && (
+              <g className="transition-opacity duration-300">
+                <line x1="10" y1="145" x2="510" y2="145" stroke="#3b82f6" strokeWidth="0.8" strokeDasharray="4 4" />
+                <text x="15" y="139" fill="#3b82f6" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+                  S_MSS (BOS) @420.770
+                </text>
+              </g>
+            )}
+
+            {activeSignals.S_PO3 && (
+              <g className="transition-opacity duration-300">
+                <rect x="25" y="190" width="125" height="45" fill="rgba(234, 179, 8, 0.04)" stroke="#eab308" strokeWidth="0.7" strokeDasharray="1 3" />
+                <text x="30" y="202" fill="#eab308" fontSize="7" fontFamily="monospace" fontWeight="bold">ACCUMULATION</text>
+                <rect x="155" y="240" width="75" height="40" fill="rgba(239, 68, 68, 0.04)" stroke="#ef4444" strokeWidth="0.7" strokeDasharray="1 3" />
+                <text x="160" y="252" fill="#ef4444" fontSize="7" fontFamily="monospace" fontWeight="bold">MANIPULATION</text>
               </g>
             )}
 
@@ -277,6 +292,9 @@ export const Hero = () => {
               <g className="transition-opacity duration-300">
                 <rect x="380" y="15" width="5" height="275" fill="#00ff00" opacity="0.85" />
                 <rect x="420" y="15" width="5" height="275" fill="#00ff00" opacity="0.85" />
+                <text x="365" y="196" fill="#ffffff" fontSize="7.5" fontFamily="monospace" fontWeight="extrabold">
+                  Volatility 100 Index_M5
+                </text>
               </g>
             )}
 
@@ -309,11 +327,13 @@ export const Hero = () => {
                 );
               })}
             </g>
+
+            <circle cx="480" cy="225" r="4.5" fill="#00ff00" />
           </svg>
 
-          {/* Axe Y des prix */}
+          {/* Axe Y */}
           {activeSignals.S_PR && (
-            <div className="absolute right-0 top-0 bottom-8 sm:bottom-10 w-8 sm:w-12 bg-black/45 border-l border-neutral-900 flex flex-col justify-between py-3 sm:py-6 text-[5px] sm:text-[6px] lg:text-[7px] font-mono text-neutral-500 z-10 select-none pl-0.5 sm:pl-1 leading-none">
+            <div className="absolute right-0 top-0 bottom-10 w-12 bg-black/45 border-l border-neutral-900 flex flex-col justify-between py-6 text-[7px] font-mono text-neutral-500 z-10 select-none pl-1 leading-none">
               <span>438.29</span>
               <span>433.34</span>
               <span>428.39</span>
@@ -324,8 +344,17 @@ export const Hero = () => {
             </div>
           )}
 
+          {/* Labels temporels */}
+          <div className="absolute bottom-9 left-2 right-12 flex justify-between text-[6.5px] font-mono text-neutral-500 pointer-events-none select-none px-1 border-t border-neutral-900/40 pt-0.5 z-10 bg-[#07080c]/60">
+            <span>8 Jul</span>
+            <span>12:00</span>
+            <span>16:00</span>
+            <span>20:00</span>
+            <span>00:00</span>
+          </div>
+
           {/* Contrôles des signaux */}
-          <div className="absolute bottom-1 left-1 sm:left-1.5 right-8 sm:right-12 flex justify-between gap-0.5 select-none z-20 px-0.5 bg-[#07080c]/85 py-0.5 rounded border border-neutral-900/50">
+          <div className="absolute bottom-1.5 left-1.5 right-12 flex justify-between gap-0.5 select-none z-20 px-0.5 bg-[#07080c]/85 py-0.5 rounded border border-neutral-900/50">
             {Object.keys(activeSignals).map((key) => {
               const isActive = activeSignals[key];
               return (
@@ -336,7 +365,7 @@ export const Hero = () => {
                     e.stopPropagation();
                     toggleSignal(key);
                   }}
-                  className={`flex-1 py-0.5 sm:py-1 text-[5px] sm:text-[6px] lg:text-[7px] font-mono font-black rounded-sm border transition-all duration-150 active:scale-95 cursor-pointer text-center select-none ${
+                  className={`flex-1 py-1 text-[7px] font-mono font-black rounded-sm border transition-all duration-150 active:scale-95 cursor-pointer text-center select-none ${
                     isActive
                       ? "bg-[#00ff00] text-[#07080c] border-[#00ff00] font-extrabold shadow-[0_0_5px_rgba(0,255,0,0.3)]"
                       : "bg-[#14161f]/90 text-neutral-500 border-neutral-800 hover:text-neutral-300"
@@ -351,14 +380,14 @@ export const Hero = () => {
 
         {/* Tabs paires */}
         {!isCompact && (
-          <div className="bg-[#10131b] border-t border-neutral-900 px-1 sm:px-2 py-0.5 sm:py-1 flex gap-0.5 sm:gap-1 select-none overflow-x-auto whitespace-nowrap">
+          <div className="bg-[#10131b] border-t border-neutral-900 px-2 py-1 flex gap-1 select-none overflow-x-auto whitespace-nowrap">
             {["Volatility 100 Index, M5", "Volatility 75 Index, M5", "Step Index, M5"].map((pair) => {
               const isActive = pair === activePair;
               return (
                 <button
                   key={pair}
                   onClick={() => setActivePair(pair)}
-                  className={`px-1 sm:px-1.5 py-0.5 font-mono text-[5px] sm:text-[6.5px] lg:text-[7.5px] font-semibold rounded border cursor-pointer transition-colors ${
+                  className={`px-1.5 py-0.5 font-mono text-[7.5px] font-semibold rounded border cursor-pointer transition-colors ${
                     isActive ? "bg-[#07080c] text-white border-neutral-800" : "bg-[#141824] text-neutral-400 border-transparent hover:text-neutral-200"
                   }`}
                 >
@@ -381,21 +410,22 @@ export const Hero = () => {
 
       {/* Effets de flou */}
       <div className="absolute inset-0">
-        <div className="absolute top-[10%] left-[5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-[10%] right-[5%] w-[30vw] h-[30vw] max-w-[400px] max-h-[400px] bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
       </div>
 
-      {/* Contenu principal - Hauteur adaptative */}
-      <div className="relative z-10 w-full h-full flex items-center px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16">
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 xl:gap-10 items-center max-w-[2000px] mx-auto w-full">
+      {/* Contenu principal - TAILLES MODÉRÉES */}
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 py-16 md:py-20 lg:py-24">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-10 items-center max-w-5xl mx-auto">
           
-          {/* Colonne gauche - Texte avec taille responsive */}
+          {/* Colonne gauche - Texte */}
           <div className="text-center md:text-left animate-fade-in">
-            <span className="inline-block px-2 sm:px-3 lg:px-4 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs lg:text-sm xl:text-base font-semibold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-3 sm:mb-4 lg:mb-6">
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-5">
               Solution BMAE — Trading Automatisé
             </span>
             
-            <h1 className="text-[clamp(1.5rem,4vw,3.5rem)] md:text-[clamp(1.8rem,3.5vw,4rem)] font-bold text-white mb-3 sm:mb-4 lg:mb-6 leading-tight">
+            {/* Titre : taille modérée, jamais trop grand ni trop petit */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
               Ne perdez plus des mois à apprendre seul{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 le trading
@@ -403,86 +433,89 @@ export const Hero = () => {
               .
             </h1>
             
-            <p className="text-[clamp(0.8rem,1.5vw,1.2rem)] md:text-[clamp(0.85rem,1.2vw,1.3rem)] text-gray-300 mb-4 sm:mb-6 lg:mb-8 leading-relaxed max-w-[600px] xl:max-w-[700px] 2xl:max-w-[800px]">
+            {/* Description : lisible sans être envahissante */}
+            <p className="text-base lg:text-lg text-gray-300 mb-7 leading-relaxed">
               BMAE a été conçu pour vous faire gagner des années d'apprentissage en vous offrant une lecture du marché claire et efficace. BMAE est le résultat de plus de 6 ans d'expérience, de recherche et d'optimisation condensé en un seul outil. Attachez-le à votre graphique et profitez immédiatement de la même vision du marché que celle de plusieurs professionnels qui utilisent l'outil au quotidien.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center md:justify-start">
+            {/* Boutons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button
                 onClick={scrollToLicence}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center justify-center gap-1.5 sm:gap-2"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-7 py-3.5 rounded-lg text-base font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center justify-center gap-2"
               >
-                <ShoppingCart className="h-4 w-4 sm:h-5 sm:w-5" />
+                <ShoppingCart className="h-5 w-5" />
                 Acheter une licence
               </button>
 
               <button
                 onClick={() => setVideoOpen(true)}
-                className="border-2 border-blue-400 text-blue-300 px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center gap-1.5 sm:gap-2"
+                className="border-2 border-blue-400 text-blue-300 px-7 py-3.5 rounded-lg text-base font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <Play className="h-4 w-4 sm:h-5 sm:w-5" />
+                <Play className="h-5 w-5" />
                 Découvrir le fonctionnement
               </button>
             </div>
 
-            <div className="mt-4 sm:mt-6 lg:mt-8 flex items-center justify-center md:justify-start gap-3 sm:gap-4 lg:gap-6 text-[11px] sm:text-sm lg:text-base text-gray-400">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></span>
+            {/* Indicateurs */}
+            <div className="mt-6 flex items-center justify-center md:justify-start gap-5 text-sm text-gray-400">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                 Analyse temps réel
               </div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-400 rounded-full animate-pulse"></span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
                 Multi-Timeframe
               </div>
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full animate-pulse"></span>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
                 Signaux Sniper
               </div>
             </div>
           </div>
 
-          {/* Colonne droite - DOUBLE ÉCRAN responsive */}
+          {/* Colonne droite - DOUBLE ÉCRAN */}
           <div className="relative flex items-center justify-center w-full animate-scale-in">
             
-            <div className="absolute inset-0 bg-blue-500/10 rounded-full filter blur-[80px] sm:blur-[100px] pointer-events-none" />
+            <div className="absolute inset-0 bg-blue-500/10 rounded-full filter blur-[100px] pointer-events-none" />
 
-            {/* Écran principal iMac - Taille responsive */}
+            {/* Écran principal iMac - TAILLE MODÉRÉE */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full max-w-[280px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[480px] xl:max-w-[550px] 2xl:max-w-[650px] transition-all"
+              className="relative w-full max-w-[380px] sm:max-w-[420px] lg:max-w-[460px]"
             >
-              <div className="relative bg-[#1a1c24] p-[4px] sm:p-[6px] lg:p-[8px] rounded-[12px] sm:rounded-[16px] lg:rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.95)] sm:shadow-[0_25px_65px_rgba(0,0,0,0.95)] border border-neutral-800">
-                <div className="bg-[#040508] p-1 sm:p-1.5 lg:p-2 rounded-[8px] sm:rounded-[10px] lg:rounded-[14px]">
+              <div className="relative bg-[#1a1c24] p-[6px] sm:p-[7px] rounded-[16px] sm:rounded-[18px] shadow-[0_25px_65px_rgba(0,0,0,0.95)] border border-neutral-800">
+                <div className="bg-[#040508] p-1.5 sm:p-2 rounded-[10px] sm:rounded-[12px]">
                   <div className="relative bg-black aspect-[16/10] overflow-hidden rounded border border-neutral-950">
                     <MT5Terminal isCompact={false} />
                   </div>
                 </div>
-                <div className="h-3 sm:h-5 lg:h-7 bg-gradient-to-r from-[#2a2c34] via-[#484a54] to-[#2a2c34] rounded-b-[8px] sm:rounded-b-[10px] lg:rounded-b-[14px] flex items-center justify-center border-t border-neutral-800/80">
-                  <span className="text-[5px] sm:text-[6px] lg:text-[7.5px] xl:text-[9px] font-mono font-black tracking-[0.2em] sm:tracking-[0.25em] text-neutral-400 uppercase">
+                <div className="h-5 sm:h-6 bg-gradient-to-r from-[#2a2c34] via-[#484a54] to-[#2a2c34] rounded-b-[10px] sm:rounded-b-[12px] flex items-center justify-center border-t border-neutral-800/80">
+                  <span className="text-[6px] sm:text-[7px] font-mono font-black tracking-[0.25em] text-neutral-400 uppercase">
                     BMAE MONITOR
                   </span>
                 </div>
               </div>
-              <div className="relative w-12 sm:w-16 lg:w-20 h-7 sm:h-10 lg:h-14 bg-gradient-to-b from-[#2a2c34] to-[#121318] mx-auto shadow-md" style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)" }} />
-              <div className="w-16 sm:w-24 lg:w-32 h-1 sm:h-1.5 lg:h-2 bg-gradient-to-r from-[#1c1d24] via-[#2d2e38] to-[#1c1d24] mx-auto rounded-b-md shadow-lg" />
+              <div className="relative w-16 sm:w-18 h-10 sm:h-12 bg-gradient-to-b from-[#2a2c34] to-[#121318] mx-auto shadow-md" style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)" }} />
+              <div className="w-24 sm:w-28 h-1.5 sm:h-2 bg-gradient-to-r from-[#1c1d24] via-[#2d2e38] to-[#1c1d24] mx-auto rounded-b-md shadow-lg" />
             </motion.div>
 
-            {/* Deuxième écran MacBook - Taille responsive */}
+            {/* Deuxième écran MacBook - TAILLE MODÉRÉE */}
             <motion.div
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="absolute -bottom-4 sm:-bottom-6 lg:-bottom-8 -right-1 sm:-right-2 lg:-right-4 z-30 w-[140px] sm:w-[200px] md:w-[240px] lg:w-[280px] xl:w-[340px] 2xl:w-[400px] transition-all"
+              className="absolute -bottom-5 sm:-bottom-7 -right-3 sm:-right-4 lg:-right-3 z-30 w-[200px] sm:w-[250px] lg:w-[280px]"
             >
-              <div className="relative bg-[#1a1c24] p-[3px] sm:p-[4px] rounded-t-lg border-t border-x border-neutral-800 shadow-[0_15px_40px_rgba(0,0,0,0.95)] sm:shadow-[0_20px_50px_rgba(0,0,0,0.95)]">
+              <div className="relative bg-[#1a1c24] p-[4px] rounded-t-lg border-t border-x border-neutral-800 shadow-[0_20px_50px_rgba(0,0,0,0.95)]">
                 <div className="relative bg-black aspect-[16/10] overflow-hidden rounded border border-neutral-950">
                   <MT5Terminal isCompact={true} />
                 </div>
               </div>
-              <div className="relative h-1 sm:h-1.5 lg:h-2 bg-gradient-to-r from-[#2a2c34] via-[#484a54] to-[#2a2c34] rounded-b-lg border-t border-neutral-500/25 shadow-[0_10px_20px_rgba(0,0,0,0.95)] sm:shadow-[0_12px_25px_rgba(0,0,0,0.95)]">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-5 sm:w-6 lg:w-8 h-0.5 bg-neutral-950 rounded-b" />
+              <div className="relative h-1.5 sm:h-2 bg-gradient-to-r from-[#2a2c34] via-[#484a54] to-[#2a2c34] rounded-b-lg border-t border-neutral-500/25 shadow-[0_12px_25px_rgba(0,0,0,0.95)]">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-7 h-0.5 bg-neutral-950 rounded-b" />
               </div>
             </motion.div>
 
@@ -492,7 +525,7 @@ export const Hero = () => {
 
       {/* Modale vidéo */}
       <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="max-w-[90vw] sm:max-w-3xl lg:max-w-4xl xl:max-w-5xl p-0 bg-black border-slate-700">
+        <DialogContent className="max-w-3xl p-0 bg-black border-slate-700">
           <div className="aspect-video w-full">
             {videoOpen && (
               <iframe
@@ -524,13 +557,13 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="relative w-full max-w-[95vw] sm:max-w-lg lg:max-w-xl bg-[#161920] border border-neutral-800 rounded-2xl shadow-2xl z-10 text-left overflow-hidden flex flex-col font-sans max-h-[90vh]"
+              className="relative w-full max-w-xl bg-[#161920] border border-neutral-800 rounded-2xl shadow-2xl z-10 text-left overflow-hidden flex flex-col font-sans max-h-[85vh]"
             >
-              <div className="bg-[#101218] border-b border-neutral-900 px-4 sm:px-5 py-2 sm:py-3 flex justify-between items-center select-none">
-                <div className="flex items-center gap-1.5 sm:gap-2">
-                  <Settings className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
-                  <span className="text-[10px] sm:text-xs font-bold text-neutral-300 font-mono uppercase tracking-wider truncate">
-                    Best Market Analyzer Edge 4.00
+              <div className="bg-[#101218] border-b border-neutral-900 px-5 py-3 flex justify-between items-center select-none">
+                <div className="flex items-center gap-2">
+                  <Settings className="w-4 h-4 text-blue-400" />
+                  <span className="text-xs font-bold text-neutral-300 font-mono uppercase tracking-wider">
+                    Best Market Analyzer Edge 4.00 (Volatility 100 Index, M5)
                   </span>
                 </div>
                 <button
@@ -538,15 +571,15 @@ export const Hero = () => {
                   onClick={() => setShowSettingsModal(false)}
                   className="p-1 rounded text-neutral-500 hover:text-white hover:bg-neutral-800 transition-colors cursor-pointer"
                 >
-                  <X className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <X className="w-4 h-4" />
                 </button>
               </div>
 
-              <div className="bg-[#13151c] px-4 sm:px-5 py-1 sm:py-1.5 border-b border-neutral-900 flex gap-2 select-none">
+              <div className="bg-[#13151c] px-5 py-1.5 border-b border-neutral-900 flex gap-2 select-none">
                 <button
                   type="button"
                   onClick={() => setActiveSettingsTab("general")}
-                  className={`px-3 sm:px-4 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs font-bold rounded-t-lg transition-colors cursor-pointer ${
+                  className={`px-4 py-1.5 font-mono text-xs font-bold rounded-t-lg transition-colors cursor-pointer ${
                     activeSettingsTab === "general"
                       ? "bg-[#161920] text-blue-400 border-t border-x border-neutral-800"
                       : "text-neutral-400 hover:text-neutral-200"
@@ -557,64 +590,64 @@ export const Hero = () => {
                 <button
                   type="button"
                   onClick={() => setActiveSettingsTab("inputs")}
-                  className={`px-3 sm:px-4 py-1 sm:py-1.5 font-mono text-[10px] sm:text-xs font-bold rounded-t-lg transition-colors cursor-pointer ${
+                  className={`px-4 py-1.5 font-mono text-xs font-bold rounded-t-lg transition-colors cursor-pointer ${
                     activeSettingsTab === "inputs"
                       ? "bg-[#161920] text-blue-400 border-t border-x border-neutral-800"
                       : "text-neutral-400 hover:text-neutral-200"
                   }`}
                 >
-                  Entrées
+                  Entrées d'utilisateurs
                 </button>
               </div>
 
-              <div className="p-4 sm:p-5 overflow-y-auto space-y-4 bg-[#161920] flex-1">
+              <div className="p-5 overflow-y-auto space-y-4 bg-[#161920]">
                 {activeSettingsTab === "general" ? (
-                  <div className="space-y-4 text-neutral-300 text-[11px] sm:text-xs leading-relaxed">
-                    <div className="p-3 sm:p-4 rounded-xl bg-black/30 border border-neutral-800/80 space-y-2 sm:space-y-3">
-                      <h4 className="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
-                        <Cpu className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
+                  <div className="space-y-4 text-neutral-300 text-xs leading-relaxed">
+                    <div className="p-4 rounded-xl bg-black/30 border border-neutral-800/80 space-y-3">
+                      <h4 className="text-sm font-bold text-white flex items-center gap-2">
+                        <Cpu className="w-4 h-4 text-blue-400" />
                         Best Market Analyzer Edge 4.00
                       </h4>
-                      <p className="text-neutral-400 text-[10px] sm:text-[11px]">
+                      <p className="text-neutral-400 text-[11px]">
                         Copyright © 2026, BAGOUGJARE TRADING GROUP.<br />
-                        Algorithme optimisé pour les indices synthétiques.
+                        Algorithme optimisé pour les indices synthétiques de type Volatilité et Marchés OTC.
                       </p>
                     </div>
 
-                    <label className="flex items-center gap-2 sm:gap-3.5 p-2.5 sm:p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-neutral-900 transition-colors cursor-pointer">
+                    <label className="flex items-center gap-3.5 p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-neutral-900 transition-colors cursor-pointer">
                       <input
                         type="checkbox"
                         checked={useVisualSimulator}
                         onChange={(e) => setUseVisualSimulator(e.target.checked)}
-                        className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-600 bg-neutral-900 border-neutral-800 rounded focus:ring-blue-500"
+                        className="w-4 h-4 text-blue-600 bg-neutral-900 border-neutral-800 rounded focus:ring-blue-500"
                       />
                       <div>
-                        <span className="font-semibold block text-white text-[11px] sm:text-xs">Autoriser le trading algorithmique</span>
-                        <span className="text-[9px] sm:text-[10px] text-neutral-500">Permet au robot d'entrer de manière autonome sur signal validé.</span>
+                        <span className="font-semibold block text-white text-xs">Autoriser le trading algorithmique</span>
+                        <span className="text-[10px] text-neutral-500">Permet au robot d'entrer de manière autonome sur signal validé.</span>
                       </div>
                     </label>
                   </div>
                 ) : (
                   <div className="space-y-3">
                     <div className="rounded-xl border border-neutral-900 bg-black/35 overflow-hidden">
-                      <table className="w-full text-left text-[10px] sm:text-xs text-neutral-400 font-mono">
+                      <table className="w-full text-left text-xs text-neutral-400 font-mono">
                         <thead className="bg-[#12141a] text-neutral-200 border-b border-neutral-900">
                           <tr>
-                            <th className="px-3 sm:px-4 py-2 sm:py-2.5">Variable</th>
-                            <th className="px-3 sm:px-4 py-2 sm:py-2.5">Valeur</th>
+                            <th className="px-4 py-2.5">Variable</th>
+                            <th className="px-4 py-2.5">Valeur</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-900/60">
-                          <tr className="bg-[#1a1d27]/40 text-[9px] sm:text-[10px] text-neutral-500 font-bold">
-                            <td colSpan={2} className="px-3 sm:px-4 py-1 sm:py-1.5">--- VISUAL TRADE SIMULATOR ---</td>
+                          <tr className="bg-[#1a1d27]/40 text-[10px] text-neutral-500 font-bold">
+                            <td colSpan={2} className="px-4 py-1.5">--- VISUAL TRADE SIMULATOR ---</td>
                           </tr>
                           <tr>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2">USE VISUAL TRADE SIMULATOR</td>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-white">
+                            <td className="px-4 py-2">USE VISUAL TRADE SIMULATOR</td>
+                            <td className="px-4 py-2 text-white">
                               <select
                                 value={String(useVisualSimulator)}
                                 onChange={(e) => setUseVisualSimulator(e.target.value === "true")}
-                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-[10px] sm:text-xs text-blue-400 outline-none"
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
                               >
                                 <option value="true">true</option>
                                 <option value="false">false</option>
@@ -622,39 +655,39 @@ export const Hero = () => {
                             </td>
                           </tr>
                           <tr>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2">BUY TRADE EMULATION</td>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-white">
+                            <td className="px-4 py-2">BUY TRADE EMULATION</td>
+                            <td className="px-4 py-2 text-white">
                               <select
                                 value={String(buyTradeEmulation)}
                                 onChange={(e) => setBuyTradeEmulation(e.target.value === "true")}
-                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-[10px] sm:text-xs text-blue-400 outline-none"
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
                               >
                                 <option value="true">true</option>
                                 <option value="false">false</option>
                               </select>
                             </td>
                           </tr>
-                          <tr className="bg-[#1a1d27]/40 text-[9px] sm:text-[10px] text-neutral-500 font-bold">
-                            <td colSpan={2} className="px-3 sm:px-4 py-1 sm:py-1.5">--- SIGNAL SETTINGS ---</td>
+                          <tr className="bg-[#1a1d27]/40 text-[10px] text-neutral-500 font-bold">
+                            <td colSpan={2} className="px-4 py-1.5">--- SIGNAL SETTINGS ---</td>
                           </tr>
                           <tr>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2">NUMBER OF CANDLES</td>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-white">
+                            <td className="px-4 py-2">NUMBER OF CANDLES TO ANALYSE</td>
+                            <td className="px-4 py-2 text-white">
                               <input
                                 type="number"
                                 value={numCandles}
                                 onChange={(e) => setNumCandles(Number(e.target.value))}
-                                className="w-16 sm:w-20 bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-[10px] sm:text-xs text-blue-400 outline-none"
+                                className="w-20 bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
                               />
                             </td>
                           </tr>
                           <tr>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2">SIGNAL TIMEFRAME</td>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-white">
+                            <td className="px-4 py-2">SIGNAL TIMEFRAME</td>
+                            <td className="px-4 py-2 text-white">
                               <select
                                 value={signalTimeframe}
                                 onChange={(e) => setSignalTimeframe(Number(e.target.value))}
-                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-[10px] sm:text-xs text-blue-400 outline-none"
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
                               >
                                 <option value={5}>5 (M5)</option>
                                 <option value={15}>15 (M15)</option>
@@ -664,12 +697,12 @@ export const Hero = () => {
                             </td>
                           </tr>
                           <tr>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2">SHOW FVG ZONE</td>
-                            <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-white">
+                            <td className="px-4 py-2">SHOW FVG ZONE</td>
+                            <td className="px-4 py-2 text-white">
                               <select
                                 value={String(showFvgZone)}
                                 onChange={(e) => setShowFvgZone(e.target.value === "true")}
-                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-[10px] sm:text-xs text-blue-400 outline-none"
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
                               >
                                 <option value="true">true</option>
                                 <option value="false">false</option>
@@ -683,26 +716,26 @@ export const Hero = () => {
                 )}
               </div>
 
-              <div className="bg-[#101218] border-t border-neutral-900 px-4 sm:px-5 py-3 sm:py-4 flex justify-between items-center select-none">
+              <div className="bg-[#101218] border-t border-neutral-900 px-5 py-4 flex justify-between items-center select-none">
                 <button
                   type="button"
                   onClick={handleResetSettings}
-                  className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 font-mono text-[10px] sm:text-xs tracking-wider transition-colors cursor-pointer"
+                  className="px-4 py-2 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-neutral-300 font-mono text-xs tracking-wider transition-colors cursor-pointer"
                 >
                   Réinitialiser
                 </button>
 
-                <div className="flex gap-1.5 sm:gap-2">
+                <div className="flex gap-2">
                   <button
                     type="button"
                     onClick={() => setShowSettingsModal(false)}
-                    className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-transparent border border-neutral-800 hover:bg-neutral-800 text-neutral-400 font-mono text-[10px] sm:text-xs tracking-wider transition-colors cursor-pointer"
+                    className="px-4 py-2 rounded-lg bg-transparent border border-neutral-800 hover:bg-neutral-800 text-neutral-400 font-mono text-xs tracking-wider transition-colors cursor-pointer"
                   >
                     Annuler
                   </button>
                   <button
                     type="submit"
-                    className="px-4 sm:px-5 py-1.5 sm:py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-mono font-bold text-[10px] sm:text-xs tracking-wider transition-all cursor-pointer shadow-md shadow-blue-600/10 active:scale-95"
+                    className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-mono font-bold text-xs tracking-wider transition-all cursor-pointer shadow-md shadow-blue-600/10 active:scale-95"
                   >
                     OK
                   </button>
