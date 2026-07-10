@@ -4,7 +4,7 @@ import bmaeAsset from "@/assets/bmae.png";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { motion, AnimatePresence } from "motion/react";
 
-export const Hero = () => {
+export const HeroSection = () => {
   // États du Fichier 1
   const [videoOpen, setVideoOpen] = useState(false);
 
@@ -108,7 +108,7 @@ export const Hero = () => {
     setNumCandles(1000);
   };
 
-  // Composant Terminal MT5 (conservé du Fichier 2, simplifié)
+  // Composant Terminal MT5 (conservé du Fichier 2)
   const MT5Terminal = ({ isCompact = false }: { isCompact?: boolean }) => {
     return (
       <div className={`w-full h-full bg-[#07080c] select-none flex flex-col relative text-white font-sans ${isCompact ? "text-[10px]" : ""}`}>
@@ -161,6 +161,12 @@ export const Hero = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-ping" />
               {activePair}
             </span>
+            {!isCompact && (
+              <>
+                <span className="hidden sm:inline text-neutral-500">|</span>
+                <span>MS_MD =&gt; <span className="text-emerald-400 font-bold">Flat</span></span>
+              </>
+            )}
           </div>
           <div className="text-[#00ff00] font-bold text-right tracking-wider">
             {currentTime || "2026.07.09 00:33:32"}
@@ -169,6 +175,7 @@ export const Hero = () => {
 
         {/* Zone graphique */}
         <div className="flex-1 relative bg-[#07080c] overflow-hidden select-none">
+          {/* Grille de fond */}
           <div className="absolute inset-0 pointer-events-none grid grid-cols-8 grid-rows-6 opacity-[0.05]">
             {Array.from({ length: 48 }).map((_, i) => (
               <div key={i} className="border-r border-b border-neutral-500 border-dashed" />
@@ -177,6 +184,7 @@ export const Hero = () => {
 
           {/* HUD overlay */}
           <div className={`absolute inset-x-2.5 z-10 grid grid-cols-3 font-mono font-bold text-neutral-400 pointer-events-none select-none ${isCompact ? "top-1 text-[7px]" : "top-3 text-[8px] sm:text-[8.5px]"}`}>
+            {/* Colonne gauche */}
             <div className="space-y-0.5 text-left">
               {activeSignals.S_SNS && (
                 <>
@@ -191,17 +199,25 @@ export const Hero = () => {
               )}
             </div>
 
+            {/* Colonne centre */}
             <div className="text-center space-y-0.5">
               <div className="flex justify-center gap-2 text-[6.5px]">
                 <span>MN1 AV</span>
                 <span>W1 AV</span>
-                <span className="text-[#ff00ff] font-extrabold">Jeudi</span>
+                <span className="text-[#ff00ff] font-extrabold filter drop-shadow-[0_0_2.5px_rgba(255,0,255,0.4)]">Jeudi</span>
               </div>
+              {!isCompact && (
+                <div className="text-[6.5px] flex justify-center gap-1">
+                  <span className="text-neutral-600">M5_MD=&gt;</span>
+                  <span className="text-white font-bold">Flat</span>
+                </div>
+              )}
             </div>
 
+            {/* Colonne droite */}
             <div className="text-right space-y-0.5">
               <div className="text-[#00ff00] font-black tracking-wider text-[8px] sm:text-[9.5px]">
-                {currentTime}
+                {currentTime || "2026.07.09 00:33:32"}
               </div>
               <div className="flex justify-end gap-0.5 pt-0.5">
                 <span className="px-0.5 py-0.2 bg-[#00ff00]/10 border border-[#00ff00]/35 text-[#00ff00] text-[6.5px] font-black rounded-sm">H4</span>
@@ -215,8 +231,8 @@ export const Hero = () => {
             <div 
               className={`absolute right-12 px-1 py-0.2 text-[8px] font-mono rounded font-bold transition-all duration-300 z-20 shadow-md ${
                 lastTickDirection === "up" 
-                  ? "bg-emerald-600 text-white" 
-                  : "bg-red-600 text-white"
+                  ? "bg-emerald-600 text-white translate-y-[-1px]" 
+                  : "bg-red-600 text-white translate-y-[1px]"
               }`}
               style={{ top: "45%" }}
             >
@@ -224,42 +240,80 @@ export const Hero = () => {
             </div>
           )}
 
-          {/* Graphique SVG */}
+          {/* Graphique SVG avec tous les indicateurs */}
           <svg className="w-full h-full absolute inset-0 z-0 pr-12 pb-10 pt-12" viewBox="0 0 520 340" preserveAspectRatio="none">
+            
+            {/* S_PNL - Niveaux de trading */}
             {activeSignals.S_PNL && (
-              <g>
+              <g className="transition-opacity duration-300">
                 <line x1="5" y1="70" x2="515" y2="70" stroke="#10b981" strokeWidth="0.8" strokeDasharray="3 3" />
-                <text x="15" y="64" fill="#10b981" fontSize="7.5" fontFamily="monospace" fontWeight="bold">Take Profit +{(profit * lotSize).toFixed(2)} USD</text>
+                <text x="15" y="64" fill="#10b981" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+                  Take Profit +{(profit * lotSize).toFixed(2)} USD
+                </text>
+
                 <line x1="5" y1="130" x2="515" y2="130" stroke="#3b82f6" strokeWidth="0.8" strokeDasharray="3 1" />
-                <text x="15" y="124" fill="#3b82f6" fontSize="7.5" fontFamily="monospace" fontWeight="bold">@BUY_LIMIT RR = 6.30</text>
+                <text x="15" y="124" fill="#3b82f6" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+                  @BUY_LIMIT RR = 6.30
+                </text>
+
                 <line x1="5" y1="260" x2="515" y2="260" stroke="#ef4444" strokeWidth="0.8" strokeDasharray="3 3" />
-                <text x="15" y="254" fill="#ef4444" fontSize="7.5" fontFamily="monospace" fontWeight="bold">Stop Loss -{(2.32 * lotSize).toFixed(2)} USD</text>
+                <text x="15" y="254" fill="#ef4444" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+                  Stop Loss -{(2.32 * lotSize).toFixed(2)} USD
+                </text>
               </g>
             )}
 
+            {/* S_FVG - Zones FVG */}
             {activeSignals.S_FVG && (
-              <g>
+              <g className="transition-opacity duration-300">
                 <rect x="155" y="130" width="145" height="110" fill="none" stroke="#52525b" strokeWidth="0.8" strokeDasharray="3 3" />
                 <rect x="305" y="80" width="135" height="150" fill="none" stroke="#52525b" strokeWidth="0.8" strokeDasharray="3 3" />
                 <rect x="445" y="195" width="55" height="50" fill="none" stroke="#52525b" strokeWidth="0.8" strokeDasharray="3 3" />
+                <line x1="500" y1="195" x2="500" y2="245" stroke="#ef4444" strokeWidth="1.2" />
               </g>
             )}
 
+            {/* S_MSS - Market Structure Shift */}
+            {activeSignals.S_MSS && (
+              <g className="transition-opacity duration-300">
+                <line x1="10" y1="145" x2="510" y2="145" stroke="#3b82f6" strokeWidth="0.8" strokeDasharray="4 4" />
+                <text x="15" y="139" fill="#3b82f6" fontSize="7.5" fontFamily="monospace" fontWeight="bold">
+                  S_MSS (BOS) @420.770
+                </text>
+              </g>
+            )}
+
+            {/* S_PO3 - Power of 3 */}
+            {activeSignals.S_PO3 && (
+              <g className="transition-opacity duration-300">
+                <rect x="25" y="190" width="125" height="45" fill="rgba(234, 179, 8, 0.04)" stroke="#eab308" strokeWidth="0.7" strokeDasharray="1 3" />
+                <text x="30" y="202" fill="#eab308" fontSize="7" fontFamily="monospace" fontWeight="bold">ACCUMULATION</text>
+                
+                <rect x="155" y="240" width="75" height="40" fill="rgba(239, 68, 68, 0.04)" stroke="#ef4444" strokeWidth="0.7" strokeDasharray="1 3" />
+                <text x="160" y="252" fill="#ef4444" fontSize="7" fontFamily="monospace" fontWeight="bold">MANIPULATION</text>
+              </g>
+            )}
+
+            {/* S_SS - Tendance et moyennes mobiles */}
             {activeSignals.S_SS && (
-              <g>
+              <g className="transition-opacity duration-300">
                 <path d="M 20 215 Q 140 185 260 245 T 480 225" stroke="#00d2ff" strokeWidth="1.0" fill="none" opacity="0.75" />
                 <path d="M 20 220 Q 140 195 260 255 T 480 230" stroke="#ffaa00" strokeWidth="1.0" fill="none" opacity="0.75" />
               </g>
             )}
 
+            {/* S_TRD - Piliers de signal */}
             {activeSignals.S_TRD && (
-              <g>
+              <g className="transition-opacity duration-300">
                 <rect x="380" y="15" width="5" height="275" fill="#00ff00" opacity="0.85" />
                 <rect x="420" y="15" width="5" height="275" fill="#00ff00" opacity="0.85" />
+                <text x="365" y="196" fill="#ffffff" fontSize="7.5" fontFamily="monospace" fontWeight="extrabold">
+                  Volatility 100 Index_M5
+                </text>
               </g>
             )}
 
-            {/* Bougies */}
+            {/* Bougies du graphique */}
             <g>
               {[
                 { o: 210, h: 200, l: 230, c: 220 }, { o: 220, h: 210, l: 235, c: 215 },
@@ -288,9 +342,33 @@ export const Hero = () => {
                 );
               })}
             </g>
+
+            <circle cx="480" cy="225" r="4.5" fill="#00ff00" />
           </svg>
 
-          {/* Contrôles des signaux */}
+          {/* Axe Y des prix */}
+          {activeSignals.S_PR && (
+            <div className="absolute right-0 top-0 bottom-10 w-12 bg-black/45 border-l border-neutral-900 flex flex-col justify-between py-6 text-[7px] font-mono text-neutral-500 z-10 select-none pl-1 leading-none">
+              <span>438.29</span>
+              <span>433.34</span>
+              <span>428.39</span>
+              <span>423.44</span>
+              <span>418.49</span>
+              <span>413.54</span>
+              <span>408.59</span>
+            </div>
+          )}
+
+          {/* Labels temporels */}
+          <div className="absolute bottom-9 left-2 right-12 flex justify-between text-[6.5px] font-mono text-neutral-500 pointer-events-none select-none px-1 border-t border-neutral-900/40 pt-0.5 z-10 bg-[#07080c]/60">
+            <span>8 Jul</span>
+            <span>12:00</span>
+            <span>16:00</span>
+            <span>20:00</span>
+            <span>00:00</span>
+          </div>
+
+          {/* Contrôles des signaux BMAE */}
           <div className="absolute bottom-1.5 left-1.5 right-12 flex justify-between gap-0.5 select-none z-20 px-0.5 bg-[#07080c]/85 py-0.5 rounded border border-neutral-900/50">
             {Object.keys(activeSignals).map((key) => {
               const isActive = activeSignals[key];
@@ -315,7 +393,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Tabs paires */}
+        {/* Tabs paires en bas */}
         {!isCompact && (
           <div className="bg-[#10131b] border-t border-neutral-900 px-2 py-1 flex gap-1 select-none overflow-x-auto whitespace-nowrap">
             {["Volatility 100 Index, M5", "Volatility 75 Index, M5", "Step Index, M5"].map((pair) => {
@@ -345,6 +423,7 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-black/30"></div>
       </div>
 
+      {/* Effets de flou animés */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
@@ -401,27 +480,62 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Colonne droite - Terminal MT5 interactif (Fichier 2) */}
-        <div className="relative flex items-center justify-center animate-scale-in">
-          <div className="absolute inset-0 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-2xl blur-3xl"></div>
-          <div className="relative w-full max-w-[480px]">
-            <div className="absolute -inset-4 rounded-2xl border border-blue-400/20 animate-pulse"></div>
-            <div className="absolute -inset-8 rounded-2xl border border-purple-400/10"></div>
-            
-            {/* Terminal MT5 remplace l'image statique */}
+        {/* Colonne droite - DOUBLE ÉCRAN : iMac + MacBook superposé (Fichier 2) */}
+        <div className="lg:col-span-7 relative flex items-center justify-center pt-8 pb-12 w-full animate-scale-in">
+          
+          {/* Effet lumineux d'ambiance */}
+          <div className="absolute inset-0 bg-blue-500/10 rounded-full filter blur-[100px] pointer-events-none" />
+
+          {/* 1. Écran principal iMac */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            className="relative w-full max-w-[480px] sm:max-w-[530px] md:max-w-[560px] transition-all"
+          >
+            {/* Coque externe du moniteur */}
             <div className="relative bg-[#1a1c24] p-[6px] sm:p-[8px] rounded-[16px] sm:rounded-[20px] shadow-[0_25px_65px_rgba(0,0,0,0.95)] border border-neutral-800">
+              {/* Bordure intérieure de l'écran */}
               <div className="bg-[#040508] p-1.5 sm:p-2 rounded-[10px] sm:rounded-[14px]">
+                {/* Contenu de l'écran */}
                 <div className="relative bg-black aspect-[16/10] overflow-hidden rounded border border-neutral-950">
                   <MT5Terminal isCompact={false} />
                 </div>
               </div>
+              {/* Menton aluminium en bas du moniteur */}
               <div className="h-5 sm:h-7 bg-gradient-to-r from-[#2a2c34] via-[#484a54] to-[#2a2c34] rounded-b-[10px] sm:rounded-b-[14px] flex items-center justify-center border-t border-neutral-800/80">
                 <span className="text-[6px] sm:text-[7.5px] font-mono font-black tracking-[0.25em] text-neutral-400 uppercase">
                   BMAE MONITOR
                 </span>
               </div>
             </div>
-          </div>
+            {/* Pied du moniteur */}
+            <div className="relative w-16 sm:w-20 h-10 sm:h-14 bg-gradient-to-b from-[#2a2c34] to-[#121318] mx-auto shadow-md" style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)" }} />
+            {/* Base du pied */}
+            <div className="w-24 sm:w-32 h-1.5 sm:h-2 bg-gradient-to-r from-[#1c1d24] via-[#2d2e38] to-[#1c1d24] mx-auto rounded-b-md shadow-lg" />
+          </motion.div>
+
+          {/* 2. Deuxième écran MacBook superposé */}
+          <motion.div
+            initial={{ opacity: 0, y: 40, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="absolute -bottom-8 -right-4 sm:-right-8 lg:-right-4 z-30 w-[230px] sm:w-[280px] md:w-[310px] lg:w-[340px] transition-all"
+          >
+            {/* Capot de l'écran */}
+            <div className="relative bg-[#1a1c24] p-[4px] rounded-t-lg border-t border-x border-neutral-800 shadow-[0_20px_50px_rgba(0,0,0,0.95)]">
+              {/* Contenu de l'écran */}
+              <div className="relative bg-black aspect-[16/10] overflow-hidden rounded border border-neutral-950">
+                <MT5Terminal isCompact={true} />
+              </div>
+            </div>
+            {/* Base du laptop */}
+            <div className="relative h-1.5 sm:h-2 bg-gradient-to-r from-[#2a2c34] via-[#484a54] to-[#2a2c34] rounded-b-lg border-t border-neutral-500/25 shadow-[0_12px_25px_rgba(0,0,0,0.95)]">
+              {/* Encoche d'ouverture */}
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-0.5 bg-neutral-950 rounded-b" />
+            </div>
+          </motion.div>
+
         </div>
       </div>
 
@@ -446,6 +560,7 @@ export const Hero = () => {
       <AnimatePresence>
         {showSettingsModal && (
           <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+            {/* Fond flouté */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -454,6 +569,7 @@ export const Hero = () => {
               className="absolute inset-0 bg-black/70 backdrop-blur-md"
             />
 
+            {/* Boîte modale */}
             <motion.form
               onSubmit={handleSaveSettings}
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
@@ -461,11 +577,12 @@ export const Hero = () => {
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               className="relative w-full max-w-xl bg-[#161920] border border-neutral-800 rounded-2xl shadow-2xl z-10 text-left overflow-hidden flex flex-col font-sans"
             >
+              {/* En-tête */}
               <div className="bg-[#101218] border-b border-neutral-900 px-5 py-3 flex justify-between items-center select-none">
                 <div className="flex items-center gap-2">
                   <Settings className="w-4 h-4 text-blue-400" />
                   <span className="text-xs font-bold text-neutral-300 font-mono uppercase tracking-wider">
-                    Best Market Analyzer Edge 4.00
+                    Best Market Analyzer Edge 4.00 (Volatility 100 Index, M5)
                   </span>
                 </div>
                 <button
@@ -477,6 +594,7 @@ export const Hero = () => {
                 </button>
               </div>
 
+              {/* Onglets */}
               <div className="bg-[#13151c] px-5 py-1.5 border-b border-neutral-900 flex gap-2 select-none">
                 <button
                   type="button"
@@ -498,10 +616,11 @@ export const Hero = () => {
                       : "text-neutral-400 hover:text-neutral-200"
                   }`}
                 >
-                  Entrées
+                  Entrées d'utilisateurs
                 </button>
               </div>
 
+              {/* Contenu scrollable */}
               <div className="p-5 max-h-[360px] overflow-y-auto space-y-4 bg-[#161920]">
                 {activeSettingsTab === "general" ? (
                   <div className="space-y-4 text-neutral-300 text-xs leading-relaxed">
@@ -512,22 +631,37 @@ export const Hero = () => {
                       </h4>
                       <p className="text-neutral-400 text-[11px]">
                         Copyright © 2026, BAGOUGJARE TRADING GROUP.<br />
-                        Algorithme optimisé pour les indices synthétiques.
+                        Algorithme optimisé pour les indices synthétiques de type Volatilité et Marchés OTC.
                       </p>
                     </div>
 
-                    <label className="flex items-center gap-3.5 p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-neutral-900 transition-colors cursor-pointer">
-                      <input
-                        type="checkbox"
-                        checked={useVisualSimulator}
-                        onChange={(e) => setUseVisualSimulator(e.target.checked)}
-                        className="w-4 h-4 text-blue-600 bg-neutral-900 border-neutral-800 rounded focus:ring-blue-500"
-                      />
-                      <div>
-                        <span className="font-semibold block text-white text-xs">Autoriser le trading algorithmique</span>
-                        <span className="text-[10px] text-neutral-500">Permet au robot d'entrer de manière autonome sur signal validé.</span>
-                      </div>
-                    </label>
+                    <div className="space-y-2">
+                      <label className="flex items-center gap-3.5 p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-neutral-900 transition-colors cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={useVisualSimulator}
+                          onChange={(e) => setUseVisualSimulator(e.target.checked)}
+                          className="w-4 h-4 text-blue-600 bg-neutral-900 border-neutral-800 rounded focus:ring-blue-500"
+                        />
+                        <div>
+                          <span className="font-semibold block text-white text-xs">Autoriser le trading algorithmique</span>
+                          <span className="text-[10px] text-neutral-500">Permet au robot d'entrer de manière autonome sur signal validé.</span>
+                        </div>
+                      </label>
+
+                      <label className="flex items-center gap-3.5 p-3 rounded-lg bg-black/20 hover:bg-black/30 border border-neutral-900 transition-colors cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={buyTradeEmulation}
+                          onChange={(e) => setBuyTradeEmulation(e.target.checked)}
+                          className="w-4 h-4 text-blue-600 bg-neutral-900 border-neutral-800 rounded focus:ring-blue-500"
+                        />
+                        <div>
+                          <span className="font-semibold block text-white text-xs">Autoriser la modification des signaux</span>
+                          <span className="text-[10px] text-neutral-500">Active la re-calcul dynamique des niveaux de stop loss sur structure.</span>
+                        </div>
+                      </label>
+                    </div>
                   </div>
                 ) : (
                   <div className="space-y-3">
@@ -540,9 +674,11 @@ export const Hero = () => {
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-neutral-900/60">
+                          
                           <tr className="bg-[#1a1d27]/40 text-[10px] text-neutral-500 font-bold">
                             <td colSpan={2} className="px-4 py-1.5">--- VISUAL TRADE SIMULATOR ---</td>
                           </tr>
+                          
                           <tr>
                             <td className="px-4 py-2">USE VISUAL TRADE SIMULATOR</td>
                             <td className="px-4 py-2 text-white">
@@ -556,6 +692,7 @@ export const Hero = () => {
                               </select>
                             </td>
                           </tr>
+
                           <tr>
                             <td className="px-4 py-2">BUY TRADE EMULATION</td>
                             <td className="px-4 py-2 text-white">
@@ -569,11 +706,13 @@ export const Hero = () => {
                               </select>
                             </td>
                           </tr>
+
                           <tr className="bg-[#1a1d27]/40 text-[10px] text-neutral-500 font-bold">
                             <td colSpan={2} className="px-4 py-1.5">--- SIGNAL SETTINGS ---</td>
                           </tr>
+
                           <tr>
-                            <td className="px-4 py-2">NUMBER OF CANDLES</td>
+                            <td className="px-4 py-2">NUMBER OF CANDLES TO ANALYSE</td>
                             <td className="px-4 py-2 text-white">
                               <input
                                 type="number"
@@ -583,6 +722,7 @@ export const Hero = () => {
                               />
                             </td>
                           </tr>
+
                           <tr>
                             <td className="px-4 py-2">SIGNAL TIMEFRAME</td>
                             <td className="px-4 py-2 text-white">
@@ -598,6 +738,7 @@ export const Hero = () => {
                               </select>
                             </td>
                           </tr>
+
                           <tr>
                             <td className="px-4 py-2">SHOW FVG ZONE</td>
                             <td className="px-4 py-2 text-white">
@@ -611,6 +752,69 @@ export const Hero = () => {
                               </select>
                             </td>
                           </tr>
+
+                          <tr>
+                            <td className="px-4 py-2">SHOW H4 SIGNAL ZONE</td>
+                            <td className="px-4 py-2 text-white">
+                              <select
+                                value={String(showH4Zone)}
+                                onChange={(e) => setShowH4Zone(e.target.value === "true")}
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
+                              >
+                                <option value="true">true</option>
+                                <option value="false">false</option>
+                              </select>
+                            </td>
+                          </tr>
+
+                          <tr className="bg-[#1a1d27]/40 text-[10px] text-neutral-500 font-bold">
+                            <td colSpan={2} className="px-4 py-1.5">--- TREND LINE SETTINGS ---</td>
+                          </tr>
+
+                          <tr>
+                            <td className="px-4 py-2">USE TREND LINE</td>
+                            <td className="px-4 py-2 text-white">
+                              <select
+                                value={String(useTrendLine)}
+                                onChange={(e) => setUseTrendLine(e.target.value === "true")}
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
+                              >
+                                <option value="true">true</option>
+                                <option value="false">false</option>
+                              </select>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td className="px-4 py-2">TREND LINE UP COLOR</td>
+                            <td className="px-4 py-2 text-white">
+                              <select
+                                value={trendLineUpColor}
+                                onChange={(e) => setTrendLineUpColor(e.target.value)}
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
+                              >
+                                <option value="DodgerBlue">DodgerBlue</option>
+                                <option value="Cyan">Cyan</option>
+                                <option value="LimeGreen">LimeGreen</option>
+                              </select>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td className="px-4 py-2">TREND LINE DOWN COLOR</td>
+                            <td className="px-4 py-2 text-white">
+                              <select
+                                value={trendLineDownColor}
+                                onChange={(e) => setTrendLineDownColor(e.target.value)}
+                                className="bg-[#13151c] border border-neutral-800 rounded px-2 py-0.5 text-xs text-blue-400 outline-none"
+                              >
+                                <option value="OrangeRed">OrangeRed</option>
+                                <option value="Rose">Rose Red</option>
+                                <option value="Yellow">Yellow</option>
+                              </select>
+                            </td>
+                          </tr>
+
                         </tbody>
                       </table>
                     </div>
@@ -618,6 +822,7 @@ export const Hero = () => {
                 )}
               </div>
 
+              {/* Boutons d'action */}
               <div className="bg-[#101218] border-t border-neutral-900 px-5 py-4 flex justify-between items-center select-none">
                 <button
                   type="button"
@@ -643,6 +848,7 @@ export const Hero = () => {
                   </button>
                 </div>
               </div>
+
             </motion.form>
           </div>
         )}
