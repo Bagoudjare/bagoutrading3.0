@@ -36,7 +36,7 @@ export const PurchaseNotification = () => {
       setTimeout(() => setNotif(null), 8000);
     };
     // First notif after 1 min, then every 1 min
-    const first = setTimeout(show, 1 * 60 * 1000);
+    const first = setTimeout(show, 0.2 * 60 * 1000);
     const interval = setInterval(show, 1 * 60 * 1000);
     return () => {
       clearTimeout(first);
