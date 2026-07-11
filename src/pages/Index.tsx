@@ -17,6 +17,8 @@ import { Videos } from "@/components/Videos";
 import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
+import { SignupPopup } from "@/components/SignupPopup";
+import { PurchaseNotification } from "@/components/PurchaseNotification";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
@@ -119,6 +121,8 @@ const Index = () => {
       </main>
 
       <Footer />
+      {/* <SignupPopup /> */}
+      <PurchaseNotification />
     </div>
   );
 };
