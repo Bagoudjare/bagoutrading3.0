@@ -109,7 +109,7 @@ const Index = () => {
           <Videos />
         </section>
 
-        <section id="faq-section" data-animate className={cls("faq-section", "delay-680")}>
+        <section id="faqsection" data-animate className={`transition-all duration-1000 delay-340 ${isVisible.faqsection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <FaqSection />
         </section>
 
