@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
-import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users, Star, MessageSquarePlus, Copy, Check, X } from "lucide-react";
-import sniper from "@/assets/imgs/sniper.jpg";
+import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users, Star, MessageSquarePlus, Copy, Check, X, MonitorPlay } from "lucide-react";
 import supabase from "@/utils/supabase";
 import { useToast } from "@/hooks/use-toast";
-import { AlertTriangle } from "lucide-react";
+
+// ID YouTube de la vidéo "tutoriel téléchargement et installation démo"
+// Remplacez cette valeur par l'ID de votre propre vidéo.
+const DEMO_TUTORIAL_VIDEO_ID = "6AK6WmPqm8U";
 
 export const TradingAlgoSection = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -202,6 +204,35 @@ export const TradingAlgoSection = () => {
             );
           })}
         </div> */}
+
+                {/* Demo Tutorial Video */}
+        <div className="mb-16 max-w-5xl mx-auto">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-sm font-medium mb-6">
+              <MonitorPlay className="h-4 w-4" />
+              Tutoriel vidéo
+            </div>
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comment télécharger et installer la version démo
+            </h3>
+            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+              Suivez ce tutoriel rapide pour obtenir et installer la démo du système BT3.0 sur MetaTrader 5 en quelques minutes.
+            </p>
+          </div>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/30 border border-slate-600/40 bg-slate-900 aspect-video group">
+            <iframe
+              src={`https://www.youtube.com/embed/${DEMO_TUTORIAL_VIDEO_ID}`}
+              title="Tutoriel téléchargement et installation démo BT3.0"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full absolute inset-0"
+            />
+          </div>
+          <p className="text-center text-gray-400 text-sm mt-6">
+            Une fois la démo installée, retrouvez les fichiers .ex5 à télécharger juste en dessous.
+          </p>
+        </div>
 
         {/* Demo Download Section */}
         <div className="mb-20 max-w-4xl mx-auto">
