@@ -14,6 +14,7 @@ import { TradingAlgoSection } from "@/components/TradingAlgoSection";
 import { BrokersSection } from "@/components/BrokersSection";
 import { PartnerCTA } from "@/components/PartnerCTA";
 import { Videos } from "@/components/Videos";
+import { FaqSection } from "@/components/FaqSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -106,6 +107,10 @@ const Index = () => {
 
         <section id="videos" data-animate className={`transition-all duration-1000 delay-340 ${isVisible.videos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Videos />
+        </section>
+
+        <section id="faq-section" data-animate className={cls("faq-section", "delay-680")}>
+          <FaqSection />
         </section>
 
         <section id="contact" data-animate className={`transition-all duration-1000 delay-380 ${isVisible.contact ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
