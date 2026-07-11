@@ -292,7 +292,7 @@ export const TradingAlgoSection = () => {
             {/* <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl p-6 border border-slate-600/40 text-center"> */}
               {/* <h3 className="text-xl font-bold text-white mb-2">Que pensent nos utilisateurs ?</h3>
               <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés et partagez votre expérience sur Trustpillot</p> */}
-              <div className="flex flex-col sm:flex-row justify-center gap-3">
+              <div className="pt-5 flex flex-col sm:flex-row justify-center gap-3">
                 <a
                   href="https://fr.trustpilot.com/evaluate/bagoudjaretrading3-0.vercel.app"
                   target="_blank"
