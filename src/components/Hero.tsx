@@ -186,7 +186,7 @@ export const Hero = () => {
                       playsInline
                       poster="/video-poster.jpg"
                     >
-                      <source src="/public/demo-bmae.mp4" type="video/mp4" />
+                      <source src="/demo-bmae.mp4" type="video/mp4" />
                       <source src="/demo-bmae.webm" type="video/webm" />
                     </video>
                   </div>
