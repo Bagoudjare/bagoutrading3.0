@@ -1,16 +1,9 @@
 import { useState, useEffect, FormEvent } from "react";
 import { Play, ShoppingCart, Cpu, Settings, Sliders, X } from "lucide-react";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { motion, AnimatePresence } from "motion/react";
 
 export const Hero = () => {
-  // États du Fichier 1
-  const [videoOpen, setVideoOpen] = useState(false);
-
-  // États du Fichier 2 - Terminal MT5 interactif
-  const [livePrice, setLivePrice] = useState<number>(428.65);
-  const [lastTickDirection, setLastTickDirection] = useState<"up" | "down">("up");
-  const [profit, setProfit] = useState<number>(14.77);
+  // États
   const [currentTime, setCurrentTime] = useState<string>("");
   const [showSettingsModal, setShowSettingsModal] = useState<boolean>(false);
   const [activeSettingsTab, setActiveSettingsTab] = useState<"general" | "inputs">("inputs");
@@ -41,7 +34,7 @@ export const Hero = () => {
   const [numCandles, setNumCandles] = useState<number>(1000);
   const [lotSize] = useState<number>(1.00);
 
-  // Navigation (Fichier 1)
+  // Navigation
   const scrollToLicence = () => {
     document.querySelector('#bmaesection')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -63,24 +56,6 @@ export const Hero = () => {
     const clockInterval = setInterval(updateTime, 1000);
     return () => clearInterval(clockInterval);
   }, []);
-
-  // Simulation prix temps réel
-  useEffect(() => {
-    const priceInterval = setInterval(() => {
-      setLivePrice((prev) => {
-        const delta = (Math.random() - 0.48) * 0.4;
-        const next = parseFloat((prev + delta).toFixed(3));
-        setLastTickDirection(delta >= 0 ? "up" : "down");
-        
-        if (buyTradeEmulation) {
-          setProfit((p) => parseFloat((p + delta * 1.5).toFixed(2)));
-        }
-        return next;
-      });
-    }, 1500);
-
-    return () => clearInterval(priceInterval);
-  }, [buyTradeEmulation]);
 
   const toggleSignal = (key: string) => {
     setActiveSignals(prev => ({
@@ -152,11 +127,11 @@ export const Hero = () => {
               </button>
 
               <button
-                onClick={() => setVideoOpen(true)}
+                onClick={scrollToLicence}
                 className="border-2 border-blue-400 text-blue-300 px-7 py-3.5 rounded-lg text-base font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Play className="h-5 w-5" />
-                Découvrir le fonctionnement
+                Voir les offres
               </button>
             </div>
 
@@ -176,13 +151,13 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Colonne droite - UN SEUL GRAND ÉCRAN AVEC VIDÉO LOCALE */}
+          {/* Colonne droite - ÉCRAN AVEC VIDÉO EN BOUCLE */}
           <div className="relative flex items-center justify-center w-full animate-scale-in">
             
             {/* Effet lumineux d'ambiance */}
             <div className="absolute inset-0 bg-blue-500/10 rounded-full filter blur-[100px] pointer-events-none" />
 
-            {/* Écran unique avec vidéo */}
+            {/* Écran unique */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -201,9 +176,8 @@ export const Hero = () => {
 
                 {/* Bordure intérieure de l'écran */}
                 <div className="bg-[#040508] p-2 sm:p-3 rounded-[12px] sm:rounded-[16px] mt-2">
-                  {/* Zone vidéo */}
+                  {/* Zone vidéo - Lecture automatique en boucle */}
                   <div className="relative bg-black aspect-video overflow-hidden rounded-lg border border-neutral-900">
-                    {/* Vidéo locale depuis le dossier public */}
                     <video
                       className="w-full h-full object-cover"
                       autoPlay
@@ -214,21 +188,7 @@ export const Hero = () => {
                     >
                       <source src="/demo-bmae.mp4" type="video/mp4" />
                       <source src="/demo-bmae.webm" type="video/webm" />
-                      Votre navigateur ne supporte pas la lecture de vidéos.
                     </video>
-
-                    {/* Overlay subtil pour le style */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-
-                    {/* Bouton play superposé pour ouvrir la modale */}
-                    <button
-                      onClick={() => setVideoOpen(true)}
-                      className="absolute inset-0 flex items-center justify-center group cursor-pointer"
-                    >
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-sm border-2 border-white/40 flex items-center justify-center group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300 shadow-lg">
-                        <Play className="w-7 h-7 sm:w-9 sm:h-9 text-white fill-white ml-1" />
-                      </div>
-                    </button>
                   </div>
                 </div>
 
@@ -252,23 +212,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Modale vidéo YouTube (s'ouvre au clic sur le bouton Play de l'écran) */}
-      <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
-        <DialogContent className="max-w-3xl p-0 bg-black border-slate-700">
-          <div className="aspect-video w-full">
-            {videoOpen && (
-              <iframe
-                className="w-full h-full rounded-lg"
-                src="https://www.youtube.com/embed/6TglLCU7rdc?autoplay=1"
-                title="Découvrir BMAE"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            )}
-          </div>
-        </DialogContent>
-      </Dialog>
 
       {/* Modale Paramètres BMAE */}
       <AnimatePresence>
