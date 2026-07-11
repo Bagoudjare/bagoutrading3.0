@@ -287,11 +287,29 @@ export const TradingAlgoSection = () => {
                 Compatible uniquement MT5 • Installation en 2 minutes • Aucune inscription requise
               </p>
             </div>
+
+            
+            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl p-6 border border-slate-600/40 text-center">
+              {/* <h3 className="text-xl font-bold text-white mb-2">Que pensent nos utilisateurs ?</h3>
+              <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés et partagez votre expérience sur Trustpillot</p> */}
+              <div className="flex flex-col sm:flex-row justify-center gap-3">
+                <a
+                  href="https://fr.trustpilot.com/evaluate/bagoudjaretrading3-0.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-xl font-semibold hover:opacity-90 transition-all duration-300 transform hover:scale-105 shadow-lg"
+                >
+                  <MessageSquarePlus className="h-5 w-5" />
+                  Donner son avis
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
 
         {/* Trustpilot Buttons */}
-        <div className="mb-12 max-w-3xl mx-auto">
+        {/* <div className="mb-12 max-w-3xl mx-auto">
           <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 rounded-2xl p-6 border border-slate-600/40 text-center">
             <h3 className="text-xl font-bold text-white mb-2">Que pensent nos utilisateurs ?</h3>
             <p className="text-gray-400 text-sm mb-5">Consultez les avis vérifiés et partagez votre expérience sur Trustpillot</p>
@@ -316,7 +334,7 @@ export const TradingAlgoSection = () => {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <style>{`
