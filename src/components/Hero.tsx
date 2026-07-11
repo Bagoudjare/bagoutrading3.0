@@ -96,8 +96,8 @@ export const Hero = () => {
       </div>
 
       {/* Contenu principal */}
-      <div className="relative z-10 w-full px-5 sm:px-6 lg:px-10 py-16 md:py-20 lg:py-24">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+      <div className="relative z-10 w-full px-3 sm:px-4 lg:px-6 py-16 md:py-20 lg:py-24">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-center max-w-7xl mx-auto">
           
           {/* Colonne gauche - Texte */}
           <div className="text-center md:text-left animate-fade-in">
@@ -162,7 +162,7 @@ export const Hero = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full max-w-[500px] sm:max-w-[540px] lg:max-w-[580px]"
+              className="relative w-full max-w-[540px] sm:max-w-[580px] lg:max-w-[640px]"
             >
               {/* Coque du moniteur */}
               <div className="relative bg-[#1a1c24] p-[8px] sm:p-[10px] rounded-[20px] sm:rounded-[24px] shadow-[0_25px_65px_rgba(0,0,0,0.95)] border border-neutral-800">
