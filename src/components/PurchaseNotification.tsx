@@ -8,7 +8,7 @@ const FIRST_NAMES = [
   "Thomas", "Adama", "Chloé", "Mamadou", "Élodie", "Rachid", "Sarah", "Mehdi",
 ];
 const CITIES = [
-  "Paris", "Abidjan", "Dakar", "Bruxelles", "Montréal", "Lyon", "Casablanca",
+  "Paris", "Abidjan", "Dakar", "Lomé", "Montréal", "Cotonou", "Casablanca",
   "Marseille", "Bamako", "Cotonou", "Genève", "Douala", "Toulouse", "Lomé",
 ];
 const LICENSES = ["Licence 6 mois", "Licence à vie"];
