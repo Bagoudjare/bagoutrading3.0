@@ -120,9 +120,9 @@ export default function PartenaireAvantages() {
               </CardHeader>
               <CardContent className="space-y-4">
                 {[
-                  { name: "BT3.0 SMART TREND", icon: "📈" },
-                  { name: "BT3.0 CCT", icon: "⚡" },
-                  { name: "BT3.0 MSS", icon: "🎯" }
+                  // { name: "BT3.0 SMART TREND", icon: "📈" },
+                  // { name: "BT3.0 CCT", icon: "⚡" },
+                  // { name: "BT3.0 MSS", icon: "🎯" }
                   // { name: "Momentum Scanner", icon: "⚡" },
                   // { name: "Risk Manager", icon: "🛡️" },
                   // { name: "Entry/Exit Signals", icon: "🔔" }
