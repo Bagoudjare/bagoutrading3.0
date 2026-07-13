@@ -1,5 +1,5 @@
 import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
-import { useEffect, useState, useRef } from "react";
+import { useEffect } from "react";
 
 const benefits6m = [
   "Accès complet pendant 6 mois",
@@ -7,6 +7,7 @@ const benefits6m = [
   "Support et accompagnement",
   "Même logique d'analyse utilisée dans nos opérations",
 ];
+
 const benefitsLife = [
   "Accès illimité",
   "Toutes les mises à jour futures incluses",
@@ -15,70 +16,22 @@ const benefitsLife = [
 ];
 
 export const BmaeLicensesSection = () => {
-  const [showWidget6m, setShowWidget6m] = useState(false);
-  const [showWidgetLife, setShowWidgetLife] = useState(false);
-  const widgetContainer6mRef = useRef(null);
-  const widgetContainerLifeRef = useRef(null);
-  const scriptLoadedRef = useRef(false);
-
-  const initChariowWidget = (container, productId) => {
-    if (container && window.Chariow) {
-      // Vider le conteneur
-      container.innerHTML = '';
-      
-      // Créer la div du widget
-      const widgetDiv = document.createElement('div');
-      widgetDiv.id = 'chariow-widget';
-      widgetDiv.setAttribute('data-product-id', productId);
-      widgetDiv.setAttribute('data-store-domain', 'vhconuvm.mychariow.shop');
-      widgetDiv.setAttribute('data-style', 'tap');
-      widgetDiv.setAttribute('data-border-style', 'rounded');
-      widgetDiv.setAttribute('data-cta-width', 'xs');
-      widgetDiv.setAttribute('data-background-color', '#FFFFFF');
-      widgetDiv.setAttribute('data-cta-animation', 'none');
-      widgetDiv.setAttribute('data-locale', 'fr');
-      widgetDiv.setAttribute('data-primary-color', '#ffcc00');
-      
-      container.appendChild(widgetDiv);
-      
-      // Initialiser le widget
-      window.Chariow.init();
-    }
-  };
-
   useEffect(() => {
-    if (!scriptLoadedRef.current) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
-      document.head.appendChild(link);
+    // Charger le script et le CSS Chariow une seule fois
+    const script = document.createElement('script');
+    script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
+    script.async = true;
+    document.head.appendChild(script);
 
-      const script = document.createElement('script');
-      script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
-      script.async = true;
-      script.onload = () => {
-        scriptLoadedRef.current = true;
-      };
-      document.head.appendChild(script);
-    }
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+    document.head.appendChild(link);
+
+    return () => {
+      // Nettoyage optionnel si nécessaire
+    };
   }, []);
-
-  useEffect(() => {
-    if (showWidget6m && widgetContainer6mRef.current) {
-      // Petit délai pour s'assurer que le DOM est prêt
-      setTimeout(() => {
-        initChariowWidget(widgetContainer6mRef.current, 'prd_yh2r36of');
-      }, 100);
-    }
-  }, [showWidget6m]);
-
-  useEffect(() => {
-    if (showWidgetLife && widgetContainerLifeRef.current) {
-      setTimeout(() => {
-        initChariowWidget(widgetContainerLifeRef.current, 'prd_sbe22p9f');
-      }, 100);
-    }
-  }, [showWidgetLife]);
 
   return (
     <div id="licence" className="py-20 px-4 bg-gradient-to-b from-white via-slate-50 to-white">
@@ -120,17 +73,19 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {!showWidget6m ? (
-              <button
-                onClick={() => setShowWidget6m(true)}
-                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
-              >
-                <ShoppingCart className="w-5 h-5" />
-                Acheter la licence 6 mois
-              </button>
-            ) : (
-              <div ref={widgetContainer6mRef}></div>
-            )}
+            {/* Widget Chariow - Licence 6 mois */}
+            <div 
+              id="chariow-widget-6m"
+              data-product-id="prd_yh2r36of"
+              data-store-domain="vhconuvm.mychariow.shop"
+              data-style="tap"
+              data-border-style="rounded"
+              data-cta-width="xs"
+              data-background-color="#FFFFFF"
+              data-cta-animation="none"
+              data-locale="fr"
+              data-primary-color="#3B82F6"
+            ></div>
           </div>
 
           {/* Lifetime */}
@@ -163,20 +118,22 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {!showWidgetLife ? (
-              <button
-                onClick={() => setShowWidgetLife(true)}
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg shadow-purple-500/40 flex items-center justify-center gap-2"
-              >
-                <ShoppingCart className="w-5 h-5" />
-                Acheter la licence à vie
-              </button>
-            ) : (
-              <div ref={widgetContainerLifeRef}></div>
-            )}
+            {/* Widget Chariow - Licence à vie */}
+            <div 
+              id="chariow-widget-lifetime"
+              data-product-id="prd_sbe22p9f"
+              data-store-domain="vhconuvm.mychariow.shop"
+              data-style="tap"
+              data-border-style="rounded"
+              data-cta-width="xs"
+              data-background-color="#FFFFFF"
+              data-cta-animation="none"
+              data-locale="fr"
+              data-primary-color="#8B5CF6"
+            ></div>
           </div>
         </div>
-        
+
         {/* Évolutif */}
         <div className="mt-10 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
@@ -188,11 +145,8 @@ export const BmaeLicensesSection = () => {
               Le prix augmente de <span className="text-amber-700 font-semibold">+50 $ après chaque vente</span>, jusqu'à atteindre le tarif final :
               <span className="text-slate-900 font-semibold"> 699,99 $</span> (6 mois) et <span className="text-slate-900 font-semibold">1 999,99 $</span> (à vie). Sécurisez votre tarif de lancement dès maintenant.
             </p>
-            <p className="text-gray-700 text-sm mt-2">
-              Paiement sécurisé via <span className="underline decoration-amber-500 decoration-2 underline-offset-2 font-semibold">Chariow</span>
-            </p>
             <p className="text-gray-700 text-sm">
-              Une licence achetée = l'indicateur<span className="text-amber-700 font-semibold"> Viking</span> offert
+              Une licence achetée, l'indicateur<span className="text-amber-700 font-semibold"> Viking</span> offert
               <span className="text-slate-900 font-semibold"> gratuitement</span>
             </p>
           </div>
