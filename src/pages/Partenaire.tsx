@@ -111,7 +111,7 @@ export default function PartenaireAvantages() {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Indicateurs */}
-            <Card className="bg-slate-900/50 border-slate-700/50">
+            {/* <Card className="bg-slate-900/50 border-slate-700/50">
               <CardHeader>
                 <CardTitle className="text-white text-2xl flex items-center gap-3">
                   <span className="text-3xl">📊</span>
@@ -133,7 +133,7 @@ export default function PartenaireAvantages() {
                   </div>
                 ))}
               </CardContent>
-            </Card>
+            </Card> */}
 
             {/* Assistant */}
             <Card className="bg-slate-900/50 border-slate-700/50">

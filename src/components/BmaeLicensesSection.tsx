@@ -1,7 +1,10 @@
 import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
+import { useEffect } from "react";
+
 const scrollToPayment = () => {
   document.querySelector('#paiement')?.scrollIntoView({ behavior: 'smooth' });
 };
+
 const benefits6m = [
   "Accès complet pendant 6 mois",
   "Toutes les mises à jour incluses",
@@ -14,7 +17,25 @@ const benefitsLife = [
   "Support et accompagnement",
   "Solution idéale pour une utilisation à long terme",
 ];
+
 export const BmaeLicensesSection = () => {
+  useEffect(() => {
+    // Charger le script et le style Chariow une seule fois
+    const script = document.createElement('script');
+    script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+    document.head.appendChild(link);
+
+    return () => {
+      // Nettoyage optionnel si nécessaire
+    };
+  }, []);
+
   return (
     <div id="licence" className="py-20 px-4 bg-gradient-to-b from-white via-slate-50 to-white">
       <div className="max-w-6xl mx-auto">
@@ -55,19 +76,19 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            <button
-              onClick={() =>
-                window.open(
-                  "https://vhconuvm.mychariow.shop/prd_yh2r36of/checkout",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              Acheter la licence 6 mois
-            </button>
+            {/* Widget Chariow - Licence 6 mois */}
+            <div 
+              id="chariow-widget-6m" 
+              data-product-id="prd_yh2r36of"
+              data-store-domain="vhconuvm.mychariow.shop"
+              data-style="tap"
+              data-border-style="rounded"
+              data-cta-width="xs"
+              data-background-color="#FFFFFF"
+              data-cta-animation="none"
+              data-locale="fr"
+              data-primary-color="#ffcc00"
+            />
           </div>
 
           {/* Lifetime */}
@@ -100,21 +121,22 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            <button
-              onClick={() =>
-                window.open(
-                  "https://vhconuvm.mychariow.shop/prd_sbe22p9f/checkout",
-                  "_blank",
-                  "noopener,noreferrer"
-                )
-              }
-              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg shadow-purple-500/40 flex items-center justify-center gap-2"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              Acheter la licence à vie
-            </button>
+            {/* Widget Chariow - Licence à vie */}
+            <div 
+              id="chariow-widget-life" 
+              data-product-id="prd_sbe22p9f"
+              data-store-domain="vhconuvm.mychariow.shop"
+              data-style="tap"
+              data-border-style="rounded"
+              data-cta-width="xs"
+              data-background-color="#FFFFFF"
+              data-cta-animation="none"
+              data-locale="fr"
+              data-primary-color="#ffcc00"
+            />
           </div>
         </div>
+        
         {/* Évolutif */}
         <div className="mt-10 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
