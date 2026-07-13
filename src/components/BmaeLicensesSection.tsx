@@ -1,105 +1,21 @@
-import { Check, Crown, Clock, TrendingUp } from "lucide-react";
-import { useEffect, useRef } from "react";
-import { ChariowWidget } from "@/components/ChariowWidget";
+import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
+import ChariowWidget from "./ChariowWidget";
 
+const scrollToPayment = () => {
+  document.querySelector('#paiement')?.scrollIntoView({ behavior: 'smooth' });
+};
 const benefits6m = [
   "Accès complet pendant 6 mois",
   "Toutes les mises à jour incluses",
   "Support et accompagnement",
   "Même logique d'analyse utilisée dans nos opérations",
 ];
-
 const benefitsLife = [
   "Accès illimité",
   "Toutes les mises à jour futures incluses",
   "Support et accompagnement",
   "Solution idéale pour une utilisation à long terme",
 ];
-
-// Hook personnalisé pour Chariow
-const useChariowWidget = (productId: string) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const loadChariowWidget = () => {
-      const container = containerRef.current;
-      if (!container) return;
-
-      // Vider le conteneur
-      container.innerHTML = '';
-
-      // Créer le div du widget
-      const widgetDiv = document.createElement('div');
-      widgetDiv.className = 'chariow-widget-container';
-      widgetDiv.setAttribute('data-product-id', productId);
-      widgetDiv.setAttribute('data-store-domain', 'vhconuvm.mychariow.shop');
-      widgetDiv.setAttribute('data-style', 'tap');
-      widgetDiv.setAttribute('data-border-style', 'rounded');
-      widgetDiv.setAttribute('data-cta-width', 'xs');
-      widgetDiv.setAttribute('data-background-color', '#FFFFFF');
-      widgetDiv.setAttribute('data-cta-animation', 'none');
-      widgetDiv.setAttribute('data-locale', 'fr');
-      
-      // Définir la couleur selon le produit
-      if (productId === 'prd_yh2r36of') {
-        widgetDiv.setAttribute('data-primary-color', '#3B82F6');
-      } else {
-        widgetDiv.setAttribute('data-primary-color', '#8B5CF6');
-      }
-
-      container.appendChild(widgetDiv);
-
-      // Charger le CSS si pas déjà fait
-      if (!document.querySelector('link[href="https://js.chariowcdn.com/v1/widget.min.css"]')) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
-        document.head.appendChild(link);
-      }
-
-      // Charger et initialiser le script
-      const existingScript = document.querySelector('script[src="https://js.chariowcdn.com/v1/widget.min.js"]');
-      
-      if (existingScript) {
-        // Si le script existe déjà, le réexécuter
-        existingScript.remove();
-      }
-
-      const script = document.createElement('script');
-      script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
-      script.async = true;
-      script.onload = () => {
-        // Forcer l'initialisation du widget si nécessaire
-        if (window.ChariowWidget) {
-          window.ChariowWidget.init();
-        }
-      };
-      document.head.appendChild(script);
-    };
-
-    // Petit délai pour s'assurer que le DOM est prêt
-    const timeoutId = setTimeout(loadChariowWidget, 100);
-
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [productId]);
-
-  return containerRef;
-};
-
-// Composant widget Chariow
-const ChariowWidget = ({ productId }: { productId: string }) => {
-  const containerRef = useChariowWidget(productId);
-
-  return (
-    <div 
-      ref={containerRef}
-      className="chariow-widget-wrapper min-h-[50px]"
-    />
-  );
-};
-
 export const BmaeLicensesSection = () => {
   return (
     <div id="licence" className="py-20 px-4 bg-gradient-to-b from-white via-slate-50 to-white">
@@ -116,7 +32,7 @@ export const BmaeLicensesSection = () => {
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Standard 6 mois */}
-          <div className="relative bg-white rounded-2xl p-8 border border-slate-200 shadow-sm flex flex-col">
+          <div className="relative bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center">
                 <Clock className="w-6 h-6 text-blue-600" />
@@ -132,7 +48,7 @@ export const BmaeLicensesSection = () => {
               <p className="text-xs text-blue-600 mt-1">Tarif de lancement</p>
             </div>
 
-            <ul className="space-y-3 mb-8 flex-grow">
+            <ul className="space-y-3 mb-8">
               {benefits6m.map((b) => (
                 <li key={b} className="flex items-start gap-2 text-slate-700">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -141,14 +57,13 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            <div className="mt-auto">
-              <ChariowWidget />
+            <div className="flex justify-center mt-6">
               <ChariowWidget productId="prd_yh2r36of" />
             </div>
           </div>
 
           {/* Lifetime */}
-          <div className="relative bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 border-2 border-purple-300 shadow-xl shadow-purple-200/50 flex flex-col">
+          <div className="relative bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 border-2 border-purple-300 shadow-xl shadow-purple-200/50">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow">
               Recommandée
             </div>
@@ -168,7 +83,7 @@ export const BmaeLicensesSection = () => {
               <p className="text-xs text-purple-600 mt-1">Tarif de lancement</p>
             </div>
 
-            <ul className="space-y-3 mb-8 flex-grow">
+            <ul className="space-y-3 mb-8">
               {benefitsLife.map((b) => (
                 <li key={b} className="flex items-start gap-2 text-slate-700">
                   <Check className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
@@ -177,9 +92,10 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            <div className="mt-auto">
+            <div className="flex justify-center mt-6">
               <ChariowWidget productId="prd_sbe22p9f" />
             </div>
+
           </div>
         </div>
 
@@ -195,7 +111,7 @@ export const BmaeLicensesSection = () => {
               <span className="text-slate-900 font-semibold"> 699,99 $</span> (6 mois) et <span className="text-slate-900 font-semibold">1 999,99 $</span> (à vie). Sécurisez votre tarif de lancement dès maintenant.
             </p>
             <p className="text-gray-700 text-sm">
-              Une licence achetée, l'indicateur<span className="text-amber-700 font-semibold"> Viking</span> offert
+              Une licence acheter l'indicateur<span className="text-amber-700 font-semibold"> Viking</span>, offert
               <span className="text-slate-900 font-semibold"> gratuitement</span>
             </p>
           </div>
@@ -204,12 +120,3 @@ export const BmaeLicensesSection = () => {
     </div>
   );
 };
-
-// Ajouter la déclaration TypeScript pour window.ChariowWidget
-declare global {
-  interface Window {
-    ChariowWidget?: {
-      init: () => void;
-    };
-  }
-}
