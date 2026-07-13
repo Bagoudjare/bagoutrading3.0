@@ -1,5 +1,6 @@
 import { Check, Crown, Clock, TrendingUp } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { ChariowWidget } from "@/components/ChariowWidget";
 
 const benefits6m = [
   "Accès complet pendant 6 mois",
@@ -141,6 +142,7 @@ export const BmaeLicensesSection = () => {
             </ul>
 
             <div className="mt-auto">
+              <ChariowWidget />
               <ChariowWidget productId="prd_yh2r36of" />
             </div>
           </div>
