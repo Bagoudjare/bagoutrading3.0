@@ -1,5 +1,5 @@
 import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const scrollToPayment = () => {
   document.querySelector('#paiement')?.scrollIntoView({ behavior: 'smooth' });
@@ -19,6 +19,9 @@ const benefitsLife = [
 ];
 
 export const BmaeLicensesSection = () => {
+  const [showWidget6m, setShowWidget6m] = useState(false);
+  const [showWidgetLife, setShowWidgetLife] = useState(false);
+
   useEffect(() => {
     // Charger le script et le style Chariow une seule fois
     const script = document.createElement('script');
@@ -30,10 +33,6 @@ export const BmaeLicensesSection = () => {
     link.rel = 'stylesheet';
     link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
     document.head.appendChild(link);
-
-    return () => {
-      // Nettoyage optionnel si nécessaire
-    };
   }, []);
 
   return (
@@ -76,19 +75,28 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {/* Widget Chariow - Licence 6 mois */}
-            <div 
-              id="chariow-widget-6m" 
-              data-product-id="prd_yh2r36of"
-              data-store-domain="vhconuvm.mychariow.shop"
-              data-style="tap"
-              data-border-style="rounded"
-              data-cta-width="xs"
-              data-background-color="#FFFFFF"
-              data-cta-animation="none"
-              data-locale="fr"
-              data-primary-color="#ffcc00"
-            />
+            {!showWidget6m ? (
+              <button
+                onClick={() => setShowWidget6m(true)}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                Acheter la licence 6 mois
+              </button>
+            ) : (
+              <div 
+                id="chariow-widget-6m" 
+                data-product-id="prd_yh2r36of"
+                data-store-domain="vhconuvm.mychariow.shop"
+                data-style="tap"
+                data-border-style="rounded"
+                data-cta-width="xs"
+                data-background-color="#FFFFFF"
+                data-cta-animation="none"
+                data-locale="fr"
+                data-primary-color="#ffcc00"
+              />
+            )}
           </div>
 
           {/* Lifetime */}
@@ -121,19 +129,28 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {/* Widget Chariow - Licence à vie */}
-            <div 
-              id="chariow-widget-life" 
-              data-product-id="prd_sbe22p9f"
-              data-store-domain="vhconuvm.mychariow.shop"
-              data-style="tap"
-              data-border-style="rounded"
-              data-cta-width="xs"
-              data-background-color="#FFFFFF"
-              data-cta-animation="none"
-              data-locale="fr"
-              data-primary-color="#ffcc00"
-            />
+            {!showWidgetLife ? (
+              <button
+                onClick={() => setShowWidgetLife(true)}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg shadow-purple-500/40 flex items-center justify-center gap-2"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                Acheter la licence à vie
+              </button>
+            ) : (
+              <div 
+                id="chariow-widget-life" 
+                data-product-id="prd_sbe22p9f"
+                data-store-domain="vhconuvm.mychariow.shop"
+                data-style="tap"
+                data-border-style="rounded"
+                data-cta-width="xs"
+                data-background-color="#FFFFFF"
+                data-cta-animation="none"
+                data-locale="fr"
+                data-primary-color="#ffcc00"
+              />
+            )}
           </div>
         </div>
         
