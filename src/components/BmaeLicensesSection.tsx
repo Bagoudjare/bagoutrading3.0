@@ -1,9 +1,5 @@
 import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
-import { useEffect } from "react";
-
-const scrollToPayment = () => {
-  document.querySelector('#paiement')?.scrollIntoView({ behavior: 'smooth' });
-};
+import { useEffect, useState } from "react";
 
 const benefits6m = [
   "Accès complet pendant 6 mois",
@@ -19,12 +15,20 @@ const benefitsLife = [
 ];
 
 export const BmaeLicensesSection = () => {
+  const [showWidget6m, setShowWidget6m] = useState(false);
+  const [showWidgetLife, setShowWidgetLife] = useState(false);
+
   useEffect(() => {
-    // Charger le script Snap de Chariow
+    // Charger le script et le style du widget Chariow
     const script = document.createElement('script');
-    script.src = 'https://js.chariowcdn.com/v1/snap.min.js';
+    script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
     script.async = true;
     document.head.appendChild(script);
+
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+    document.head.appendChild(link);
   }, []);
 
   return (
@@ -67,15 +71,29 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {/* Bouton Snap Chariow - Licence 6 mois */}
-            <button
-              data-chariow-snap="prd_yh2r36of"
-              data-chariow-store="vhconuvm.mychariow.shop"
-              className="chariow-snap-button w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              Acheter la licence 6 mois
-            </button>
+            {!showWidget6m ? (
+              <button
+                onClick={() => setShowWidget6m(true)}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                Acheter la licence 6 mois
+              </button>
+            ) : (
+              /* Widget complet Chariow - Licence 6 mois */
+              <div 
+                id="chariow-widget"
+                data-product-id="prd_yh2r36of"
+                data-store-domain="vhconuvm.mychariow.shop"
+                data-style="tap"
+                data-border-style="rounded"
+                data-cta-width="xs"
+                data-background-color="#FFFFFF"
+                data-cta-animation="none"
+                data-locale="fr"
+                data-primary-color="#ffcc00"
+              ></div>
+            )}
           </div>
 
           {/* Lifetime */}
@@ -108,15 +126,29 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {/* Bouton Snap Chariow - Licence à vie */}
-            <button
-              data-chariow-snap="prd_sbe22p9f"
-              data-chariow-store="vhconuvm.mychariow.shop"
-              className="chariow-snap-button w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg shadow-purple-500/40 flex items-center justify-center gap-2"
-            >
-              <ShoppingCart className="w-5 h-5" />
-              Acheter la licence à vie
-            </button>
+            {!showWidgetLife ? (
+              <button
+                onClick={() => setShowWidgetLife(true)}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg shadow-purple-500/40 flex items-center justify-center gap-2"
+              >
+                <ShoppingCart className="w-5 h-5" />
+                Acheter la licence à vie
+              </button>
+            ) : (
+              /* Widget complet Chariow - Licence à vie */
+              <div 
+                id="chariow-widget"
+                data-product-id="prd_sbe22p9f"
+                data-store-domain="vhconuvm.mychariow.shop"
+                data-style="tap"
+                data-border-style="rounded"
+                data-cta-width="xs"
+                data-background-color="#FFFFFF"
+                data-cta-animation="none"
+                data-locale="fr"
+                data-primary-color="#ffcc00"
+              ></div>
+            )}
           </div>
         </div>
         
