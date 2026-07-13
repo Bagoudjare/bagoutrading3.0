@@ -1,38 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useId } from "react";
 
-interface ChariowWidgetProps {
+interface Props {
   productId: string;
 }
 
-export default function ChariowWidget({
-  productId,
-}: ChariowWidgetProps) {
+export default function ChariowWidget({ productId }: Props) {
+  const id = useId();
+
   useEffect(() => {
-    // Charger le CSS une seule fois
-    if (!document.querySelector('link[href="https://js.chariowcdn.com/v1/widget.min.css"]')) {
+    if (!document.getElementById("chariow-script")) {
+      const script = document.createElement("script");
+      script.id = "chariow-script";
+      script.src = "https://js.chariowcdn.com/v1/widget.min.js";
+      script.async = true;
+      document.body.appendChild(script);
+
       const link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = "https://js.chariowcdn.com/v1/widget.min.css";
       document.head.appendChild(link);
-    }
-
-    // Charger le JS une seule fois
-    if (!document.querySelector('script[src="https://js.chariowcdn.com/v1/widget.min.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://js.chariowcdn.com/v1/widget.min.js";
-      script.async = true;
-      document.body.appendChild(script);
     } else {
-      // Si le script existe déjà, on relance le widget si nécessaire
-      if ((window as any).ChariowWidget) {
-        (window as any).ChariowWidget.init();
-      }
+      (window as any).ChariowWidget?.init?.();
     }
   }, []);
 
   return (
     <div
-      className="chariow-widget"
+      id={`chariow-widget-${id}`}
       data-product-id={productId}
       data-store-domain="vhconuvm.mychariow.shop"
       data-style="tap"
