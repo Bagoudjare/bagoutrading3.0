@@ -1,4 +1,4 @@
-import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
+import { Check, Crown, Clock, TrendingUp } from "lucide-react";
 import { useEffect } from "react";
 
 const benefits6m = [
@@ -15,24 +15,52 @@ const benefitsLife = [
   "Solution idéale pour une utilisation à long terme",
 ];
 
-export const BmaeLicensesSection = () => {
+// Hook personnalisé pour Chariow
+const useChariowWidget = () => {
   useEffect(() => {
-    // Charger le script et le CSS Chariow une seule fois
-    const script = document.createElement('script');
-    script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
-    script.async = true;
-    document.head.appendChild(script);
+    // Vérifier si le script existe déjà
+    const existingScript = document.querySelector('script[src="https://js.chariowcdn.com/v1/widget.min.js"]');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = 'https://js.chariowcdn.com/v1/widget.min.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
 
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
-    document.head.appendChild(link);
-
-    return () => {
-      // Nettoyage optionnel si nécessaire
-    };
+    // Vérifier si le CSS existe déjà
+    const existingLink = document.querySelector('link[href="https://js.chariowcdn.com/v1/widget.min.css"]');
+    
+    if (!existingLink) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'https://js.chariowcdn.com/v1/widget.min.css';
+      document.head.appendChild(link);
+    }
   }, []);
+};
 
+// Composant widget Chariow réutilisable
+const ChariowWidget = ({ productId, primaryColor = "#ffcc00" }: { productId: string; primaryColor?: string }) => {
+  useChariowWidget();
+
+  return (
+    <div 
+      id={`chariow-widget-${productId}`}
+      data-product-id={productId}
+      data-store-domain="vhconuvm.mychariow.shop"
+      data-style="tap"
+      data-border-style="rounded"
+      data-cta-width="xs"
+      data-background-color="#FFFFFF"
+      data-cta-animation="none"
+      data-locale="fr"
+      data-primary-color={primaryColor}
+    />
+  );
+};
+
+export const BmaeLicensesSection = () => {
   return (
     <div id="licence" className="py-20 px-4 bg-gradient-to-b from-white via-slate-50 to-white">
       <div className="max-w-6xl mx-auto">
@@ -73,19 +101,7 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {/* Widget Chariow - Licence 6 mois */}
-            <div 
-              id="chariow-widget-6m"
-              data-product-id="prd_yh2r36of"
-              data-store-domain="vhconuvm.mychariow.shop"
-              data-style="tap"
-              data-border-style="rounded"
-              data-cta-width="xs"
-              data-background-color="#FFFFFF"
-              data-cta-animation="none"
-              data-locale="fr"
-              data-primary-color="#3B82F6"
-            ></div>
+            <ChariowWidget productId="prd_yh2r36of" primaryColor="#3B82F6" />
           </div>
 
           {/* Lifetime */}
@@ -118,19 +134,7 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            {/* Widget Chariow - Licence à vie */}
-            <div 
-              id="chariow-widget-lifetime"
-              data-product-id="prd_sbe22p9f"
-              data-store-domain="vhconuvm.mychariow.shop"
-              data-style="tap"
-              data-border-style="rounded"
-              data-cta-width="xs"
-              data-background-color="#FFFFFF"
-              data-cta-animation="none"
-              data-locale="fr"
-              data-primary-color="#8B5CF6"
-            ></div>
+            <ChariowWidget productId="prd_sbe22p9f" primaryColor="#8B5CF6" />
           </div>
         </div>
 
