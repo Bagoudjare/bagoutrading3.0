@@ -1,5 +1,4 @@
 import { Check, Crown, Clock, TrendingUp, ShoppingCart } from "lucide-react";
-import ChariowWidget from "./ChariowWidget";
 
 const scrollToPayment = () => {
   document.querySelector('#paiement')?.scrollIntoView({ behavior: 'smooth' });
@@ -57,9 +56,19 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            <div className="flex justify-center mt-6">
-              <ChariowWidget productId="prd_yh2r36of" />
-            </div>
+            <button
+              onClick={() =>
+                window.open(
+                  "https://vhconuvm.mychariow.shop/prd_yh2r36of/checkout",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-blue-700 transition-all shadow-lg shadow-blue-500/30 flex items-center justify-center gap-2"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              Acheter la licence 6 mois
+            </button>
           </div>
 
           {/* Lifetime */}
@@ -92,13 +101,21 @@ export const BmaeLicensesSection = () => {
               ))}
             </ul>
 
-            <div className="flex justify-center mt-6">
-              <ChariowWidget productId="prd_sbe22p9f" />
-            </div>
-
+            <button
+              onClick={() =>
+                window.open(
+                  "https://vhconuvm.mychariow.shop/prd_sbe22p9f/checkout",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+              className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg shadow-purple-500/40 flex items-center justify-center gap-2"
+            >
+              <ShoppingCart className="w-5 h-5" />
+              Acheter la licence à vie
+            </button>
           </div>
         </div>
-
         {/* Évolutif */}
         <div className="mt-10 bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-4">
           <div className="w-12 h-12 rounded-xl bg-amber-100 border border-amber-200 flex items-center justify-center flex-shrink-0">
