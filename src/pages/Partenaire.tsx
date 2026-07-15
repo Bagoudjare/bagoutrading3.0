@@ -6,6 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { FaqPartner } from "@/components/FaqPartner";
 
 export default function PartenaireAvantages() {
   const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire`, []);
@@ -105,11 +106,11 @@ export default function PartenaireAvantages() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Le Système BMAE</h2>
             <p className="text-slate-300 text-lg max-w-3xl mx-auto">
-              Un système de trading révolutionnaire avec des indicateurs avancés et une automatisation intelligente pour maximiser vos profits sur les marchés financiers.
+              Un système de trading révolutionnaire avec des indicateurs avancés et une automatisation intelligente pour vou aider a gagner du temps d'apprentisage et a devenire rentable sur les marchés financiers.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 ">
             {/* Indicateurs */}
             {/* <Card className="bg-slate-900/50 border-slate-700/50">
               <CardHeader>
@@ -189,7 +190,7 @@ export default function PartenaireAvantages() {
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-white mb-3">Tarif Exclusif</h3>
                         <p className="text-slate-300 mb-4 leading-relaxed">
-                          Profitez de 50% de réduction sur BT3.0. Un investissement qui se rentabilise rapidement grâce à notre système performant.
+                          Profitez de 50% de réduction sur BMAE. Un investissement qui se rentabilise rapidement grâce à notre système performant.
                         </p>
                         <div className="flex items-center gap-4">
                           <Badge className="bg-green-600 text-white px-4 py-2 text-lg">349,99 $ seulement</Badge>
@@ -215,8 +216,8 @@ export default function PartenaireAvantages() {
                           Gagnez 100$ par vente avec 29% de commission. Créez une source de revenus récurrents et évolutive.
                         </p>
                         <div className="flex items-center gap-4">
-                          <Badge className="bg-blue-600 text-white px-4 py-2 text-lg">100$/vente</Badge>
-                          <span className="text-blue-300 text-sm font-medium">29% de commission</span>
+                          <Badge className="bg-blue-600 text-white px-4 py-2 text-lg">20%/vente</Badge>
+                          <span className="text-blue-300 text-sm font-medium">20% de commission</span>
                         </div>
                       </div>
                     </div>
@@ -336,6 +337,7 @@ export default function PartenaireAvantages() {
 
         {/* FAQ */}
         <section className="mb-20">
+          <FaqPartner />
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Questions fréquentes</h2>
           <Accordion type="single" collapsible className="max-w-4xl mx-auto space-y-4 bg-slate-900/50 border-slate-700/50 rounded-xl">
             <AccordionItem value="q1" className="border-slate-700/50">
