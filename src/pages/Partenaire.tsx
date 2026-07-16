@@ -6,7 +6,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { FaqPartner } from "@/components/FaqPartner";
+// import { FaqPartner } from "@/components/FaqPartner";
 
 export default function PartenaireAvantages() {
   const canonicalUrl = useMemo(() => `${window.location.origin}/partenaire`, []);
@@ -337,7 +337,7 @@ export default function PartenaireAvantages() {
 
         {/* FAQ */}
         <section className="mb-20">
-          <FaqPartner />
+          {/* <FaqPartner /> */}
           <h2 className="text-2xl font-bold text-white mb-6 text-center">Questions fréquentes</h2>
           <Accordion type="single" collapsible className="max-w-4xl mx-auto space-y-4 bg-slate-900/50 border-slate-700/50 rounded-xl">
             <AccordionItem value="q1" className="border-slate-700/50">
