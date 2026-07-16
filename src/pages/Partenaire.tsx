@@ -404,7 +404,7 @@ export default function PartenaireAvantages() {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-600/20 to-emerald-600/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">💰</span>
                   </div>
-                  <div className="text-2xl font-bold text-white mb-2">100€/vente</div>
+                  <div className="text-2xl font-bold text-white mb-2">20%/vente</div>
                   <p className="text-slate-400 text-sm">Commission garantie</p>
                 </div>
                 
