@@ -330,7 +330,7 @@ export default function PartenaireAvantages() {
                 Combien puis-je gagner ?
               </AccordionTrigger>
               <AccordionContent className="text-slate-300 px-6 pb-6">
-                Vous recevez 29% de commission soit 100$ par vente générée via votre lien d'affiliation. Les paiements sont effectués mensuellement.
+                Vous recevez 20% de commission par vente générée via votre lien d'affiliation. Les paiements sont effectués mensuellement.
               </AccordionContent>
             </AccordionItem>
             

@@ -227,10 +227,10 @@ export default function PartenaireInscription() {
                   <h3 className="text-2xl font-bold text-white mb-2">
                     Félicitations ! Vous êtes maintenant partenaire
                   </h3>
-                  <p className="text-green-300">Votre lien d'affiliation est prêt à être utilisé</p>
+                  <p className="text-green-300">Votre code d'affiliation est prêt à être utilisé il vous sera communiquer par email</p>
                 </div>
                 
-                <div className="space-y-6">
+                {/* <div className="space-y-6">
                   <div className="bg-slate-800/60 rounded-xl p-6">
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                       <span className="text-blue-400">🔗</span>
@@ -245,7 +245,7 @@ export default function PartenaireInscription() {
                     >
                       📋 Copier le lien
                     </Button>
-                  </div>
+                  </div> */}
                   
                   {/* <div className="bg-slate-800/60 rounded-xl p-6">
                     <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
@@ -265,8 +265,8 @@ export default function PartenaireInscription() {
                     >
                       📱 Copier le lien WhatsApp
                     </Button>
-                  </div> */}
-                </div>
+                  </div>
+                </div> */}
               </aside>
             )}
           </div>
