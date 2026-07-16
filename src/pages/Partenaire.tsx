@@ -395,7 +395,7 @@ export default function PartenaireAvantages() {
                   <br />en revenus ?
                 </h2>
                 <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                  Rejoignez une communauté exclusive de partenaires qui génèrent déjà des revenus significatifs avec BT3.0
+                  Rejoignez une communauté exclusive de partenaires qui génèrent déjà des revenus significatifs avec BMAE.
                 </p>
               </div>
 
