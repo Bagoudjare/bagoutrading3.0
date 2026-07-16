@@ -165,7 +165,7 @@ export default function PartenaireAvantages() {
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-white mb-3">Tarif Exclusif</h3>
                         <p className="text-slate-300 mb-4 leading-relaxed">
-                          Profitez de 50% de réduction sur BMAE. Un investissement qui se rentabilise rapidement grâce à notre système performant.
+                          Profitez de 30% de réduction sur BMAE. Un investissement qui se rentabilise rapidement grâce à notre système performant.
                         </p>
                         <div className="flex items-center gap-4">
                           <Badge className="bg-green-600 text-white px-4 py-2 text-lg">349,99 $ seulement</Badge>
