@@ -129,14 +129,14 @@ export default function PartenaireAvantages() {
                   </p>
                 </div>
                 
-                <div className="p-4 bg-purple-900/20 border border-purple-600/40 rounded-lg">
+                {/* <div className="p-4 bg-purple-900/20 border border-purple-600/40 rounded-lg">
                   <h4 className="text-lg font-semibold text-white mb-2 flex items-center gap-2">
                     <span>🚀</span> Mode Auto
                   </h4>
                   <p className="text-slate-300 text-sm">
                     Trading entièrement automatisé selon vos paramètres de risque. L'assistant trade pour vous 24h/24.
                   </p>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           </div>
