@@ -101,15 +101,15 @@ export const TradingAlgoSection = () => {
     }
   ];
 
-  const handleCopyAddress = async (address: string) => {
-    await navigator.clipboard.writeText(address);
-    setCopied(true);
-    toast({ title: "Adresse copiée !", description: address });
-    setTimeout(() => {
-      setCopied(false);
-      setSelectedPayment(null);
-    }, 800);
-  };
+  // const handleCopyAddress = async (address: string) => {
+  //   await navigator.clipboard.writeText(address);
+  //   setCopied(true);
+  //   toast({ title: "Adresse copiée !", description: address });
+  //   setTimeout(() => {
+  //     setCopied(false);
+  //     setSelectedPayment(null);
+  //   }, 800);
+  // };
 
   return (
     <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">

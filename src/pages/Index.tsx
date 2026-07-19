@@ -6,6 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { VideoPresentationSection } from "@/components/VideoPresentationSection";
 import { RoboInteractive } from "@/components/RoboInteractive";
 import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
+import { PaymentMethods } "@/components/PaymentMethods";
 import { ProofPerformanceSection } from "@/components/ProofPerformanceSection";
 import Testimonials from "@/components/Testimonials";
 import { AboutSection } from "@/components/AboutSection";
@@ -69,6 +70,10 @@ const Index = () => {
 
         <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <BmaeLicensesSection />
+        </section>
+
+        <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <PaymentMethods />
         </section>
 
         <section id="proof" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.proof ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
