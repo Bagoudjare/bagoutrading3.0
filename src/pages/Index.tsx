@@ -6,7 +6,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { VideoPresentationSection } from "@/components/VideoPresentationSection";
 import { RoboInteractive } from "@/components/RoboInteractive";
 import { BmaeLicensesSection } from "@/components/BmaeLicensesSection";
-import { PaymentMethods } "@/components/PaymentMethods";
+import PaymentMethods from "@/components/PaymentMethods";
 import { ProofPerformanceSection } from "@/components/ProofPerformanceSection";
 import Testimonials from "@/components/Testimonials";
 import { AboutSection } from "@/components/AboutSection";
