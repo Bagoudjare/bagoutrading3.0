@@ -105,7 +105,7 @@ export const Hero = () => {
               Solution BMAE — Trading Automatisé
             </span>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-5 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
               Ne perdez plus des mois à apprendre seul{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                 le trading
