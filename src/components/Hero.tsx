@@ -83,16 +83,16 @@ export const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-transparent">
       {/* Fond */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-transparent">
+        <div className="absolute inset-0 bg-slate-950/20"></div>
       </div>
 
       {/* Effets de flou */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-600/10 rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-600/10 rounded-full filter blur-3xl animate-pulse"></div>
       </div>
 
       {/* Contenu principal */}
@@ -101,26 +101,26 @@ export const Hero = () => {
           
           {/* Colonne gauche - Texte */}
           <div className="text-center md:text-left animate-fade-in">
-            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-5">
+            <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-50 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 border border-blue-100 dark:border-blue-500/30 mb-5">
               Solution BMAE — Trading Automatisé
             </span>
             
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-5 leading-tight">
               Ne perdez plus des mois à apprendre seul{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
                 le trading
               </span>
               .
             </h1>
             
-            <p className="text-base lg:text-lg text-gray-300 mb-7 leading-relaxed">
+            <p className="text-base lg:text-lg text-slate-600 dark:text-gray-300 mb-7 leading-relaxed">
               BMAE a été conçu pour vous faire gagner des années d'apprentissage en vous offrant une lecture du marché claire et efficace. BMAE est le résultat de plus de 6 ans d'expérience, de recherche et d'optimisation condensé en un seul outil. Attachez-le à votre graphique et profitez immédiatement de la même vision du marché que celle de plusieurs professionnels qui utilisent l'outil au quotidien.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <button
                 onClick={scrollToLicence}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-7 py-3.5 rounded-lg text-base font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-7 py-3.5 rounded-lg text-base font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-xl shadow-blue-500/20 flex items-center justify-center gap-2"
               >
                 <ShoppingCart className="h-5 w-5" />
                 Acheter une licence
@@ -128,24 +128,24 @@ export const Hero = () => {
 
               <button
                 onClick={scrollToLicence}
-                className="border-2 border-blue-400 text-blue-300 px-7 py-3.5 rounded-lg text-base font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center gap-2"
+                className="border-2 border-blue-500 dark:border-blue-400 text-blue-600 dark:text-blue-300 px-7 py-3.5 rounded-lg text-base font-semibold hover:bg-blue-500/5 dark:hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Play className="h-5 w-5" />
                 Voir les offres
               </button>
             </div>
 
-            <div className="mt-6 flex items-center justify-center md:justify-start gap-5 text-sm text-gray-400">
+            <div className="mt-6 flex items-center justify-center md:justify-start gap-5 text-sm text-slate-500 dark:text-gray-400">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Analyse temps réel
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></span>
+                <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
                 Multi-Timeframe
               </div>
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></span>
+                <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
                 Signaux Sniper
               </div>
             </div>
@@ -184,7 +184,6 @@ export const Hero = () => {
                       loop
                       muted
                       playsInline
-                      poster="/video-poster.jpg"
                     >
                       <source src="/demo-bmae.mp4" type="video/mp4" />
                       <source src="/demo-bmae.webm" type="video/webm" />
