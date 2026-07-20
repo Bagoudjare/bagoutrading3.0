@@ -72,9 +72,9 @@ const Index = () => {
           <BmaeLicensesSection />
         </section>
 
-        <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        {/* <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <PaymentMethods />
-        </section>
+        </section> */}
 
         <section id="proof" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.proof ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <ProofPerformanceSection />
