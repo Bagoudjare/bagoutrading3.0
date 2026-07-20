@@ -25,6 +25,18 @@ const Index = () => {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
+    // Fallback: force all sections to be visible after 500ms in case IntersectionObserver
+    // is blocked or fails to trigger (highly common inside preview iFrames)
+    const fallbackTimer = setTimeout(() => {
+      const sections = document.querySelectorAll('[data-animate]');
+      sections.forEach(section => {
+        setIsVisible(prev => ({
+          ...prev,
+          [section.id]: true
+        }));
+      });
+    }, 500);
+
     const observerOptions = {
       threshold: 0.1,
       rootMargin: "0px 0px -100px 0px"
@@ -44,16 +56,19 @@ const Index = () => {
     const sections = document.querySelectorAll('[data-animate]');
     sections.forEach(section => observer.observe(section));
 
-    return () => observer.disconnect();
+    return () => {
+      clearTimeout(fallbackTimer);
+      observer.disconnect();
+    };
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden relative">
+    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden relative transition-colors duration-300">
       {/* Background glow effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
-      
+
       <Navigation />
       
       <main className="relative">
@@ -77,9 +92,9 @@ const Index = () => {
           <BmaeLicensesSection />
         </section>
 
-        {/* <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <PaymentMethods />
-        </section> */}
+        </section>
 
         <section id="proof" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.proof ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <ProofPerformanceSection />
