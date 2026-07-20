@@ -123,7 +123,7 @@ export const ContactSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 overflow-hidden">
           {/* Contact Form */}
-          <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
+          <div className="bg-slate-900/40 p-5 sm:p-8 rounded-xl border border-slate-800/80 backdrop-blur-md hover:border-slate-700/50 transition-all duration-300">
             <div className="flex items-center space-x-2 mb-6">
               <MessageSquare className="h-6 w-6 text-blue-400" />
               <h3 className="text-2xl font-bold text-white">Envoyez-moi un message</h3>
@@ -195,59 +195,59 @@ export const ContactSection = () => {
           {/* Contact Info & Socials */}
           <div className="space-y-8">
             {/* Contact Info */}
-            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
+            <div className="bg-slate-900/40 p-5 sm:p-8 rounded-xl border border-slate-800/80 backdrop-blur-md hover:border-slate-700/50 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-6">Informations de contact</h3>
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="h-6 w-6 text-white" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-white font-semibold">Email</h4>
-                    <p className="text-gray-300">aiglestrengthtrading@gmail.com</p>
+                    <p className="text-gray-300 text-sm sm:text-base break-all">aiglestrengthtrading@gmail.com</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-white" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-white font-semibold">Téléphone</h4>
-                    <p className="text-gray-300">+228 98 74 08 35</p>
+                    <p className="text-gray-300 text-sm sm:text-base break-all">+228 98 74 08 35</p>
                   </div>
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="text-white font-semibold">Localisation</h4>
-                    <p className="text-gray-300">Pya, Togo</p>
+                    <p className="text-gray-300 text-sm sm:text-base break-all">Pya, Togo</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
+            <div className="bg-slate-900/40 p-5 sm:p-8 rounded-xl border border-slate-800/80 backdrop-blur-md hover:border-slate-700/50 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-6">Suivez-moi</h3>
               
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;
                   return (
                     <a
                       key={social.name}
                       href={social.url}
-                      className={`bg-gradient-to-r ${social.color} p-4 rounded-lg text-white font-semibold hover:transform hover:scale-105 transition-all duration-300 text-center group`}
+                      className={`bg-gradient-to-r ${social.color} p-2 sm:p-4 rounded-lg text-white font-semibold hover:transform hover:scale-105 transition-all duration-300 text-center group`}
                     >
                       <div className="flex justify-center mb-2 group-hover:animate-bounce">
                         <IconComponent />
                       </div>
-                      <div className="text-sm">{social.name}</div>
+                      <div className="text-xs sm:text-sm">{social.name}</div>
                     </a>
                   );
                 })}
