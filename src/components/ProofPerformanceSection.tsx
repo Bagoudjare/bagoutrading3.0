@@ -87,23 +87,6 @@ export const ProofPerformanceSection = () => {
           </span>
         </h2>
         <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mb-6" />
-
-        {/* <div className="bg-amber-500/10 border border-amber-500/30 rounded-xl p-5 flex gap-4 text-left">
-          <AlertTriangle className="h-5 w-5 text-amber-400 shrink-0 mt-0.5" />
-          <p className="text-sm text-amber-100/90 leading-relaxed">
-            Beaucoup achètent des formations ou des outils de trading uniquement parce qu'ils ont
-            vu des captures de profits publiées par un formateur — et une fois la formation
-            acquise, aucune rentabilité. Pourquoi ? Parce que{" "}
-            <span className="font-semibold text-amber-300">
-              les profits réalisés sur une période donnée ne garantissent pas les résultats futurs
-            </span>
-            . Les performances passées d'un élève ne garantissent pas votre propre réussite. C'est
-            pourquoi nous avons rendu notre méthodologie{" "}
-            <span className="font-semibold text-amber-300">semi-automatique</span> : vous pouvez
-            lancer notre outil dans le testeur de stratégie de MetaTrader et constater par
-            vous-même l'efficacité de la méthodologie et la puissance de l'outil avant tout achat.
-          </p>
-        </div> */}
       </div>
 
       <div
