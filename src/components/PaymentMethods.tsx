@@ -47,7 +47,7 @@ export default function PaymentMethods() {
       name: "Litecoin (LTC)",
       type: "Cryptocurrency",
       color: "from-slate-400 to-slate-600",
-      icon: Coins,
+      icon: "https://cryptologos.cc/logos/litecoin-ltc-logo.png",
       address: "M8VzFjKxW8C6pTrVsz78NksY6uBGuoJKmQY",
       isCrypto: true
     },
@@ -56,7 +56,7 @@ export default function PaymentMethods() {
       name: "Tron (TRX)",
       type: "Cryptocurrency",
       color: "from-red-600 to-rose-500",
-      icon: Coins,
+      icon: "https://cryptologos.cc/logos/tron-trx-logo.png",
       address: "TY5v1pAUziYQEsZ4ugmjiozyjRCcMj1Ca8N",
       isCrypto: true
     },
@@ -65,7 +65,7 @@ export default function PaymentMethods() {
       name: "USDT (TRC-20)",
       type: "Cryptocurrency",
       color: "from-emerald-400 to-teal-600",
-      icon: Coins,
+      icon: "https://cryptologos.cc/logos/tether-usdt-logo.png",
       address: "TR7NHqeVg63C3XQ8rwURpSdfBNzsWgjDu6y",
       isCrypto: true
     }
