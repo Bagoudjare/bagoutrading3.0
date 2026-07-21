@@ -1,12 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Smartphone, 
-  Coins, 
   Copy, 
   CheckCircle,
-  HelpCircle,
-  Wallet
+  HelpCircle
 } from "lucide-react";
 
 interface PaymentMethod {
@@ -14,7 +11,7 @@ interface PaymentMethod {
   name: string;
   type: "Mobile Money" | "Digital Wallet" | "Cryptocurrency";
   color: string;
-  icon: any;
+  icon: string;
   address: string;
   isCrypto: boolean;
 }
@@ -29,7 +26,7 @@ export default function PaymentMethods() {
       name: "Moov Money",
       type: "Mobile Money",
       color: "from-orange-500 to-amber-600",
-      icon: Smartphone,
+      icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Moov_Africa.png",
       address: "+228 99 12 34 56",
       isCrypto: false
     },
@@ -38,8 +35,8 @@ export default function PaymentMethods() {
       name: "Mixx by Yas",
       type: "Digital Wallet",
       color: "from-yellow-400 to-amber-500",
-      icon: Wallet,
-      address: "+228 91 81 83 82",
+      icon: "https://yas.tg/favicon.png",
+      address: "YAS-BAGOUG-88390",
       isCrypto: false
     },
     {
@@ -133,7 +130,6 @@ export default function PaymentMethods() {
         {/* Horizontal Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {paymentMethods.map((method) => {
-            const MethodIcon = method.icon;
             const isOpened = activeCardId === method.id;
 
             return (
@@ -147,8 +143,13 @@ export default function PaymentMethods() {
               >
                 <div className="flex items-center gap-4">
                   {/* Left visual icon badge */}
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${method.color} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform`}>
-                    <MethodIcon className="w-5 h-5" />
+                  <div className="w-12 h-12 rounded-xl bg-slate-950/80 border border-slate-800/80 flex items-center justify-center overflow-hidden p-1.5 shadow-md group-hover:scale-105 transition-transform">
+                    <img 
+                      src={method.icon} 
+                      alt={method.name} 
+                      className="w-full h-full object-contain rounded"
+                      referrerPolicy="no-referrer"
+                    />
                   </div>
 
                   <div>
