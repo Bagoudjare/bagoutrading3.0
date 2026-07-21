@@ -1,0 +1,8 @@
+{
+  "name": "Bagou Trading 3.0",
+  "description": "Plateforme d'initiation au trading et de partenariat Bagou Trading 3.0",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
