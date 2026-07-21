@@ -68,7 +68,7 @@ export const AboutSection = () => {
           <div className="relative">
             <div className="bg-slate-900/40 p-8 rounded-xl border border-slate-800/80 backdrop-blur-md shadow-md">
               <div className="text-center mb-6">
-                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden shadow-lg border border-slate-700/50">
+                <div className="w-35 h-35 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden shadow-lg border border-slate-700/50">
                   <img src={profile} alt="ma photo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Expert Trader Formateur & Programmeur MQL5</h3>

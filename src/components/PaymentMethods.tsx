@@ -26,7 +26,7 @@ export default function PaymentMethods() {
       name: "Moov Money",
       type: "Mobile Money",
       color: "from-orange-500 to-amber-600",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/4/4b/Logo_Moov_Africa.png",
+      icon: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg",
       address: "+228 99 12 34 56",
       isCrypto: false
     },
@@ -35,7 +35,7 @@ export default function PaymentMethods() {
       name: "Mixx by Yas",
       type: "Digital Wallet",
       color: "from-yellow-400 to-amber-500",
-      icon: "https://yas.tg/favicon.png",
+      icon: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2024/10/jem_logo.svg",
       address: "YAS-BAGOUG-88390",
       isCrypto: false
     },
