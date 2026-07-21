@@ -39,7 +39,7 @@ export default function PaymentMethods() {
       type: "Digital Wallet",
       color: "from-yellow-400 to-amber-500",
       icon: Wallet,
-      address: "YAS-BAGOUG-88390",
+      address: "+228 91 81 83 82",
       isCrypto: false
     },
     {
