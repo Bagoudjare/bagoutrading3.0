@@ -63,7 +63,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden relative transition-colors duration-300">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white overflow-x-hidden relative">
       {/* Background glow effects */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none"></div>
@@ -75,6 +75,10 @@ const Index = () => {
         <section id="hero" data-animate className={`transition-all duration-800 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Hero />
         </section>
+        
+        {/* <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <HeroSection />
+        </section> */}
 
         <section id="presentation" data-animate className={`transition-all duration-800 ${isVisible.presentation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <VideoPresentationSection />
@@ -111,6 +115,14 @@ const Index = () => {
         <section id="apropos" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AboutSection />
         </section>
+
+        {/* <section id="formations" data-animate className={`transition-all duration-1000 delay-180 ${isVisible.formations ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <FormationsSection />
+        </section> */}
+
+        {/* <section id="automatisation" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <AutomationSection />
+        </section> */}
 
         <section id="brokers" data-animate className={`transition-all duration-1000 delay-550 ${isVisible.brokers ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <BrokersSection />

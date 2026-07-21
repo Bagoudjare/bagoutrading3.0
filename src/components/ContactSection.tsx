@@ -109,7 +109,7 @@ export const ContactSection = () => {
   };
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="py-20 px-4 bg-transparent">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -142,7 +142,7 @@ export const ContactSection = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200"
                   placeholder="Votre nom"
                 />
               </div>
@@ -159,7 +159,7 @@ export const ContactSection = () => {
                   onChange={handleChange}
                   required
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-200"
+                  className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200"
                   placeholder="votre@email.com"
                 />
               </div>
@@ -176,7 +176,7 @@ export const ContactSection = () => {
                   required
                   disabled={isSubmitting}
                   rows={5}
-                  className="w-full px-4 py-3 bg-slate-600/50 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200 resize-none"
                   placeholder="Décrivez votre projet ou votre question..."
                 />
               </div>

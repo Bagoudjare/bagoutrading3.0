@@ -11,7 +11,7 @@ import { Settings, Zap, Target, Users } from "lucide-react";
 
 export const AutomationSection = () => {
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-slate-800 to-slate-900">
+    <div className="py-20 px-4 bg-transparent">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -25,7 +25,7 @@ export const AutomationSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-8">
-            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-xl backdrop-blur-sm border border-slate-600/30">
+            <div className="bg-slate-900/40 p-6 rounded-xl border border-slate-800/80 backdrop-blur-md">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Développement sur mesure
               </h3>
@@ -39,7 +39,7 @@ export const AutomationSection = () => {
                 </div>
                 <p className="text-gray-400 text-sm">Frais de base pour les services de programmation : 99,99 $ pour les stratégies jugées non complexes. Le prix varie en fonction de la complexité de votre stratégie.</p>
               </div>
-              <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-600/40 mb-4">
+              <div className="bg-slate-950/60 rounded-lg p-4 border border-slate-800/60 mb-4">
                 <p className="text-white font-semibold mb-3 text-sm">
                   Avant de soumettre votre stratégie, veuillez prendre connaissance de mes conditions de travail :
                 </p>
@@ -64,23 +64,10 @@ export const AutomationSection = () => {
                 <span className="font-semibold">Livrable + Formation</span>
               </div>
             </div>
-
-            {/* <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-4 rounded-lg border border-blue-500/30">
-                <Target className="h-8 w-8 text-blue-400 mb-2" />
-                <h4 className="text-white font-semibold mb-1">Précision</h4>
-                <p className="text-gray-300 text-sm">Exécution parfaite de vos stratégies</p>
-              </div>
-              <div className="bg-gradient-to-br from-purple-500/20 to-purple-600/20 p-4 rounded-lg border border-purple-500/30">
-                <Users className="h-8 w-8 text-purple-400 mb-2" />
-                <h4 className="text-white font-semibold mb-1">Support</h4>
-                <p className="text-gray-300 text-sm">Accompagnement personnalisé</p>
-              </div>
-            </div> */}
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-8 rounded-xl backdrop-blur-sm border border-slate-600/30">
+            <div className="bg-slate-900/40 p-8 rounded-xl border border-slate-800/80 backdrop-blur-md">
               <div className="text-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <Settings className="h-10 w-10 text-white" />
@@ -109,7 +96,7 @@ export const AutomationSection = () => {
               
             </div>
             {/* Précision & Support en bas du processus */}
-              <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-600/30">
+              <div className="grid grid-cols-2 gap-4 mt-8 pt-6 border-t border-slate-800/40">
                 <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-4 rounded-lg border border-blue-500/30">
                   <Target className="h-8 w-8 text-blue-400 mb-2" />
                   <h4 className="text-white font-semibold mb-1">Précision</h4>

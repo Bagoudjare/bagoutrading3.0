@@ -37,17 +37,17 @@ const faqs = [
 ];
 
 const FaqItem = ({ q, a, open, onClick }: { q: string; a: string; open: boolean; onClick: () => void }) => (
-  <div className="border border-slate-200 rounded-xl bg-white shadow-sm overflow-hidden">
+  <div className="border border-slate-800/80 rounded-xl bg-slate-900/40 shadow-md backdrop-blur-md overflow-hidden hover:border-slate-700/60 transition-colors">
     <button
       onClick={onClick}
-      className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left hover:bg-slate-50 transition"
+      className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left hover:bg-slate-900/40 transition"
     >
-      <span className="font-semibold text-slate-900">{q}</span>
-      <ChevronDown className={`w-5 h-5 text-blue-600 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
+      <span className="font-semibold text-white">{q}</span>
+      <ChevronDown className={`w-5 h-5 text-blue-400 shrink-0 transition-transform ${open ? "rotate-180" : ""}`} />
     </button>
     <div className={`grid transition-all duration-300 ${open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
       <div className="overflow-hidden">
-        <p className="px-6 pb-5 text-slate-600 leading-relaxed">{a}</p>
+        <p className="px-6 pb-5 text-slate-300 leading-relaxed">{a}</p>
       </div>
     </div>
   </div>
@@ -57,14 +57,14 @@ export const FaqSection = () => {
   const [openIdx, setOpenIdx] = useState<number | null>(0);
 
   return (
-    <div id="faq" className="py-20 px-4 bg-gradient-to-b from-white via-slate-50 to-white">
+    <div id="faq" className="py-20 px-4 bg-transparent">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
             <HelpCircle className="w-4 h-4" />
             Questions fréquentes
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
             On répond à vos questions
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto" />
