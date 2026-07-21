@@ -36,7 +36,7 @@ export default function PaymentMethods() {
       type: "Digital Wallet",
       color: "from-yellow-400 to-amber-500",
       icon: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-ef13978/yas.tg/wp-content/uploads/2024/10/jem_logo.svg",
-      address: "YAS-BAGOUG-88390",
+      address: "+228 91 81 83 82",
       isCrypto: false
     },
     {
@@ -45,7 +45,7 @@ export default function PaymentMethods() {
       type: "Cryptocurrency",
       color: "from-slate-400 to-slate-600",
       icon: "https://cryptologos.cc/logos/litecoin-ltc-logo.png",
-      address: "M8VzFjKxW8C6pTrVsz78NksY6uBGuoJKmQY",
+      address: " ",
       isCrypto: true
     },
     {
@@ -54,7 +54,7 @@ export default function PaymentMethods() {
       type: "Cryptocurrency",
       color: "from-red-600 to-rose-500",
       icon: "https://cryptologos.cc/logos/tron-trx-logo.png",
-      address: "TY5v1pAUziYQEsZ4ugmjiozyjRCcMj1Ca8N",
+      address: " ",
       isCrypto: true
     },
     {
@@ -63,7 +63,7 @@ export default function PaymentMethods() {
       type: "Cryptocurrency",
       color: "from-emerald-400 to-teal-600",
       icon: "https://cryptologos.cc/logos/tether-usdt-logo.png",
-      address: "TR7NHqeVg63C3XQ8rwURpSdfBNzsWgjDu6y",
+      address: " ",
       isCrypto: true
     }
   ];
