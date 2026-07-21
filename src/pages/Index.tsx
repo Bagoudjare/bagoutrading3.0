@@ -75,10 +75,6 @@ const Index = () => {
         <section id="hero" data-animate className={`transition-all duration-800 ${isVisible.hero ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <Hero />
         </section>
-        
-        {/* <section id="accueil" data-animate className={`transition-all duration-800 ${isVisible.accueil ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <HeroSection />
-        </section> */}
 
         <section id="presentation" data-animate className={`transition-all duration-800 ${isVisible.presentation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <VideoPresentationSection />
@@ -115,14 +111,6 @@ const Index = () => {
         <section id="apropos" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <AboutSection />
         </section>
-
-        {/* <section id="formations" data-animate className={`transition-all duration-1000 delay-180 ${isVisible.formations ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <FormationsSection />
-        </section> */}
-
-        {/* <section id="automatisation" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.automatisation ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <AutomationSection />
-        </section> */}
 
         <section id="brokers" data-animate className={`transition-all duration-1000 delay-550 ${isVisible.brokers ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <BrokersSection />

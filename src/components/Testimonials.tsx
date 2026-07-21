@@ -6,19 +6,19 @@ export default function Testimonials() {
   const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
-    <section id="testimonials" className="py-24 relative overflow-hidden bg-transparent border-t border-gray-100 dark:border-slate-800/60 transition-colors duration-300">
+    <section id="testimonials" className="py-24 relative overflow-hidden bg-transparent border-t border-slate-800/60 transition-colors duration-300">
       {/* Background soft glow and grid mask */}
-      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white/80 dark:from-slate-950/80 to-transparent pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950/80 to-transparent pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(59,130,246,0.02),transparent_50%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 mb-16 text-center">
-        <span className="px-3 py-1 text-xs font-mono tracking-widest text-cyan-600 dark:text-cyan-400 uppercase bg-cyan-500/10 border border-cyan-500/20 rounded-full">
+        <span className="px-3 py-1 text-xs font-mono tracking-widest text-cyan-400 uppercase bg-cyan-500/10 border border-cyan-500/20 rounded-full">
           Retours d'Expérience
         </span>
-        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 dark:text-white mt-4 tracking-tight transition-colors duration-300">
+        <h2 className="text-3xl md:text-5xl font-display font-bold text-white mt-4 tracking-tight transition-colors duration-300">
           La satisfaction de nos clients
         </h2>
-        <p className="text-slate-600 dark:text-slate-300 mt-4 max-w-2xl mx-auto text-sm md:text-base">
+        <p className="text-slate-300 mt-4 max-w-2xl mx-auto text-sm md:text-base">
           Des traders particuliers, gérants indépendants et passionnés de finance partagent leur quotidien avec les algorithmes de BagougjareTrading 3.0.
         </p>
       </div>
@@ -26,15 +26,15 @@ export default function Testimonials() {
       {/* Infinite Marquee Container */}
       <div className="relative w-full overflow-hidden py-4 flex select-none">
         {/* Soft fading overlays at edges to create high-end visual smoothness */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white dark:from-slate-950 via-white/80 dark:via-slate-950/80 to-transparent z-15 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white dark:from-slate-950 via-white/80 dark:via-slate-950/80 to-transparent z-15 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-slate-950 via-slate-950/80 to-transparent z-15 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-slate-950 via-slate-950/80 to-transparent z-15 pointer-events-none" />
 
         {/* Moving track */}
         <div className="flex w-max animate-marquee gap-8 pr-8 hover:[animation-play-state:paused]">
           {duplicatedTestimonials.map((item, idx) => (
             <div
               key={`${item.id}-${idx}`}
-              className="w-[300px] md:w-[380px] p-6 md:p-8 rounded-2xl bg-white dark:bg-slate-900/40 border border-gray-200 dark:border-slate-800/80 hover:border-blue-500/30 flex-shrink-0 flex flex-col justify-between transition-all duration-300 group shadow-sm dark:shadow-md backdrop-blur-md"
+              className="w-[300px] md:w-[380px] p-6 md:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700/50 flex-shrink-0 flex flex-col justify-between transition-all duration-300 group shadow-md backdrop-blur-md"
             >
               <div>
                 {/* Five-Star Rating */}
@@ -45,22 +45,22 @@ export default function Testimonials() {
                 </div>
 
                 {/* Comment */}
-                <p className="text-slate-600 dark:text-slate-300 text-xs md:text-sm leading-relaxed italic">
+                <p className="text-slate-300 text-xs md:text-sm leading-relaxed italic">
                   "{item.comment}"
                 </p>
               </div>
 
               {/* Profile Block */}
-              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-gray-100 dark:border-slate-800/80 relative">
+              <div className="flex items-center gap-4 mt-6 pt-4 border-t border-slate-800/80">
                 <div className="absolute -top-3 -left-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full p-2.5 shadow-lg shadow-blue-500/30">
                   <Quote className="w-4 h-4 text-white" />
                 </div>
                 <div className="text-left">
-                  <h4 className="text-slate-800 dark:text-white font-bold font-display text-xs md:text-sm">
+                  <h4 className="text-white font-bold font-display text-xs md:text-sm">
                     {item.name}
                   </h4>
-                  <p className="text-slate-500 dark:text-slate-400 text-[10px] font-mono mt-0.5">
-                    {item.role}, <span className="text-slate-400 dark:text-slate-500">{item.company}</span>
+                  <p className="text-slate-400 text-[10px] font-mono mt-0.5">
+                    {item.role}, <span className="text-slate-500">{item.company}</span>
                   </p>
                 </div>
               </div>

@@ -5,7 +5,7 @@ export const PartnerCTA = () => {
   return (
     <div className="px-4 py-16 overflow-hidden">
       {/* <article className="relative max-w-6xl mx-auto bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 border border-slate-600/30 rounded-2xl p-8 md:p-12 shadow-xl overflow-hidden"> */}
-      <article className="relative max-w-6xl mx-auto bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-slate-600/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm shadow-xl overflow-hidden">
+      <article className="relative max-w-6xl mx-auto bg-slate-900/40 border border-slate-800/80 rounded-2xl p-8 md:p-12 backdrop-blur-md shadow-xl overflow-hidden hover:border-blue-500/30 transition-colors duration-300">
         {/* Effet de balayage lumineux principal - plus visible */}
         <div 
           className="absolute inset-0 pointer-events-none"

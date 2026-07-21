@@ -135,3 +135,111 @@
     opacity: 0;
   }
 }
+
+/* --- Chariow Iframe Integration & Scroll Optimization --- */
+
+/* Centering and layout wrapper setup for Chariow widgets */
+#chariow-widget,
+[id^="chariow-widget"] {
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  overflow: visible !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Ensure dynamically generated overlay containers/modals created by Chariow are centered on the screen */
+div[class*="chariow"][style*="position: fixed"],
+div[id*="chariow"][style*="position: fixed"],
+div[class*="chariow"][style*="position: absolute"],
+div[id*="chariow"][style*="position: absolute"],
+.chariow-overlay,
+.chariow-modal-container {
+  display: flex !important;
+  justify-content: center !important; /* Perfectly center horizontally */
+  align-items: center !important;     /* Center vertically */
+  position: fixed !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background-color: rgba(15, 23, 42, 0.75) !important; /* Elegant slate backdrop color matching our page dark theme */
+  backdrop-filter: blur(8px) !important; /* Smooth blurred transition effect */
+  z-index: 2147483647 !important;
+}
+
+/* Enforce horizontal and vertical centering on modal bodies */
+div[class*="chariow-modal"],
+div[id*="chariow-modal"],
+.chariow-modal {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important; /* True viewport centering */
+  max-width: 95vw !important;
+  z-index: 2147483647 !important;
+}
+
+/* Ensure deep nested wrappers created by the Chariow widget script are responsive and scrollable */
+#chariow-widget div,
+[id^="chariow-widget"] div {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+}
+
+/* Complete aesthetic integration of the payment iframe to match our elegant dark site theme */
+#chariow-widget iframe,
+[id^="chariow-widget"] iframe,
+iframe[src*="chariow"],
+iframe[id*="chariow"],
+.chariow-iframe {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; /* True screen-wide centering */
+  margin: 0 !important; /* Clear any default margins to ensure perfect centering */
+  z-index: 2147483647 !important; /* Ultimate priority stacking on top of navbars and elements */
+  width: 92vw !important; /* Super responsive width for all devices */
+  max-width: 540px !important; /* Perfectly balanced checkout overlay width */
+  height: 85vh !important;
+  max-height: 750px !important; /* Ideal height to avoid screen clipping */
+  border-radius: 16px !important;
+  border: 0px solid transparent !important; /* Borderless integration as requested */
+  background-color: #0f172a !important; /* Soft dark slate background matching the card aesthetics */
+  box-shadow: 0 0 0 9999px rgba(8, 10, 20, 0.85), 0 25px 50px -12px rgba(0, 0, 0, 0.7) !important; /* Fullscreen dimming overlay */
+  overflow: auto !important; /* Allow internal scrolling if content is long */
+  -webkit-overflow-scrolling: touch !important; /* Silky-smooth kinetic scrolling on iOS and Android devices */
+}
+
+/* Ensure the main page remains fully scrollable when interacting with or after opening the iframe */
+html,
+body {
+  overflow: auto !important;
+  height: auto !important;
+  min-height: 100% !important;
+}
+
+/* Specific layout alignment for selected Chariow CTA button per focus mode selection */
+div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#bmaesection:nth-of-type(4) > div#licence:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div#chariow-widget:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
+  margin-top: -315px !important;
+  margin-left: 0px !important;
+  margin-right: 410px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#bmaesection:nth-of-type(4) > div#licence:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div#chariow-widget:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
+  margin-top: -310px !important;
+  margin-right: 410px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#apropos:nth-of-type(9) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div#chariow-widget:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
+  margin-top: -315px !important;
+  margin-right: 410px !important;
+}
+
+div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#partner:nth-of-type(11) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(2) > button:nth-of-type(1) {
+  background-color: #ffffff !important;
+  color: #000554 !important;
+}

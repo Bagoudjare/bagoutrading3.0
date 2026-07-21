@@ -17,20 +17,20 @@ export const VideoPresentationSection = () => {
       <div className="relative max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6 leading-tight">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
             Découvrez la vidéo présentation de l'outil{" "}
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
               BMAE
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             BMAE vous aide à développer cette compétence étape par étape. Découvrez comment notre outil analyse le marché en temps réel et vous guide vers des décisions de trading plus disciplinées.
           </p>
         </div>
 
         {/* Video Container */}
         <div className="relative max-w-5xl mx-auto">
-          <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/5 border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900/60 group cursor-pointer"
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/5 border border-slate-800 bg-slate-900/60 group cursor-pointer"
                onClick={() => setIsOpen(true)}>
             {/* Thumbnail */}
             <div className="relative aspect-video">
@@ -62,12 +62,12 @@ export const VideoPresentationSection = () => {
             </div>
 
             {/* Floating badges */}
-            <div className="absolute top-6 left-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur text-slate-800 dark:text-slate-200 text-sm font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-gray-200 dark:border-slate-800">
+            <div className="absolute top-6 left-6 bg-slate-900/90 backdrop-blur text-slate-200 text-sm font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-slate-800">
               <CheckCircle2 className="h-4 w-4 text-green-500" />
               Analyse temps réel
             </div>
 
-            <div className="absolute top-6 right-6 bg-white/90 dark:bg-slate-900/90 backdrop-blur text-slate-800 dark:text-slate-200 text-sm font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-gray-200 dark:border-slate-800">
+            <div className="absolute top-6 right-6 bg-slate-900/90 backdrop-blur text-slate-200 text-sm font-semibold px-4 py-2 rounded-full shadow-lg flex items-center gap-2 border border-slate-800">
               <CheckCircle2 className="h-4 w-4 text-blue-500" />
               Signaux précis
             </div>

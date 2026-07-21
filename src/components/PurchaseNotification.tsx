@@ -52,25 +52,25 @@ export const PurchaseNotification = () => {
       role="status"
       aria-live="polite"
     >
-      <div className="flex items-start gap-3 bg-white border border-slate-200 shadow-2xl rounded-xl p-3 sm:p-4">
-        <div className="shrink-0 w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-          <ShieldCheck className="w-5 h-5 text-green-600" />
+      <div className="flex items-start gap-3 bg-slate-900/95 border border-slate-800 shadow-2xl rounded-xl p-3 sm:p-4 backdrop-blur-md text-white">
+        <div className="shrink-0 w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
+          <ShieldCheck className="w-5 h-5 text-green-400" />
         </div>
         <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5 text-xs text-slate-500 mb-0.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-green-600" />
+          <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-0.5">
+            <CheckCircle2 className="w-3.5 h-3.5 text-green-400" />
             <span>Achat vérifié</span>
           </div>
-          <p className="text-sm text-slate-900 leading-snug">
-            <span className="font-semibold">{notif.name}</span>{" "}
-            <span className="text-slate-600">de {notif.city}</span> vient d'acheter la{" "}
-            <span className="font-semibold text-primary">{notif.license}</span>.
+          <p className="text-sm text-slate-200 leading-snug">
+            <span className="font-semibold text-white">{notif.name}</span>{" "}
+            <span className="text-slate-300">de {notif.city}</span> vient d'acheter la{" "}
+            <span className="font-semibold text-blue-400">{notif.license}</span>.
           </p>
-          <p className="text-[10px] text-slate-400 mt-1">à l'instant</p>
+          <p className="text-[10px] text-slate-500 mt-1">à l'instant</p>
         </div>
         <button
           onClick={() => setNotif(null)}
-          className="shrink-0 text-slate-400 hover:text-slate-700 transition-colors"
+          className="shrink-0 text-slate-400 hover:text-white transition-colors"
           aria-label="Fermer"
         >
           <X className="w-4 h-4" />

@@ -101,18 +101,18 @@ export const TradingAlgoSection = () => {
     }
   ];
 
-  // const handleCopyAddress = async (address: string) => {
-  //   await navigator.clipboard.writeText(address);
-  //   setCopied(true);
-  //   toast({ title: "Adresse copiée !", description: address });
-  //   setTimeout(() => {
-  //     setCopied(false);
-  //     setSelectedPayment(null);
-  //   }, 800);
-  // };
+  const handleCopyAddress = async (address: string) => {
+    await navigator.clipboard.writeText(address);
+    setCopied(true);
+    toast({ title: "Adresse copiée !", description: address });
+    setTimeout(() => {
+      setCopied(false);
+      setSelectedPayment(null);
+    }, 800);
+  };
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-slate-900 to-slate-800">
+    <div className="py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
 
         {/* <div className="text-center mb-16">
@@ -236,7 +236,7 @@ export const TradingAlgoSection = () => {
 
         {/* Demo Download Section */}
         <div className="mb-20 max-w-4xl mx-auto">
-          <div className="relative overflow-hidden bg-gradient-to-br from-slate-800/80 to-slate-900/80 rounded-2xl p-8 border border-slate-600/40 backdrop-blur-sm">
+          <div className="relative overflow-hidden bg-slate-900/40 rounded-2xl p-8 border border-slate-800/80 backdrop-blur-md">
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-green-500/10 to-cyan-500/10 rounded-full blur-3xl"></div>
             

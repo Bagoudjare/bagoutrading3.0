@@ -15,6 +15,7 @@ export default function PartenaireInscription() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [customCode, setCustomCode] = useState("");
   const [channel, setChannel] = useState("");
   const [partnerId, setPartnerId] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,6 +32,10 @@ export default function PartenaireInscription() {
     e.preventDefault();
     setIsSubmitting(true);
 
+    const generatedId = customCode.trim() 
+      ? slugify(customCode) 
+      : `${slugify(name || email.split("@")[0] || "partner")}-${Math.random().toString(36).slice(2, 7)}`;
+
     try {
       // Envoi vers Formspree
       const response = await fetch("https://formspree.io/f/mzzgrwrl", {
@@ -42,20 +47,17 @@ export default function PartenaireInscription() {
           name,
           email,
           phone,
+          customCode: generatedId,
           channel,
           timestamp: new Date().toISOString(),
         }),
       });
 
       if (response.ok) {
-        // Génération de l'ID partenaire
-        const base = slugify(name || email.split("@")[0] || "partner");
-        const rnd = Math.random().toString(36).slice(2, 7);
-        const id = `${base}-${rnd}`;
-        setPartnerId(id);
+        setPartnerId(generatedId);
         
         // Sauvegarde locale
-        localStorage.setItem("affiliate:partnerId", id);
+        localStorage.setItem("affiliate:partnerId", generatedId);
         localStorage.setItem("affiliate:partnerName", name);
         localStorage.setItem("affiliate:partnerEmail", email);
         localStorage.setItem("affiliate:partnerPhone", phone);
@@ -102,41 +104,50 @@ export default function PartenaireInscription() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white relative overflow-hidden">
+      {/* Background glow effects */}
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <main className="max-w-4xl mx-auto px-4 py-20">
+      <main className="relative z-10 max-w-4xl mx-auto px-4 py-20">
         <header className="text-center mb-12">
-          <Link to="/partenaire" className="text-blue-300 hover:text-blue-200 text-sm uppercase tracking-widest mb-4 inline-block transition-colors">
-            ← Voir les avantages
+          <Link 
+            to="/partenaire" 
+            className="inline-flex items-center text-slate-400 hover:text-blue-400 text-sm font-medium transition-colors group mb-4"
+          >
+            <span className="mr-2 transition-transform group-hover:-translate-x-1">←</span> Retour aux avantages
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Rejoindre le Programme Partenaire
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
+            Rejoindre le Programme <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Partenaire BMAE</span>
           </h1>
-          <p className="text-xl text-slate-300 mb-8">
-            Obtenez votre lien d'affiliation et commencez à partager la solution au autres.
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            Obtenez votre code d'affiliation et commencez à partager notre solution avec votre communauté.
           </p>
         </header>
 
         <section className="mb-16">
-          <div className="bg-gradient-to-br from-slate-900/60 to-slate-800/60 border border-slate-600/50 rounded-2xl p-10 backdrop-blur-sm shadow-2xl">
-            <div className="text-center mb-8">
-              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
+          <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-8 md:p-12 backdrop-blur-md shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-[80px] pointer-events-none"></div>
+            
+            <div className="text-center mb-10 relative z-10">
+              <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-2xl flex items-center justify-center">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h2 className="text-3xl font-bold text-white mb-2">Inscription Gratuite</h2>
-              <p className="text-slate-300">Créez votre compte partenaire en moins de 2 minutes</p>
+              <h2 className="text-3xl font-bold text-white mb-2 tracking-tight">Inscription Gratuite</h2>
+              <p className="text-slate-400">Créez votre compte partenaire en moins de 2 minutes</p>
             </div>
             
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8 relative z-10">
               <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-white mb-3 text-lg font-semibold flex items-center gap-2" htmlFor="name">
-                    <span className="text-blue-400">👤</span>
+                <div className="md:col-span-2">
+                  <label className="block text-slate-300 mb-2 font-medium flex items-center gap-2" htmlFor="name">
+                    <span>👤</span>
                     Nom complet *
                   </label>
                   <input 
                     id="name" 
-                    className="w-full px-6 py-4 bg-slate-800/60 border border-slate-600/60 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 text-lg transition-all duration-300 focus:bg-slate-800/80" 
+                    className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200 disabled:opacity-50" 
                     placeholder="Votre nom complet" 
                     value={name} 
                     onChange={(e) => setName(e.target.value)} 
@@ -146,14 +157,14 @@ export default function PartenaireInscription() {
                 </div>
                 
                 <div>
-                  <label className="block text-white mb-3 text-lg font-semibold flex items-center gap-2" htmlFor="email">
-                    <span className="text-purple-400">📧</span>
+                  <label className="block text-slate-300 mb-2 font-medium flex items-center gap-2" htmlFor="email">
+                    <span>📧</span>
                     Adresse email *
                   </label>
                   <input 
                     id="email" 
                     type="email" 
-                    className="w-full px-6 py-4 bg-slate-800/60 border border-slate-600/60 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 text-lg transition-all duration-300 focus:bg-slate-800/80" 
+                    className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200 disabled:opacity-50" 
                     placeholder="votre@email.com" 
                     value={email} 
                     onChange={(e) => setEmail(e.target.value)} 
@@ -163,13 +174,13 @@ export default function PartenaireInscription() {
                 </div>
                 
                 <div>
-                  <label className="block text-white mb-3 text-lg font-semibold flex items-center gap-2" htmlFor="email">
-                    <span className="text-purple-400"></span>
-                    Numero de télephone *
+                  <label className="block text-slate-300 mb-2 font-medium flex items-center gap-2" htmlFor="phone">
+                    <span>📞</span>
+                    Numéro de téléphone *
                   </label>
                   <input 
                     id="phone"
-                    className="w-full px-6 py-4 bg-slate-800/60 border border-slate-600/60 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/30 text-lg transition-all duration-300 focus:bg-slate-800/80" 
+                    className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200 disabled:opacity-50" 
                     placeholder="+228 00 00 00 00" 
                     value={phone} 
                     onChange={(e) => setPhone(e.target.value)} 
@@ -177,39 +188,64 @@ export default function PartenaireInscription() {
                     disabled={isSubmitting}
                   />
                 </div>
+
+                <div className="md:col-span-2">
+                  <label className="block text-slate-300 mb-2 font-medium flex items-center gap-2" htmlFor="customCode">
+                    <span>🔑</span>
+                    Identifiant / Code d'affiliation souhaité *
+                  </label>
+                  <input 
+                    id="customCode" 
+                    className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200 disabled:opacity-50 font-mono" 
+                    placeholder="ex: jean-dupont, mon-entreprise, promo10" 
+                    value={customCode} 
+                    onChange={(e) => setCustomCode(e.target.value)} 
+                    required 
+                    disabled={isSubmitting}
+                  />
+                  <p className="text-slate-400 text-xs mt-2">
+                    {customCode.trim() ? (
+                      <>
+                        Votre code d'affiliation personnel sera : <span className="text-blue-400 font-mono font-semibold bg-blue-500/10 px-2 py-0.5 rounded">{slugify(customCode)}</span>
+                      </>
+                    ) : (
+                      "Saisissez l'identifiant de votre choix (lettres, chiffres, tirets). Il servira à identifier vos recommandations."
+                    )}
+                  </p>
+                </div>
               </div>
               
               <div>
-                <label className="block text-white mb-3 text-lg font-semibold flex items-center gap-2" htmlFor="channel">
-                  <span className="text-green-400">📱</span>
+                <label className="block text-slate-300 mb-2 font-medium flex items-center gap-2" htmlFor="channel">
+                  <span>📱</span>
                   Votre plateforme principale (optionnel)
                 </label>
                 <input 
                   id="channel" 
-                  className="w-full px-6 py-4 bg-slate-800/60 border border-slate-600/60 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/30 text-lg transition-all duration-300 focus:bg-slate-800/80" 
+                  className="w-full px-4 py-3 bg-slate-950/60 border border-slate-800 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all duration-200 disabled:opacity-50" 
                   placeholder="YouTube, Instagram, TikTok, Site web, Discord..." 
                   value={channel} 
                   onChange={(e) => setChannel(e.target.value)} 
                   disabled={isSubmitting}
                 />
-                <p className="text-slate-400 text-sm mt-3 bg-slate-800/30 rounded-lg p-3">
-                  💡 Ces informations nous aide à fair un suivie des recommandations
+                <p className="text-slate-400 text-sm mt-3 bg-slate-950/40 border border-slate-800/60 rounded-lg p-3">
+                  💡 Ces informations nous aident à assurer le suivi de vos parrainages.
                 </p>
               </div>
               
               <div className="pt-6">
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 text-xl px-8 py-5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+                  className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white hover:scale-[1.01] transition-all duration-300 text-lg px-8 py-6 rounded-xl font-medium shadow-lg"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? (
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-3 justify-center">
                       <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                       Génération en cours...
                     </span>
                   ) : (
-                    <span className="flex items-center gap-3">
+                    <span className="flex items-center gap-3 justify-center">
                       <span>🚀</span>
                       Créer mon compte partenaire
                     </span>
@@ -219,54 +255,22 @@ export default function PartenaireInscription() {
             </form>
 
             {partnerId && (
-              <aside className="mt-10 bg-gradient-to-br from-green-900/30 to-emerald-900/30 border border-green-600/50 rounded-2xl p-8">
-                <div className="text-center mb-6">
-                  <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-                    <span className="text-3xl">🎉</span>
+              <aside className="mt-10 bg-gradient-to-br from-emerald-950/20 via-slate-900/90 to-green-950/20 border border-emerald-500/30 rounded-2xl p-8 shadow-2xl relative z-10 animate-fade-in">
+                <div className="text-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-emerald-500/10 border border-emerald-500/20 rounded-2xl flex items-center justify-center">
+                    <span className="text-2xl">🎉</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-white mb-2 tracking-tight">
                     Félicitations ! Vous êtes maintenant partenaire
                   </h3>
-                  <p className="text-green-300">Votre code d'affiliation est prêt à être utilisé il vous sera communiquer par email</p>
-                </div>
-                
-                {/* <div className="space-y-6">
-                  <div className="bg-slate-800/60 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                      <span className="text-blue-400">🔗</span>
-                      Votre lien d'affiliation
-                    </h4>
-                    <div className="bg-slate-900/60 rounded-lg p-4 mb-4">
-                      <p className="text-slate-300 break-all font-mono text-sm">{whatsappLink}</p>
-                    </div>
-                    <Button 
-                      onClick={copyLink}
-                      className="w-full bg-blue-600 hover:bg-blue-700"
-                    >
-                      📋 Copier le lien
-                    </Button>
-                  </div> */}
-                  
-                  {/* <div className="bg-slate-800/60 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
-                      <span className="text-purple-400">💬</span>
-                      Lien WhatsApp personnalisé
-                    </h4>
-                    <p className="text-slate-300 text-sm mb-4">
-                      Lien direct vers WhatsApp avec votre nom pré-rempli pour les clients
-                    </p>
-                    <div className="bg-slate-900/60 rounded-lg p-4 mb-4">
-                      <p className="text-slate-300 break-all font-mono text-xs">{whatsappLink}</p>
-                    </div>
-                    <Button 
-                      onClick={() => navigator.clipboard.writeText(whatsappLink)}
-                      variant="outline"
-                      className="w-full border-purple-600 text-purple-400 hover:bg-purple-600/20"
-                    >
-                      📱 Copier le lien WhatsApp
-                    </Button>
+                  <div className="my-6 p-4 bg-slate-950/80 border border-emerald-800 rounded-xl inline-block">
+                    <p className="text-xs text-slate-400 uppercase tracking-wider mb-1">Votre code d'affiliation personnel</p>
+                    <span className="text-2xl font-mono font-bold text-blue-400 tracking-wider">{partnerId}</span>
                   </div>
-                </div> */}
+                  <p className="text-emerald-400/90 max-w-md mx-auto text-sm">
+                    Votre compte a été enregistré. Ce code d'affiliation personnel vous sera communiqué par e-mail très rapidement pour vous aider à suivre vos parrainages.
+                  </p>
+                </div>
               </aside>
             )}
           </div>
@@ -274,17 +278,17 @@ export default function PartenaireInscription() {
 
 
         <footer className="text-center">
-          <div className="bg-slate-900/40 border border-slate-600/40 rounded-xl p-6">
-            <p className="text-slate-300 mb-4">
-              Des questions ? Notre équipe partenaire est là pour vous aider
+          <div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 backdrop-blur-md">
+            <p className="text-slate-300 mb-4 font-medium">
+              Des questions ? Notre équipe partenaire est là pour vous aider.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/partenaire">
-                <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+              <Link to="/partenaire" className="w-full sm:w-auto">
+                <Button variant="outline" className="border-slate-800 text-slate-300 hover:text-white hover:bg-slate-900 w-full">
                   ← Retour aux avantages
                 </Button>
               </Link>
-              <Button variant="outline" className="border-blue-600 text-blue-400 hover:bg-blue-600/20">
+              <Button variant="outline" className="border-blue-500/30 text-blue-400 hover:bg-blue-500/5 hover:text-blue-300 w-full sm:w-auto">
                 💬 Contacter le support
               </Button>
             </div>
