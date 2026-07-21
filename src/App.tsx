@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,7 +14,39 @@ import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      // Detect if Chariow checkout is currently active (iframe is in DOM)
+      const iframe = document.querySelector(
+        'iframe[src*="chariow"], iframe[id*="chariow"], .chariow-iframe'
+      );
+
+      if (iframe) {
+        const target = e.target as HTMLElement;
+
+        // Locate the close button for the Chariow checkout overlay
+        const closeButton = document.querySelector(
+          'div[id^="chariow-widget"] div div button, #chariow-widget div div button, button[class*="chariow-close"]'
+        ) as HTMLButtonElement | null;
+
+        if (closeButton) {
+          // If the click is not on the close button itself, trigger the close action
+          if (!closeButton.contains(target)) {
+            closeButton.click();
+          }
+        }
+      }
+    };
+
+    // Use capturing phase (true) to intercept the click before propagation is stopped
+    document.addEventListener("mousedown", handleOutsideClick, true);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick, true);
+    };
+  }, []);
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
         <Toaster />
@@ -33,5 +66,6 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
+};
 
 export default App;
