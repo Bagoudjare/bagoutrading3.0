@@ -29,9 +29,9 @@ export function RoboInteractive() {
   const selectedFeature = robotFeatures.find((f) => f.id === selectedId);
 
   return (
-    <section id="robot" className="py-20 md:py-24 relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-blue-950">
+    <section id="robot" className="py-20 md:py-24 relative overflow-hidden bg-transparent">
       {/* Grid Pattern and Dark Ambient Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.12),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.08),transparent_60%)] pointer-events-none" />
       <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-slate-900 to-transparent pointer-events-none" />
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none" />
 
@@ -171,9 +171,9 @@ export function RoboInteractive() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -25 }}
                   transition={{ duration: 0.3 }}
-                  className="p-8 rounded-3xl bg-gradient-to-b from-slate-800/80 to-slate-900/80 border border-blue-400/20 backdrop-blur-md shadow-2xl relative overflow-hidden"
+                  className="p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-md shadow-2xl relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-500/20 to-transparent pointer-events-none rounded-tr-3xl" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-500/10 to-transparent pointer-events-none rounded-tr-2xl" />
                   
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-400/40 flex items-center justify-center text-blue-300">
@@ -196,7 +196,7 @@ export function RoboInteractive() {
                     {selectedFeature.description}
                   </p>
 
-                  <div className="p-5 rounded-2xl bg-slate-950/50 border border-slate-700/60 space-y-3">
+                  <div className="p-5 rounded-2xl bg-slate-950/50 border border-slate-800/80 space-y-3">
                     <h4 className="text-xs font-mono font-semibold text-gray-400 tracking-widest uppercase">
                       Spécifications Techniques
                     </h4>
