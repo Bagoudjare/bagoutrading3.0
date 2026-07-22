@@ -45,7 +45,7 @@ export default function PaymentMethods() {
       type: "Cryptocurrency",
       color: "from-slate-400 to-slate-600",
       icon: "https://cryptologos.cc/logos/litecoin-ltc-logo.png",
-      address: " ",
+      address: "LbvVrprrbKwZqDvkMEP2Fo1A4g6Y2PSjzj",
       isCrypto: true
     },
     {
@@ -54,7 +54,7 @@ export default function PaymentMethods() {
       type: "Cryptocurrency",
       color: "from-red-600 to-rose-500",
       icon: "https://cryptologos.cc/logos/tron-trx-logo.png",
-      address: " ",
+      address: "TPg3mn6qW6qVv8DQKW7BTVNeEVuvt3VZVw",
       isCrypto: true
     },
     {
@@ -63,7 +63,7 @@ export default function PaymentMethods() {
       type: "Cryptocurrency",
       color: "from-emerald-400 to-teal-600",
       icon: "https://cryptologos.cc/logos/tether-usdt-logo.png",
-      address: " ",
+      address: "TPg3mn6qW6qVv8DQKW7BTVNeEVuvt3VZVw",
       isCrypto: true
     }
   ];

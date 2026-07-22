@@ -21,12 +21,12 @@ export default function PartenaireInscription() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const whatsappLink = useMemo(() => {
-    if (!partnerId || !name) return "";
-    const message = encodeURIComponent(`Je viens de la part de ${name}`);
-    const phoneNumber = "+22898740835"; // Remplace par ton vrai numéro
-    return `https://wa.me/${phoneNumber}?text=${message}`;
-  }, [partnerId, name]);
+  // const whatsappLink = useMemo(() => {
+  //   if (!partnerId || !name) return "";
+  //   const message = encodeURIComponent(`Je viens de la part de ${name}`);
+  //   const phoneNumber = "+22898740835"; // Remplace par ton vrai numéro
+  //   return `https://wa.me/${phoneNumber}?text=${message}`;
+  // }, [partnerId, name]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -80,22 +80,22 @@ export default function PartenaireInscription() {
     }
   };
 
-  const copyLink = async () => {
-    if (!whatsappLink) return;
-    try {
-      await navigator.clipboard.writeText(whatsappLink);
-      toast({
-        title: "Lien copié !",
-        description: "Ton lien a été copié dans le presse-papiers.",
-      });
-    } catch {
-      toast({
-        title: "Erreur",
-        description: "Impossible de copier le lien. Sélectionne-le manuellement.",
-        variant: "destructive",
-      });
-    }
-  };
+  // const copyLink = async () => {
+  //   if (!whatsappLink) return;
+  //   try {
+  //     await navigator.clipboard.writeText(whatsappLink);
+  //     toast({
+  //       title: "Lien copié !",
+  //       description: "Ton lien a été copié dans le presse-papiers.",
+  //     });
+  //   } catch {
+  //     toast({
+  //       title: "Erreur",
+  //       description: "Impossible de copier le lien. Sélectionne-le manuellement.",
+  //       variant: "destructive",
+  //     });
+  //   }
+  // };
 
   useEffect(() => {
     // Pré-remplir si déjà inscrit
