@@ -27,7 +27,7 @@ export default function PaymentMethods() {
       type: "Mobile Money",
       color: "from-orange-500 to-amber-600",
       icon: "https://moov-africa.tg/wp-content/uploads/elementor/thumbs/2logo-moov-africa-put36aevvcwbxm9ucoog0ot5tre773bvjb8nnh8514.jpeg",
-      address: "+228 99 12 34 56",
+      address: "+228 98 74 08 35",
       isCrypto: false
     },
     {
