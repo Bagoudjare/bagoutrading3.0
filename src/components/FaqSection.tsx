@@ -4,7 +4,7 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 const faqs = [
   {
     q: "Qu'est-ce que Best Market Analyser Edge (BMAE) ?",
-    a: "BMAE est un outil d'analyse et d'aide à la décision pour MetaTrader 5. Il combine détection d'Order Blocks, FVG, structure de marché, filtres BUY/SELL et signaux Sniper pour appliquer notre méthodologie de manière semi-automatique.",
+    a: "BMAE est un outil d'analyse et d'aide à la décision pour MetaTrader 5. Il analyse automatiquement le marché pour detecter les setup a fort probabilité de réusite.",
   },
   {
     q: "Puis-je tester l'outil avant de l'acheter ?",
