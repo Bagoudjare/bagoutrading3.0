@@ -48,7 +48,7 @@ export const Footer = () => {
             <span className="text-xl font-bold">Fait par </span>
             <span className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent">Léonardo</span>
             <PhoneCallIcon className="h-6 w-6 text-blue-400" />
-            <span><a className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent" href="https://wa.me/+22891659982">+228 96938284</a></span>
+            <span><a className="text-xl font-bold bg-gradient-to-r from-yellow-500 to-orange-600 bg-clip-text text-transparent" href="https://wa.me/+22891659982">+228 91659982</a></span>
           </div>
         </div>
       </div>
