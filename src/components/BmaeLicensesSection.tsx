@@ -150,8 +150,8 @@ return (
                   </li>
                 ))}
                 <li className="flex items-start gap-2 text-emerald-400 text-sm font-semibold pt-2 border-t border-slate-800">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span>Satisfait ou remboursé au bout de 6 mois</span>
+                  <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
+                  <span>Aucun remboursement possible</span>
                 </li>
               </ul>
             </div>
