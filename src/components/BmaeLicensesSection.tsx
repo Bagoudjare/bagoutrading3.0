@@ -243,7 +243,7 @@ return (
             </p>
             <p className="text-emerald-400 text-xs font-semibold mt-2 flex items-center justify-center md:justify-start gap-1">
               <ShieldCheck className="w-4 h-4" />
-              Garantie de 6 mois Satisfait ou Remboursé applicable sur la licences à Vie.
+              Garantie de 6 mois Satisfait ou Remboursé applicable sous certaines conditions, uniquement sur la licences à Vie.
             </p>
           </div>
         </div>
