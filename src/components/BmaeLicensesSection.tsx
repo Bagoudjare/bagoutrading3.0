@@ -149,7 +149,7 @@ return (
                     <span>{b}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-2 text-emerald-400 text-sm font-semibold pt-2 border-t border-slate-800">
+                <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
                   <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                   <span>Aucun remboursement possible</span>
                 </li>
@@ -243,7 +243,7 @@ return (
             </p>
             <p className="text-emerald-400 text-xs font-semibold mt-2 flex items-center justify-center md:justify-start gap-1">
               <ShieldCheck className="w-4 h-4" />
-              Garantie de 6 mois Satisfait ou Remboursé applicable sur les licences 6 Mois et à Vie.
+              Garantie de 6 mois Satisfait ou Remboursé applicable sur la licences à Vie.
             </p>
           </div>
         </div>
