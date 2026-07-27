@@ -92,7 +92,7 @@ export default function Partenaire() {
               
               <div className="lg:col-span-7 space-y-6 text-slate-300 text-base md:text-lg leading-relaxed">
                 <p className="font-semibold text-white">
-                  BMAE n'est pas un simple indicateur.
+                  BMAE n'est pas un simple Outil.
                 </p>
                 <p>
                   C'est un outil développé après plus de <span className="text-blue-400 font-semibold">6 années de recherche</span>, d'expérience et d'optimisation, avec un objectif clair : permettre aux traders d'obtenir une lecture du marché simple, rapide et efficace.
