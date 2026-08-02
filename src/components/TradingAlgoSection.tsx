@@ -174,7 +174,7 @@ export const TradingAlgoSection = () => {
           last_name: `WhatsApp: ${newLead.whatsapp}`,
           email: newLead.email
         }
-      ]).catch(() => {});
+      ]);
     } catch (err) {
       console.warn("Supabase lead save fallback:", err);
     }
