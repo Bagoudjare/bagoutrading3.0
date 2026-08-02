@@ -16,13 +16,18 @@ export default async function handler(req, res) {
   const ipHash = createHash('sha256').update(ip).digest('hex');
   const userAgent = req.headers['user-agent'] || '';
 
+  const { full_name, email, whatsapp, file_name } = req.body || {};
   const { error } = await supabase
     .from('demo_downloads')
     .insert([
       {
         downloadet_at: new Date().toISOString(),
         user_agent: userAgent,
-        ip_hash: ipHash
+        ip_hash: ipHash,
+        full_name: full_name || null,
+        email: email || null,
+        whatsapp: whatsapp || null,
+        file_name: file_name || 'BMAE_Demo.ex5'
       }
     ]);
 
