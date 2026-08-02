@@ -96,10 +96,10 @@ return (
                     <span>{b}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
+                {/* <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
                   <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                   <span>Aucun remboursement possible</span>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -149,10 +149,10 @@ return (
                     <span>{b}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
+                {/* <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
                   <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                   <span>Aucun remboursement possible</span>
-                </li>
+                </li> */}
               </ul>
             </div>
 
