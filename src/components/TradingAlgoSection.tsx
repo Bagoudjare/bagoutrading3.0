@@ -432,7 +432,7 @@ export const TradingAlgoSection = () => {
               </p>
 
               {/* Grid des avantages de la formation */}
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left mb-10">
+              {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left mb-10">
                 <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 hover:border-blue-500/40 transition-all">
                   <div className="p-2.5 bg-blue-500/10 rounded-xl w-fit mb-3 text-blue-400">
                     <BookOpen className="h-6 w-6" />
@@ -462,7 +462,7 @@ export const TradingAlgoSection = () => {
                     Maximisez votre ratio risque/récompense et protégez votre capital sur le Forex et les Indices.
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Encadré d'Achat Chariow */}
               <div className="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 md:p-8 max-w-xl mx-auto shadow-2xl relative">
