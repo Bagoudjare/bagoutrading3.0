@@ -120,7 +120,7 @@ export default function PaymentMethods() {
             Moyens de Règlement Sécurisés
           </span>
           <h2 className="text-3xl md:text-5xl font-display font-bold text-white mt-4 tracking-tight">
-            Moyens de paiement
+            Autres Moyens de paiement
           </h2>
           <p className="text-slate-400 mt-4 leading-relaxed text-sm md:text-base">
             Survolez une carte pour afficher son adresse ou numéro de dépôt. Cliquez sur l'adresse pour la copier.

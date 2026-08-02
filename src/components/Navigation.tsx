@@ -36,8 +36,8 @@ export const Navigation = () => {
   const navItems = [
     { label: "Accueil", href: "#accueil", id: "accueil" },
     { label: "Presentation de BMAE", href: "#presentation", id: "presentation" },
+    { label: "Licence BME", href: "#bmaesection", id: "bmaesection" },
     { label: "Performance", href: "#proof", id: "proof" },
-    { label: "Paiement", href: "#paiement", id: "paiement" },
     { label: "Demo", href: "#algo", id: "algo" },
     { label: "À propos", href: "#apropos", id: "apropos" },
     { label: "Vidéos", href: "#videos", id: "videos" },
