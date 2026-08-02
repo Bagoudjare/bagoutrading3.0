@@ -1,5 +1,5 @@
 import { useState, useEffect, FormEvent } from "react";
-import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users, Star, MessageSquarePlus, Copy, Check, X, MonitorPlay, Phone, Mail, User, PhoneCall, FileSpreadsheet, Sparkles, ShieldCheck } from "lucide-react";
+import { TrendingUp, BarChart3, Target, Shield, LineChart, Calculator, History, Zap, Download, Play, Lock, CheckCircle, Users, Star, MessageSquarePlus, Copy, Check, X, MonitorPlay, Phone, Mail, User, PhoneCall, FileSpreadsheet, Sparkles, ShieldCheck, GraduationCap, BookOpen, CheckCircle2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import supabase from "@/utils/supabase";
 import { useToast } from "@/hooks/use-toast";
@@ -91,6 +91,34 @@ export const TradingAlgoSection = () => {
     };
     
     fetchDownloadCount();
+  }, []);
+
+  // Charger les ressources Chariow pour le widget d'achat
+  useEffect(() => {
+    const linkId = "chariow-widget-css";
+    if (!document.getElementById(linkId)) {
+      const link = document.createElement("link");
+      link.id = linkId;
+      link.rel = "stylesheet";
+      link.href = "https://js.chariowcdn.com/v1/widget.min.css";
+      document.head.appendChild(link);
+    }
+
+    const scriptId = "chariow-widget-js";
+    const runScript = () => {
+      const existingScript = document.getElementById(scriptId);
+      if (existingScript) {
+        existingScript.remove();
+      }
+      const script = document.createElement("script");
+      script.id = scriptId;
+      script.src = "https://js.chariowcdn.com/v1/widget.min.js";
+      script.async = true;
+      document.head.appendChild(script);
+    };
+
+    const timer = setTimeout(runScript, 100);
+    return () => clearTimeout(timer);
   }, []);
 
   // Déclencher l'ouverture de la modale
@@ -382,7 +410,97 @@ export const TradingAlgoSection = () => {
           })}
         </div> */}
 
-                {/* Demo Tutorial Video */}
+                {/* SECTION FORMATION STRATEGIE BMAE */}
+        <div className="mb-20 max-w-5xl mx-auto">
+          <div className="relative overflow-hidden bg-gradient-to-br from-slate-900/90 via-blue-950/50 to-slate-900/90 rounded-3xl p-8 md:p-12 border border-blue-500/30 backdrop-blur-xl shadow-2xl shadow-blue-950/50">
+            {/* Background Glows */}
+            <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="relative z-10 text-center">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-blue-500/20 border border-amber-400/30 text-amber-300 text-sm font-semibold mb-6 shadow-md">
+                <GraduationCap className="h-4 w-4 text-amber-400" />
+                <span>Formation Stratégie BMAE</span>
+              </div>
+
+              <h3 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+                Maîtrisez la Stratégie derrière le Système <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-amber-300 bg-clip-text text-transparent">BMAE</span>
+              </h3>
+
+              <p className="text-base md:text-lg text-slate-300 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Apprenez la méthodologie complète et la logique d'analyse qu'utilise l'outil BMAE. Découvrez les règles d'entrée, de sortie et de gestion du risque pour trader avec confiance.
+              </p>
+
+              {/* Grid des avantages de la formation */}
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 text-left mb-10">
+                <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 hover:border-blue-500/40 transition-all">
+                  <div className="p-2.5 bg-blue-500/10 rounded-xl w-fit mb-3 text-blue-400">
+                    <BookOpen className="h-6 w-6" />
+                  </div>
+                  <h4 className="text-white font-bold text-lg mb-2">Méthodologie Détaillée</h4>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    Comprenez la structure du marché et la logique derrière chaque alerte générée par le système BMAE.
+                  </p>
+                </div>
+
+                <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 hover:border-amber-500/40 transition-all">
+                  <div className="p-2.5 bg-amber-500/10 rounded-xl w-fit mb-3 text-amber-400">
+                    <Target className="h-6 w-6" />
+                  </div>
+                  <h4 className="text-white font-bold text-lg mb-2">Entrées & Sorties Précises</h4>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    Apprenez à valider les signaux, éliminer les faux départs et exécuter vos ordres avec discipline.
+                  </p>
+                </div>
+
+                <div className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800/80 hover:border-emerald-500/40 transition-all sm:col-span-2 lg:col-span-1">
+                  <div className="p-2.5 bg-emerald-500/10 rounded-xl w-fit mb-3 text-emerald-400">
+                    <Shield className="h-6 w-6" />
+                  </div>
+                  <h4 className="text-white font-bold text-lg mb-2">Money Management Pro</h4>
+                  <p className="text-slate-400 text-sm leading-relaxed">
+                    Maximisez votre ratio risque/récompense et protégez votre capital sur le Forex et les Indices.
+                  </p>
+                </div>
+              </div>
+
+              {/* Encadré d'Achat Chariow */}
+              <div className="bg-slate-900/90 border border-slate-700/80 rounded-2xl p-6 md:p-8 max-w-xl mx-auto shadow-2xl relative">
+                <div className="flex items-center justify-center gap-2 mb-2 text-amber-400 font-bold text-sm uppercase tracking-wider">
+                  <Sparkles className="h-4 w-4" />
+                  <span>Accès Stratégie & Formation</span>
+                </div>
+                <h4 className="text-2xl font-bold text-white mb-2">Acheter la Formation Stratégie BMAE</h4>
+                <p className="text-slate-400 text-sm mb-6">
+                  Obtenez un accès immédiat aux modules vidéo interactifs et supports de cours.
+                </p>
+
+                <div className="w-full flex justify-center items-center min-h-[50px]">
+                  <div
+                    id="chariow-widget"
+                    className="w-full max-w-[340px] mx-auto"
+                    data-product-id="prd_k6jcxe45"
+                    data-store-domain="vhconuvm.mychariow.shop"
+                    data-style="tap"
+                    data-border-style="rounded"
+                    data-cta-width="full"
+                    data-background-color="#FFFFFF"
+                    data-cta-animation="none"
+                    data-locale="fr"
+                    data-primary-color="#ffcc00"
+                  />
+                </div>
+
+                <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-400 border-t border-slate-800/80 pt-4">
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> Accès illimité</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-emerald-400" /> Paiement 100% sécurisé</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Demo Tutorial Video */}
         <div className="mb-16 max-w-5xl mx-auto">
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-sm font-medium mb-6">
