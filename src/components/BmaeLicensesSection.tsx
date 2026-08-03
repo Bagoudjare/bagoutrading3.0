@@ -80,7 +80,7 @@ return (
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">Licence 1 mois</h3>
-                    <span className="text-xs text-amber-400 font-semibold">Version Restreinte</span>
+                    <span className="text-xs text-amber-400 font-semibold">Version de decouverte et d'apprentisage</span>
                   </div>
                 </div>
               </div>
