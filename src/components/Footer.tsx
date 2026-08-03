@@ -21,9 +21,9 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
-              <li><a href="#accueil" className="text-gray-400 hover:text-blue-400 transition-colors">Accueil</a></li>
+              <li><a href="#hero" className="text-gray-400 hover:text-blue-400 transition-colors">Accueil</a></li>
               <li><a href="#apropos" className="text-gray-400 hover:text-blue-400 transition-colors">À propos</a></li>
-              <li><a href="#formations" className="text-gray-400 hover:text-blue-400 transition-colors">Formations</a></li>
+              <li><a href="#formation-strategie" className="text-gray-400 hover:text-blue-400 transition-colors">Formations</a></li>
               <li><a href="#videos" className="text-gray-400 hover:text-blue-400 transition-colors">Videos</a></li>
             </ul>
           </div>
@@ -32,10 +32,10 @@ export const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#formations" className="text-gray-400 hover:text-blue-400 transition-colors">Formations</a></li>
-              <li><a href="#automatisation" className="text-gray-400 hover:text-blue-400 transition-colors">Automatisation</a></li>
-              <li><a href="#algo" className="text-gray-400 hover:text-blue-400 transition-colors">Indicateurs</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-blue-400 transition-colors">Consultation</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Formations</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Automatisation</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Indicateurs</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">Consultation</a></li>
             </ul>
           </div>
         </div>

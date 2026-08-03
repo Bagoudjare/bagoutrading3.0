@@ -288,7 +288,8 @@ export default function PartenaireInscription() {
                   ← Retour aux avantages
                 </Button>
               </Link>
-              <Button variant="outline" className="border-blue-500/30 text-blue-400 hover:bg-blue-500/5 hover:text-blue-300 w-full sm:w-auto">
+              <Button
+            onClick={() => window.open('https://whatsapp.com/channel/0029Vb6533j2Jl8BFdEVFd0C', '_blank')} variant="outline" className="border-blue-500/30 text-blue-400 hover:bg-blue-500/5 hover:text-blue-300 w-full sm:w-auto">
                 💬 Contacter le support
               </Button>
             </div>
