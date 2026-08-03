@@ -68,7 +68,7 @@ return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Licence 1 mois - Restreinte */}
           <div className="relative bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-600 to-amber-400 text-white text-[11px] font-bold px-3.5 py-0.5 rounded-full uppercase tracking-wider shadow">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-800 to-amber-500 text-white text-[11px] font-bold px-3.5 py-0.5 rounded-full uppercase tracking-wider shadow">
               1 Mois d'accès
             </div>
             
