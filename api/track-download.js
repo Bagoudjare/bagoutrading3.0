@@ -21,12 +21,13 @@ export default async function handler(req, res) {
     .from('demo_downloads')
     .insert([
       {
-        downloadet_at: new Date().toISOString(),
+        downloaded_at: new Date().toISOString(),
         user_agent: userAgent,
         ip_hash: ipHash,
         full_name: full_name || null,
         email: email || null,
         whatsapp: whatsapp || null,
+        experience: experience || null,
         file_name: file_name || 'BMAE_Demo.ex5'
       }
     ]);

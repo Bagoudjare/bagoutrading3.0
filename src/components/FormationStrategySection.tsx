@@ -76,7 +76,7 @@ export const FormationStrategySection = () => {
           </h2>
 
           <p className="text-base sm:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Découvrez la méthodologie professionnelle complète qui alimente l'indicateur BMAE. Apprenez à analyser le marché avec clarté, valider les opportunités et appliquer un money management irréprochable.
+            Découvrez la méthodologie professionnelle complète qui alimente BMAE. Apprenez à analyser le marché avec clarté, valider les opportunités et appliquer un money management irréprochable.
           </p>
 
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-amber-400 mx-auto mt-8 rounded-full" />

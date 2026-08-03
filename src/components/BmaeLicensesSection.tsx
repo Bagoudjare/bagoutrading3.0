@@ -68,6 +68,10 @@ return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Licence 1 mois - Restreinte */}
           <div className="relative bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
+            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-600 to-amber-400 text-white text-[11px] font-bold px-3.5 py-0.5 rounded-full uppercase tracking-wider shadow">
+              1 Mois d'accès
+            </div>
+            
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -83,8 +87,9 @@ return (
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-white">99,99 $</span>
-                  <span className="text-sm text-slate-400">/ mois</span>
+                  <span className="text-4xl font-bold text-white">70 $</span>
+                  {/* <span className="text-sm text-slate-400">/ mois</span> */}
+                  <span className="text-lg text-slate-500 line-through">100 $</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-1">Utilisation limitée à 1 seul actif</p>
               </div>
