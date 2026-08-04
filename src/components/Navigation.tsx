@@ -12,7 +12,7 @@ export const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Detect active section
-      const sections = ["accueil", "presentation", "proof", "paiement", "algo", "apropos", "videos", "contact"];
+      const sections = ["hero", "presentation", "bmaesection", "proof", "formationstrategie", "algo", "apropos", "videos", "contact"];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {
@@ -34,7 +34,7 @@ export const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Accueil", href: "#accueil", id: "accueil" },
+    { label: "Accueil", href: "#hero", id: "hero" },
     { label: "Presentation de BMAE", href: "#presentation", id: "presentation" },
     { label: "Licence BMAE", href: "#bmaesection", id: "bmaesection" },
     { label: "Performance", href: "#proof", id: "proof" },

@@ -36,7 +36,7 @@ export const PartnerCTA = () => {
             </Button>
           </Link>
           <Link to="/partenaire" className="inline-flex">
-            <Button variant="outline">En savoir plus</Button>
+            <Button variant="outline" className="text-black">En savoir plus</Button>
           </Link>
         </div>
       </article>
