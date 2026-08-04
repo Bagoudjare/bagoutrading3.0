@@ -109,7 +109,7 @@ const Index = () => {
           <WarningNoticeSection />
         </section> */}
 
-        <section id="formation-strategie" data-animate className={`transition-all duration-1000 delay-220 ${isVisible['formation-strategie'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <section id="formationstrategie" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.formationstrategie ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <FormationStrategySection />
         </section>
 

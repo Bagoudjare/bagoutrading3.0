@@ -38,7 +38,7 @@ export const Navigation = () => {
     { label: "Presentation de BMAE", href: "#presentation", id: "presentation" },
     { label: "Licence BMAE", href: "#bmaesection", id: "bmaesection" },
     { label: "Performance", href: "#proof", id: "proof" },
-    { label: "Strategie BMAE", href: "#formation-strategie", id: "formation-strategie" },
+    { label: "Strategie BMAE", href: "#formationstrategie", id: "formationstrategie" },
     { label: "Demo", href: "#algo", id: "algo" },
     { label: "À propos", href: "#apropos", id: "apropos" },
     { label: "Vidéos", href: "#videos", id: "videos" },
