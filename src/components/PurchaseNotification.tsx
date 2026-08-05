@@ -1,81 +1,107 @@
 import { useEffect, useState } from "react";
-import { CheckCircle2, X, ShieldCheck } from "lucide-react";
-
-// Fake but realistic-looking purchase notifications
-const FIRST_NAMES = [
-  "Kouassi", "Amadou", "Fatou", "Marc", "Julien", "Aïcha", "Sophie", "Ibrahim",
-  "Léa", "David", "Moussa", "Camille", "Sébastien", "Awa", "Nicolas", "Yasmine",
-  "Thomas", "Adama", "Chloé", "Mamadou", "Élodie", "Rachid", "Sarah", "Mehdi",
-];
-const CITIES = [
-  "Paris", "Abidjan", "Dakar", "Lomé", "Montréal", "Cotonou", "Casablanca",
-  "Marseille", "Bamako", "Cotonou", "Genève", "Douala", "Toulouse", "Lomé",
-];
-const LICENSES = ["Licence 6 mois", "Licence à vie"];
-
-interface Notif {
-  id: number;
-  name: string;
-  city: string;
-  license: string;
-}
-
-const randomNotif = (): Notif => ({
-  id: Date.now() + Math.random(),
-  name: FIRST_NAMES[Math.floor(Math.random() * FIRST_NAMES.length)],
-  city: CITIES[Math.floor(Math.random() * CITIES.length)],
-  license: LICENSES[Math.floor(Math.random() * LICENSES.length)],
-});
+import { Sparkles, X, Tag, Copy, Check } from "lucide-react";
 
 export const PurchaseNotification = () => {
-  const [notif, setNotif] = useState<Notif | null>(null);
+  const [visible, setVisible] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const show = () => {
-      setNotif(randomNotif());
-      setTimeout(() => setNotif(null), 8000);
-    };
-    // First notif after 1 min, then every 1 min
-    const first = setTimeout(show, 0.2 * 60 * 1000);
-    const interval = setInterval(show, 1 * 60 * 1000);
+    // Premier affichage après 6 secondes
+    const initialTimer = setTimeout(() => {
+      setVisible(true);
+    }, 6000);
+
+    // Réapparition périodique toutes les 60 secondes si fermé
+    const interval = setInterval(() => {
+      setVisible(true);
+    }, 60000);
+
     return () => {
-      clearTimeout(first);
+      clearTimeout(initialTimer);
       clearInterval(interval);
     };
   }, []);
 
-  if (!notif) return null;
+  const handleCopyCode = () => {
+    navigator.clipboard.writeText("BMAE");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2500);
+  };
+
+  const scrollToPaiement = () => {
+    const el = document.querySelector("#paiement");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  if (!visible) return null;
 
   return (
     <div
-      className="fixed bottom-4 left-4 z-[60] max-w-xs sm:max-w-sm animate-in slide-in-from-left-5 fade-in duration-500"
+      className="fixed bottom-5 left-5 z-[60] max-w-sm sm:max-w-md animate-in slide-in-from-left-5 fade-in duration-500"
       role="status"
       aria-live="polite"
     >
-      <div className="flex items-start gap-3 bg-slate-900/95 border border-slate-800 shadow-2xl rounded-xl p-3 sm:p-4 backdrop-blur-md text-white">
-        <div className="shrink-0 w-10 h-10 rounded-full bg-green-500/10 flex items-center justify-center">
-          <ShieldCheck className="w-5 h-5 text-green-400" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-1.5 text-xs text-slate-400 mb-0.5">
-            <CheckCircle2 className="w-3.5 h-3.5 text-green-400" />
-            <span>Achat vérifié</span>
+      <div className="relative overflow-hidden bg-gradient-to-br from-slate-900/95 via-slate-900/98 to-blue-950/90 border border-amber-500/30 shadow-2xl rounded-2xl p-4 sm:p-5 backdrop-blur-xl text-white group">
+        {/* Glow ambient */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+
+        <div className="flex items-start gap-3.5 relative z-10">
+          <div className="shrink-0 w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500/20 to-orange-500/20 border border-amber-400/30 flex items-center justify-center text-amber-400 shadow-lg">
+            <Tag className="w-5 h-5 animate-pulse" />
           </div>
-          <p className="text-sm text-slate-200 leading-snug">
-            <span className="font-semibold text-white">{notif.name}</span>{" "}
-            <span className="text-slate-300">de {notif.city}</span> vient d'acheter la{" "}
-            <span className="font-semibold text-blue-400">{notif.license}</span>.
-          </p>
-          <p className="text-[10px] text-slate-500 mt-1">à l'instant</p>
+
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-wider mb-1">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Réduction Exclusive</span>
+            </div>
+
+            <p className="text-sm font-medium text-slate-100 leading-snug mb-3">
+              Achetez une licence maintenant et recevez une réduction avec le code promo{" "}
+              <span className="font-extrabold text-amber-300 font-mono bg-amber-500/15 px-2 py-0.5 rounded border border-amber-400/30 inline-block">
+                BMAE
+              </span>
+            </p>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={handleCopyCode}
+                className="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-semibold text-slate-200 hover:text-white transition-all flex items-center gap-1.5 cursor-pointer"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-emerald-400" />
+                    <span className="text-emerald-400">Code copié !</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Copier le code</span>
+                  </>
+                )}
+              </button>
+
+              <button
+                onClick={scrollToPaiement}
+                className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 hover:opacity-90 text-slate-950 font-bold text-xs shadow-md transition-all cursor-pointer"
+              >
+                J'en profite
+              </button>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setVisible(false)}
+            className="shrink-0 p-1 text-slate-400 hover:text-white transition-colors rounded-lg hover:bg-slate-800/60"
+            aria-label="Fermer"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
-        <button
-          onClick={() => setNotif(null)}
-          className="shrink-0 text-slate-400 hover:text-white transition-colors"
-          aria-label="Fermer"
-        >
-          <X className="w-4 h-4" />
-        </button>
       </div>
     </div>
   );
 };
+
