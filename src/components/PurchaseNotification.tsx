@@ -28,8 +28,8 @@ export const PurchaseNotification = () => {
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const scrollToPaiement = () => {
-    const el = document.querySelector("#paiement");
+  const scrollToLicence = () => {
+    const el = document.querySelector("#bmaesection");
     if (el) {
       el.scrollIntoView({ behavior: "smooth" });
     }
@@ -61,8 +61,9 @@ export const PurchaseNotification = () => {
             <p className="text-sm font-medium text-slate-100 leading-snug mb-3">
               Achetez une licence maintenant et recevez une réduction avec le code promo{" "}
               <span className="font-extrabold text-amber-300 font-mono bg-amber-500/15 px-2 py-0.5 rounded border border-amber-400/30 inline-block">
-                BMAE
+                BMAE100
               </span>
+              Valide pour les 100 premiers utilisateurs
             </p>
 
             <div className="flex items-center gap-2">
@@ -84,7 +85,7 @@ export const PurchaseNotification = () => {
               </button>
 
               <button
-                onClick={scrollToPaiement}
+                onClick={scrollToLicence}
                 className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-500 hover:opacity-90 text-slate-950 font-bold text-xs shadow-md transition-all cursor-pointer"
               >
                 J'en profite
