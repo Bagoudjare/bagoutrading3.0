@@ -1,5 +1,5 @@
 
-import { TrendingUp, Heart, Phone, ChartAreaIcon, PhoneCallIcon } from "lucide-react";
+import { TrendingUp, ShoppingBag, Phone, ExternalLink, PhoneCallIcon } from "lucide-react";
 
 export const Footer = () => {
   return (
@@ -12,9 +12,19 @@ export const Footer = () => {
               <TrendingUp className="h-8 w-8 text-blue-400" />
               <span className="text-xl font-bold text-white">Bagoudjare Trading 3.0</span>
             </div>
-            <p className="text-gray-400 max-w-md">
+            <p className="text-gray-400 max-w-md mb-4">
               Expert en trading automatisé, je vous accompagne dans votre réussite sur les marchés financiers avec des stratégies éprouvées et des outils sur mesure.
             </p>
+            <a
+              href="https://vhconuvm.mychariow.shop/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md shadow-amber-500/10"
+            >
+              <ShoppingBag className="w-4 h-4" />
+              <span>Boutique Chariow</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>            
           </div>
 
           {/* Quick Links */}
@@ -24,7 +34,18 @@ export const Footer = () => {
               <li><a href="#hero" className="text-gray-400 hover:text-blue-400 transition-colors">Accueil</a></li>
               <li><a href="#apropos" className="text-gray-400 hover:text-blue-400 transition-colors">À propos</a></li>
               <li><a href="#formation-strategie" className="text-gray-400 hover:text-blue-400 transition-colors">Formations</a></li>
-              <li><a href="#videos" className="text-gray-400 hover:text-blue-400 transition-colors">Videos</a></li>
+              <li><a href="#videos" className="text-gray-400 hover:text-blue-400 transition-colors">Vidéos</a></li>
+              <li>
+                <a 
+                  href="https://vhconuvm.mychariow.shop/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-amber-400 hover:text-amber-300 font-semibold transition-colors flex items-center gap-1"
+                >
+                  <ShoppingBag className="w-3.5 h-3.5" />
+                  <span>Boutique Chariow</span>
+                </a>
+              </li>
             </ul>
           </div>
 

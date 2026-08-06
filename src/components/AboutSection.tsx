@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { TrendingUp, Target, Lightbulb } from "lucide-react";
+import { TrendingUp, Target, Lightbulb, ShoppingBag, ExternalLink } from "lucide-react";
 import profile from "@/assets/imgs/profile.png";
 import files from "@/assets/files/Reussir_En_Trading-V2.pdf";
 
@@ -63,6 +63,34 @@ export const AboutSection = () => {
                 <p className="text-slate-300 text-sm">L'automatisation au service de tous</p>
               </div>
             </div>
+
+            {/* Bouton vers la Boutique Chariow */}
+            <div className="pt-2">
+              <a
+                href="https://vhconuvm.mychariow.shop/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-between gap-4 p-4 rounded-xl bg-gradient-to-r from-amber-500/20 via-orange-500/15 to-amber-500/10 border border-amber-400/40 hover:border-amber-400 transition-all duration-300 group shadow-lg shadow-amber-500/10 cursor-pointer"
+              >
+                <div className="flex items-center gap-3.5">
+                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-orange-500 text-slate-950 flex items-center justify-center font-bold shrink-0 shadow-md">
+                    <ShoppingBag className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-sm sm:text-base group-hover:text-amber-300 transition-colors">
+                      Visiter notre Boutique Chariow
+                    </h4>
+                    <p className="text-slate-300 text-xs">
+                      Formations, outils & licences officielles en ligne
+                    </p>
+                  </div>
+                </div>
+                <span className="px-3.5 py-2 rounded-lg bg-amber-400 text-slate-950 text-xs font-extrabold flex items-center gap-1.5 shrink-0 group-hover:bg-amber-300 transition-colors shadow-md">
+                  <span>Accéder</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </span>
+              </a>
+            </div>           
           </div>
 
           <div className="relative">

@@ -61,9 +61,9 @@ export const PurchaseNotification = () => {
             <p className="text-sm font-medium text-slate-100 leading-snug mb-3">
               Achetez une licence maintenant et recevez une réduction avec le code promo{" "}
               <span className="font-extrabold text-amber-300 font-mono bg-amber-500/15 px-2 py-0.5 rounded border border-amber-400/30 inline-block">
-                BMAE100
+                BMAE100 
               </span>
-              Valide pour les 100 premiers utilisateurs
+              Valide uniquement pour les 100 premiers utilisateurs
             </p>
 
             <div className="flex items-center gap-2">
