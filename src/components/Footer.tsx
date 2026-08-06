@@ -35,17 +35,6 @@ export const Footer = () => {
               <li><a href="#apropos" className="text-gray-400 hover:text-blue-400 transition-colors">À propos</a></li>
               <li><a href="#formation-strategie" className="text-gray-400 hover:text-blue-400 transition-colors">Formations</a></li>
               <li><a href="#videos" className="text-gray-400 hover:text-blue-400 transition-colors">Vidéos</a></li>
-              <li>
-                <a 
-                  href="https://vhconuvm.mychariow.shop/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-amber-400 hover:text-amber-300 font-semibold transition-colors flex items-center gap-1"
-                >
-                  <ShoppingBag className="w-3.5 h-3.5" />
-                  <span>Boutique Chariow</span>
-                </a>
-              </li>
             </ul>
           </div>
 

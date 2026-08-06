@@ -23,7 +23,7 @@ export const PurchaseNotification = () => {
   }, []);
 
   const handleCopyCode = () => {
-    navigator.clipboard.writeText("BMAE");
+    navigator.clipboard.writeText("BMAE100");
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -63,7 +63,7 @@ export const PurchaseNotification = () => {
               <span className="font-extrabold text-amber-300 font-mono bg-amber-500/15 px-2 py-0.5 rounded border border-amber-400/30 inline-block">
                 BMAE100 
               </span>
-              Valide uniquement pour les 100 premiers utilisateurs
+               Valide uniquement pour les 100 premiers utilisateurs
             </p>
 
             <div className="flex items-center gap-2">
