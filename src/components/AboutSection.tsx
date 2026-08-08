@@ -44,11 +44,21 @@ export const AboutSection = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="space-y-6">
-            <div className="bg-slate-900/40 p-6 rounded-xl border border-slate-800/80 backdrop-blur-md shadow-md">
-              <h3 className="text-2xl font-bold text-white mb-4">Mon parcours</h3>
-              <p className="text-slate-300 leading-relaxed">
-                Avec 6 ans d'expérience dans les marchés financiers, j'ai développé une expertise unique dans le trading algorithmique et l'automatisation de stratégies. Ma passion pour l'innovation m'a conduit à créer des solutions sur mesure pour optimiser les performances de trading.
+            <div className="bg-slate-900/40 p-6 rounded-xl border border-slate-800/80 backdrop-blur-md shadow-md space-y-4">
+              <h3 className="text-2xl font-bold text-white mb-2">Mon parcours</h3>
+              <p className="text-slate-300 leading-relaxed text-sm sm:text-base">
+                Fort de plus de 6 ans d'expérience dans les marchés financiers, j'ai développé une expertise approfondie dans l'analyse de marché, le trading algorithmique et la création de stratégies performantes.
               </p>
+              
+              <div className="pt-2">
+                <div className="flex items-center gap-2 mb-2 text-amber-400 font-bold text-xs tracking-wider uppercase">
+                  <TrendingUp className="w-4 h-4 text-blue-400" />
+                  <span>La Genèse de BMAE</span>
+                </div>
+                <p className="text-slate-200 leading-relaxed text-sm sm:text-base bg-gradient-to-r from-blue-950/40 via-slate-900/60 to-purple-950/30 p-4 rounded-xl border-l-4 border-amber-400 italic shadow-inner">
+                  « Après plus de 6 années consacrées à l’analyse des marchés et au développement d’une méthode permettant de les étudier avec précision, une question s’est imposée à moi : <span className="text-amber-300 font-medium">"Et si je pouvais transformer cette méthode en un véritable assistant capable d’accompagner le trader, de l’aider à analyser le marché, de lui permettre de s’entraîner sur des données historiques grâce au Replay et, surtout, de progresser jour après jour ?"</span> C’est de cette réflexion qu’est né BMAE. »
+                </p>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
