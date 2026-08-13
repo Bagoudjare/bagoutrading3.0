@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Play, X, Star, CheckCircle2 } from "lucide-react";
 
-const VIDEO_ID = "6TglLCU7rdc";
+const VIDEO_ID = "MnraNokxDdI";
 
 export const VideoPresentationSection = () => {
   const [isOpen, setIsOpen] = useState(false);
