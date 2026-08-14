@@ -23,8 +23,8 @@ const faqs = [
     a: "BMAE fonctionne sur MetaTrader 5 avec les brokers que nous recommandons (voir section brokers). Il est compatible avec les comptes démo et réels.",
   },
   {
-    q: "Faut-il déjà être trader pour utiliser BMAE ?",
-    a: "Non, mais une base est fortement recommandée. Notre formation d'initiation au trading vous donne les fondamentaux pour tirer le meilleur parti de l'outil.",
+    q: "BMAE est-il adapté aux debutants ?",
+    a: "il est est fortement recommandée d'avoir une base en trading mais il n'est pas obligé. Notre formation d'initiation au trading vous donne les fondamentaux pour tirer le meilleur parti de l'outil.",
   },
   {
     q: "Comment se passe le support ?",
