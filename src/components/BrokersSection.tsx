@@ -25,7 +25,7 @@ const brokers = [
   {
     name: "IC.com",
     description: "Broker ECN réputé avec spreads ultra-faibles et exécution ultra-rapide.",
-    url: "https://ic.com",
+    url: "https://ic.com/?camp=94943",
     gradient: "from-emerald-500 to-teal-500",
     logo: "https://www.google.com/s2/favicons?sz=128&domain=icmarkets.com",
   },
