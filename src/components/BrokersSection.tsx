@@ -51,12 +51,19 @@ const brokers = [
       </svg>
     ),
   },
+  {
+    name: "IC.com",
+    description: "Broker ECN réputé avec spreads ultra-faibles et exécution ultra-rapide.",
+    url: "https://ic.com",
+    gradient: "from-emerald-500 to-teal-500",
+    logo: "https://www.google.com/s2/favicons?sz=128&domain=icmarkets.com",
+  },
 ];
 
 export const BrokersSection = () => {
   return (
     <div className="py-20 px-4 bg-transparent">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Ouvrez votre Compte Trading
@@ -67,7 +74,7 @@ export const BrokersSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto mt-6"></div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {brokers.map((broker, idx) => (
             <a
               key={idx}
