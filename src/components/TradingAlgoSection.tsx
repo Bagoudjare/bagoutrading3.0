@@ -229,7 +229,7 @@ export const TradingAlgoSection = () => {
     setShowLeadModal(false);
 
     // Exécuter le téléchargement du fichier démo
-    executeFileDownload("BMAE_Demo.ex5", "/demo/BMAE_Demo.ex5");
+    executeFileDownload("BMAE_STD_DEMO.ex5", "/demo/BMAE_STD_DEMO.ex5");
   };
 
   const executeFileDownload = (fileName: string, filePath: string) => {
