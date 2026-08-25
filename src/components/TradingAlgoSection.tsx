@@ -167,7 +167,7 @@ export const TradingAlgoSection = () => {
       whatsapp: fullWhatsapp,
       experience,
       downloadedAt: formattedDate,
-      fileName: "BMAE_Demo.ex5"
+      fileName: "BMAE_STD_DEMO.ex5"
     };
 
     // 1. Sauvegarde locale dans localStorage
