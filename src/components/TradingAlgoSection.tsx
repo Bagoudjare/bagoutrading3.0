@@ -146,6 +146,7 @@ export const TradingAlgoSection = () => {
                 data-cta-animation="none"
                 data-locale="fr"
                 data-primary-color="#22c55e"
+                data-custom-cta-text="Télécharger maintenant"
               />
             </div>
             
