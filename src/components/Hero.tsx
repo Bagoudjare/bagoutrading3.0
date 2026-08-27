@@ -96,11 +96,11 @@ export const Hero = () => {
       </div>
 
       {/* Contenu principal */}
-      <div className="relative z-10 w-full px-3 sm:px-4 lg:px-6 py-16 md:py-20 lg:py-24">
+      <div className="relative z-10 w-full px-3 sm:px-4 lg:px-6 pt-24 sm:pt-28 md:pt-20 pb-16 md:pb-20 lg:py-24">
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8 items-center max-w-7xl mx-auto">
           
-          {/* Colonne gauche - Texte */}
-          <div className="text-center md:text-left animate-fade-in">
+          {/* Colonne gauche - Texte (sur mobile, passe après le moniteur) */}
+          <div className="text-center md:text-left animate-fade-in order-2 md:order-1">
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30 mb-5">
               Solution BMAE — Trading Automatisé
             </span>
@@ -151,8 +151,8 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Colonne droite - ÉCRAN AVEC VIDÉO EN BOUCLE */}
-          <div className="relative flex items-center justify-center w-full animate-scale-in">
+          {/* Colonne droite - ÉCRAN AVEC VIDÉO EN BOUCLE (sur mobile, passe en premier avant le texte) */}
+          <div className="relative flex items-center justify-center w-full animate-scale-in order-1 md:order-2 mb-4 md:mb-0">
             
             {/* Effet lumineux d'ambiance */}
             <div className="absolute inset-0 bg-blue-500/10 rounded-full filter blur-[100px] pointer-events-none" />
