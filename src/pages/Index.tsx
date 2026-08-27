@@ -85,16 +85,20 @@ const Index = () => {
           <RoboInteractive />
         </section>
 
+        <section id="proof" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.proof ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <ProofPerformanceSection />
+        </section>
+
+        <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <TradingAlgoSection />
+        </section>
+
         <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <BmaeLicensesSection />
         </section>
 
         <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <PaymentMethods />
-        </section>
-
-        <section id="proof" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.proof ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <ProofPerformanceSection />
         </section>
 
         <section id="testimonials" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.testimonials ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -107,10 +111,6 @@ const Index = () => {
 
         <section id="formationstrategie" data-animate className={`transition-all duration-1000 delay-220 ${isVisible.formationstrategie ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <FormationStrategySection />
-        </section>
-
-        <section id="algo" data-animate className={`transition-all duration-1000 delay-260 ${isVisible.algo ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <TradingAlgoSection />
         </section>
 
         <section id="apropos" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.apropos ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
