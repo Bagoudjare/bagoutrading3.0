@@ -136,7 +136,7 @@
   }
 }
 
-/* --- Chariow Iframe Integration & Scroll Optimization --- */
+/* --- Chariow Iframe Integration & Viewport Optimization --- */
 
 /* Centering and layout wrapper setup for Chariow widgets */
 #chariow-widget,
@@ -149,37 +149,59 @@
   -webkit-overflow-scrolling: touch !important;
 }
 
-/* Ensure dynamically generated overlay containers/modals created by Chariow are centered on the screen */
+/* Ensure overlay backdrop covers 100% of visible viewport */
+.cw-modal-overlay,
 div[class*="chariow"][style*="position: fixed"],
 div[id*="chariow"][style*="position: fixed"],
 div[class*="chariow"][style*="position: absolute"],
 div[id*="chariow"][style*="position: absolute"],
 .chariow-overlay,
 .chariow-modal-container {
-  display: flex !important;
-  justify-content: center !important; /* Perfectly center horizontally */
-  align-items: center !important;     /* Center vertically */
   position: fixed !important;
-  left: 0 !important;
+  inset: 0 !important;
   top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
   width: 100vw !important;
   height: 100vh !important;
-  background-color: rgba(15, 23, 42, 0.75) !important; /* Elegant slate backdrop color matching our page dark theme */
-  backdrop-filter: blur(8px) !important; /* Smooth blurred transition effect */
-  z-index: 2147483647 !important;
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+  z-index: 2147483646 !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* Enforce horizontal and vertical centering on modal bodies */
+/* Perfectly center the modal window in the visible screen space */
+.cw-modal-wrapper,
 div[class*="chariow-modal"],
 div[id*="chariow-modal"],
 .chariow-modal {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  left: 50% !important;
+  position: fixed !important;
   top: 50% !important;
-  transform: translate(-50%, -50%) !important; /* True viewport centering */
-  max-width: 95vw !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  margin: 0 !important;
+  width: 92vw !important;
+  max-width: 560px !important;
+  max-height: min(90vh, 760px) !important;
   z-index: 2147483647 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+  overflow: hidden !important;
+  background-color: #0f172a !important;
+}
+
+/* Modal content container */
+.cw-modal-content {
+  background-color: #0f172a !important;
+  width: 100% !important;
+  max-height: min(90vh, 760px) !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  border-radius: 16px !important;
+  border: none !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 /* Ensure deep nested wrappers created by the Chariow widget script are responsive and scrollable */
@@ -190,53 +212,52 @@ div[id*="chariow-modal"],
   overflow: visible !important;
 }
 
-/* Complete aesthetic integration of the payment iframe to match our elegant dark site theme */
+/* Embedded and Modal Checkout Iframe */
+.cw-modal-content iframe,
+.cw-modal-wrapper iframe,
 #chariow-widget iframe,
 [id^="chariow-widget"] iframe,
 iframe[src*="chariow"],
 iframe[id*="chariow"],
 .chariow-iframe {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important; /* True screen-wide centering */
-  margin: 0 !important; /* Clear any default margins to ensure perfect centering */
-  z-index: 2147483647 !important; /* Ultimate priority stacking on top of navbars and elements */
-  width: 92vw !important; /* Super responsive width for all devices */
-  max-width: 540px !important; /* Perfectly balanced checkout overlay width */
-  height: 85vh !important;
-  max-height: 750px !important; /* Ideal height to avoid screen clipping */
+  width: 100% !important;
+  height: min(85vh, 720px) !important;
+  min-height: 480px !important;
   border-radius: 16px !important;
-  border: 0px solid transparent !important; /* Borderless integration as requested */
-  background-color: #0f172a !important; /* Soft dark slate background matching the card aesthetics */
-  box-shadow: 0 0 0 9999px rgba(8, 10, 20, 0.85), 0 25px 50px -12px rgba(0, 0, 0, 0.7) !important; /* Fullscreen dimming overlay */
-  overflow: auto !important; /* Allow internal scrolling if content is long */
-  -webkit-overflow-scrolling: touch !important; /* Silky-smooth kinetic scrolling on iOS and Android devices */
+  border: none !important;
+  display: block !important;
+  background-color: #0f172a !important;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
-/* Ensure the main page remains fully scrollable when interacting with or after opening the iframe */
+/* Ensure the main page remains scrollable */
 html,
 body {
-  overflow: auto !important;
+  overflow-x: hidden !important;
   height: auto !important;
   min-height: 100% !important;
 }
 
-/* Specific layout alignment for selected Chariow CTA button per focus mode selection */
-div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#bmaesection:nth-of-type(4) > div#licence:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(1) > div:nth-of-type(3) > div#chariow-widget:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
-  margin-top: -315px !important;
-  margin-left: 0px !important;
-  margin-right: 410px !important;
-}
-
-div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#bmaesection:nth-of-type(4) > div#licence:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > div#chariow-widget:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
-  margin-top: -310px !important;
-  margin-right: 410px !important;
-}
-
-div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#apropos:nth-of-type(9) > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(3) > div:nth-of-type(1) > div#chariow-widget:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(2) > button:nth-of-type(1) {
-  margin-top: -315px !important;
-  margin-right: 410px !important;
+/* Completely remove/hide the close button of the Chariow widget modal window across all widgets */
+.cw-modal-close-button,
+div[class*="chariow"][style*="position: fixed"] button,
+div[id*="chariow"][style*="position: fixed"] button,
+.chariow-overlay button,
+.chariow-modal button,
+.chariow-close,
+[class*="chariow-close"],
+div[id^="chariow-widget"] div div button,
+#chariow-widget div div button {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
 div#root:nth-of-type(1) > div:nth-of-type(2) > main:nth-of-type(1) > section#partner:nth-of-type(11) > div:nth-of-type(1) > article:nth-of-type(1) > div:nth-of-type(2) > a:nth-of-type(2) > button:nth-of-type(1) {
