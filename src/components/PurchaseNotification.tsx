@@ -11,10 +11,10 @@ export const PurchaseNotification = () => {
       setVisible(true);
     }, 6000);
 
-    // Réapparition périodique toutes les 60 secondes si fermé
+    // Réapparition périodique toutes les 120 secondes si fermé
     const interval = setInterval(() => {
       setVisible(true);
-    }, 60000);
+    }, 120000);
 
     return () => {
       clearTimeout(initialTimer);

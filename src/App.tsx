@@ -12,6 +12,7 @@ import InitiationTrading from "./pages/InitiationTrading";
 //import Analyses from "./pages/Analyses";
 import { RefTracker } from "./components/RefTracker";
 import { ScrollToTop } from "./components/ScrollToTop";
+import { FloatingScrollToTop } from "./components/FloatingScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -99,6 +100,7 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
+            <FloatingScrollToTop />
             <RefTracker />
             <Routes>
               <Route path="/" element={<Index />} />
