@@ -79,7 +79,7 @@ export const BmaeLicensesSection = ({
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">Licence 1 mois</h3>
-                    <span className="text-xs text-amber-400 font-semibold">Version Restreinte</span>
+                    <span className="text-xs text-amber-400 font-semibold">Version de découverte et d'apprentisage</span>
                   </div>
                 </div>
               </div>
@@ -99,10 +99,7 @@ export const BmaeLicensesSection = ({
                     <span>{b}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
-                  <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
-                  <span>Aucun remboursement possible</span>
-                </li>
+                
               </ul>
             </div>
 
@@ -154,10 +151,7 @@ export const BmaeLicensesSection = ({
                     <span>{b}</span>
                   </li>
                 ))}
-                <li className="flex items-start gap-2 text-emerald-400 text-sm font-semibold pt-2 border-t border-slate-800">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
-                  <span>Satisfait ou remboursé au bout de 6 mois</span>
-                </li>
+                
               </ul>
             </div>
 
@@ -248,7 +242,7 @@ export const BmaeLicensesSection = ({
             </p>
             <p className="text-emerald-400 text-xs font-semibold mt-2 flex items-center justify-center md:justify-start gap-1">
               <ShieldCheck className="w-4 h-4" />
-              Garantie de 6 mois Satisfait ou Remboursé applicable sur les licences 6 Mois et à Vie.
+              Garantie de 6 mois Satisfait ou Remboursé applicable uniquement sur la licence à Vie.
             </p>
           </div>
         </div>
