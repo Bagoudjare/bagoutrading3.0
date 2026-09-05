@@ -86,8 +86,8 @@ export const BmaeLicensesSection = ({
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-white">99,99 $</span>
-                  <span className="text-sm text-slate-400">/ mois</span>
+                  <span className="text-4xl font-bold text-white">70 $</span>
+                  <span className="text-sm text-slate-400"> 100 $</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-1">Utilisation limitée à 1 seul actif</p>
               </div>
