@@ -246,7 +246,7 @@ export default function PaymentMethods({
                   </div>
 
                   {/* Numéro ou Adresse avec bouton Copier */}
-                  <div className="mb-4">
+                  {/* <div className="mb-4">
                     <div className="text-[10px] font-mono text-slate-500 mb-1 flex items-center justify-between">
                       <span>{method.isCrypto ? "Adresse de dépôt" : "Numéro de dépôt"}</span>
                     </div>
@@ -262,7 +262,7 @@ export default function PaymentMethods({
                         <Copy className="w-3.5 h-3.5" />
                       </span>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Bouton d'action WhatsApp sur la carte */}
