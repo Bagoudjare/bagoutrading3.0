@@ -1,5 +1,5 @@
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ComponentType } from "react";
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { HeroSection } from "@/components/HeroSection";
@@ -21,9 +21,38 @@ import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { SignupPopup } from "@/components/SignupPopup";
 import { PurchaseNotification } from "@/components/PurchaseNotification";
+import { BMAE_LICENSES, BmaeLicense } from "@/types";
+// import { BMAE_LICENSES, BmaeLicense } from "@/types/licences";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState<Record<string, boolean>>({});
+  const [selectedLicense, setSelectedLicense] = useState<BmaeLicense>(() => {
+    try {
+      const stored = localStorage.getItem("bmae_selected_license");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed?.id && parsed?.name) return parsed;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+    return BMAE_LICENSES[2]; // Licence à Vie par défaut
+  });
+
+  const handleSelectLicense = (license: BmaeLicense) => {
+    setSelectedLicense(license);
+    try {
+      localStorage.setItem("bmae_selected_license", JSON.stringify(license));
+    } catch (e) {
+      console.error(e);
+    }
+
+    // Défilement fluide vers la section Moyens de paiement
+    const paymentEl = document.getElementById("paiement");
+    if (paymentEl) {
+      paymentEl.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
 
   useEffect(() => {
     // Fallback: force all sections to be visible after 500ms in case IntersectionObserver
@@ -94,11 +123,17 @@ const Index = () => {
         </section>
 
         <section id="bmaesection" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.bmaesection ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <BmaeLicensesSection />
+          <BmaeLicensesSection 
+            selectedLicenseId={selectedLicense.id} 
+            onSelectLicense={handleSelectLicense} 
+          />
         </section>
 
         <section id="paiement" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.paiement ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <PaymentMethods />
+          <PaymentMethods 
+            selectedLicense={selectedLicense} 
+            onSelectLicense={handleSelectLicense} 
+          />
         </section>
 
         <section id="testimonials" data-animate className={`transition-all duration-1000 delay-140 ${isVisible.testimonials ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>

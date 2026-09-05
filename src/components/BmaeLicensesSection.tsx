@@ -1,58 +1,57 @@
-import { useEffect } from "react";
-import { Check, Crown, Clock, TrendingUp, ShoppingCart, Zap, XCircle, ShieldCheck } from "lucide-react";
+import { Check, Crown, Clock, TrendingUp, ShieldCheck, XCircle, Zap, ArrowRight, ShoppingCart } from "lucide-react";
+import { BMAE_LICENSES, BmaeLicense } from "@/types";
 
-const scrollToPayment = () => {
-  document.querySelector('#paiement')?.scrollIntoView({ behavior: 'smooth' });
-};
+interface BmaeLicensesSectionProps {
+  selectedLicenseId?: string;
+  onSelectLicense?: (license: BmaeLicense) => void;
+}
+
 const benefits1m = [
   "Accès pendant 1 mois",
   "Utilisation restreinte à 1 seul actif au choix",
   "Toutes les mises à jour incluses",
   "Support et accompagnement inclus",
 ];
+
 const benefits6m = [
-  "Accès complet pendant 6 mois",
+  "Accès complet pendant 6 mois (tous les actifs)",
   "Toutes les mises à jour incluses",
-  "Support et accompagnement",
+  "Support et accompagnement prioritaire",
   "Même logique d'analyse utilisée dans nos opérations",
 ];
+
 const benefitsLife = [
-  "Accès illimité",
+  "Accès illimité à vie (tous les actifs)",
   "Toutes les mises à jour futures incluses",
-  "Support et accompagnement",
+  "Support et accompagnement VIP",
   "Solution idéale pour une utilisation à long terme",
 ];
-export const BmaeLicensesSection = () => {
-  useEffect(() => {
-    // 1. Charger la feuille de style du widget Chariow si elle n'existe pas déjà
-    const linkId = "chariow-widget-css";
-    if (!document.getElementById(linkId)) {
-      const link = document.createElement("link");
-      link.id = linkId;
-      link.rel = "stylesheet";
-      link.href = "https://js.chariowcdn.com/v1/widget.min.css";
-      document.head.appendChild(link);
-    }
 
-    // 2. Charger le script du widget Chariow de manière asynchrone et différée
-    const scriptId = "chariow-widget-js";
-    const runScript = () => {
-      const existingScript = document.getElementById(scriptId);
-      if (existingScript) {
-        existingScript.remove();
+export const BmaeLicensesSection = ({
+  selectedLicenseId,
+  onSelectLicense,
+}: BmaeLicensesSectionProps) => {
+  const license1m = BMAE_LICENSES[0];
+  const license6m = BMAE_LICENSES[1];
+  const licenseLife = BMAE_LICENSES[2];
+
+  const handleBuyClick = (license: BmaeLicense) => {
+    if (onSelectLicense) {
+      onSelectLicense(license);
+    } else {
+      try {
+        localStorage.setItem("bmae_selected_license", JSON.stringify(license));
+      } catch (e) {
+        console.error("Erreur sauvegarde licence", e);
       }
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://js.chariowcdn.com/v1/widget.min.js";
-      script.async = true;
-      document.head.appendChild(script);
-    };
+      const paiementEl = document.getElementById("paiement");
+      if (paiementEl) {
+        paiementEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
 
-    const timer = setTimeout(runScript, 100);
-    return () => clearTimeout(timer);
-  }, []);
-
-return (
+  return (
     <div id="licence" className="py-20 px-4 bg-transparent">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-14">
@@ -67,11 +66,11 @@ return (
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
           {/* Licence 1 mois - Restreinte */}
-          <div className="relative bg-slate-900/90 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl hover:border-slate-700 transition-all duration-300 flex flex-col justify-between">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-800 to-amber-500 text-white text-[11px] font-bold px-3.5 py-0.5 rounded-full uppercase tracking-wider shadow">
-              1 Mois d'accès
-            </div>
-            
+          <div className={`relative bg-slate-900/90 border rounded-2xl p-6 sm:p-8 shadow-2xl transition-all duration-300 flex flex-col justify-between ${
+            selectedLicenseId === license1m.id
+              ? "border-amber-500 ring-2 ring-amber-500/30"
+              : "border-slate-800 hover:border-slate-700"
+          }`}>
             <div>
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -80,16 +79,15 @@ return (
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">Licence 1 mois</h3>
-                    <span className="text-xs text-amber-400 font-semibold">Version de decouverte et d'apprentisage</span>
+                    <span className="text-xs text-amber-400 font-semibold">Version Restreinte</span>
                   </div>
                 </div>
               </div>
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-white">70 $</span>
-                  {/* <span className="text-sm text-slate-400">/ mois</span> */}
-                  <span className="text-lg text-slate-500 line-through">100 $</span>
+                  <span className="text-4xl font-bold text-white">99,99 $</span>
+                  <span className="text-sm text-slate-400">/ mois</span>
                 </div>
                 <p className="text-xs text-slate-400 mt-1">Utilisation limitée à 1 seul actif</p>
               </div>
@@ -101,32 +99,34 @@ return (
                     <span>{b}</span>
                   </li>
                 ))}
-                {/* <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
+                <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
                   <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
                   <span>Aucun remboursement possible</span>
-                </li> */}
+                </li>
               </ul>
             </div>
 
-            <div className="w-full flex justify-center items-center min-h-[50px] mt-4">
-              <div
-                id="chariow-widget"
-                className="w-full"
-                data-product-id="prd_4fw86tj0"
-                data-store-domain="vhconuvm.mychariow.shop"
-                data-style="tap"
-                data-border-style="rounded"
-                data-cta-width="full"
-                data-background-color="#FFFFFF"
-                data-cta-animation="none"
-                data-locale="fr"
-                data-primary-color="#ffcc00"
-              />
+            {/* Bouton Acheter maintenant - Licence 1 mois */}
+            <div className="w-full mt-4">
+              <button
+                type="button"
+                id="btn-buy-license-1m"
+                onClick={() => handleBuyClick(license1m)}
+                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-bold text-base shadow-lg shadow-amber-500/20 hover:shadow-amber-500/30 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer group"
+              >
+                <ShoppingCart className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>Acheter maintenant</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </div>
 
           {/* Standard 6 mois */}
-          <div className="relative bg-slate-900 border border-blue-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl hover:border-blue-500/60 hover:bg-slate-900/95 transition-all duration-300 flex flex-col justify-between">
+          <div className={`relative bg-slate-900 border rounded-2xl p-6 sm:p-8 shadow-2xl transition-all duration-300 flex flex-col justify-between ${
+            selectedLicenseId === license6m.id
+              ? "border-blue-500 ring-2 ring-blue-500/30 bg-slate-900/95"
+              : "border-blue-500/30 hover:border-blue-500/60 hover:bg-slate-900/95"
+          }`}>
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-[11px] font-bold px-3.5 py-0.5 rounded-full uppercase tracking-wider shadow">
               6 Mois d'accès
             </div>
@@ -154,32 +154,34 @@ return (
                     <span>{b}</span>
                   </li>
                 ))}
-                {/* <li className="flex items-start gap-2 text-red-400 text-sm font-medium pt-2 border-t border-slate-800">
-                  <XCircle className="w-4 h-4 text-red-400 flex-shrink-0 mt-0.5" />
-                  <span>Aucun remboursement possible</span>
-                </li> */}
+                <li className="flex items-start gap-2 text-emerald-400 text-sm font-semibold pt-2 border-t border-slate-800">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Satisfait ou remboursé au bout de 6 mois</span>
+                </li>
               </ul>
             </div>
 
-            <div className="w-full flex justify-center items-center min-h-[50px] mt-4">
-              <div
-                id="chariow-widget"
-                className="w-full"
-                data-product-id="prd_yh2r36of"
-                data-store-domain="vhconuvm.mychariow.shop"
-                data-style="tap"
-                data-border-style="rounded"
-                data-cta-width="full"
-                data-background-color="#FFFFFF"
-                data-cta-animation="none"
-                data-locale="fr"
-                data-primary-color="#ffcc00"
-              />
+            {/* Bouton Acheter maintenant - Licence Standard 6 mois */}
+            <div className="w-full mt-4">
+              <button
+                type="button"
+                id="btn-buy-license-6m"
+                onClick={() => handleBuyClick(license6m)}
+                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-base shadow-lg shadow-blue-500/25 hover:shadow-blue-500/35 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer group"
+              >
+                <ShoppingCart className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>Acheter maintenant</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </div>
 
           {/* Lifetime */}
-          <div className="relative bg-gradient-to-br from-purple-950/40 via-slate-900/90 to-blue-950/40 rounded-2xl p-6 sm:p-8 border-2 border-purple-500/40 shadow-2xl shadow-purple-500/10 hover:border-purple-400 hover:bg-slate-900/95 transition-all duration-300 flex flex-col justify-between">
+          <div className={`relative bg-gradient-to-br from-purple-950/40 via-slate-900/90 to-blue-950/40 rounded-2xl p-6 sm:p-8 border-2 shadow-2xl transition-all duration-300 flex flex-col justify-between ${
+            selectedLicenseId === licenseLife.id
+              ? "border-purple-400 ring-2 ring-purple-500/40 shadow-purple-500/20"
+              : "border-purple-500/40 shadow-purple-500/10 hover:border-purple-400 hover:bg-slate-900/95"
+          }`}>
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-[11px] font-bold px-4 py-0.5 rounded-full uppercase tracking-wider shadow">
               Recommandée • À Vie
             </div>
@@ -214,20 +216,18 @@ return (
               </ul>
             </div>
 
-            <div className="w-full flex justify-center items-center min-h-[50px] mt-4">
-              <div
-                id="chariow-widget"
-                className="w-full"
-                data-product-id="prd_sbe22p9f"
-                data-store-domain="vhconuvm.mychariow.shop"
-                data-style="tap"
-                data-border-style="rounded"
-                data-cta-width="full"
-                data-background-color="#FFFFFF"
-                data-cta-animation="none"
-                data-locale="fr"
-                data-primary-color="#ffcc00"
-              />
+            {/* Bouton Acheter maintenant - Licence à Vie */}
+            <div className="w-full mt-4">
+              <button
+                type="button"
+                id="btn-buy-license-life"
+                onClick={() => handleBuyClick(licenseLife)}
+                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:from-purple-500 hover:via-pink-500 hover:to-indigo-500 text-white font-bold text-base shadow-xl shadow-purple-500/30 hover:shadow-purple-500/40 transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 cursor-pointer group"
+              >
+                <ShoppingCart className="w-5 h-5 transition-transform group-hover:scale-110" />
+                <span>Acheter maintenant</span>
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </div>
         </div>
@@ -248,7 +248,7 @@ return (
             </p>
             <p className="text-emerald-400 text-xs font-semibold mt-2 flex items-center justify-center md:justify-start gap-1">
               <ShieldCheck className="w-4 h-4" />
-              Garantie de 6 mois Satisfait ou Remboursé applicable sous certaines conditions, uniquement sur la licences à Vie.
+              Garantie de 6 mois Satisfait ou Remboursé applicable sur les licences 6 Mois et à Vie.
             </p>
           </div>
         </div>
@@ -256,4 +256,3 @@ return (
     </div>
   );
 };
-
