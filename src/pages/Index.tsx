@@ -183,7 +183,7 @@ const Index = () => {
 
       <Footer />
       {/* <SignupPopup /> */}
-      <PurchaseNotification />
+      {/* <PurchaseNotification /> */}
     </div>
   );
 };

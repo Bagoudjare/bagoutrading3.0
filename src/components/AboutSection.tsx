@@ -115,7 +115,7 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-950/40 via-slate-900/90 to-purple-950/40 rounded-2xl p-8 border border-slate-800/80 text-center">
+        {/* <div className="bg-gradient-to-r from-blue-950/40 via-slate-900/90 to-purple-950/40 rounded-2xl p-8 border border-slate-800/80 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">
             Hey ! Pas de blabla, juste ce qui est nécessaire pour réussir
           </h3>
@@ -137,7 +137,7 @@ export const AboutSection = () => {
               data-primary-color="#ffcc00"
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
