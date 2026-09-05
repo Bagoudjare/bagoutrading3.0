@@ -69,7 +69,7 @@ export default function PaymentMethods({
       name: "Mixx by Yas",
       type: "Digital Wallet",
       color: "from-yellow-400 to-amber-500",
-      icon: "./assets/imgs/mixx.svg",
+      icon: "https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-a85bd02/yas.tg/wp-content/uploads/2025/07/mixx-logo.svg",
       address: "YAS-BAGOUG-88390",
       isCrypto: false
     },
