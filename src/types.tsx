@@ -89,7 +89,7 @@ export const BMAE_LICENSES: BmaeLicense[] = [
   {
     id: "life",
     name: "Licence à Vie",
-    price: "699,99 $",
+    price: "999,99 $",
     originalPrice: "1 999,99 $",
     period: "À Vie",
     badge: "Recommandée • À Vie",
