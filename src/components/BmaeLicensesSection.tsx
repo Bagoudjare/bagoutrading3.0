@@ -86,7 +86,7 @@ export const BmaeLicensesSection = ({
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-4xl font-bold text-white">99,99 $</span>
+                  <span className="text-4xl font-bold text-white">149,99 $</span>
                   {/* <span className="text-sm text-slate-400"> 100 $</span> */}
                 </div>
                 <p className="text-xs text-slate-400 mt-1">Utilisation limitée à 1 seul actif</p>
@@ -138,7 +138,7 @@ export const BmaeLicensesSection = ({
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-4xl font-bold text-white">499,99 $</span>
+                  <span className="text-4xl font-bold text-white">549,99 $</span>
                   <span className="text-lg text-slate-500 line-through">699,99 $</span>
                 </div>
                 <p className="text-xs text-blue-400 mt-1">Tarif de lancement</p>
@@ -190,7 +190,7 @@ export const BmaeLicensesSection = ({
 
               <div className="mb-6">
                 <div className="flex items-baseline gap-3">
-                  <span className="text-4xl font-bold text-white">999,99 $</span>
+                  <span className="text-4xl font-bold text-white">1049,99 $</span>
                   <span className="text-lg text-slate-500 line-through">1 999,99 $</span>
                 </div>
                 <p className="text-xs text-purple-400 mt-1">Tarif de lancement</p>

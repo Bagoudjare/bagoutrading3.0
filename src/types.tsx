@@ -72,7 +72,7 @@ export const BMAE_LICENSES: BmaeLicense[] = [
   {
     id: "1m",
     name: "Licence 1 mois",
-    price: "99,99 $",
+    price: "549,99 $",
     period: "1 mois",
     badge: "Version Restreinte",
     description: "Utilisation limitée à 1 seul actif"
@@ -80,7 +80,7 @@ export const BMAE_LICENSES: BmaeLicense[] = [
   {
     id: "6m",
     name: "Licence Standard – 6 mois",
-    price: "499,99 $",
+    price: "549,99 $",
     originalPrice: "699,99 $",
     period: "6 mois",
     badge: "6 Mois d'accès",
@@ -89,7 +89,7 @@ export const BMAE_LICENSES: BmaeLicense[] = [
   {
     id: "life",
     name: "Licence à Vie",
-    price: "999,99 $",
+    price: "1049,99 $",
     originalPrice: "1 999,99 $",
     period: "À Vie",
     badge: "Recommandée • À Vie",
