@@ -72,7 +72,7 @@ export const BMAE_LICENSES: BmaeLicense[] = [
   {
     id: "1m",
     name: "Licence 1 mois",
-    price: "549,99 $",
+    price: "149,99 $",
     period: "1 mois",
     badge: "Version Restreinte",
     description: "Utilisation limitée à 1 seul actif"
