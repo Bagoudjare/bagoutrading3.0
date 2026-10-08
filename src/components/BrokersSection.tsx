@@ -18,7 +18,7 @@ const brokers = [
   {
     name: "Weltrade",
     description: "Broker international fiable avec conditions de trading attractives.",
-    url: "https://track.gowt.me/visit/?bta=64900&brand=weltrade",
+    url: "https://track.gowt.me/visit/?bta=90413&brand=weltrade",
     gradient: "from-blue-500 to-cyan-500",
     logo: "https://www.google.com/s2/favicons?sz=128&domain=weltrade.com",
   },
